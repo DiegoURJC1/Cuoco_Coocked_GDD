@@ -1,0 +1,16 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Environment files
+*.local
+.env
+.env.*
+
+# IDE / editor
+.idea/
+.vscode/
+.DS_Store
