@@ -1,0 +1,40 @@
+.base-page-layout {
+    display: flex;
+}
+
+.page-content {
+    padding: 20px;
+    width: auto;
+    max-width: 800px;   /* prueba entre 700–1000px */
+    margin: 0 auto;     /* centra el contenido */
+}
+
+.side-panel {
+    box-sizing: unset;
+    /* TODO clamp no funciona exactamente, mejorar */
+    width: clamp(100px, 35%, 200px);
+    padding: 20px;
+    position: sticky;
+    top: calc(10px + var(--header-height));
+
+    background-color: #171717;
+    margin-bottom: 10px;
+    /* Toda la página */
+    /* height: calc(100dvh - var(--header-height) - 20px); */
+    height: fit-content;
+    max-width: clamp(80px, fitcontent, 400px);
+}
+
+.side-panel ul, .page-content ul {
+    list-style-position: inside;
+}
+
+.web-side-panel {
+    border-radius: 0 10px 10px 0;
+    margin-right:10px;
+}
+
+.page-nav-panel {
+    border-radius: 10px 0 0 10px;
+    margin-left:10px;
+}

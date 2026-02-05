@@ -1,0 +1,14 @@
+.page-nav ul {
+    list-style: none;
+}
+
+.page-nav li {
+    margin-bottom: 6px;
+}
+
+
+
+/* indentación por nivel */
+.page-nav .level-3 { padding-left: 12px; }
+.page-nav .level-4 { padding-left: 24px; }
+.page-nav .level-5 { padding-left: 36px; }

@@ -1,0 +1,32 @@
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: var(--header-height);
+    width: stretch;
+    background: #4a4a4a;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+
+    font-size: 1.6em;
+    font-variation-settings: "wght" 900, "wdth" 100;
+}
+
+.home-icon {
+    height: 100%;
+}
+
+.home-icon svg {
+    height: 100%;
+    color: #222222;
+    transition: color 0.2s ease;
+}
+
+.home-icon:is(:hover, :focus) > svg {
+    color: #007bff;
+    filter: drop-shadow(0 0 5px #081391) drop-shadow(5px 5px 5px #9c25cc);
+}

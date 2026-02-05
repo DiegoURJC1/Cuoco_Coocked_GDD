@@ -1,0 +1,32 @@
+.alert-panel {
+    background-color: #d82121;
+    color: #e1b753;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+
+    margin: 10px 0 10px 0;
+
+}
+
+.alert-panel .text {
+    align-self: center;
+}
+
+.alert-panel .text .title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #e4cd8b;
+}
+
+.alert-icon {
+    display: block;
+    height: 3rem;
+    width: auto;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.alert-icon svg {
+    color: #e1b753;
+}
