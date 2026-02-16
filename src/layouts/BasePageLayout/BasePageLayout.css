@@ -1,18 +1,19 @@
 .base-page-layout {
-    display: flex;
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr) 250px;
+    gap: 20px;
 }
 
 .page-content {
     padding: 20px;
-    width: auto;
-    max-width: 800px;   /* prueba entre 700–1000px */
-    margin: 0 auto;     /* centra el contenido */
+    width: 100%;
+    max-width: 1200px; /* reducir ancho máximo para mejor lectura */
+    margin: 0 auto; /* centra el contenido */
 }
 
 .side-panel {
-    box-sizing: unset;
-    /* TODO clamp no funciona exactamente, mejorar */
-    width: clamp(100px, 35%, 200px);
+    font-size: 0.9rem;
+    box-sizing: border-box;
     padding: 20px;
     position: sticky;
     top: calc(10px + var(--header-height));
@@ -31,10 +32,20 @@
 
 .web-side-panel {
     border-radius: 0 10px 10px 0;
-    margin-right:10px;
+    margin-right: 10px;
 }
 
 .page-nav-panel {
     border-radius: 10px 0 0 10px;
-    margin-left:10px;
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .base-page-layout {
+        grid-template-columns: 250px minmax(0, 1fr);
+    }
+
+    .page-nav-panel {
+        display: none;
+    }
 }
