@@ -5,4 +5,8 @@ export const routes = {
     combat: {
         path: "/combat",
     },
+    test: {
+        path: "/test",
+        links: "/test/links",
+    }
 };

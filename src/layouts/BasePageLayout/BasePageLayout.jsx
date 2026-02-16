@@ -35,7 +35,7 @@ export default function BasePageLayout() {
                         <ul>
                             <li><PLink href="/">Home</PLink></li>
                             <li><PLink href="/combat">Combate</PLink></li>
-                            <li>Elem3</li>
+                            <li><PLink href="/test/links">Test Links</PLink></li>
                             <li>Elem4</li>
                             <li>Elem5</li>
                             <li>Elem6</li>

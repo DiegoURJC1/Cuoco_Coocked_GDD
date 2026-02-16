@@ -8,6 +8,7 @@ import ScrollToTop from "./common/auxFunc/ScrollToTop.jsx";
 import {routes} from "./routes/routes.js";
 // Estilos
 import './styles/index.css'
+import TestLinks from "./pages/testPage/TestLinks.jsx";
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
@@ -18,6 +19,9 @@ createRoot(document.getElementById('root')).render(
                 <Route element={<BasePageLayout/>}>
                     <Route path={routes.home.path} element={<Home/>}/>
                     <Route path={routes.combat.path} element={<Combat/>}/>
+                    <Route path={"test"}>
+                        <Route path={routes.test.links} element={<TestLinks/>}/>
+                    </Route>
                 </Route>
             </Routes>
         </BrowserRouter>
