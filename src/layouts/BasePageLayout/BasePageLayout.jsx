@@ -3,6 +3,7 @@ import Header from "../../modules/Header/Header.jsx";
 import {PageProvider} from "../../contexts/PageContext.jsx";
 import PageNav from "../../modules/PageNav/PageNav.jsx";
 import PLink from "../../modules/Link/PLink.jsx";
+import {routes} from "../../routes/routes.js";
 
 // Estilos
 import "./BasePageLayout.css";
@@ -36,7 +37,7 @@ export default function BasePageLayout() {
                             <li><PLink href="/">Home</PLink></li>
                             <li><PLink href="/combat">Combate</PLink></li>
                             <li><PLink href="/test/links">Test Links</PLink></li>
-                            <li>Elem4</li>
+                            <li><PLink href={routes.fighters.path}>Fighters</PLink></li>
                             <li>Elem5</li>
                             <li>Elem6</li>
                         </ul>

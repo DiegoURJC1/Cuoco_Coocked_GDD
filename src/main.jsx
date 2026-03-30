@@ -9,6 +9,8 @@ import {routes} from "./routes/routes.js";
 // Estilos
 import './styles/index.css'
 import TestLinks from "./pages/testPage/TestLinks.jsx";
+import FightersListPage from "./pages/FightersListPage.jsx";
+import FighterPage from "./pages/FighterPage/FighterPage.jsx";
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
@@ -19,9 +21,11 @@ createRoot(document.getElementById('root')).render(
                 <Route element={<BasePageLayout/>}>
                     <Route path={routes.home.path} element={<Home/>}/>
                     <Route path={routes.combat.path} element={<Combat/>}/>
-                    <Route path={"test"}>
+                    <Route path={routes.test.path}>
                         <Route path={routes.test.links} element={<TestLinks/>}/>
                     </Route>
+                    <Route path={routes.fighters.path} element={<FightersListPage/>}/>
+                    <Route path={routes.fighters.id} element={<FighterPage />} />
                 </Route>
             </Routes>
         </BrowserRouter>

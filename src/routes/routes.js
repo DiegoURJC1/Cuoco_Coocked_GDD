@@ -8,5 +8,9 @@ export const routes = {
     test: {
         path: "/test",
         links: "/test/links",
+    },
+    fighters: {
+        path: "/fighters",
+        id: "/fighters/:id"
     }
 };

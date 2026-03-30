@@ -26,7 +26,7 @@ const FILE_REGEX = /\.(pdf|jpg|jpeg|png|gif|svg|mp4|webm|mp3|wav|zip)$/i;
  *
  *
  * @param {Object} props
- * @param {ReactNode} props.children
+ * @param {ReactNode|JSX.Element|string} props.children
  *        Contenido del enlace.
  *
  * @param {string} props.href
