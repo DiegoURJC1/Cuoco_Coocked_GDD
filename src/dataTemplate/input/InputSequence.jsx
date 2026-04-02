@@ -1,4 +1,4 @@
-import { InputIcon } from "./InputIcon";
+import { InputIcon } from "./InputIcon.jsx";
 import { detectMotion } from "./enums/detectMotion.js";
 
 export function InputSequence({ sequence }) {

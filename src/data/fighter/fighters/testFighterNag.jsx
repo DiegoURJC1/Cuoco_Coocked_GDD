@@ -1,12 +1,12 @@
-import {Fighter} from "../Fighter.jsx"
-import {Archetypes} from "../enums/Archetypes.js";
-import {createSeasonPass} from "../enums/Source.js";
-import {MoveCategory} from "../moves/moveCategory.js";
-import {Input} from "../../input/enums/Input.js";
-import {FrameType} from "../moves/frameType.js";
-import {createFrames} from "../moves/Frame.js";
+import {Fighter} from "../../../dataTemplate/fighters/Fighter.jsx"
+import {Archetypes} from "../../../dataTemplate/fighters/enums/Archetypes.js";
+import {createSeasonPass} from "../../../dataTemplate/fighters/enums/Source.js";
+import {MoveCategory} from "../../../dataTemplate/fighters/moves/moveCategory.js";
+import {Input} from "../../../dataTemplate/input/enums/Input.js";
+import {FrameType} from "../../../dataTemplate/fighters/moves/frameType.js";
+import {createFrames} from "../../../dataTemplate/fighters/moves/Frame.js";
 import {InlineIcon} from "../../../modules/InlineIcon/InlineIcon.jsx";
-import {InputIcon} from "../../input/InputIcon.jsx";
+import {InputIcon} from "../../../dataTemplate/input/InputIcon.jsx";
 
 export const testFighterNag = new Fighter({
     name: "Nagoriyuki",

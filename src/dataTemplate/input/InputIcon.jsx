@@ -1,5 +1,5 @@
-import { ButtonIcon } from "./ButtonIcon";
-import { StickIcon } from "./StickIcon";
+import { ButtonIcon } from "./ButtonIcon.jsx";
+import { StickIcon } from "./StickIcon.jsx";
 import { detectMotion } from "./enums/detectMotion.js";
 
 /**

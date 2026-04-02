@@ -1,6 +1,6 @@
-import {Fighter} from "../Fighter.jsx"
-import {Archetypes} from "../enums/Archetypes.js";
-import {createSeasonPass} from "../enums/Source.js";
+import {Fighter} from "../../../dataTemplate/fighters/Fighter.jsx"
+import {Archetypes} from "../../../dataTemplate/fighters/enums/Archetypes.js";
+import {createSeasonPass} from "../../../dataTemplate/fighters/enums/Source.js";
 
 export const testFighterRam = new Fighter({
     name: "Test Fighter",

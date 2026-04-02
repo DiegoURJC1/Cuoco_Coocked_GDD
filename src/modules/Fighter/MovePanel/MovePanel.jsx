@@ -1,5 +1,5 @@
 import "./MovePanel.css"
-import {InputSequence} from "../../../data/input/InputSequence.jsx";
+import {InputSequence} from "../../../dataTemplate/input/InputSequence.jsx";
 export default function MovePanel({move, fighter = null}) {
     return (
         <div className="move-panel">
