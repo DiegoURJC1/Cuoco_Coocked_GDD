@@ -2,7 +2,7 @@ import {Fighter} from "../Fighter.jsx"
 import {Archetypes} from "../enums/Archetypes.js";
 import {createSeasonPass} from "../enums/Source.js";
 import {MoveCategory} from "../moves/moveCategory.js";
-import {Input} from "../../input/Input.js";
+import {Input} from "../../input/enums/Input.js";
 import {FrameType} from "../moves/frameType.js";
 import {createFrames} from "../moves/Frame.js";
 
@@ -77,6 +77,117 @@ export const testFighterNag = new Fighter({
                 {
                     frameType: FrameType.RECOVERY,
                     duration: 31
+                },
+
+            ]),
+            moveData: {
+                damage: [25],
+                guard: ["High"],
+                onBlock: [-14],
+                invuln: false
+            }
+        },
+        {
+            name: "Te rajo",
+            moveCategory: MoveCategory.OVERDRIVE,
+            description: (fighter) => (
+                <>
+                    {fighter.name} hace un rajazo hacia delante.
+                </>
+            ),
+            inputList: [Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT, Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT, Input.HS],
+            frameList: createFrames([
+                {
+                    frameType: FrameType.STARTUP,
+                    duration: 17
+                },
+                {
+                    frameType: FrameType.ACTIVE,
+                    duration: 2
+                },
+
+                {
+                    frameType: FrameType.INACTIVE,
+                    duration: 2
+                },
+                {
+                    frameType: FrameType.ACTIVE,
+                    duration: 2
+                },
+                {
+                    frameType: FrameType.INACTIVE,
+                    duration: 2
+                },
+                {
+                    frameType: FrameType.ACTIVE,
+                    duration: 2
+                },
+                {
+                    frameType: FrameType.RECOVERY,
+                    duration: 31
+                },
+
+            ]),
+            moveData: {
+                damage: [25],
+                guard: ["High"],
+                onBlock: [-14],
+                invuln: false
+            }
+        },
+        {
+            name: "Te rajo",
+            moveCategory: MoveCategory.OVERDRIVE,
+            description: (fighter) => (
+                <>
+                    {fighter.name} hace un rajazo hacia delante.
+                </>
+            ),
+            inputList: [Input.RIGHT, Input.DOWN, Input.DOWN_RIGHT, Input.K],
+            frameList: createFrames([
+                {
+                    frameType: FrameType.STARTUP,
+                    duration: 27
+                },
+                {
+                    frameType: FrameType.ACTIVE,
+                    duration: 13
+                },
+                {
+                    frameType: FrameType.RECOVERY,
+                    duration: 21
+                },
+
+            ]),
+            moveData: {
+                damage: [25],
+                guard: ["High"],
+                onBlock: [-14],
+                invuln: false
+            }
+        },
+
+        {
+            name: "Te rajo",
+            moveCategory: MoveCategory.OVERDRIVE,
+            description: (fighter) => (
+                <>
+                    {fighter.name} hace un rajazo hacia delante.
+                </>
+            ),
+            inputList: [Input.RIGHT, Input.RIGHT, Input.DOWN_RIGHT, Input.K],
+            frameList: createFrames([
+                {
+                    frameType: FrameType.STARTUP,
+                    duration: 27
+                },
+                {
+                    frameType: FrameType.ACTIVE,
+                    duration: 13
+                },
+                {
+                    frameType: FrameType.RECOVERY,
+                    duration: 21
                 },
 
             ]),

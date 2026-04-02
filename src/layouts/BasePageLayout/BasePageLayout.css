@@ -41,11 +41,15 @@
 }
 
 @media (max-width: 768px) {
+
     .base-page-layout {
-        grid-template-columns: 250px minmax(0, 1fr);
+        display: block;
+        /*grid-template-columns: 250px minmax(0, 1fr);*/
     }
 
-    .page-nav-panel {
+
+
+    .page-nav-panel, .web-side-panel {
         display: none;
     }
 }

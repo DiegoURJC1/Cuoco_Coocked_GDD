@@ -1,6 +1,6 @@
-import {fighters} from "../data/fighter/fighters.jsx";
 import {Heading1} from "../modules/Heading/Heading.jsx";
 import PLink from "../modules/Link/PLink.jsx";
+import {fighters} from "../data/fighter/fighters.jsx";
 
 export default function FightersListPage() {
     return (

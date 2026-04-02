@@ -2,11 +2,10 @@ import {Outlet} from "react-router-dom";
 import Header from "../../modules/Header/Header.jsx";
 import {PageProvider} from "../../contexts/PageContext.jsx";
 import PageNav from "../../modules/PageNav/PageNav.jsx";
-import PLink from "../../modules/Link/PLink.jsx";
-import {routes} from "../../routes/routes.js";
 
 // Estilos
 import "./BasePageLayout.css";
+import {GlobalNav} from "../../modules/GlobalNav/GlobalNav.jsx";
 
 /**
  * Plantilla de página básica con {@link Header|cabecera},
@@ -32,16 +31,7 @@ export default function BasePageLayout() {
             <PageProvider>
                 <Header/>
                 <div className="base-page-layout">
-                    <div className="web-side-panel side-panel">
-                        <ul>
-                            <li><PLink href="/">Home</PLink></li>
-                            <li><PLink href="/combat">Combate</PLink></li>
-                            <li><PLink href="/test/links">Test Links</PLink></li>
-                            <li><PLink href={routes.fighters.path}>Fighters</PLink></li>
-                            <li>Elem5</li>
-                            <li>Elem6</li>
-                        </ul>
-                    </div>
+                    <GlobalNav/>
                     <main className="page-content">
                         <Outlet/>
                     </main>

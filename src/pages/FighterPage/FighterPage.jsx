@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
-import { fighters } from "../../data/fighter/fighters.jsx";
 import {Heading1} from "../../modules/Heading/Heading.jsx";
 import Move from "../../modules/Fighter/Move/Move.jsx";
 import "./FighterPage.css"
+import {fighters} from "../../data/fighter/./fighters.jsx";
 
 export default function FighterPage() {
     const { id } = useParams();

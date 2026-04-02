@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 712 712" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-3048,-762)">
+        <g id="Kick-Icon" serif:id="Kick Icon" transform="matrix(0.659259,0,0,0.659259,3048,762)">
+            <rect x="0" y="0" width="1080" height="1080" style="fill:none;"/>
+            <g>
+                <g transform="matrix(1.516854,0,0,1.516854,151.685393,151.685393)">
+                    <circle cx="256" cy="256" r="256" style="fill:rgb(28,29,31);"/>
+                    <path d="M256,0C397.29,0 512,114.71 512,256C512,397.29 397.29,512 256,512C114.71,512 0,397.29 0,256C0,114.71 114.71,0 256,0ZM256,16.667C123.908,16.667 16.667,123.908 16.667,256C16.667,388.092 123.908,495.333 256,495.333C388.092,495.333 495.333,388.092 495.333,256C495.333,123.908 388.092,16.667 256,16.667Z" style="fill:rgb(142,145,152);"/>
+                </g>
+            </g>
+            <g transform="matrix(1.516854,0,0,1.516854,-35.139169,-1155.842697)">
+                <g transform="matrix(400,0,0,400,509.829885,1268)">
+                </g>
+                <text x="248.502px" y="1268px" style="font-family:'Roboto-Medium', 'Roboto Medium';font-weight:500;font-size:400px;fill:rgb(229,137,67);">D</text>
+            </g>
+        </g>
+    </g>
+</svg>

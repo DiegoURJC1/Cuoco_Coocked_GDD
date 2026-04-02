@@ -1,4 +1,5 @@
 import "./Move.css"
+import {InputSequence} from "../../../data/input/InputSequence.jsx";
 export default function Move({move, fighter = null}) {
     return (
         <div className="move-panel">
@@ -24,6 +25,9 @@ export default function Move({move, fighter = null}) {
             </div>
             <div className="move-data">
 
+            </div>
+            <div className="move-input">
+                <InputSequence sequence={move.inputList} />
             </div>
             <div className="description">
                 {typeof move.description === "function" ? move.description(fighter) : move.description}
