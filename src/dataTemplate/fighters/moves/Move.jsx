@@ -47,14 +47,19 @@ export class Move {
     /**
      * Crea un nuevo movimiento.
      *
-     * @param {string} name Nombre del movimiento.
-     * @param {string} moveCategory Categoría (MoveCategory).
-     * @param {JSX.Element|Function|string} description Descripción del movimiento.
-     * @param {string[]} inputList Lista de inputs (Input).
-     * @param {Array<{type: Object, cancelWindow?: boolean, projectile?: boolean}>} frameList Lista de frames.
-     * @param {{damage: number[], guard: string|string[], onBlock: number[], invuln: boolean}} moveData Datos adicionales.
+     * @type {Move}
+     * @property {string} name - Nombre del movimiento.
+     * @property {MoveCategory} moveCategory - Categoría del movimiento (Special, Normal, etc.).
+     * @property {React.ReactNode} description - Descripción del movimiento (puede usar JSX).
+     * @property {Array<string>} inputList - Secuencia de inputs para ejecutar el movimiento.
+     * @property {Array<Frame>} frameList - Lista de frames del movimiento.
+     * @property {Object} moveData - Datos adicionales del movimiento.
+     * @property {number[]} moveData.damage - Daño por golpe.
+     * @property {string[]} moveData.guard - Guard de cada golpe ("High", "Low", etc.).
+     * @property {number[]} moveData.onBlock - Frames de ventaja/desventaja al bloquear.
+     * @property {boolean} moveData.invuln - Si el movimiento tiene invulnerabilidad.
      */
-    constructor(name, moveCategory, description, inputList, frameList, moveData) {
+    constructor({name, moveCategory, description, inputList, frameList, moveData}) {
         this.#name = name;
         this.#moveCategory = moveCategory;
         this.#description = typeof description === "function" ? description(this) : description;

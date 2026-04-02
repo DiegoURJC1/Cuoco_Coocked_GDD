@@ -6,10 +6,11 @@ import StickQuarter from "../../assets/icons/input/Stick Quarter Icon.svg?react"
 import StickHalf from "../../assets/icons/input/Stick Half Icon.svg?react";
 import StickZ from "../../assets/icons/input/Stick Z Icon.svg?react";
 import StickCircle from "../../assets/icons/input/Stick Circle Icon.svg?react";
+import {LookDirection} from "./enums/LookDirection.js";
 
 export function StickIcon({
                               type,
-                              direction = "6",
+                              direction = LookDirection.RIGHT,
                               flip = false,
                               size = 32,
                           }) {
@@ -20,7 +21,7 @@ export function StickIcon({
         height: "100%",
         transform: `
       rotate(${angle}deg)
-      ${flip ? "scaleY(-1)" : ""}
+      ${flip ? "scaleX(-1)" : ""}
     `,
     };
 
@@ -62,11 +63,11 @@ const numpadToAngle = {
 //export const isLeft = (dir) => ["1", "4", "7"].includes(dir);
 //export const isRight = (dir) => ["3", "6", "9"].includes(dir);
 
-export const QCF = () => <StickIcon type="quarter" direction="6" />;
-export const QCB = () => <StickIcon type="quarter" direction="4" />;
+export const QCF = () => <StickIcon type="quarter" direction={LookDirection.RIGHT} />;
+export const QCB = () => <StickIcon type="quarter" direction={LookDirection.LEFT} />;
 
-export const DP = () => <StickIcon type="z" direction="6" />;
-export const RDP = () => <StickIcon type="z" direction="4" />;
+export const DP = () => <StickIcon type="z" direction={LookDirection.RIGHT}  />;
+export const RDP = () => <StickIcon type="z" direction={LookDirection.LEFT} />;
 
-export const HCF = () => <StickIcon type="half" direction="6" />;
-export const HCB = () => <StickIcon type="half" direction="4" />;
+export const HCF = () => <StickIcon type="half" direction={LookDirection.RIGHT}  />;
+export const HCB = () => <StickIcon type="half" direction={LookDirection.LEFT}  />;

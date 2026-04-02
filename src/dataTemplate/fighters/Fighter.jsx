@@ -1,3 +1,5 @@
+import {Source} from "./enums/Source.js";
+
 /**
  * Representa un luchador en el juego.
  */
@@ -81,8 +83,8 @@ export class Fighter {
      *
      * @param {Object} options Opciones de inicialización del luchador.
      * @param {string} options.name Nombre del luchador.
-     * @param {Object} options.archetype Arquetipo del luchador (ej. `Archetypes.BALANCE`).
-     * @param {JSX.Element|Function|string} options.description Descripción del luchador (puede contener JSX).
+     * @param {Object} options.archetype Arquetipo del luchador (ej. `Archetype.BALANCE`).
+     * @param {string|Function|JSX.Element} options.description Descripción del luchador (puede contener JSX).
      * @param {number} [options.easyToUse=2.5] Facilidad de uso, entre 0.5 y 5, en incrementos de 0.5.
      * @param {Array<Object>} [] Lista de comandos/movimientos.
      * @param {Object} [options.source] Fuente del luchador (ej. `Source.BASE_GAME` o `createSeasonPass(n)`).
@@ -96,7 +98,7 @@ export class Fighter {
                     description,
                     easyToUse = 2.5,
                     moveList = [],
-                    source,
+                    source= Source.BASE_GAME,
                     icon,
                     fullArt,
                     portraitConfig

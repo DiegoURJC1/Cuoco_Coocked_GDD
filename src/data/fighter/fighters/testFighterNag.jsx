@@ -1,5 +1,5 @@
 import {Fighter} from "../../../dataTemplate/fighters/Fighter.jsx"
-import {Archetypes} from "../../../dataTemplate/fighters/enums/Archetypes.js";
+import {Archetype} from "../../../dataTemplate/fighters/enums/./Archetype.js";
 import {createSeasonPass} from "../../../dataTemplate/fighters/enums/Source.js";
 import {MoveCategory} from "../../../dataTemplate/fighters/moves/moveCategory.js";
 import {Input} from "../../../dataTemplate/input/enums/Input.js";
@@ -10,7 +10,7 @@ import {InputIcon} from "../../../dataTemplate/input/InputIcon.jsx";
 
 export const testFighterNag = new Fighter({
     name: "Nagoriyuki",
-    archetype: Archetypes.ONESHOT,
+    archetype: Archetype.ONESHOT,
     description: (fighter) => (
         <>
             This is a <b>description</b> of {fighter.name} He is a samurai vampire.

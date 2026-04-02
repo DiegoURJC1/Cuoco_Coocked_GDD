@@ -1,10 +1,10 @@
 import {Fighter} from "../../../dataTemplate/fighters/Fighter.jsx"
-import {Archetypes} from "../../../dataTemplate/fighters/enums/Archetypes.js";
+import {Archetype} from "../../../dataTemplate/fighters/enums/./Archetype.js";
 import {createSeasonPass} from "../../../dataTemplate/fighters/enums/Source.js";
 
 export const testFighterRam = new Fighter({
     name: "Test Fighter",
-    archetype: Archetypes.BALANCE,
+    archetype: Archetype.BALANCE,
     description: (fighter) => (
         <>
             This is a <b>description</b> of {fighter.name}.

@@ -1,6 +1,7 @@
 import { ButtonIcon } from "./ButtonIcon.jsx";
 import { StickIcon } from "./StickIcon.jsx";
 import { detectMotion } from "./enums/detectMotion.js";
+import {LookDirection} from "./enums/LookDirection.js";
 
 /**
  * Renderiza un input como icono.
@@ -24,7 +25,7 @@ export function InputIcon({ inputs }) {
                 <StickIcon
                     type={motion.type.toLowerCase()}
                     direction={motion.dir}
-                    flip={motion.dir === "4"}
+                    flip={motion.dir === LookDirection.LEFT}
                 />
             );
         }
