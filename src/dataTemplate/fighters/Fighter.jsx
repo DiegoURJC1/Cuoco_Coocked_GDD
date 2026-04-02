@@ -84,7 +84,7 @@ export class Fighter {
      * @param {Object} options.archetype Arquetipo del luchador (ej. `Archetypes.BALANCE`).
      * @param {JSX.Element|Function|string} options.description Descripción del luchador (puede contener JSX).
      * @param {number} [options.easyToUse=2.5] Facilidad de uso, entre 0.5 y 5, en incrementos de 0.5.
-     * @param {Array<Object>} [options.commandList=[]] Lista de comandos/movimientos.
+     * @param {Array<Object>} [] Lista de comandos/movimientos.
      * @param {Object} [options.source] Fuente del luchador (ej. `Source.BASE_GAME` o `createSeasonPass(n)`).
      * @param {string} [options.icon] URL o referencia del icono.
      * @param {string} [options.fullArt] URL o referencia del arte completo.

@@ -37,8 +37,6 @@ const ButtonMap = {
  * @param {Object} props
  * @param {string} props.input - La clave del botón (P, K, S, HS, D, DASH, TAUNT)
  * @param {Object} [props.size] - Tamaño del icono
- * @param {string|number} [props.size.width="auto"] - Ancho del icono
- * @param {string|number} [props.size.height="100%"] - Alto del icono
  * @returns {React.JSX.Element|null} El icono del botón o null si la clave no existe
  */
 export function ButtonIcon({input, size = {width: "auto", height: "100%"}}) {
