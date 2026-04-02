@@ -1,3 +1,18 @@
+/**
+ * Arquetipos de personajes en el juego.
+ * Cada arquetipo define un estilo de juego con sus características únicas.
+ *
+ * @typedef {Object} Archetype
+ * @property {string} name - Nombre legible del arquetipo.
+ * @property {string} description - Descripción del estilo de juego del arquetipo.
+ */
+
+/**
+ * Objeto que contiene todos los arquetipos disponibles en el juego.
+ * Cada propiedad es un arquetipo con un `name` y una `description`.
+ * @type {Object.<string, Archetype>}
+ * @readonly
+ */
 export const Archetypes = Object.freeze({
     BALANCE: {
         name: "Balance",
@@ -29,10 +44,10 @@ export const Archetypes = Object.freeze({
     },
     PUPPET: {
         name: "Puppet",
-        description: "Controla un segundo personaje."
+        description: "Controla un segundo personaje o invoca ayudantes."
     },
     STANCE: {
         name: "Stance",
-        description: "Cambia su estilo según la pose."
+        description: "Cambia su estilo y movimientos disponibles según la pose."
     }
 });

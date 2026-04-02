@@ -47,7 +47,7 @@ export function InputSequence({ sequence }) {
     flushBuffer();
 
     return (
-        <div style={{ display: "flex", gap: 6 }}>
+        <div className="input-sequence-container" style={{ display: "flex", gap: 6}}>
             {elements.map((item, i) => (
                 <InputIcon key={i} inputs={item} />
             ))}

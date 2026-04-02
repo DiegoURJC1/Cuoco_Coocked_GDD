@@ -5,6 +5,8 @@ import {MoveCategory} from "../moves/moveCategory.js";
 import {Input} from "../../input/enums/Input.js";
 import {FrameType} from "../moves/frameType.js";
 import {createFrames} from "../moves/Frame.js";
+import {InlineIcon} from "../../../modules/InlineIcon/InlineIcon.jsx";
+import {InputIcon} from "../../input/InputIcon.jsx";
 
 export const testFighterNag = new Fighter({
     name: "Nagoriyuki",
@@ -140,7 +142,8 @@ export const testFighterNag = new Fighter({
             moveCategory: MoveCategory.OVERDRIVE,
             description: (fighter) => (
                 <>
-                    {fighter.name} hace un rajazo hacia delante.
+                    {fighter.name} hace un rajazo hacia delante y duele mucho cuando da
+                    el <InlineIcon size={2}><InputIcon inputs={Input.HS} /></InlineIcon>.
                 </>
             ),
             inputList: [Input.RIGHT, Input.DOWN, Input.DOWN_RIGHT, Input.K],
@@ -175,7 +178,7 @@ export const testFighterNag = new Fighter({
                     {fighter.name} hace un rajazo hacia delante.
                 </>
             ),
-            inputList: [Input.RIGHT, Input.RIGHT, Input.DOWN_RIGHT, Input.K],
+            inputList: [Input.RIGHT, Input.RIGHT, Input.DOWN_RIGHT, Input.RIGHT, Input.DOWN, Input.DOWN_RIGHT, Input.K],
             frameList: createFrames([
                 {
                     frameType: FrameType.STARTUP,

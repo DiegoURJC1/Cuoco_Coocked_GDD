@@ -16,8 +16,8 @@ export function StickIcon({
     const angle = numpadToAngle[direction] ?? 0;
 
     const style = {
-        width: size,
-        height: size,
+        width: "auto",
+        height: "100%",
         transform: `
       rotate(${angle}deg)
       ${flip ? "scaleY(-1)" : ""}

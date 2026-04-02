@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import {Heading1} from "../../modules/Heading/Heading.jsx";
-import Move from "../../modules/Fighter/Move/Move.jsx";
+import MovePanel from "../../modules/Fighter/MovePanel/MovePanel.jsx";
 import "./FighterPage.css"
 import {fighters} from "../../data/fighter/./fighters.jsx";
 
@@ -18,7 +18,7 @@ export default function FighterPage() {
             <p>Facilidad de uso: {fighter.easyToUse}</p>
             <div className="moves-panel-list">
                 {fighter.moveList.map((move, index) => (
-                    <Move key={index} move={move} fighter={fighter} />
+                    <MovePanel key={index} move={move} fighter={fighter} />
                 ))}
             </div>
             {fighter.fullArtImg}

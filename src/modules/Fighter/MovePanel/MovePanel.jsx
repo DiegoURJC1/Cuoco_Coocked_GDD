@@ -1,6 +1,6 @@
-import "./Move.css"
+import "./MovePanel.css"
 import {InputSequence} from "../../../data/input/InputSequence.jsx";
-export default function Move({move, fighter = null}) {
+export default function MovePanel({move, fighter = null}) {
     return (
         <div className="move-panel">
             <div className="name">{move.name}</div>

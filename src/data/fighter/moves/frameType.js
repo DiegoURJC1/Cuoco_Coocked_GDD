@@ -1,3 +1,17 @@
+/**
+ * Representa un tipo de frame en el juego.
+ *
+ * @typedef {Object} Frame
+ * @property {string} name - Identificador legible del frame.
+ * @property {string} color - Color asociado al frame, en formato HEX, para visualización.
+ */
+
+/**
+ * Tipos de frames principales en ataques o movimientos.
+ * Cada frame tiene un `name` y un `color` para visualización en UI.
+ * @type {Object.<string, Frame>}
+ * @readonly
+ */
 export const FrameType = Object.freeze({
     STARTUP: {
         name: "startup",
@@ -21,9 +35,15 @@ export const FrameType = Object.freeze({
     }
 });
 
+/**
+ * Tipos de frames especiales adicionales.
+ * Usados para ataques con propiedades especiales.
+ * @type {Object.<string, Frame>}
+ * @readonly
+ */
 export const FrameSpecial = Object.freeze({
     PROJECTILE_ACTIVE: {
-        name: "projectice active",
+        name: "projectile active",
         color: "#fd0000"
     },
     CANCEL_WINDOW: {
