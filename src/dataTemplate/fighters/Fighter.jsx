@@ -53,7 +53,7 @@ export class Fighter {
 
     /**
      * Descripción del luchador (puede contener JSX).
-     * @type {JSX.Element}
+     * @type {JSX.Element|string}
      */
     #description;
 
@@ -64,6 +64,11 @@ export class Fighter {
      */
     #easyToUse;
 
+    /**
+     * Origen narrativo del personaje
+     * @type {JSX.Element|string}
+     */
+    #narrativeOrigin;
 
     /**
      * Stats base del personaje como su salud o velocidad.
@@ -95,8 +100,6 @@ export class Fighter {
      */
     #fullArt;
 
-
-
     /**
      * Configuración del retrato basada en el fullArt.
      * @type {PortraitConfig}
@@ -114,6 +117,7 @@ export class Fighter {
      * @param {Object} options.archetype Arquetipo del luchador.
      * @param {string|Function|JSX.Element} options.description Descripción (puede ser función).
      * @param {number} [options.easyToUse=2.5] Facilidad de uso (0.5–5).
+     * @param {string|Function|JSX.Element} [options.narrativeOrigin]
      * @param {MoveSet} [options.moveSet] Conjunto de movimientos. Si no se proporciona o es parcial,
      *         se completará automáticamente con movimientos por defecto.
      * @param {BaseStats} [options.baseStats] Stats básicos del personaje.
@@ -128,6 +132,7 @@ export class Fighter {
                     archetype,
                     description,
                     easyToUse = 2.5,
+                    narrativeOrigin,
                     baseStats = {health: 100, walkSpeed: 50, runSpeed: 100},
                     moveSet = new MoveSet(),
                     source = Source.BASE_GAME,
@@ -141,6 +146,7 @@ export class Fighter {
         this.#archetype = archetype;
         this.#description = typeof description === "function" ? description(this) : description;
         this.#easyToUse = this.#normalizeEasyToUse(easyToUse);
+        this.#narrativeOrigin = typeof narrativeOrigin === "function" ? narrativeOrigin(this) : narrativeOrigin;
         this.#baseStats = baseStats;
         if (!(moveSet instanceof MoveSet)) {
             throw new Error("moveSet must be an instance of MoveSet");
@@ -207,7 +213,7 @@ export class Fighter {
         return this.#archetype;
     }
 
-    /** @returns {JSX.Element} Descripción del luchador */
+    /** @returns {JSX.Element|string} Descripción del luchador */
     get description() {
         return this.#description;
     }
@@ -216,6 +222,12 @@ export class Fighter {
     get easyToUse() {
         return this.#easyToUse;
     }
+
+    /** @returns {JSX.Element|string} Origen narrativo */
+    get narrativeOrigin() {
+        return this.#narrativeOrigin;
+    }
+
 
     /** @returns {BaseStats} Stats */
     get baseStats() {

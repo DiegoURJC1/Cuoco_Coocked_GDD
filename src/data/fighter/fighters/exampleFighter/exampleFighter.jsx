@@ -11,6 +11,10 @@ export const exampleFighter = new Fighter({
 
         </>
     ),
+    narrativeOrigin:
+        <>
+            Restaurante italiano de la Toscana.
+        </>,
     easyToUse: 5,
     source: Source.BASE_GAME,
     icon: "../../../public/fighters/icon/alan_icon.svg",

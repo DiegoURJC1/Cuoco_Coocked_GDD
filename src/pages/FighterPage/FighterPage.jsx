@@ -1,12 +1,14 @@
-import { useParams } from "react-router-dom";
-import { Heading1, Heading2, Heading3 } from "../../modules/Heading/Heading.jsx";
+import {useParams} from "react-router-dom";
+import {Heading1, Heading2} from "../../modules/Heading/Heading.jsx";
 import MovePanel from "../../modules/Fighter/MovePanel/MovePanel.jsx";
 import "./FighterPage.css";
-import { fighters } from "../../data/fighter/fighters.jsx";
+import {fighters} from "../../data/fighter/fighters.jsx";
 import Stars from "../../modules/Fighter/Star/Stars.jsx";
 import MoveSection from "../../modules/Fighter/MovePanel/MoveSection.jsx"
+import {InlineIcon} from "../../modules/InlineIcon/InlineIcon.jsx";
+
 export default function FighterPage() {
-    const { id } = useParams();
+    const {id} = useParams();
     const fighter = fighters.find(f => f.id === id);
 
     if (!fighter) return <p>Luchador no encontrado.</p>;
@@ -30,9 +32,11 @@ export default function FighterPage() {
         moveSet.universal.down_r,
         moveSet.universal.down_d,
     ].filter(Boolean);
-    {orderedUniversal.map((move, i) => (
-        <MovePanel key={`u-${i}`} move={move} fighter={fighter} />
-    ))}
+    {
+        orderedUniversal.map((move, i) => (
+            <MovePanel key={`u-${i}`} move={move} fighter={fighter}/>
+        ))
+    }
 
     return (
         <>
@@ -41,16 +45,17 @@ export default function FighterPage() {
             <div>{fighter.description}</div>
 
             <p>Arquetipo: {fighter.archetype.name}</p>
-            <div>Facilidad de uso: <Stars stars={fighter.easyToUse} /></div>
+            <div>Facilidad de uso: <InlineIcon size={2}><Stars stars={fighter.easyToUse}/></InlineIcon></div>
+            <div>Origen:<br/>{fighter.narrativeOrigin}</div>
 
             <Heading2 id="moves">Movimientos</Heading2>
 
             <div className="moves-panel-list">
 
-                <MoveSection title="Universales" moves={orderedUniversal} fighter={fighter} />
-                <MoveSection title="Normales" moves={moveSet.normal} fighter={fighter} />
-                <MoveSection title="Especiales" moves={moveSet.special} fighter={fighter} />
-                <MoveSection title="Overdrives" moves={moveSet.overdrive} fighter={fighter} />
+                <MoveSection title="Universales" moves={orderedUniversal} fighter={fighter}/>
+                <MoveSection title="Normales" moves={moveSet.normal} fighter={fighter}/>
+                <MoveSection title="Especiales" moves={moveSet.special} fighter={fighter}/>
+                <MoveSection title="Overdrives" moves={moveSet.overdrive} fighter={fighter}/>
 
             </div>
 
