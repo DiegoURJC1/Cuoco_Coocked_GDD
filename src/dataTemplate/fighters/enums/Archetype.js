@@ -22,7 +22,7 @@ export const Archetype = Object.freeze({
         name: "Power",
         description: "Golpea con fuerza al oponente antes de que tengan la oportunidad de recuperarse."
     },
-    ZONING: {
+    ZONER: {
         name: "Zoneador",
         description: "Su largo alcance le hace fuerte a largas distancias."
     },

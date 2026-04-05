@@ -1,6 +1,7 @@
 import {Fighter} from "../../../../dataTemplate/fighters/Fighter.jsx";
 import {Archetype} from "../../../../dataTemplate/fighters/enums/Archetype.js";
 import {Source} from "../../../../dataTemplate/fighters/enums/Source.js";
+import {bolognesaMoveSet} from "./moveSetBolognesa.jsx";
 
 export const fighterBolognesa = new Fighter({
     name: "La Boloñesa",
@@ -28,5 +29,6 @@ export const fighterBolognesa = new Fighter({
         health: 100,
         walkSpeed: 55,
         runSpeed: 110
-    }
+    },
+    moveSet: bolognesaMoveSet
 });

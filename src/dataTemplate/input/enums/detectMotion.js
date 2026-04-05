@@ -12,9 +12,9 @@ import {LookDirection} from "./LookDirection.js";
  */
 const motions = [
     ["63214789", { type: MotionType.FULL, dir: LookDirection.RIGHT }],
-    ["21478963", { type: MotionType.FULL, dir: LookDirection.LEFT }],
-    ["14789632", { type: MotionType.FULL, dir: LookDirection.RIGHT }],
-    ["78963214", { type: MotionType.FULL, dir: LookDirection.RIGHT }],
+    ["41236987", { type: MotionType.FULL, dir: LookDirection.LEFT }],
+    ["69874123", { type: MotionType.FULL, dir: LookDirection.RIGHT }],
+    ["47896321", { type: MotionType.FULL, dir: LookDirection.LEFT }],
 
     ["41236", { type: MotionType.HALF, dir: LookDirection.RIGHT }],
     ["63214", { type: MotionType.HALF, dir: LookDirection.LEFT }],
