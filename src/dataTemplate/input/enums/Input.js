@@ -8,22 +8,23 @@
  * @enum {string}
  */
 export const Input = Object.freeze({
-    UP_LEFT: "7",
-    UP: "8",
-    UP_RIGHT: "9",
-    LEFT: "4",
-    NEUTRAL: "5",
-    RIGHT: "6",
-    DOWN_LEFT: "1",
-    DOWN: "2",
-    DOWN_RIGHT: "3",
+  UP_LEFT: "7",
+  UP: "8",
+  UP_RIGHT: "9",
+  LEFT: "4",
+  NEUTRAL: "5",
+  RIGHT: "6",
+  DOWN_LEFT: "1",
+  DOWN: "2",
+  DOWN_RIGHT: "3",
 
-    P: "P", //puño
-    K: "K", //kick
-    S: "S", //slash
-    HS: "HS", //heavy slash
-    D: "D", //dust
-    R: "R", //range
-    DASH: "DASH",
-    TAUNT: "TAUNT",
+  // Mejor golpe ligero y golpe fuerte porque muchos luchadores no tienen "puños" o "piernas" como tal
+  L: "L", // Light: Golpe ligero
+  S: "S", // Strong: Golpe fuerte
+  R: "R", // Range: Golpe a distancia
+  G: "G", // Grab: Agarrar
+  P: "P", // Parry: Tratar de devolver ataque de distancia
+  DASH: "DASH",
+  TAUNT: "TAUNT",
 });
+
