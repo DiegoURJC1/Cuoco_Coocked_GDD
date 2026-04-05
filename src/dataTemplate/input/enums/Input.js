@@ -20,9 +20,10 @@ export const Input = Object.freeze({
 
     P: "P", //puño
     K: "K", //kick
-    R: "R", //range
+    S: "S", //slash
     HS: "HS", //heavy slash
     D: "D", //dust
+    R: "R", //range
     DASH: "DASH",
     TAUNT: "TAUNT",
 });
