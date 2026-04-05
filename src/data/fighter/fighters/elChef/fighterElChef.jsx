@@ -31,11 +31,11 @@ export const fighterElChef = new Fighter({
     source: Source.BASE_GAME,
 
     icon: "",
-    fullArt: "",
+    fullArt: "../../../public/fighters/fullart/el-chef_fullArt.png",
     portraitConfig: {
-        x: 0,
-        y: 0,
-        zoom: 1,
+        x: 0.4,
+        y: -0.4,
+        zoom: 1.5,
     },
     moveSet: chefMoveSet
 });

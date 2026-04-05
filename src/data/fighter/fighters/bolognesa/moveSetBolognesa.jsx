@@ -7,8 +7,9 @@ import {FrameType} from "../../../../dataTemplate/fighters/moves/enums/frameType
 import {Stance} from "../../../../dataTemplate/fighters/enums/Stance.js";
 import {MoveSet} from "../../../../dataTemplate/fighters/moves/MoveSet.jsx";
 
-// ==================== NORMALES ====================
+// region Universal
 
+// region Neutral
 const moveManotazo = new Move({
     name: "Manotazo de albóndiga",
     moveCategory: MoveCategory.NORMAL,
@@ -28,7 +29,74 @@ const moveManotazo = new Move({
         invuln: false
     }
 });
+// endregion
 
+// region Down
+const moveBarrido = new Move({
+    name: "Barrido de fideos",
+    moveCategory: MoveCategory.NORMAL,
+    description: (
+        <>Barrido rápido bajo.</>
+    ),
+    inputList: [Input.DOWN, Input.S],
+    frameList: createFrames([
+        {frameType: FrameType.STARTUP, duration: 5},
+        {frameType: FrameType.ACTIVE, duration: 2},
+        {frameType: FrameType.INACTIVE, duration: 10},
+    ]),
+    moveData: {
+        damage: [8],
+        guard: [Stance.LOW],
+        onBlock: [0],
+        invuln: false
+    }
+});
+
+const moveGranBarrido = new Move({
+    name: "Gran barrido",
+    moveCategory: MoveCategory.NORMAL,
+    description: (
+        <>Barrido pesado que tumba.</>
+    ),
+    inputList: [Input.DOWN, Input.HS],
+    frameList: createFrames([
+        {frameType: FrameType.STARTUP, duration: 13},
+        {frameType: FrameType.ACTIVE, duration: 5},
+        {frameType: FrameType.RECOVERY, duration: 24},
+    ]),
+    moveData: {
+        damage: [18],
+        guard: [Stance.LOW],
+        onBlock: [-14],
+        invuln: false
+    }
+});
+// endregion
+
+// region Aerial
+const moveAereo = new Move({
+    name: "Ensartado de masa aérea",
+    moveCategory: MoveCategory.NORMAL,
+    description: (
+        <>Golpe descendente en salto.</>
+    ),
+    inputList: [Input.S],
+    frameList: createFrames([
+        {frameType: FrameType.STARTUP, duration: 5},
+        {frameType: FrameType.ACTIVE, duration: 4},
+    ]),
+    moveData: {
+        damage: [8],
+        guard: [Stance.HIGH],
+        onBlock: [0],
+        invuln: false
+    }
+});
+// endregion
+// endregion
+
+
+// region Normal
 const moveGancho = new Move({
     name: "Gancho de Ragú",
     moveCategory: MoveCategory.NORMAL,
@@ -49,91 +117,6 @@ const moveGancho = new Move({
     }
 });
 
-// ==================== AGACHADO ====================
-
-const moveBarrido = new Move({
-    name: "Barrido de fideos",
-    moveCategory: MoveCategory.NORMAL,
-    description: (
-        <>Barrido rápido bajo.</>
-    ),
-    inputList: [Input.DOWN, Input.L],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 5},
-        {frameType: FrameType.ACTIVE, duration: 2},
-        {frameType: FrameType.INACTIVE, duration: 10},
-    ]),
-    moveData: {
-        damage: [8],
-        guard: [Stance.LOW],
-        onBlock: [0],
-        invuln: false
-    }
-});
-
-const moveGranBarrido = new Move({
-    name: "Gran barrido",
-    moveCategory: MoveCategory.NORMAL,
-    description: (
-        <>Barrido pesado que tumba.</>
-    ),
-    inputList: [Input.DOWN, Input.S],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 13},
-        {frameType: FrameType.ACTIVE, duration: 5},
-        {frameType: FrameType.RECOVERY, duration: 24},
-    ]),
-    moveData: {
-        damage: [18],
-        guard: [Stance.LOW],
-        onBlock: [-14],
-        invuln: false
-    }
-});
-
-// ==================== AÉREO ====================
-
-const moveAereo = new Move({
-    name: "Ensartado de masa aérea",
-    moveCategory: MoveCategory.NORMAL,
-    description: (
-        <>Golpe descendente en salto.</>
-    ),
-    inputList: [Input.S],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 5},
-        {frameType: FrameType.ACTIVE, duration: 4},
-    ]),
-    moveData: {
-        damage: [8],
-        guard: [Stance.HIGH],
-        onBlock: [0],
-        invuln: false
-    }
-});
-
-// ==================== ESPECIALES ====================
-
-const movePlancha = new Move({
-    name: "Plancha de pasta",
-    moveCategory: MoveCategory.SPECIAL,
-    description: (
-        <>Caída pesada desde el aire. Alto daño.</>
-    ),
-    inputList: [Input.RIGHT, Input.DOWN, Input.DOWN_RIGHT, Input.S],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 16},
-        {frameType: FrameType.ACTIVE, duration: 6},
-        {frameType: FrameType.RECOVERY, duration: 16},
-    ]),
-    moveData: {
-        damage: [33],
-        guard: [Stance.HIGH],
-        onBlock: [-4],
-        invuln: true
-    }
-});
-
 const moveExtension = new Move({
     name: "Extensión de fideos",
     moveCategory: MoveCategory.SPECIAL,
@@ -151,6 +134,28 @@ const moveExtension = new Move({
         guard: [Stance.HIGH],
         onBlock: [-4],
         invuln: false
+    }
+});
+// endregion
+
+// region Special
+const movePlancha = new Move({
+    name: "Plancha de pasta",
+    moveCategory: MoveCategory.SPECIAL,
+    description: (
+        <>Caída pesada desde el aire. Alto daño.</>
+    ),
+    inputList: [Input.RIGHT, Input.DOWN, Input.DOWN_RIGHT, Input.S],
+    frameList: createFrames([
+        {frameType: FrameType.STARTUP, duration: 16},
+        {frameType: FrameType.ACTIVE, duration: 6},
+        {frameType: FrameType.RECOVERY, duration: 16},
+    ]),
+    moveData: {
+        damage: [33],
+        guard: [Stance.HIGH],
+        onBlock: [-4],
+        invuln: true
     }
 });
 
@@ -213,9 +218,9 @@ const moveBola = new Move({
         invuln: false
     }
 });
+// endregion
 
-// ==================== OVERDRIVE ====================
-
+// region Overdrive
 const moveSuper = new Move({
     name: "Il grande condimento",
     moveCategory: MoveCategory.OVERDRIVE,
@@ -242,24 +247,39 @@ const moveSuper = new Move({
         invuln: true
     }
 });
-
-// ==================== EXPORT ====================
+// endregion
 
 export const bolognesaMoveSet = new MoveSet ({
     universal: {
         [UniversalMoveKey.NEUTRAL_P]: moveManotazo,
+        //[UniversalMoveKey.NEUTRAL_K]:,
+        //[UniversalMoveKey.NEUTRAL_S]:,
+        //[UniversalMoveKey.NEUTRAL_HS]:,
+        //[UniversalMoveKey.NEUTRAL_R]:,
+        //[UniversalMoveKey.NEUTRAL_D]:,
+
+        //[UniversalMoveKey.DOWN_P]:,
+        //[UniversalMoveKey.DOWN_K]:,
+        [UniversalMoveKey.DOWN_S]: moveBarrido,
+        [UniversalMoveKey.DOWN_HS]: moveGranBarrido,
+        //[UniversalMoveKey.DOWN_R]:,
+        //[UniversalMoveKey.DOWN_D]:,
+
+        //[UniversalMoveKey.AIR_P]:,
+        //[UniversalMoveKey.AIR_K]:,
+        [UniversalMoveKey.AIR_S]: moveAereo,
+        //[UniversalMoveKey.AIR_HS]:,
+        //[UniversalMoveKey.AIR_R]:,
+        //[UniversalMoveKey.AIR_D]:,
     },
 
     normal: [
         moveGancho,
-        moveBarrido,
-        moveGranBarrido,
-        moveAereo
+        moveExtension
     ],
 
     special: [
         movePlancha,
-        moveExtension,
         moveLlave,
         moveSalsa,
         moveBola

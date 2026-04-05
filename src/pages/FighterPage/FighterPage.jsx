@@ -31,6 +31,13 @@ export default function FighterPage() {
         moveSet.universal.down_hs,
         moveSet.universal.down_r,
         moveSet.universal.down_d,
+
+        moveSet.universal.air_p,
+        moveSet.universal.air_k,
+        moveSet.universal.air_s,
+        moveSet.universal.air_hs,
+        moveSet.universal.air_r,
+        moveSet.universal.air_d,
     ].filter(Boolean);
     {
         orderedUniversal.map((move, i) => (

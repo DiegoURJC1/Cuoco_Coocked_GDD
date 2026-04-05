@@ -18,6 +18,10 @@ export class MoveSet {
      * @property {Move} down_r
      * @property {Move} air_p
      * @property {Move} air_k
+     * @property {Move} air_s
+     * @property {Move} air_hs
+     * @property {Move} air_d
+     * @property {Move} air_r
      */
 
     /**

@@ -5,9 +5,11 @@ import {createFrames} from "../../../../dataTemplate/fighters/moves/Frame.js";
 import {FrameType} from "../../../../dataTemplate/fighters/moves/enums/frameType.js";
 import {Stance} from "../../../../dataTemplate/fighters/enums/Stance.js";
 import {MoveSet} from "../../../../dataTemplate/fighters/moves/MoveSet.jsx";
+import {UniversalMoveKey} from "../../../../dataTemplate/fighters/moves/enums/UniversalMoveKey.js";
 
-// ==================== NORMALES ====================
+// region Universal MoveSet
 
+// region Neutral
 const movePincho = new Move({
     name: "Pincho Rápido de Tenedor",
     moveCategory: MoveCategory.NORMAL,
@@ -28,33 +30,13 @@ const movePincho = new Move({
     }
 });
 
-const moveCorte = new Move({
-    name: "Corte de Cuchillo",
-    moveCategory: MoveCategory.NORMAL,
-    description: (
-        <>Corte diagonal con buena cobertura antiaérea.</>
-    ),
-    inputList: [Input.DOWN, Input.HS],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 9},
-        {frameType: FrameType.ACTIVE, duration: 4},
-        {frameType: FrameType.RECOVERY, duration: 16},
-    ]),
-    moveData: {
-        damage: [25],
-        guard: [Stance.HIGH],
-        onBlock: [-2],
-        invuln: false
-    }
-});
-
 const moveSarten = new Move({
     name: "Golpe de Sartén",
     moveCategory: MoveCategory.NORMAL,
     description: (
         <>Golpe pesado vertical. Alto daño.</>
     ),
-    inputList: [Input.S],
+    inputList: [Input.HS],
     frameList: createFrames([
         {frameType: FrameType.STARTUP, duration: 14},
         {frameType: FrameType.ACTIVE, duration: 5},
@@ -67,9 +49,9 @@ const moveSarten = new Move({
         invuln: false
     }
 });
+// endregion
 
-// ==================== AGACHADO ====================
-
+// region Down
 const movePinchazoBajo = new Move({
     name: "Pinchazo Bajo",
     moveCategory: MoveCategory.NORMAL,
@@ -90,13 +72,33 @@ const movePinchazoBajo = new Move({
     }
 });
 
+const moveCorte = new Move({
+    name: "Corte de Cuchillo",
+    moveCategory: MoveCategory.NORMAL,
+    description: (
+        <>Corte diagonal con buena cobertura antiaérea.</>
+    ),
+    inputList: [Input.DOWN, Input.K],
+    frameList: createFrames([
+        {frameType: FrameType.STARTUP, duration: 9},
+        {frameType: FrameType.ACTIVE, duration: 4},
+        {frameType: FrameType.RECOVERY, duration: 16},
+    ]),
+    moveData: {
+        damage: [25],
+        guard: [Stance.HIGH],
+        onBlock: [-2],
+        invuln: false
+    }
+});
+
 const moveBarrido = new Move({
     name: "Barrido de Cazo",
     moveCategory: MoveCategory.NORMAL,
     description: (
         <>Barrido amplio que derriba.</>
     ),
-    inputList: [Input.DOWN, Input.S],
+    inputList: [Input.DOWN, Input.HS],
     frameList: createFrames([
         {frameType: FrameType.STARTUP, duration: 15},
         {frameType: FrameType.ACTIVE, duration: 6},
@@ -109,9 +111,9 @@ const moveBarrido = new Move({
         invuln: false
     }
 });
+// endregion
 
-// ==================== AÉREOS ====================
-
+// region Aerial
 const moveAereoPincho = new Move({
     name: "Pinchazo Aéreo",
     moveCategory: MoveCategory.NORMAL,
@@ -151,16 +153,18 @@ const moveAereoSarten = new Move({
         invuln: false
     }
 });
+// endregion
 
-// ==================== ESPECIALES ====================
+// endregion
 
+// region Normal
 const moveEstocada = new Move({
     name: "Estocada de Tenedor",
     moveCategory: MoveCategory.SPECIAL,
     description: (
         <>Herramienta principal de zoning.</>
     ),
-    inputList: [Input.RIGHT, Input.R],
+    inputList: [Input.RIGHT, Input.S],
     frameList: createFrames([
         {frameType: FrameType.STARTUP, duration: 12},
         {frameType: FrameType.ACTIVE, duration: 5},
@@ -173,7 +177,9 @@ const moveEstocada = new Move({
         invuln: false
     }
 });
+// endregion
 
+// region Special
 const movePicante = new Move({
     name: "Bote de Salsa Picante",
     moveCategory: MoveCategory.SPECIAL,
@@ -273,8 +279,9 @@ const movePinza = new Move({
         invuln: false
     }
 });
+// endregion
 
-// ==================== OVERDRIVE ====================
+// region Overdrive
 
 const moveSuper = new Move({
     name: "Mise en Place",
@@ -303,23 +310,37 @@ const moveSuper = new Move({
     }
 });
 
-// ==================== EXPORT ====================
+// endregion
 
-export const chefMoveSet = new MoveSet ({
-    universal: {},
+export const chefMoveSet = new MoveSet({
+    universal: {
+        //[UniversalMoveKey.NEUTRAL_P]:,
+        //[UniversalMoveKey.NEUTRAL_K]:,
+        [UniversalMoveKey.NEUTRAL_S]: movePincho,
+        [UniversalMoveKey.NEUTRAL_HS]: moveSarten,
+        //[UniversalMoveKey.NEUTRAL_R]:,
+        //[UniversalMoveKey.NEUTRAL_D]:,
+
+        //[UniversalMoveKey.DOWN_P]:,
+        [UniversalMoveKey.DOWN_K]: moveCorte,
+        [UniversalMoveKey.DOWN_S]: movePinchazoBajo,
+        [UniversalMoveKey.DOWN_HS]: moveBarrido,
+        //[UniversalMoveKey.DOWN_R]:,
+        //[UniversalMoveKey.DOWN_D]:,
+
+        //[UniversalMoveKey.AIR_P]:,
+        //[UniversalMoveKey.AIR_K]:,
+        [UniversalMoveKey.AIR_S]: moveAereoPincho,
+        [UniversalMoveKey.AIR_HS]: moveAereoSarten,
+        //[UniversalMoveKey.AIR_R]:,
+        //[UniversalMoveKey.AIR_D]:,
+    },
 
     normal: [
-        movePincho,
-        moveCorte,
-        moveSarten,
-        movePinchazoBajo,
-        moveBarrido,
-        moveAereoPincho,
-        moveAereoSarten
+        moveEstocada
     ],
 
     special: [
-        moveEstocada,
         movePicante,
         moveMiel,
         moveVinagre,

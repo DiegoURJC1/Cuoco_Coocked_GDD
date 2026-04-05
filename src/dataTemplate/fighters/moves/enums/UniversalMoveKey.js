@@ -13,7 +13,11 @@ export const UniversalMoveKey = Object.freeze({
     DOWN_D: "down_d",
     DOWN_R: "down_r",
 
-    // futuro
-    //AIR_P: "air_p",
-    //AIR_K: "air_k",
+
+    AIR_P: "air_p",
+    AIR_K: "air_k",
+    AIR_S: "air_s",
+    AIR_HS: "air_hs",
+    AIR_D: "air_d",
+    AIR_R: "air_r",
 });

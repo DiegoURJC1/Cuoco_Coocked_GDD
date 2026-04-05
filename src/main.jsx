@@ -7,7 +7,7 @@ import Combat from "./pages/Combat.jsx";
 import ScrollToTop from "./common/auxFunc/ScrollToTop.jsx";
 import {routes} from "./routes/routes.js";
 // Estilos
-import './styles/index.css'
+import './styles/imports.css'
 import TestLinks from "./pages/testPage/TestLinks.jsx";
 import FightersListPage from "./pages/FightersListPage/FightersListPage.jsx";
 import FighterPage from "./pages/FighterPage/FighterPage.jsx";

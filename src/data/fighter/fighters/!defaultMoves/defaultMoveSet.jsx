@@ -5,14 +5,15 @@ import {Input} from "../../../../dataTemplate/input/enums/Input.js";
 import {createFrames} from "../../../../dataTemplate/fighters/moves/Frame.js";
 import {FrameType} from "../../../../dataTemplate/fighters/moves/enums/frameType.js";
 import {Stance} from "../../../../dataTemplate/fighters/enums/Stance.js";
-
-const moveDefaultPunch = new Move(
+// region Universal Moves
+// region Neutral
+const moveDefaultNeutralPunch = new Move(
     {
         name: "Puñetazo por defecto",
         moveCategory: MoveCategory.UNIVERSAL,
         description:
             <>
-                Este es el puñetazo por defecto. A la espera de ser sustituido por un movimiento definitivo.
+                <div className="alert">Este es el puñetazo por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>
         ,
         inputList: [Input.P],
@@ -39,13 +40,13 @@ const moveDefaultPunch = new Move(
     }
 );
 
-const moveDefaultKick = new Move(
+const moveDefaultNeutralKick = new Move(
     {
         name: "Patada por defecto",
         moveCategory: MoveCategory.UNIVERSAL,
         description:
             <>
-                Este es la patada por defecto. A la espera de ser sustituido por un movimiento definitivo.
+                <div className="alert">Este es la patada por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>,
         inputList: [Input.K],
         frameList: createFrames([
@@ -71,13 +72,13 @@ const moveDefaultKick = new Move(
     }
 );
 
-const moveDefaultSlash = new Move(
+const moveDefaultNeutralSlash = new Move(
     {
         name: "Golpe por defecto",
         moveCategory: MoveCategory.UNIVERSAL,
         description:
             <>
-                Este es el golpe por defecto. A la espera de ser sustituido por un movimiento definitivo.
+                <div className="alert">Este es el golpe por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>,
         inputList: [Input.S],
         frameList: createFrames([
@@ -103,13 +104,13 @@ const moveDefaultSlash = new Move(
     }
 );
 
-const moveDefaultHeavySlash = new Move(
+const moveDefaultNeutralHeavySlash = new Move(
     {
         name: "Golpe fuerte por defecto",
         moveCategory: MoveCategory.UNIVERSAL,
         description:
             <>
-                Este es el golpe fuerte por defecto. A la espera de ser sustituido por un movimiento definitivo.
+                <div className="alert">Este es el golpe fuerte por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>,
         inputList: [Input.HS],
         frameList: createFrames([
@@ -135,13 +136,13 @@ const moveDefaultHeavySlash = new Move(
     }
 );
 
-const moveDefaultRange = new Move(
+const moveDefaultNeutralRange = new Move(
     {
         name: "Golpe fuerte por defecto",
         moveCategory: MoveCategory.UNIVERSAL,
         description:
             <>
-                Este es el a distancia por defecto. A la espera de ser sustituido por un movimiento definitivo.
+                <div className="alert">Este es el a distancia por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>,
         inputList: [Input.R],
         frameList: createFrames([
@@ -167,13 +168,13 @@ const moveDefaultRange = new Move(
     }
 );
 
-const moveDefaultDust = new Move(
+const moveDefaultNeutralDust = new Move(
     {
         name: "Golpe comodín por defecto",
         moveCategory: MoveCategory.UNIVERSAL,
         description:
             <>
-                Este es el comodín por defecto. A la espera de ser sustituido por un movimiento definitivo.
+                <div className="alert">Este es el comodín por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>,
         inputList: [Input.D],
         frameList: createFrames([
@@ -198,14 +199,16 @@ const moveDefaultDust = new Move(
         }
     }
 );
+// endregion
 
+// region Down
 const moveDefaultDownPunch = new Move(
     {
         name: "Puñetazo agachado por defecto",
         moveCategory: MoveCategory.UNIVERSAL,
         description:
             <>
-                Este es el puñetazo agachado por defecto. A la espera de ser sustituido por un movimiento definitivo.
+                <div className="alert">Este es el puñetazo agachado por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>
         ,
         inputList: [Input.DOWN, Input.P],
@@ -238,7 +241,7 @@ const moveDefaultDownKick = new Move(
         moveCategory: MoveCategory.UNIVERSAL,
         description:
             <>
-                Esta es la patada agachado por defecto. A la espera de ser sustituido por un movimiento definitivo.
+                <div className="alert">Esta es la patada agachado por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>,
         inputList: [Input.DOWN, Input.K],
         frameList: createFrames([
@@ -270,7 +273,7 @@ const moveDefaultDownSlash = new Move(
         moveCategory: MoveCategory.UNIVERSAL,
         description:
             <>
-                Este es el golpe agachado por defecto. A la espera de ser sustituido por un movimiento definitivo.
+                <div className="alert">Este es el golpe agachado por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>,
         inputList: [Input.DOWN, Input.S],
         frameList: createFrames([
@@ -302,7 +305,7 @@ const moveDefaultDownHeavySlash = new Move(
         moveCategory: MoveCategory.UNIVERSAL,
         description:
             <>
-                Este es el golpe fuerte agachado por defecto. A la espera de ser sustituido por un movimiento definitivo.
+                <div className="alert">Este es el golpe fuerte agachado por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>,
         inputList: [Input.DOWN, Input.HS],
         frameList: createFrames([
@@ -334,7 +337,7 @@ const moveDefaultDownRange = new Move(
         moveCategory: MoveCategory.UNIVERSAL,
         description:
             <>
-                Este es el golpe a distancia agachado por defecto. A la espera de ser sustituido por un movimiento definitivo.
+                <div className="alert">Este es el golpe a distancia agachado por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>,
         inputList: [Input.DOWN, Input.R],
         frameList: createFrames([
@@ -366,7 +369,7 @@ const moveDefaultDownDust = new Move(
         moveCategory: MoveCategory.UNIVERSAL,
         description:
             <>
-                Este es el comodín agachado por defecto. A la espera de ser sustituido por un movimiento definitivo.
+                <div className="alert">Este es el comodín agachado por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>,
         inputList: [Input.DOWN, Input.D],
         frameList: createFrames([
@@ -391,15 +394,211 @@ const moveDefaultDownDust = new Move(
         }
     }
 );
+// endregion
 
+// region Aerial
+const moveDefaultAirPunch = new Move(
+    {
+        name: "Puñetazo aéreo por defecto",
+        moveCategory: MoveCategory.UNIVERSAL,
+        description:
+            <>
+                <div className="alert">Este es el puñetazo aéreo por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
+            </>
+        ,
+        inputList: [Input.P],
+        frameList: createFrames([
+            {
+                frameType: FrameType.STARTUP,
+                duration: 2
+            },
+            {
+                frameType: FrameType.ACTIVE,
+                duration: 2
+            },
+            {
+                frameType: FrameType.RECOVERY,
+                duration: 2
+            },
+        ]),
+        moveData: {
+            damage: [3],
+            guard: [Stance.HIGH],
+            onBlock: [-2],
+            invuln: false
+        }
+    }
+);
+
+const moveDefaultAirKick = new Move(
+    {
+        name: "Patada aéreo por defecto",
+        moveCategory: MoveCategory.UNIVERSAL,
+        description:
+            <>
+                <div className="alert">Esta es la patada aérea por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
+            </>,
+        inputList: [Input.K],
+        frameList: createFrames([
+            {
+                frameType: FrameType.STARTUP,
+                duration: 2
+            },
+            {
+                frameType: FrameType.ACTIVE,
+                duration: 2
+            },
+            {
+                frameType: FrameType.RECOVERY,
+                duration: 2
+            },
+        ]),
+        moveData: {
+            damage: [3],
+            guard: [Stance.HIGH],
+            onBlock: [-2],
+            invuln: false
+        }
+    }
+);
+
+const moveDefaultAirSlash = new Move(
+    {
+        name: "Golpe aéreo por defecto",
+        moveCategory: MoveCategory.UNIVERSAL,
+        description:
+            <>
+                <div className="alert">Este es el golpe aéreo por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
+            </>,
+        inputList: [Input.S],
+        frameList: createFrames([
+            {
+                frameType: FrameType.STARTUP,
+                duration: 2
+            },
+            {
+                frameType: FrameType.ACTIVE,
+                duration: 2
+            },
+            {
+                frameType: FrameType.RECOVERY,
+                duration: 2
+            },
+        ]),
+        moveData: {
+            damage: [3],
+            guard: [Stance.HIGH],
+            onBlock: [-2],
+            invuln: false
+        }
+    }
+);
+
+const moveDefaultAirHeavySlash = new Move(
+    {
+        name: "Golpe fuerte aéreo por defecto",
+        moveCategory: MoveCategory.UNIVERSAL,
+        description:
+            <>
+                <div className="alert">Este es el golpe fuerte aéreo por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
+            </>,
+        inputList: [Input.HS],
+        frameList: createFrames([
+            {
+                frameType: FrameType.STARTUP,
+                duration: 2
+            },
+            {
+                frameType: FrameType.ACTIVE,
+                duration: 2
+            },
+            {
+                frameType: FrameType.RECOVERY,
+                duration: 2
+            },
+        ]),
+        moveData: {
+            damage: [3],
+            guard: [Stance.HIGH],
+            onBlock: [-2],
+            invuln: false
+        }
+    }
+);
+
+const moveDefaultAirRange = new Move(
+    {
+        name: "Golpe fuerte aéreo por defecto",
+        moveCategory: MoveCategory.UNIVERSAL,
+        description:
+            <>
+                <div className="alert">Este es el a distancia aéreo por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
+            </>,
+        inputList: [Input.R],
+        frameList: createFrames([
+            {
+                frameType: FrameType.STARTUP,
+                duration: 2
+            },
+            {
+                frameType: FrameType.ACTIVE,
+                duration: 2
+            },
+            {
+                frameType: FrameType.RECOVERY,
+                duration: 2
+            },
+        ]),
+        moveData: {
+            damage: [3],
+            guard: [Stance.HIGH],
+            onBlock: [-2],
+            invuln: false
+        }
+    }
+);
+
+const moveDefaultAirDust = new Move(
+    {
+        name: "Golpe comodín aéreo por defecto",
+        moveCategory: MoveCategory.UNIVERSAL,
+        description:
+            <>
+                <div className="alert">Este es el comodín aéreo por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
+            </>,
+        inputList: [Input.D],
+        frameList: createFrames([
+            {
+                frameType: FrameType.STARTUP,
+                duration: 2
+            },
+            {
+                frameType: FrameType.ACTIVE,
+                duration: 2
+            },
+            {
+                frameType: FrameType.RECOVERY,
+                duration: 2
+            },
+        ]),
+        moveData: {
+            damage: [3],
+            guard: [Stance.HIGH],
+            onBlock: [-2],
+            invuln: false
+        }
+    }
+);
+// endregion
+// endregion
 export const defaultMoveSet ={
     universal: {
-        [UniversalMoveKey.NEUTRAL_P]: moveDefaultPunch,
-        [UniversalMoveKey.NEUTRAL_K]: moveDefaultKick,
-        [UniversalMoveKey.NEUTRAL_S]: moveDefaultSlash,
-        [UniversalMoveKey.NEUTRAL_HS]: moveDefaultHeavySlash,
-        [UniversalMoveKey.NEUTRAL_R]: moveDefaultRange,
-        [UniversalMoveKey.NEUTRAL_D]: moveDefaultDust,
+        [UniversalMoveKey.NEUTRAL_P]: moveDefaultNeutralPunch,
+        [UniversalMoveKey.NEUTRAL_K]: moveDefaultNeutralKick,
+        [UniversalMoveKey.NEUTRAL_S]: moveDefaultNeutralSlash,
+        [UniversalMoveKey.NEUTRAL_HS]: moveDefaultNeutralHeavySlash,
+        [UniversalMoveKey.NEUTRAL_R]: moveDefaultNeutralRange,
+        [UniversalMoveKey.NEUTRAL_D]: moveDefaultNeutralDust,
 
         [UniversalMoveKey.DOWN_P]: moveDefaultDownPunch,
         [UniversalMoveKey.DOWN_K]: moveDefaultDownKick,
@@ -407,6 +606,13 @@ export const defaultMoveSet ={
         [UniversalMoveKey.DOWN_HS]: moveDefaultDownHeavySlash,
         [UniversalMoveKey.DOWN_R]: moveDefaultDownRange,
         [UniversalMoveKey.DOWN_D]: moveDefaultDownDust,
+
+        [UniversalMoveKey.AIR_P]: moveDefaultAirPunch,
+        [UniversalMoveKey.AIR_K]: moveDefaultAirKick,
+        [UniversalMoveKey.AIR_S]: moveDefaultAirSlash,
+        [UniversalMoveKey.AIR_HS]: moveDefaultAirHeavySlash,
+        [UniversalMoveKey.AIR_R]: moveDefaultAirRange,
+        [UniversalMoveKey.AIR_D]: moveDefaultAirDust,
     },
 
     normal: [
