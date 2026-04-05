@@ -37,6 +37,7 @@ export const fighterBolognesa = new Fighter({
 
   source: Source.BASE_GAME,
 
+  icon: "../../../public/fighters/icon/bolognesa_icon.jpg",
   fullArt: "",
   portraitConfig: {
     x: 0,
@@ -45,6 +46,7 @@ export const fighterBolognesa = new Fighter({
   },
   moveList: [
     {
+      // ==================== Normales ====================
       name: "Manotazo de albóndiga",
       moveCategory: MoveCategory.NORMAL,
       description: () => (
@@ -106,6 +108,7 @@ export const fighterBolognesa = new Fighter({
         invuln: false,
       },
     },
+    // ==================== Normales agachado ====================
     {
       name: "Barrido de fideos",
       moveCategory: MoveCategory.NORMAL,
@@ -166,7 +169,7 @@ export const fighterBolognesa = new Fighter({
         invuln: false,
       },
     },
-
+    // ==================== Normales saltando ====================
     {
       name: "Ensartado de masa aérea",
       moveCategory: MoveCategory.JUMP,
@@ -193,7 +196,7 @@ export const fighterBolognesa = new Fighter({
         invuln: false,
       },
     },
-
+    // ==================== Especiales ====================
     {
       name: "Plancha de pasta",
       moveCategory: MoveCategory.SPECIAL,
@@ -349,7 +352,7 @@ export const fighterBolognesa = new Fighter({
         invuln: false,
       },
     },
-
+    // ==================== SUPER ====================
     {
       name: "Il grande condimento",
       moveCategory: MoveCategory.OVERDRIVE,
