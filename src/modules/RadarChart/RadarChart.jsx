@@ -1,5 +1,22 @@
 import React from "react";
 
+/**
+ * @example
+ * const data = [
+ *         { label: "Fuerza", value: 80, max: 100 },
+ *         { label: "Velocidad", value: 60, max: 100 },
+ *         { label: "Dificultad", value: 90, max: 120 },
+ *         { label: "Técnica", value: 70, max: 200 },
+ *         { label: "Defensa", value: 50, max: 80 },
+ *     ];
+ * <RadarChart data={data} size={350} />
+ * @param param0
+ * @param param0.data
+ * @param param0.size
+ * @param param0.levels
+ * @returns {React.JSX.Element}
+ * @constructor
+ */
 const RadarChart = ({
                         data = [],
                         size = 300,
