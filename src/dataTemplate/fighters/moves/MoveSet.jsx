@@ -79,20 +79,6 @@ export class MoveSet {
         return merged;
     }
 
-    #validateUniversal(universal) {
-        const required = Object.values(UniversalMoveKey);
-
-        const missing = required.filter(k => !universal?.[k]);
-
-        if (missing.length) {
-            throw new Error(
-                `Missing universal moves: ${missing.join(", ")}`
-            );
-        }
-
-        return universal;
-    }
-
     /**
      * @returns {UniversalMoves} Movimientos universales completos (incluye defaults)
      */

@@ -1,12 +1,12 @@
 import {Input} from "../../../../dataTemplate/input/enums/Input.js";
 import {MoveCategory} from "../../../../dataTemplate/fighters/moves/enums/moveCategory.js";
 import {FrameType} from "../../../../dataTemplate/fighters/moves/enums/frameType.js";
-import {createFrames} from "../../../../dataTemplate/fighters/moves/Frame.js";
+//import {createFrames} from "../../../../dataTemplate/fighters/moves/Frame.js";
 import {Move} from "../../../../dataTemplate/fighters/moves/Move.jsx";
 import {Stance} from "../../../../dataTemplate/fighters/enums/Stance.js";
 import {UniversalMoveKey} from "../../../../dataTemplate/fighters/moves/enums/UniversalMoveKey.js";
 import {MoveSet} from "../../../../dataTemplate/fighters/moves/MoveSet.jsx";
-
+/*
 // region Universal Moves
 const movePunch = new Move(
     {
@@ -518,7 +518,7 @@ const movePanPrepare = new Move(
             invuln: false
         }
     }
-);
+);*/
 export const moveSetAlan = null;
 // endregion
 /*

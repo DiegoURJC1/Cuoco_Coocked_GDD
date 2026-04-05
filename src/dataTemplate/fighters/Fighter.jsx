@@ -1,7 +1,5 @@
 import {Source} from "./enums/Source.js";
-import {UniversalMoveKey} from "./moves/enums/UniversalMoveKey.js";
 import {MoveSet} from "./moves/MoveSet.jsx";
-import {defaultMoveSet} from "../../data/fighter/fighters/!defaultMoves/defaultMoveSet.jsx";
 
 /**
  * Representa un luchador en el juego.

@@ -1,4 +1,3 @@
-import {MoveSet} from "../../../../dataTemplate/fighters/moves/MoveSet.jsx";
 import {UniversalMoveKey} from "../../../../dataTemplate/fighters/moves/enums/UniversalMoveKey.js";
 import {Move} from "../../../../dataTemplate/fighters/moves/Move.jsx";
 import {MoveCategory} from "../../../../dataTemplate/fighters/moves/enums/moveCategory.js";
@@ -6,7 +5,6 @@ import {Input} from "../../../../dataTemplate/input/enums/Input.js";
 import {createFrames} from "../../../../dataTemplate/fighters/moves/Frame.js";
 import {FrameType} from "../../../../dataTemplate/fighters/moves/enums/frameType.js";
 import {Stance} from "../../../../dataTemplate/fighters/enums/Stance.js";
-import {MoveState} from "../../../../dataTemplate/fighters/moves/enums/MoveState.js";
 
 const moveDefaultPunch = new Move(
     {
