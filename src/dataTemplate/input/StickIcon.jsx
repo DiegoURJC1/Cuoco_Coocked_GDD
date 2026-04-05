@@ -27,22 +27,22 @@ export function StickIcon({
 
     switch (type) {
         case "neutral":
-            return <StickNeutral style={{ width: size, height: size }} />;
+            return <StickNeutral style={{width: size, height: size}}/>;
 
         case "straight":
-            return <StickStraight style={style} />;
+            return <StickStraight style={style}/>;
 
         case "quarter":
-            return <StickQuarter style={style} />;
+            return <StickQuarter style={style}/>;
 
         case "half":
-            return <StickHalf style={style} />;
+            return <StickHalf style={style}/>;
 
         case "z":
-            return <StickZ style={style} />;
+            return <StickZ style={style}/>;
 
         case "circle":
-            return <StickCircle style={{ width: size, height: size }} />;
+            return <StickCircle style={{width: size, height: size}}/>;
 
         default:
             return null;
@@ -63,11 +63,11 @@ const numpadToAngle = {
 //export const isLeft = (dir) => ["1", "4", "7"].includes(dir);
 //export const isRight = (dir) => ["3", "6", "9"].includes(dir);
 
-export const QCF = () => <StickIcon type="quarter" direction={LookDirection.RIGHT} />;
-export const QCB = () => <StickIcon type="quarter" direction={LookDirection.LEFT} />;
+export const QCF = () => <StickIcon type="quarter" direction={LookDirection.RIGHT}/>;
+export const QCB = () => <StickIcon type="quarter" direction={LookDirection.LEFT}/>;
 
-export const DP = () => <StickIcon type="z" direction={LookDirection.RIGHT}  />;
-export const RDP = () => <StickIcon type="z" direction={LookDirection.LEFT} />;
+export const DP = () => <StickIcon type="z" direction={LookDirection.RIGHT}/>;
+export const RDP = () => <StickIcon type="z" direction={LookDirection.LEFT}/>;
 
-export const HCF = () => <StickIcon type="half" direction={LookDirection.RIGHT}  />;
-export const HCB = () => <StickIcon type="half" direction={LookDirection.LEFT}  />;
+export const HCF = () => <StickIcon type="half" direction={LookDirection.RIGHT}/>;
+export const HCB = () => <StickIcon type="half" direction={LookDirection.LEFT}/>;
