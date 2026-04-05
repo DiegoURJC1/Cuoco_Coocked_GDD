@@ -9,7 +9,7 @@ import {routes} from "./routes/routes.js";
 // Estilos
 import './styles/index.css'
 import TestLinks from "./pages/testPage/TestLinks.jsx";
-import FightersListPage from "./pages/FightersListPage.jsx";
+import FightersListPage from "./pages/FightersListPage/FightersListPage.jsx";
 import FighterPage from "./pages/FighterPage/FighterPage.jsx";
 import Mechanics from "./pages/Mechanics.jsx";
 

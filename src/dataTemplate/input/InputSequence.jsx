@@ -43,7 +43,7 @@ export function InputSequence({ sequence }) {
             elements.push(input);
         }
     });
-    console.log(elements)
+    //console.log(elements)
     flushBuffer();
 
     return (

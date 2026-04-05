@@ -1,10 +1,12 @@
 import {Input} from "../../../../dataTemplate/input/enums/Input.js";
-import {MoveCategory} from "../../../../dataTemplate/fighters/moves/moveCategory.js";
-import {FrameType} from "../../../../dataTemplate/fighters/moves/frameType.js";
-import {createFrames} from "../../../../dataTemplate/fighters/moves/Frame.js";
+import {MoveCategory} from "../../../../dataTemplate/fighters/moves/enums/moveCategory.js";
+import {FrameType} from "../../../../dataTemplate/fighters/moves/enums/frameType.js";
+//import {createFrames} from "../../../../dataTemplate/fighters/moves/Frame.js";
 import {Move} from "../../../../dataTemplate/fighters/moves/Move.jsx";
 import {Stance} from "../../../../dataTemplate/fighters/enums/Stance.js";
-
+import {UniversalMoveKey} from "../../../../dataTemplate/fighters/moves/enums/UniversalMoveKey.js";
+import {MoveSet} from "../../../../dataTemplate/fighters/moves/MoveSet.jsx";
+/*
 // region Universal Moves
 const movePunch = new Move(
     {
@@ -516,31 +518,35 @@ const movePanPrepare = new Move(
             invuln: false
         }
     }
-);
-
+);*/
+export const moveSetAlan = null;
 // endregion
+/*
+export const moveSetAlan = new MoveSet({
+    universal: {
+        [UniversalMoveKey.NEUTRAL_P]: movePunch,
+        [UniversalMoveKey.NEUTRAL_K]: moveKick,
+        [UniversalMoveKey.NEUTRAL_S]: moveSlash,
+        [UniversalMoveKey.NEUTRAL_HS]: moveHeavySlash,
+        [UniversalMoveKey.NEUTRAL_R]: moveRange,
 
-export const moveList = [
-    // Universal moves
-    movePunch,
-    moveKick,
-    moveRange,
-    moveSlash,
-    moveHeavySlash,
+        [UniversalMoveKey.DOWN_P]: moveLowPunch,
+        [UniversalMoveKey.DOWN_K]: moveLowKick,
+        [UniversalMoveKey.DOWN_S]: moveLowSlash,
+        [UniversalMoveKey.DOWN_HS]: moveLowHeavySlash,
+    },
 
-    moveLowPunch,
-    moveLowKick,
-    moveLowSlash,
-    moveLowHeavySlash,
+    normal: [
+        moveForwardPunch,
+        moveWideSlam
+    ],
 
-    // Normal moves
-    moveForwardPunch,
-    moveWideSlam,
+    special: [
+        moveVeggyThrow,
+        moveAntiAir
+    ],
 
-    // Special moves
-    moveVeggyThrow,
-    moveAntiAir,
-
-    // Overdrive move
-    movePanPrepare
-]
+    overdrive: [
+        movePanPrepare
+    ]
+});*/

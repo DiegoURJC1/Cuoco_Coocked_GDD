@@ -1,9 +1,6 @@
 import {Fighter} from "../../../../dataTemplate/fighters/Fighter.jsx";
 import {Archetype} from "../../../../dataTemplate/fighters/enums/Archetype.js";
 import {Source} from "../../../../dataTemplate/fighters/enums/Source.js";
-import {moveList} from "./exampleFighterMoves.jsx";
-
-
 
 export const exampleFighter = new Fighter({
     name: "Alan",
@@ -14,6 +11,10 @@ export const exampleFighter = new Fighter({
 
         </>
     ),
+    narrativeOrigin:
+        <>
+            Restaurante italiano de la Toscana.
+        </>,
     easyToUse: 5,
     source: Source.BASE_GAME,
     icon: "../../../public/fighters/icon/alan_icon.svg",
@@ -23,6 +24,5 @@ export const exampleFighter = new Fighter({
         y: 0.2,
         zoom: 2
     },
-    moveList: moveList
 });
 
