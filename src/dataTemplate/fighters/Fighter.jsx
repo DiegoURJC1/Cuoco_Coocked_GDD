@@ -17,7 +17,11 @@ export class Fighter {
      * @type {string}
      */
     #name;
-
+    /**
+     * Apodo del luchador.
+     * @type {string}
+     */
+    #nickName;
     /**
      * Arquetipo del luchador.
      * @type {Object}
@@ -94,17 +98,19 @@ export class Fighter {
      */
     constructor({
                     name,
+                    nickName,
                     archetype,
                     description,
                     easyToUse = 2.5,
                     moveList = [],
-                    source= Source.BASE_GAME,
+                    source = Source.BASE_GAME,
                     icon,
                     fullArt,
                     portraitConfig
                 }) {
         this.#id = this.#generateIdFromName(name);
         this.#name = name;
+        this.#nickName = nickName;
         this.#archetype = archetype;
         this.#description = typeof description === "function" ? description(this) : description;
         this.#easyToUse = this.#normalizeEasyToUse(easyToUse);
@@ -159,6 +165,11 @@ export class Fighter {
         return this.#name;
     }
 
+    /** @returns {string} Apodo del luchador */
+    get nickName() {
+        return this.#nickName;
+    }
+
     /** @returns {Object} Arquetipo del luchador */
     get archetype() {
         return this.#archetype;
@@ -198,14 +209,14 @@ export class Fighter {
         return (
             <img
                 src={this.fullArt}
-                style={{ width: "100%", aspectRatio: "auto" }}
+                style={{width: "100%", aspectRatio: "auto"}}
                 alt={this.#name + "-full-art"}/>
         )
     }
 
     /** @returns {JSX.Element} Retrato del luchador */
     get portraitArt() {
-        const { x, y, zoom } = this.#portraitConfig;
+        const {x, y, zoom} = this.#portraitConfig;
 
         return (
             <div
