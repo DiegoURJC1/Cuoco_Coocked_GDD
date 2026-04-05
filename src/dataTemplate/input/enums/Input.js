@@ -18,11 +18,11 @@ export const Input = Object.freeze({
     DOWN: "2",
     DOWN_RIGHT: "3",
 
-    P: "P",
-    K: "K",
-    S: "S",
-    HS: "HS",
-    D: "D",
+    P: "P", //puño
+    K: "K", //kick
+    S: "S", //dist
+    HS: "HS", //heavy slash
+    D: "D", //dust
     DASH: "DASH",
     TAUNT: "TAUNT",
 });

@@ -11,6 +11,7 @@ import './styles/index.css'
 import TestLinks from "./pages/testPage/TestLinks.jsx";
 import FightersListPage from "./pages/FightersListPage.jsx";
 import FighterPage from "./pages/FighterPage/FighterPage.jsx";
+import Mechanics from "./pages/Mechanics.jsx";
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
@@ -20,6 +21,7 @@ createRoot(document.getElementById('root')).render(
                 {/* Páginas del documento */}
                 <Route element={<BasePageLayout/>}>
                     <Route path={routes.home.path} element={<Home/>}/>
+                    <Route path={routes.mechanics.path} element={<Mechanics/>}/>
                     <Route path={routes.combat.path} element={<Combat/>}/>
                     <Route path={routes.test.path}>
                         <Route path={routes.test.links} element={<TestLinks/>}/>

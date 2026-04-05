@@ -1,6 +1,6 @@
 import { Fighter } from "../../../dataTemplate/fighters/Fighter.jsx";
 import { Archetype } from "../../../dataTemplate/fighters/enums/./Archetype.js";
-import { createSeasonPass } from "../../../dataTemplate/fighters/enums/Source.js";
+import {createSeasonPass, Source} from "../../../dataTemplate/fighters/enums/Source.js";
 import { MoveCategory } from "../../../dataTemplate/fighters/moves/moveCategory.js";
 import { Input } from "../../../dataTemplate/input/enums/Input.js";
 import { FrameType } from "../../../dataTemplate/fighters/moves/frameType.js";
@@ -8,7 +8,7 @@ import { createFrames } from "../../../dataTemplate/fighters/moves/Frame.js";
 import { InlineIcon } from "../../../modules/InlineIcon/InlineIcon.jsx";
 import { InputIcon } from "../../../dataTemplate/input/InputIcon.jsx";
 
-export const testFighterNag = new Fighter({
+export const fighterBolognesa = new Fighter({
   name: "La Boloñesa",
   archetype: Archetype.RUSHDOWN,
   description: (fighter) => (
@@ -39,7 +39,7 @@ export const testFighterNag = new Fighter({
       description: (fighter) => (
         <>Una agrupación de pasta se alza y deja caer hacia adelante dando un fuerte golpe con una pequeña albóndiga. Rápido y de alcance muy corto.</>
       ),
-      inputList: [5, Input.L],
+      inputList: [Input.RIGHT, Input.L],
       frameList: createFrames([
         {
           frameType: FrameType.STARTUP,

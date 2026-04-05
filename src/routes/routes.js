@@ -2,6 +2,9 @@ export const routes = {
     home: {
         path: "/",
     },
+    mechanics: {
+        path: "/mechanics",
+    },
     combat: {
         path: "/combat",
     },
