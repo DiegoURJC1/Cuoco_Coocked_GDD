@@ -4,6 +4,7 @@ import Slash from "../../assets/icons/input/Slash Icon.svg?react";
 import HeavySlash from "../../assets/icons/input/Heavy Slash Icon.svg?react";
 import Dust from "../../assets/icons/input/Dust Icon.svg?react";
 import Dash from "../../assets/icons/input/Dash Icon.svg?react";
+import Range from "../../assets/icons/input/Range Icon.svg?react";
 import Taunt from "../../assets/icons/input/Taunt Icon.svg?react";
 import {Input} from "./enums/Input.js";
 
@@ -15,6 +16,7 @@ import {Input} from "./enums/Input.js";
  * - **S**: Slash
  * - **HS**: Heavy Slash
  * - **D**: Dust
+ * - **R**: Range
  * - **DASH**: Dash
  * - **TAUNT**: Taunt
  *
@@ -27,6 +29,7 @@ const ButtonMap = {
     [Input.S]: Slash,
     [Input.HS]: HeavySlash,
     [Input.D]: Dust,
+    [Input.R]: Range,
     [Input.DASH]: Dash,
     [Input.TAUNT]: Taunt,
 };
@@ -35,7 +38,7 @@ const ButtonMap = {
  * Componente que renderiza el icono de un botón de acción.
  *
  * @param {Object} props
- * @param {string} props.input - La clave del botón (P, K, S, HS, D, DASH, TAUNT)
+ * @param {string} props.input - La clave del botón (P, K, S, HS, D, R, DASH, TAUNT)
  * @param {Object} [props.size] - Tamaño del icono
  * @returns {React.JSX.Element|null} El icono del botón o null si la clave no existe
  */

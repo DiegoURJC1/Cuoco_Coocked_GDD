@@ -1,0 +1,9 @@
+<svg viewBox="0 0 712 712" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2">
+  <path style="fill:none" d="M0 0h1080v1080H0z" transform="scale(.65926)"/>
+  <g transform="translate(100 100)">
+    <circle cx="256" cy="256" r="256" style="fill:#1c1d1f"/>
+    <path d="M256 0c141.29 0 256 114.71 256 256S397.29 512 256 512 0 397.29 0 256 114.71 0 256 0m0 16.667C123.908 16.667 16.667 123.908 16.667 256S123.908 495.333 256 495.333 495.333 388.092 495.333 256 388.092 16.667 256 16.667" style="fill:#8e9198"/>
+  </g>
+  <g transform="translate(480.803 505.997)scale(399.99941)"/>
+  <text x="254.361" y="1268" style="font-family:&quot;Roboto-Medium&quot;,&quot;Roboto Medium&quot;;font-weight:500;font-size:400px;fill:#edf557" transform="translate(-23.166 -762.001)">R</text>
+</svg>

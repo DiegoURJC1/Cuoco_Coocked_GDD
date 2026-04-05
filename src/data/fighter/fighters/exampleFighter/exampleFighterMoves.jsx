@@ -109,6 +109,40 @@ const moveKick = new Move(
     }
 );
 
+const moveRange = new Move(
+    {
+        name: "Quemado va",
+        moveCategory: MoveCategory.UNIVERSAL,
+        description:
+            <>
+                Lanza una carne chamuscada en arco hacia delante
+            </>
+        ,
+        inputList: [Input.R],
+        frameList: createFrames([
+            {
+                frameType: FrameType.STARTUP,
+                duration: 16
+            },
+            {
+                frameType: FrameType.ACTIVE,
+                duration: 9
+            },
+            {
+                frameType: FrameType.RECOVERY,
+                duration: 21
+            },
+
+        ]),
+        moveData: {
+            damage: [6],
+            guard: [Stance.HIGH, Stance.LOW],
+            onBlock: [-4],
+            invuln: false
+        }
+    }
+);
+
 const moveLowKick = new Move(
     {
         name: "Patada tímida",
@@ -490,6 +524,7 @@ export const moveList = [
     // Universal moves
     movePunch,
     moveKick,
+    moveRange,
     moveSlash,
     moveHeavySlash,
 
