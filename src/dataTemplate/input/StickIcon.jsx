@@ -7,6 +7,7 @@ import StickHalf from "../../assets/icons/input/Stick Half Icon.svg?react";
 import StickZ from "../../assets/icons/input/Stick Z Icon.svg?react";
 import StickCircle from "../../assets/icons/input/Stick Circle Icon.svg?react";
 import {LookDirection} from "./enums/LookDirection.js";
+import {MotionType} from "./enums/MotionType.js";
 
 export function StickIcon({
                               type,
@@ -32,16 +33,16 @@ export function StickIcon({
         case "straight":
             return <StickStraight style={style}/>;
 
-        case "quarter":
+        case MotionType.QUARTER:
             return <StickQuarter style={style}/>;
 
-        case "half":
+        case MotionType.HALF:
             return <StickHalf style={style}/>;
 
-        case "z":
+        case MotionType.Z:
             return <StickZ style={style}/>;
 
-        case "circle":
+        case MotionType.FULL:
             return <StickCircle style={{width: size, height: size}}/>;
 
         default:

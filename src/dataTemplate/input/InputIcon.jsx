@@ -23,7 +23,7 @@ export function InputIcon({ inputs }) {
         if (motion) {
             return (
                 <StickIcon
-                    type={motion.type.toLowerCase()}
+                    type={motion.type}
                     direction={motion.dir}
                     flip={motion.dir === LookDirection.LEFT}
                 />
