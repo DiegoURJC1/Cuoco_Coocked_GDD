@@ -1,11 +1,9 @@
-import {testFighterRam} from "./fighters/testFighterRam.jsx";
-import {testFighterNag} from "./fighters/testFighterNag.jsx";
 import {exampleFighter} from "./fighters/exampleFighter/exampleFighter.jsx";
-import {fighterBolognesa} from "./fighters/fighterBolognesa.jsx";
+import {fighterBolognesa} from "./fighters/bolognesa/fighterBolognesa.jsx";
+import {fighterJohnGrinder} from "./fighters/johnGrinder/fighterJohnGrinder.jsx";
 
 export const fighters = [
-    testFighterRam,
-    testFighterNag,
     exampleFighter,
+    fighterJohnGrinder,
     fighterBolognesa,
 ]

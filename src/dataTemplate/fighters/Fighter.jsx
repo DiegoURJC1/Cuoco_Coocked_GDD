@@ -2,6 +2,25 @@ import {Source} from "./enums/Source.js";
 import {MoveSet} from "./moves/MoveSet.jsx";
 
 /**
+ * Stats base.
+ *
+ * @typedef {Object} BaseStats
+ * @property {number} health Salud máxima. Por defecto 100.
+ * @property {number} walkSpeed Velocidad de caminar.
+ * @property {number} runSpeed Velocidad de carrera.
+ */
+
+
+/**
+ * Configuración del retrato basada en el fullArt.
+ *
+ * @typedef {Object} PortraitConfig
+ * @property {number} x Centro horizontal (0–1)
+ * @property {number} y Centro vertical (0–1)
+ * @property {number} zoom Nivel de zoom (>1 acerca)
+ */
+
+/**
  * Representa un luchador en el juego.
  */
 export class Fighter {
@@ -45,6 +64,13 @@ export class Fighter {
      */
     #easyToUse;
 
+
+    /**
+     * Stats base del personaje como su salud o velocidad.
+     * @type {{health: number, walkSpeed: number, runSpeed: number}}
+     */
+    #baseStats;
+
     /**
      * Fuente del luchador (Base Game/Season Pass).
      * @type {Object}
@@ -59,7 +85,7 @@ export class Fighter {
 
     /**
      * Icono del luchador (URL o referencia).
-     * @type {string}
+     * @type {string|undefined}
      */
     #icon;
 
@@ -69,14 +95,7 @@ export class Fighter {
      */
     #fullArt;
 
-    /**
-     * Configuración del retrato basada en el fullArt.
-     *
-     * @typedef {Object} PortraitConfig
-     * @property {number} x Centro horizontal (0–1)
-     * @property {number} y Centro vertical (0–1)
-     * @property {number} zoom Nivel de zoom (>1 acerca)
-     */
+
 
     /**
      * Configuración del retrato basada en el fullArt.
@@ -97,10 +116,11 @@ export class Fighter {
      * @param {number} [options.easyToUse=2.5] Facilidad de uso (0.5–5).
      * @param {MoveSet} [options.moveSet] Conjunto de movimientos. Si no se proporciona o es parcial,
      *         se completará automáticamente con movimientos por defecto.
+     * @param {BaseStats} [options.baseStats] Stats básicos del personaje.
      * @param {Object} [options.source] Fuente del luchador.
-     * @param {string} [options.icon] Icono del luchador.
-     * @param {string} [options.fullArt] Arte completo del luchador.
-     * @param {PortraitConfig} [options.portraitConfig] Configuración del retrato.
+     * @param {string} [options.icon|undefined] Icono del luchador.
+     * @param {string} [options.fullArt|undefined] Arte completo del luchador.
+     * @param {PortraitConfig} [options.portraitConfig|undefined] Configuración del retrato.
      */
     constructor({
                     name,
@@ -108,6 +128,7 @@ export class Fighter {
                     archetype,
                     description,
                     easyToUse = 2.5,
+                    baseStats = {health: 100, walkSpeed: 50, runSpeed: 100},
                     moveSet = new MoveSet(),
                     source = Source.BASE_GAME,
                     icon,
@@ -120,6 +141,7 @@ export class Fighter {
         this.#archetype = archetype;
         this.#description = typeof description === "function" ? description(this) : description;
         this.#easyToUse = this.#normalizeEasyToUse(easyToUse);
+        this.#baseStats = baseStats;
         if (!(moveSet instanceof MoveSet)) {
             throw new Error("moveSet must be an instance of MoveSet");
         }
@@ -193,6 +215,11 @@ export class Fighter {
     /** @returns {number} Facilidad de uso (0.5 a 5) */
     get easyToUse() {
         return this.#easyToUse;
+    }
+
+    /** @returns {BaseStats} Stats */
+    get baseStats() {
+        return this.#baseStats;
     }
 
     /** @returns {MoveSet} Conjunto de movimientos del luchador */

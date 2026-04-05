@@ -1,12 +1,13 @@
-import {Heading1} from "../modules/Heading/Heading.jsx";
-import PLink from "../modules/Link/PLink.jsx";
-import {fighters} from "../data/fighter/fighters.jsx";
+import {Heading1} from "../../modules/Heading/Heading.jsx";
+import PLink from "../../modules/Link/PLink.jsx";
+import {fighters} from "../../data/fighter/fighters.jsx";
+import "./FightersListPage.css";
 
 export default function FightersListPage() {
     return (
         <div>
             <Heading1 id="fighters">Fighters</Heading1>
-            <ul>
+            <div className="fighters-list">
                 {fighters.map(f => (
                     <PLink key={f.id} href={`/fighters/${f.id}`}>
                         <div
@@ -22,7 +23,7 @@ export default function FightersListPage() {
                     </PLink>
 
                 ))}
-            </ul>
+            </div>
         </div>
     );
 }
