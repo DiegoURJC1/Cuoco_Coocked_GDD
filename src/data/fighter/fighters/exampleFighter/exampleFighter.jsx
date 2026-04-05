@@ -1,7 +1,8 @@
 import {Fighter} from "../../../../dataTemplate/fighters/Fighter.jsx";
 import {Archetype} from "../../../../dataTemplate/fighters/enums/Archetype.js";
 import {Source} from "../../../../dataTemplate/fighters/enums/Source.js";
-import {moveList} from "./exampleFighterMoves.jsx";
+import {moveSetAlan} from "./exampleFighterMoves.jsx";
+import {defaultMoveSet} from "../!defaultMoves/defaultMoveSet.jsx";
 
 
 
@@ -23,6 +24,5 @@ export const exampleFighter = new Fighter({
         y: 0.2,
         zoom: 2
     },
-    moveList: moveList
 });
 

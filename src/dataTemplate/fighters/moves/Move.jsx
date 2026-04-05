@@ -1,4 +1,5 @@
-import {FrameType} from "./frameType.js";
+import {FrameType} from "./enums/frameType.js";
+import {MoveState} from "./enums/MoveState.js";
 
 /**
  * Representa un movimiento de un luchador.
@@ -22,6 +23,12 @@ export class Move {
      * @type {JSX.Element|string}
      */
     #description;
+
+    /**
+     * Estado adicional del movimiento
+     * @type {JSX.Element|string}
+     */
+    #state;
 
     /**
      * Secuencia de inputs que ejecuta el movimiento.
@@ -59,10 +66,11 @@ export class Move {
      * @property {number[]} moveData.onBlock - Frames de ventaja/desventaja al bloquear.
      * @property {boolean} moveData.invuln - Si el movimiento tiene invulnerabilidad.
      */
-    constructor({name, moveCategory, description, inputList, frameList, moveData}) {
+    constructor({name, moveCategory, description, state = MoveState.STAND, inputList, frameList, moveData}) {
         this.#name = name;
         this.#moveCategory = moveCategory;
         this.#description = typeof description === "function" ? description(this) : description;
+        this.#state = state;
         this.#inputList = inputList;
         this.#frameList = frameList;
         this.#moveData = moveData;
@@ -117,6 +125,7 @@ export class Move {
     get name() { return this.#name; }
     get moveCategory() { return this.#moveCategory; }
     get description() { return this.#description; }
+    get state() { return this.#state; }
     get inputList() { return this.#inputList; }
     get frameList() { return this.#frameList; }
     get moveData() { return this.#moveData; }

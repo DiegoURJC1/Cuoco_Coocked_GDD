@@ -1,4 +1,7 @@
 import {Source} from "./enums/Source.js";
+import {UniversalMoveKey} from "./moves/enums/UniversalMoveKey.js";
+import {MoveSet} from "./moves/MoveSet.jsx";
+import {defaultMoveSet} from "../../data/fighter/fighters/!defaultMoves/defaultMoveSet.jsx";
 
 /**
  * Representa un luchador en el juego.
@@ -12,16 +15,19 @@ export class Fighter {
      * @type {string}
      */
     #id;
+
     /**
      * Nombre del luchador.
      * @type {string}
      */
     #name;
+
     /**
      * Apodo del luchador.
      * @type {string}
      */
     #nickName;
+
     /**
      * Arquetipo del luchador.
      * @type {Object}
@@ -48,10 +54,10 @@ export class Fighter {
     #source;
 
     /**
-     * Lista de comandos/movimientos del luchador.
-     * @type {Array<Object>}
+     * Conjunto de movimientos del luchador.
+     * @type {MoveSet}
      */
-    #moveList;
+    #moveSet;
 
     /**
      * Icono del luchador (URL o referencia).
@@ -67,34 +73,36 @@ export class Fighter {
 
     /**
      * Configuración del retrato basada en el fullArt.
-     * Define qué parte de la imagen se muestra.
      *
      * @typedef {Object} PortraitConfig
      * @property {number} x Centro horizontal (0–1)
      * @property {number} y Centro vertical (0–1)
      * @property {number} zoom Nivel de zoom (>1 acerca)
      */
+
     /**
-     * Configuración del retrato basada en el fullArt
+     * Configuración del retrato basada en el fullArt.
      * @type {PortraitConfig}
      */
-    #portraitConfig
+    #portraitConfig;
+
     // endregion
 
-    // region Constructor
     /**
      * Crea un nuevo luchador.
      *
      * @param {Object} options Opciones de inicialización del luchador.
      * @param {string} options.name Nombre del luchador.
-     * @param {Object} options.archetype Arquetipo del luchador (ej. `Archetype.BALANCE`).
-     * @param {string|Function|JSX.Element} options.description Descripción del luchador (puede contener JSX).
-     * @param {number} [options.easyToUse=2.5] Facilidad de uso, entre 0.5 y 5, en incrementos de 0.5.
-     * @param {Array<Object>} [] Lista de comandos/movimientos.
-     * @param {Object} [options.source] Fuente del luchador (ej. `Source.BASE_GAME` o `createSeasonPass(n)`).
-     * @param {string} [options.icon] URL o referencia del icono.
-     * @param {string} [options.fullArt] URL o referencia del arte completo.
-     * @param {PortraitConfig} [options.portraitConfig]
+     * @param {string} [options.nickName] Apodo del luchador.
+     * @param {Object} options.archetype Arquetipo del luchador.
+     * @param {string|Function|JSX.Element} options.description Descripción (puede ser función).
+     * @param {number} [options.easyToUse=2.5] Facilidad de uso (0.5–5).
+     * @param {MoveSet} [options.moveSet] Conjunto de movimientos. Si no se proporciona o es parcial,
+     *         se completará automáticamente con movimientos por defecto.
+     * @param {Object} [options.source] Fuente del luchador.
+     * @param {string} [options.icon] Icono del luchador.
+     * @param {string} [options.fullArt] Arte completo del luchador.
+     * @param {PortraitConfig} [options.portraitConfig] Configuración del retrato.
      */
     constructor({
                     name,
@@ -102,7 +110,7 @@ export class Fighter {
                     archetype,
                     description,
                     easyToUse = 2.5,
-                    moveList = [],
+                    moveSet = new MoveSet(),
                     source = Source.BASE_GAME,
                     icon,
                     fullArt,
@@ -114,7 +122,11 @@ export class Fighter {
         this.#archetype = archetype;
         this.#description = typeof description === "function" ? description(this) : description;
         this.#easyToUse = this.#normalizeEasyToUse(easyToUse);
-        this.#moveList = moveList;
+        if (!(moveSet instanceof MoveSet)) {
+            throw new Error("moveSet must be an instance of MoveSet");
+        }
+
+        this.#moveSet = moveSet;
         this.#source = source;
         this.#icon = icon;
         this.#fullArt = this.#FULL_ART_PATH + fullArt;
@@ -185,9 +197,9 @@ export class Fighter {
         return this.#easyToUse;
     }
 
-    /** @returns {Array<Object>} Lista de comandos/movimientos */
-    get moveList() {
-        return this.#moveList;
+    /** @returns {MoveSet} Conjunto de movimientos del luchador */
+    get moveSet() {
+        return this.#moveSet;
     }
 
     /** @returns {Object} Fuente del luchador */

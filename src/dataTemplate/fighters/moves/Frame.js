@@ -1,4 +1,4 @@
-import {FrameSpecial} from "./frameType.js";
+import {FrameSpecial} from "./enums/frameType.js";
 
 export class Frame {
     #frameType;

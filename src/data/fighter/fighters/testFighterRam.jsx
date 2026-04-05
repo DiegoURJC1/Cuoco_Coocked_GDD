@@ -19,5 +19,5 @@ export const testFighterRam = new Fighter({
         x: 0.48,
         y: 0.04,
         zoom:5
-    }
+    },
 })
