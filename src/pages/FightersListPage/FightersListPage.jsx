@@ -1,4 +1,4 @@
-import {Heading1} from "../../modules/Heading/Heading.jsx";
+import {Heading1, Heading2} from "../../modules/Heading/Heading.jsx";
 import PLink from "../../modules/Link/PLink.jsx";
 import {fighters} from "../../data/fighter/fighters.jsx";
 import "./FightersListPage.css";
@@ -6,7 +6,12 @@ import "./FightersListPage.css";
 export default function FightersListPage() {
     return (
         <div>
-            <Heading1 id="fighters">Fighters</Heading1>
+            <Heading1 id="fighters">Personajes</Heading1>
+            <Heading2 id="archetypes">Arquetipos</Heading2>
+            <p>
+
+            </p>
+            <Heading2 id="fighter-list">Roster completo</Heading2>
             <div className="fighters-list">
                 {fighters.map(f => (
                     <PLink key={f.id} href={`/fighters/${f.id}`}>
