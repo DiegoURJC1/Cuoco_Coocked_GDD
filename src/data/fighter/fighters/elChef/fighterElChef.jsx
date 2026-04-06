@@ -38,5 +38,10 @@ export const fighterElChef = new Fighter({
         y: -0.4,
         zoom: 1.5,
     },
+    baseStats: {
+        health: 100,
+        walkSpeed: 45,
+        runSpeed: 95
+    },
     moveSet: chefMoveSet
 });

@@ -6,6 +6,7 @@ import {fighters} from "../../data/fighter/fighters.jsx";
 import Stars from "../../modules/Fighter/Star/Stars.jsx";
 import MoveSection from "../../modules/Fighter/MovePanel/MoveSection.jsx"
 import {InlineIcon} from "../../modules/InlineIcon/InlineIcon.jsx";
+import {FighterRadar} from "../../modules/RadarChart/FighterRadar.jsx";
 
 export default function FighterPage() {
     const {id} = useParams();
@@ -53,6 +54,7 @@ export default function FighterPage() {
 
             <p>Arquetipo: {fighter.archetype.name}</p>
             <div>Facilidad de uso: <InlineIcon size={2}><Stars stars={fighter.easyToUse}/></InlineIcon></div>
+            <FighterRadar fighter={fighter}/>
             <div>Origen:<br/>{fighter.narrativeOrigin}</div>
             <div>Tipo:<br/>{fighter.type}</div>
             <div>
