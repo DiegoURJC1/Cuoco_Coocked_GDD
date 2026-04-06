@@ -11,7 +11,13 @@ import './styles/imports.css'
 import TestLinks from "./pages/testPage/TestLinks.jsx";
 import FightersListPage from "./pages/FightersListPage/FightersListPage.jsx";
 import FighterPage from "./pages/FighterPage/FighterPage.jsx";
-import Mechanics from "./pages/Mechanics.jsx";
+import MechanicsPage from "./pages/MechanicsPage.jsx";
+import DressingsPage from "./pages/DressingsPage.jsx";
+import ScenaryListPage from "./pages/ScenaryListPage.jsx";
+import GameModesPage from "./pages/GameModesPage.jsx";
+import AppearancePage from "./pages/AppearancePage.jsx";
+import BusinessPage from "./pages/BusinessPage.jsx";
+import GlosaryPage from "./pages/GlosaryPage.jsx";
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
@@ -21,7 +27,13 @@ createRoot(document.getElementById('root')).render(
                 {/* Páginas del documento */}
                 <Route element={<BasePageLayout/>}>
                     <Route path={routes.home.path} element={<Home/>}/>
-                    <Route path={routes.mechanics.path} element={<Mechanics/>}/>
+                    <Route path={routes.mechanics.path} element={<MechanicsPage/>}/>
+                    <Route path={routes.dressings.path} element={<DressingsPage/>}/>
+                    <Route path={routes.scenary.path} element={<ScenaryListPage/>}/>
+                    <Route path={routes.gameModes.path} element={<GameModesPage/>}/>
+                    <Route path={routes.appearance.path} element={<AppearancePage/>}/>
+                    <Route path={routes.business.path} element={<BusinessPage/>}/>
+                    <Route path={routes.glosary.path} element={<GlosaryPage/>}/>
                     <Route path={routes.combat.path} element={<Combat/>}/>
                     <Route path={routes.test.path}>
                         <Route path={routes.test.links} element={<TestLinks/>}/>
