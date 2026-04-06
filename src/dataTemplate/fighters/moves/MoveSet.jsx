@@ -4,7 +4,7 @@ import {
     validateUniversalMove,
     validateNormalMove,
     validateSpecialMove,
-    sortMoves, validateOverdriveMove, validateDuplicateInputs
+    sortMoves, validateOverdriveMove, validateDuplicateInputs, validateCrouchState
 } from "./moveValidation.js";
 
 export class MoveSet {
@@ -122,6 +122,10 @@ export class MoveSet {
         this.#normal = sortMoves(this.#normal);
         this.#special = sortMoves(this.#special);
         this.#overdrive = sortMoves(this.#overdrive);
+
+        // CROUCH
+        [...Object.values(this.#universal), ...this.#normal, ...this.#special, ...this.#overdrive]
+            .forEach(validateCrouchState);
 
         // DUPLICATES
         validateDuplicateInputs(this);

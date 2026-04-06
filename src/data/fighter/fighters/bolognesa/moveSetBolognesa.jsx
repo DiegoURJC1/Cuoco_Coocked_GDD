@@ -107,7 +107,7 @@ const moveGancho = new Move({
     description: (
         <>Uppercut ascendente de masa. Antiaéreo situacional.</>
     ),
-    inputList: [Input.NEUTRAL, Input.S],
+    inputList: [Input.RIGHT, Input.S],
     frameList: createFrames([
         {frameType: FrameType.STARTUP, duration: 12},
         {frameType: FrameType.ACTIVE, duration: 4},

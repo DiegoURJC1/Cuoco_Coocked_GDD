@@ -275,3 +275,31 @@ export function sortMoves(moves) {
 }
 
 // endregion
+
+// region Crouch
+
+export function validateCrouchState(move) {
+    const warn = (msg) => {
+        console.warn(`⚠️ [CrouchCheck] ${move.name} → ${msg}`);
+    };
+
+    if (!move.inputList || move.inputList.length === 0) return;
+
+    const firstInput = move.inputList[0];
+
+    // Si el primer input es DOWN, DOWN_LEFT o DOWN_RIGHT
+    if ([Input.DOWN, Input.DOWN_LEFT, Input.DOWN_RIGHT].includes(firstInput)) {
+        // Verificar si no forma parte de un motion
+        if (!detectMotion(move.inputList)) {
+            // Alerta si el estado no es CROUCH
+            if (move.state !== MoveState.CROUCH) {
+                warn(
+                    `Primer input es ${firstInput}, pero move.state=${move.state}. ` +
+                    `Debería ser type CROUCH`
+                );
+            }
+        }
+    }
+}
+
+// endregion
