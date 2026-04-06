@@ -17,6 +17,7 @@ import ScenaryListPage from "./pages/ScenaryListPage.jsx";
 import GameModesPage from "./pages/GameModesPage.jsx";
 import AppearancePage from "./pages/AppearancePage.jsx";
 import BusinessPage from "./pages/BusinessPage.jsx";
+import GlosaryPage from "./pages/GlosaryPage.jsx";
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
@@ -32,6 +33,7 @@ createRoot(document.getElementById('root')).render(
                     <Route path={routes.gameModes.path} element={<GameModesPage/>}/>
                     <Route path={routes.appearance.path} element={<AppearancePage/>}/>
                     <Route path={routes.business.path} element={<BusinessPage/>}/>
+                    <Route path={routes.glosary.path} element={<GlosaryPage/>}/>
                     <Route path={routes.combat.path} element={<Combat/>}/>
                     <Route path={routes.test.path}>
                         <Route path={routes.test.links} element={<TestLinks/>}/>

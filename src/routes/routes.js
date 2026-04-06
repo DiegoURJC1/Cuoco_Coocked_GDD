@@ -20,6 +20,9 @@ export const routes = {
     business: {
         path: "/business",
     },
+    glosary: {
+        path: "/glosary",
+    },
     combat: {
         path: "/combat",
     },

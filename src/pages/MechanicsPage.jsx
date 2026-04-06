@@ -1,4 +1,5 @@
-import {Heading1, Heading2} from "../modules/Heading/Heading.jsx"
+import {Heading1, Heading2, Heading3} from "../modules/Heading/Heading.jsx"
+import {Input} from "../dataTemplate/input/enums/Input.js";
 export default function MechanicsPage() {
     return (
         <>
@@ -38,7 +39,26 @@ export default function MechanicsPage() {
             </p>
             <Heading2 id="movement">Movimiento</Heading2>
             <p>
+                <Heading3>Movimientos básicos</Heading3>
+                 <b> {Input.RIGHT} → : </b> Andar adelante, velocidad estándar                        <br></br>
+                <b> ← : </b> Andar atrás, velocidad estándar                            <br></br>
+                <b> →→ : </b> Dash adelante, corto, con frames de recuperación             <br></br>
+                <b> ←← : </b> Backdash, invencibilidad parcial en startup             <br></br>
+                <b> ↓ : </b> Agacharse, cambia hurtbox, accede a ataques agachado     <br></br>
+                <b> ↑ : </b> Saltar, arco neutral                                  <br></br>
+                <b> ↑→ : </b> Saltar adelante, salto diagonal ofensivo                       <br></br>
+                <b> ↑← : </b> Saltar atrás, salto diagonal defensivo / escape             <br></br>
+                <b> ↓→↑ : </b> Salto bajo, salto más rápido, menor altura                <br></br>
 
+                <Heading3>Características del salto</Heading3>
+                - Arco fijo una vez iniciado (sin control aéreo extendido)<br></br>
+                - Ataques aéreos disponibles<br></br>
+                - Vulnerable durante el ascenso a ataques antiaire<br></br>
+                - Los grabs terrestres no alcanzan a personajes en aire<br></br>
+
+                <hr></hr>
+                <Heading3>Restricciones por Aderezo</Heading3>
+                <b>- Saciado (debuff) </b>: elimina la capacidad de dash y salto durante su duración
             </p>
             <Heading2 id="offensive-system">Sistema ofensivo</Heading2>
             <p>
