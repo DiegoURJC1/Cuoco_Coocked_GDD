@@ -16,18 +16,18 @@ export default function Stars({ stars = 2.5 }) {
     const hasHalfStar = stars % 1 === 0.5;
 
     const starStyle = {
-        width: "1em",
-        height: "1em",
-        flexShrink: 0, // 👈 importante
+        width: "auto",
+        height: "100%",
+        flexShrink: 0,
     };
 
     return (
-        <div style={{ display: "flex", gap: "0.2em" }}>
+        <>
             {Array.from({ length: fullStars }, (_, i) => (
                 <Star key={`full-${i}`} style={starStyle} />
             ))}
 
             {hasHalfStar && <HalfStar style={starStyle} />}
-        </div>
+        </>
     );
 }

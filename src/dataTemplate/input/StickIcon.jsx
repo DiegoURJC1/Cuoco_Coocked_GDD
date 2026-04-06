@@ -20,6 +20,8 @@ export function StickIcon({
     const style = {
         width: "auto",
         height: "100%",
+        objectFit: "contain",
+        display: "block",
         transform: `
       rotate(${angle}deg)
       ${flip ? "scaleX(-1)" : ""}
@@ -43,7 +45,7 @@ export function StickIcon({
             return <StickZ style={style}/>;
 
         case MotionType.FULL:
-            return <StickCircle style={{width: size, height: size}}/>;
+            return <StickCircle style={style}/>;
 
         default:
             return null;

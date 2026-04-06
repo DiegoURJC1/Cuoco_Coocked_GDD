@@ -1,3 +1,5 @@
+import "./InlineIcon.css";
+
 /**
  * Contenedor genérico para renderizar iconos inline con tamaño relativo en `em`.
  *
@@ -10,13 +12,15 @@
  * @param {string} [props.verticalAlign="middle"] - Alineación vertical del icono respecto al texto.
  * @returns {React.JSX.Element} Elemento `<span>` contenedor del icono.
  */
-export function InlineIcon({ children, size = 1, verticalAlign = "middle" }) {
+export function InlineIcon({ children, size = 1, verticalAlign = "middle", alignItems = "normal" }) {
     const style = {
-        display: "inline-block",
-        width: typeof size === "number" ? `${size}em` : size,
+        //display: "inline-block",
+        width: "auto",
         height: typeof size === "number" ? `${size}em` : size,
-        verticalAlign: verticalAlign, // para alinear con el texto, otra opción: "text-bottom"
+        verticalAlign: verticalAlign, // para alinear con el texto, otra opción: "text-bottom" o "middle"
+        alignItems: alignItems,
+        marginLeft: "auto"
     };
 
-    return <span style={style}>{children}</span>;
+    return <span className="inline-icon-wrapper" style={style}>{children}</span>;
 }
