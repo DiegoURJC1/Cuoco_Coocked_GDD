@@ -6,6 +6,7 @@ import {createFrames} from "../../../../dataTemplate/fighters/moves/Frame.js";
 import {FrameType} from "../../../../dataTemplate/fighters/moves/enums/frameType.js";
 import {Stance} from "../../../../dataTemplate/fighters/enums/Stance.js";
 import {MoveSet} from "../../../../dataTemplate/fighters/moves/MoveSet.jsx";
+import {MoveState} from "../../../../dataTemplate/fighters/moves/enums/MoveState.js";
 
 // region Universal
 
@@ -38,6 +39,7 @@ const moveBarrido = new Move({
     description: (
         <>Barrido rápido bajo.</>
     ),
+    state: MoveState.CROUCH,
     inputList: [Input.DOWN, Input.S],
     frameList: createFrames([
         {frameType: FrameType.STARTUP, duration: 5},
@@ -58,6 +60,7 @@ const moveGranBarrido = new Move({
     description: (
         <>Barrido pesado que tumba.</>
     ),
+    state: MoveState.CROUCH,
     inputList: [Input.DOWN, Input.HS],
     frameList: createFrames([
         {frameType: FrameType.STARTUP, duration: 13},
@@ -80,6 +83,7 @@ const moveAereo = new Move({
     description: (
         <>Golpe descendente en salto.</>
     ),
+    state: MoveState.AIR,
     inputList: [Input.S],
     frameList: createFrames([
         {frameType: FrameType.STARTUP, duration: 5},

@@ -6,6 +6,7 @@ import {FrameType} from "../../../../dataTemplate/fighters/moves/enums/frameType
 import {Stance} from "../../../../dataTemplate/fighters/enums/Stance.js";
 import {MoveSet} from "../../../../dataTemplate/fighters/moves/MoveSet.jsx";
 import {UniversalMoveKey} from "../../../../dataTemplate/fighters/moves/enums/UniversalMoveKey.js";
+import {MoveState} from "../../../../dataTemplate/fighters/moves/enums/MoveState.js";
 
 // region Universal MoveSet
 
@@ -58,6 +59,7 @@ const movePinchazoBajo = new Move({
     description: (
         <>Ataque bajo con tenedor.</>
     ),
+    state: MoveState.CROUCH,
     inputList: [Input.DOWN, Input.S],
     frameList: createFrames([
         {frameType: FrameType.STARTUP, duration: 6},
@@ -78,6 +80,7 @@ const moveCorte = new Move({
     description: (
         <>Corte diagonal con buena cobertura antiaérea.</>
     ),
+    state: MoveState.CROUCH,
     inputList: [Input.DOWN, Input.K],
     frameList: createFrames([
         {frameType: FrameType.STARTUP, duration: 9},
@@ -98,6 +101,7 @@ const moveBarrido = new Move({
     description: (
         <>Barrido amplio que derriba.</>
     ),
+    state: MoveState.CROUCH,
     inputList: [Input.DOWN, Input.HS],
     frameList: createFrames([
         {frameType: FrameType.STARTUP, duration: 15},
@@ -120,6 +124,7 @@ const moveAereoPincho = new Move({
     description: (
         <>Jump-in rápido con buen alcance.</>
     ),
+    state: MoveState.AIR,
     inputList: [Input.S],
     frameList: createFrames([
         {frameType: FrameType.STARTUP, duration: 6},
@@ -140,6 +145,7 @@ const moveAereoSarten = new Move({
     description: (
         <>Ataque aéreo vertical de gran hitbox.</>
     ),
+    state: MoveState.AIR,
     inputList: [Input.HS],
     frameList: createFrames([
         {frameType: FrameType.STARTUP, duration: 17},

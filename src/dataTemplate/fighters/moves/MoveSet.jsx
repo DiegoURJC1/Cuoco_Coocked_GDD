@@ -1,5 +1,11 @@
 import {UniversalMoveKey} from "./enums/UniversalMoveKey.js";
 import {defaultMoveSet} from "../../../data/fighter/fighters/!defaultMoves/defaultMoveSet.jsx";
+import {
+    validateUniversalMove,
+    validateNormalMove,
+    validateSpecialMove,
+    sortMoves
+} from "./moveValidation.js";
 
 export class MoveSet {
     /**
@@ -67,10 +73,26 @@ export class MoveSet {
 
         const base = defaultMoveSet;
 
+        // Construir primero
         this.#universal = this.#mergeUniversal(universal, base);
+
         this.#normal = normal.length ? normal : [...base.normal];
         this.#special = special.length ? special : [...base.special];
         this.#overdrive = overdrive.length ? overdrive : [...base.overdrive];
+
+        // Validar universales
+        Object.entries(this.#universal).forEach(([key, move]) => {
+            validateUniversalMove(key, move);
+        });
+
+        // Validar listas
+        this.#normal.forEach(validateNormalMove);
+        this.#special.forEach(validateSpecialMove);
+
+        // Ordenar
+        this.#normal = sortMoves(this.#normal);
+        this.#special = sortMoves(this.#special);
+        this.#overdrive = sortMoves(this.#overdrive);
     }
 
     #mergeUniversal(universal, base) {
