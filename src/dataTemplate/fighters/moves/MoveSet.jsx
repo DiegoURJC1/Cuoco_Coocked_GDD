@@ -4,7 +4,7 @@ import {
     validateUniversalMove,
     validateNormalMove,
     validateSpecialMove,
-    sortMoves, validateOverdriveMove
+    sortMoves, validateOverdriveMove, validateDuplicateInputs
 } from "./moveValidation.js";
 
 export class MoveSet {
@@ -122,6 +122,9 @@ export class MoveSet {
         this.#normal = sortMoves(this.#normal);
         this.#special = sortMoves(this.#special);
         this.#overdrive = sortMoves(this.#overdrive);
+
+        // DUPLICATES
+        validateDuplicateInputs(this);
     }
 
     #mergeUniversal(universal, base) {

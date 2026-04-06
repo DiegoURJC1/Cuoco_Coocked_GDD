@@ -182,6 +182,50 @@ export function validateOverdriveMove(move) {
 
 // endregion
 
+
+// region Duplicate Inputs
+
+function normalizeInput(move) {
+    // Comparar el state para diferenciar moves con mismo input pero distinto estado
+    return move.inputList.join("-") + `|${move.state}`;
+}
+
+export function validateDuplicateInputs(moveSet) {
+    const map = new Map();
+
+    const allMoves = [
+        ...Object.values(moveSet.universal),
+        ...moveSet.normal,
+        ...moveSet.special,
+        ...moveSet.overdrive
+    ];
+
+    allMoves.forEach(move => {
+        if (!move) return;
+
+        const key = normalizeInput(move);
+
+        if (!map.has(key)) {
+            map.set(key, []);
+        }
+
+        map.get(key).push(move);
+    });
+
+    // detectar duplicados
+    map.forEach((moves, inputKey) => {
+        if (moves.length > 1) {
+            console.warn(`🚨 Inputs duplicados [${inputKey}]`);
+
+            moves.forEach(m => {
+                console.warn(`   → ${m.name} (${m.moveCategory}, state=${m.state})`);
+            });
+        }
+    });
+}
+
+// endregion
+
 // region Consistency (GLOBAL)
 
 export function validateMoveConsistency(move) {
