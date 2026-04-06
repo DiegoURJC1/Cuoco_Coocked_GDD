@@ -1,5 +1,9 @@
 import {Heading1, Heading2, Heading3} from "../modules/Heading/Heading.jsx"
 import {Input} from "../dataTemplate/input/enums/Input.js";
+import {InlineIcon} from "../modules/InlineIcon/InlineIcon.jsx";
+import {InputSequence} from "../dataTemplate/input/InputSequence.jsx";
+import AlertPanel from "../modules/AlertPanel/AlertPanel.jsx";
+
 export default function MechanicsPage() {
     return (
         <>
@@ -11,12 +15,13 @@ export default function MechanicsPage() {
                 match. Si el primer round lo gana uno y el segundo lo gana el contrincante, se disputará un último round
                 y saldrá ganador quien venza en este mismo. Para ganar un round hay dos vías:
             </p>
-                <b>1.-</b> Bajar la vida del oponente hasta 0, que a partir de ahora llamaremos "COOCKED" a modo de "KO".
+            <b>1.-</b> Bajar la vida del oponente hasta 0, que a partir de ahora llamaremos "COOCKED" a modo de "KO".
             <br></br>
-                <b>2.-</b> Tener más vida que tu oponente al finalizar la cuenta atrás.
+            <b>2.-</b> Tener más vida que tu oponente al finalizar la cuenta atrás.
             <br></br>
-            <p>
-                La estructura interna de cada round sigue el siguiente esquema/diagrama de flujo: (*TODO: crear esquema/diagrama*)
+            <div>
+                La estructura interna de cada round sigue el siguiente esquema/diagrama de flujo:
+                <AlertPanel>TODO: crear esquema/diagrama</AlertPanel>
                 <br></br>
                 INICIO DE ROUND <br></br>
                 │ <br></br>
@@ -36,30 +41,52 @@ export default function MechanicsPage() {
                 │ <br></br>
                 ▼ <br></br>
                 FIN DE ROUND → siguiente round o fin de match <br></br>
-            </p>
+            </div>
             <Heading2 id="movement">Movimiento</Heading2>
-            <p>
-                <Heading3>Movimientos básicos</Heading3>
-                 <b> {Input.RIGHT} → : </b> Andar adelante, velocidad estándar                        <br></br>
-                <b> ← : </b> Andar atrás, velocidad estándar                            <br></br>
-                <b> →→ : </b> Dash adelante, corto, con frames de recuperación             <br></br>
-                <b> ←← : </b> Backdash, invencibilidad parcial en startup             <br></br>
-                <b> ↓ : </b> Agacharse, cambia hurtbox, accede a ataques agachado     <br></br>
-                <b> ↑ : </b> Saltar, arco neutral                                  <br></br>
-                <b> ↑→ : </b> Saltar adelante, salto diagonal ofensivo                       <br></br>
-                <b> ↑← : </b> Saltar atrás, salto diagonal defensivo / escape             <br></br>
-                <b> ↓→↑ : </b> Salto bajo, salto más rápido, menor altura                <br></br>
 
-                <Heading3>Características del salto</Heading3>
-                - Arco fijo una vez iniciado (sin control aéreo extendido)<br></br>
-                - Ataques aéreos disponibles<br></br>
-                - Vulnerable durante el ascenso a ataques antiaire<br></br>
-                - Los grabs terrestres no alcanzan a personajes en aire<br></br>
+            <Heading3 id="movement-basic">Movimientos básicos</Heading3>
+            <ul>
+                <li><InlineIcon size={2}><InputSequence sequence={[Input.RIGHT]}/></InlineIcon>: Andar adelante,
+                    velocidad estándar
+                </li>
+                <li><InlineIcon size={2}><InputSequence sequence={[Input.LEFT]}/></InlineIcon>: Andar atrás, velocidad
+                    estándar
+                </li>
+                <li><InlineIcon size={2}><InputSequence sequence={[Input.RIGHT, Input.RIGHT]}/></InlineIcon>/
+                    <InlineIcon size={2}><InputSequence sequence={[Input.DASH]}/></InlineIcon>: Dash
+                    adelante, corto, con frames de recuperación
+                </li>
+                <li><InlineIcon size={2}><InputSequence sequence={[Input.LEFT, Input.LEFT]}/></InlineIcon>/
+                    <InlineIcon size={2}><InputSequence sequence={[Input.DASH]}/></InlineIcon>: Backdash, invencibilidad
+                    parcial en startup
+                </li>
+                <li><InlineIcon size={2}><InputSequence sequence={[Input.DOWN]}/></InlineIcon>: Agacharse, cambia
+                    hurtbox, accede a ataques agachado
+                </li>
+                <li><InlineIcon size={2}><InputSequence sequence={[Input.UP]}/></InlineIcon>: Saltar, arco neutral</li>
+                <li><InlineIcon size={2}><InputSequence sequence={[Input.UP_RIGHT]}/></InlineIcon>: Saltar adelante,
+                    salto diagonal ofensivo
+                </li>
+                <li><InlineIcon size={2}><InputSequence sequence={[Input.UP_LEFT]}/></InlineIcon>: Saltar atrás, salto
+                    diagonal defensivo / escape
+                </li>
+                <li> ↓→↑ : Salto bajo, salto más rápido, menor altura</li>
+                {/* Diego: Tengo dudas sobre este input */}
+            </ul>
+            <Heading3 id="movement-jump">Características del salto</Heading3>
+            <ul>
+                <li>Arco fijo una vez iniciado (sin control aéreo extendido)</li>
+                <li>Ataques aéreos disponibles</li>
+                <li>Vulnerable durante el ascenso a ataques antiaereos</li>
+                <li>Los grabs terrestres no alcanzan a personajes en aire</li>
+            </ul>
+            <hr></hr>
 
-                <hr></hr>
-                <Heading3>Restricciones por Aderezo</Heading3>
-                <b>- Saciado (debuff) </b>: elimina la capacidad de dash y salto durante su duración
-            </p>
+
+            <Heading3 id="dressing-restrictions">Restricciones por Aderezo</Heading3>
+            <ul>
+                <li><b>- Saciado (debuff) </b>: elimina la capacidad de dash y salto durante su duración</li>
+            </ul>
             <Heading2 id="offensive-system">Sistema ofensivo</Heading2>
             <p>
 

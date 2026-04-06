@@ -1,14 +1,6 @@
 import {Heading1, Heading2} from "../modules/Heading/Heading.jsx"
 import RadarChart from "../modules/RadarChart/RadarChart.jsx";
 export default function Home() {
-    const data = [
-        { label: "Fuerza", value: 80, max: 100 },
-        { label: "Velocidad", value: 60, max: 100 },
-        { label: "Dificultad", value: 90, max: 120 },
-        { label: "Técnica", value: 70, max: 200 },
-        { label: "Defensa", value: 50, max: 80 },
-    ];
-
     return (
         <>
             <Heading1 id="home">Home</Heading1>
@@ -37,9 +29,6 @@ export default function Home() {
                 pero en un instante lancé un tenedor a la estantería,
                 se le cayó la salsa brava por encima y ahí supe que me la iba a comer".
             </p>
-            <div style={{ width: 400 }}>
-                <RadarChart data={data} size={350} />
-            </div>
             <p>
                 <b>La fantasía del jugador es sentir que domina una cocina que se ha vuelto completamente loca.</b>
             </p>
