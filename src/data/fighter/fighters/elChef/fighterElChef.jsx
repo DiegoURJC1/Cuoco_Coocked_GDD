@@ -2,6 +2,7 @@ import {Fighter} from "../../../../dataTemplate/fighters/Fighter.jsx";
 import {Archetype} from "../../../../dataTemplate/fighters/enums/Archetype.js";
 import {Source,} from "../../../../dataTemplate/fighters/enums/Source.js";
 import {chefMoveSet} from "./moveSetElChef.jsx";
+import {FighterType} from "../../../../dataTemplate/fighters/enums/FighterType.js";
 
 export const fighterElChef = new Fighter({
     name: "El Chef",
@@ -27,7 +28,7 @@ export const fighterElChef = new Fighter({
         </>
     ),
     easyToUse: 2.0,
-
+    type: FighterType.HUMAN,
     source: Source.BASE_GAME,
 
     icon: "",

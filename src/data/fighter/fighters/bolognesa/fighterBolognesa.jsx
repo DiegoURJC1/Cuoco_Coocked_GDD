@@ -2,6 +2,7 @@ import {Fighter} from "../../../../dataTemplate/fighters/Fighter.jsx";
 import {Archetype} from "../../../../dataTemplate/fighters/enums/Archetype.js";
 import {Source} from "../../../../dataTemplate/fighters/enums/Source.js";
 import {bolognesaMoveSet} from "./moveSetBolognesa.jsx";
+import {FighterType} from "../../../../dataTemplate/fighters/enums/FighterType.js";
 
 export const fighterBolognesa = new Fighter({
     name: "La Boloñesa",
@@ -18,6 +19,7 @@ export const fighterBolognesa = new Fighter({
         </>
     ),
     easyToUse: 3,
+    type: FighterType.HUMAN,
     source: Source.BASE_GAME,
     fullArt: "../../../public/fighters/fullart/la-bolognesa_fullArt.png",
     portraitConfig: {

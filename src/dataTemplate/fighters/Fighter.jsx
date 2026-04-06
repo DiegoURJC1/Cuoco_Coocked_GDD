@@ -21,6 +21,14 @@ import {MoveSet} from "./moves/MoveSet.jsx";
  */
 
 /**
+ * Ventajas y desventajas del luchador.
+ *
+ * @typedef {Object} ProsCons
+ * @property {Array<JSX.Element|string|function>} pros Ventajas del personaje
+ * @property {Array<JSX.Element|string|function>} cons Desventajas del personaje
+ */
+
+/**
  * Representa un luchador en el juego.
  */
 export class Fighter {
@@ -71,6 +79,18 @@ export class Fighter {
     #narrativeOrigin;
 
     /**
+     * Objeto con el texto de los pros y contras del luchador.
+     * @type {ProsCons}
+     */
+    #prosCons;
+
+    /**
+     * Tipo de entidad del luchador (Food o Human).
+     * @type {string}
+     */
+    #type;
+
+    /**
      * Stats base del personaje como su salud o velocidad.
      * @type {{health: number, walkSpeed: number, runSpeed: number}}
      */
@@ -117,7 +137,9 @@ export class Fighter {
      * @param {Object} options.archetype Arquetipo del luchador.
      * @param {string|Function|JSX.Element} options.description Descripción (puede ser función).
      * @param {number} [options.easyToUse=2.5] Facilidad de uso (0.5–5).
-     * @param {string|Function|JSX.Element} [options.narrativeOrigin]
+     * @param {string|Function|JSX.Element} [options.narrativeOrigin] Origen del luchador.
+     * @param {ProsCons} [options.prosCons] Objeto con el texto de los pros y contras del luchador.
+     * @param {string} [options.type] Tipo del luchador (Humano/Comida).
      * @param {MoveSet} [options.moveSet] Conjunto de movimientos. Si no se proporciona o es parcial,
      *         se completará automáticamente con movimientos por defecto.
      * @param {BaseStats} [options.baseStats] Stats básicos del personaje.
@@ -133,6 +155,8 @@ export class Fighter {
                     description,
                     easyToUse = 2.5,
                     narrativeOrigin,
+                    prosCons = { pros: [], cons: [] },
+                    type,
                     baseStats = {health: 100, walkSpeed: 50, runSpeed: 100},
                     moveSet = new MoveSet(),
                     source = Source.BASE_GAME,
@@ -147,12 +171,20 @@ export class Fighter {
         this.#description = typeof description === "function" ? description(this) : description;
         this.#easyToUse = this.#normalizeEasyToUse(easyToUse);
         this.#narrativeOrigin = typeof narrativeOrigin === "function" ? narrativeOrigin(this) : narrativeOrigin;
+        this.#type = type;
         this.#baseStats = baseStats;
         if (!(moveSet instanceof MoveSet)) {
             throw new Error("moveSet must be an instance of MoveSet");
         }
-
         this.#moveSet = moveSet;
+        this.#prosCons = {
+            pros: (prosCons.pros ?? []).map(p =>
+                typeof p === "function" ? p(this) : p
+            ),
+            cons: (prosCons.cons ?? []).map(c =>
+                typeof c === "function" ? c(this) : c
+            )
+        };
         this.#source = source;
         this.#icon = icon;
         this.#fullArt = this.#FULL_ART_PATH + fullArt;
@@ -228,6 +260,14 @@ export class Fighter {
         return this.#narrativeOrigin;
     }
 
+    /** @returns {ProsCons} Ventajas y desventajas */
+    get prosCons() {
+        return this.#prosCons;
+    }
+
+    get type() {
+        return this.#type;
+    }
 
     /** @returns {BaseStats} Stats */
     get baseStats() {

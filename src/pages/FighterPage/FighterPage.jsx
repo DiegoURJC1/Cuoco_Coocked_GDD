@@ -54,7 +54,25 @@ export default function FighterPage() {
             <p>Arquetipo: {fighter.archetype.name}</p>
             <div>Facilidad de uso: <InlineIcon size={2}><Stars stars={fighter.easyToUse}/></InlineIcon></div>
             <div>Origen:<br/>{fighter.narrativeOrigin}</div>
-
+            <div>Tipo:<br/>{fighter.type}</div>
+            <div>
+                <div>Pros</div>
+                <div>
+                    <ul>
+                        {fighter.prosCons.pros.map((pro, index) => (
+                            <li key={index}>{pro}</li>
+                        ))}
+                    </ul>
+                </div>
+                <div>Cons</div>
+                <div>
+                    <ul>
+                        {fighter.prosCons.cons.map((con, index) => (
+                            <li key={index}>{con}</li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
             <Heading2 id="moves">Movimientos</Heading2>
 
             <div className="moves-panel-list">

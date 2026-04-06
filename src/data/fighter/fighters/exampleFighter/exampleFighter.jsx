@@ -1,6 +1,7 @@
 import {Fighter} from "../../../../dataTemplate/fighters/Fighter.jsx";
 import {Archetype} from "../../../../dataTemplate/fighters/enums/Archetype.js";
 import {Source} from "../../../../dataTemplate/fighters/enums/Source.js";
+import {FighterType} from "../../../../dataTemplate/fighters/enums/FighterType.js";
 
 export const exampleFighter = new Fighter({
     name: "Alan",
@@ -11,11 +12,21 @@ export const exampleFighter = new Fighter({
 
         </>
     ),
+    easyToUse: 5,
     narrativeOrigin:
         <>
             Restaurante italiano de la Toscana.
         </>,
-    easyToUse: 5,
+    prosCons: {
+        pros: [
+            <>Muchas oportunidades para optar a la defensa.</>
+        ],
+        cons: [
+            <>Pocas herramientas para generar gran presión.</>,
+
+        ]
+    },
+    type: FighterType.HUMAN,
     source: Source.BASE_GAME,
     icon: "../../../public/fighters/icon/alan_icon.svg",
     fullArt: "../../../public/fighters/fullart/alan_fullart.png",
