@@ -1,5 +1,11 @@
 import {UniversalMoveKey} from "./enums/UniversalMoveKey.js";
 import {defaultMoveSet} from "../../../data/fighter/fighters/!defaultMoves/defaultMoveSet.jsx";
+import {
+    validateUniversalMove,
+    validateNormalMove,
+    validateSpecialMove,
+    sortMoves, validateOverdriveMove
+} from "./moveValidation.js";
 
 export class MoveSet {
     /**
@@ -60,17 +66,62 @@ export class MoveSet {
     constructor(options = {}) {
         const {
             universal = {},
-            normal = [],
-            special = [],
-            overdrive = []
+            normal,
+            special,
+            overdrive
         } = options;
 
         const base = defaultMoveSet;
 
+        // BUILD
+
         this.#universal = this.#mergeUniversal(universal, base);
-        this.#normal = normal.length ? normal : [...base.normal];
-        this.#special = special.length ? special : [...base.special];
-        this.#overdrive = overdrive.length ? overdrive : [...base.overdrive];
+
+        this.#normal = (Array.isArray(normal) && normal.length)
+            ? [...normal]
+            : [...(base.normal ?? [])];
+
+        this.#special = (Array.isArray(special) && special.length)
+            ? [...special]
+            : [...(base.special ?? [])];
+
+        this.#overdrive = (Array.isArray(overdrive) && overdrive.length)
+            ? [...overdrive]
+            : [...(base.overdrive ?? [])];
+
+
+        // VALIDATION
+
+        // universales
+        Object.entries(this.#universal).forEach(([key, move]) => {
+            if (!move) {
+                console.warn(`❌ Universal ${key} está undefined`);
+                return;
+            }
+            validateUniversalMove(key, move);
+        });
+
+        // listas
+        this.#normal.forEach(move => {
+            if (!move) return console.warn("❌ Normal undefined");
+            validateNormalMove(move);
+        });
+
+        this.#special.forEach(move => {
+            if (!move) return console.warn("❌ Special undefined");
+            validateSpecialMove(move);
+        });
+
+        this.#overdrive.forEach(move => {
+            if (!move) return console.warn("❌ Overdrive undefined");
+            validateOverdriveMove(move);
+        });
+
+        // SORT
+
+        this.#normal = sortMoves(this.#normal);
+        this.#special = sortMoves(this.#special);
+        this.#overdrive = sortMoves(this.#overdrive);
     }
 
     #mergeUniversal(universal, base) {

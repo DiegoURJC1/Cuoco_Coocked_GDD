@@ -6,13 +6,14 @@ import {createFrames} from "../../../../dataTemplate/fighters/moves/Frame.js";
 import {FrameType} from "../../../../dataTemplate/fighters/moves/enums/frameType.js";
 import {Stance} from "../../../../dataTemplate/fighters/enums/Stance.js";
 import {MoveSet} from "../../../../dataTemplate/fighters/moves/MoveSet.jsx";
+import {MoveState} from "../../../../dataTemplate/fighters/moves/enums/MoveState.js";
 
 // region Universal
 
 // region Neutral
 const moveManotazo = new Move({
     name: "Manotazo de albóndiga",
-    moveCategory: MoveCategory.NORMAL,
+    moveCategory: MoveCategory.UNIVERSAL,
     description: (
         <>Una agrupación de pasta golpea con una albóndiga. Rápido y corto alcance.</>
     ),
@@ -34,10 +35,11 @@ const moveManotazo = new Move({
 // region Down
 const moveBarrido = new Move({
     name: "Barrido de fideos",
-    moveCategory: MoveCategory.NORMAL,
+    moveCategory: MoveCategory.UNIVERSAL,
     description: (
         <>Barrido rápido bajo.</>
     ),
+    state: MoveState.CROUCH,
     inputList: [Input.DOWN, Input.S],
     frameList: createFrames([
         {frameType: FrameType.STARTUP, duration: 5},
@@ -54,10 +56,11 @@ const moveBarrido = new Move({
 
 const moveGranBarrido = new Move({
     name: "Gran barrido",
-    moveCategory: MoveCategory.NORMAL,
+    moveCategory: MoveCategory.UNIVERSAL,
     description: (
         <>Barrido pesado que tumba.</>
     ),
+    state: MoveState.CROUCH,
     inputList: [Input.DOWN, Input.HS],
     frameList: createFrames([
         {frameType: FrameType.STARTUP, duration: 13},
@@ -76,10 +79,11 @@ const moveGranBarrido = new Move({
 // region Aerial
 const moveAereo = new Move({
     name: "Ensartado de masa aérea",
-    moveCategory: MoveCategory.NORMAL,
+    moveCategory: MoveCategory.UNIVERSAL,
     description: (
         <>Golpe descendente en salto.</>
     ),
+    state: MoveState.AIR,
     inputList: [Input.S],
     frameList: createFrames([
         {frameType: FrameType.STARTUP, duration: 5},
@@ -119,7 +123,7 @@ const moveGancho = new Move({
 
 const moveExtension = new Move({
     name: "Extensión de fideos",
-    moveCategory: MoveCategory.SPECIAL,
+    moveCategory: MoveCategory.NORMAL,
     description: (
         <>Ataque a media distancia.</>
     ),

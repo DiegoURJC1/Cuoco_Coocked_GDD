@@ -5,6 +5,7 @@ import {Input} from "../../../../dataTemplate/input/enums/Input.js";
 import {createFrames} from "../../../../dataTemplate/fighters/moves/Frame.js";
 import {FrameType} from "../../../../dataTemplate/fighters/moves/enums/frameType.js";
 import {Stance} from "../../../../dataTemplate/fighters/enums/Stance.js";
+import {MoveState} from "../../../../dataTemplate/fighters/moves/enums/MoveState.js";
 // region Universal Moves
 // region Neutral
 const moveDefaultNeutralPunch = new Move(
@@ -211,6 +212,7 @@ const moveDefaultDownPunch = new Move(
                 <div className="alert">Este es el puñetazo agachado por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>
         ,
+        state: MoveState.CROUCH,
         inputList: [Input.DOWN, Input.P],
         frameList: createFrames([
             {
@@ -243,6 +245,7 @@ const moveDefaultDownKick = new Move(
             <>
                 <div className="alert">Esta es la patada agachado por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>,
+        state: MoveState.CROUCH,
         inputList: [Input.DOWN, Input.K],
         frameList: createFrames([
             {
@@ -275,6 +278,7 @@ const moveDefaultDownSlash = new Move(
             <>
                 <div className="alert">Este es el golpe agachado por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>,
+        state: MoveState.CROUCH,
         inputList: [Input.DOWN, Input.S],
         frameList: createFrames([
             {
@@ -307,6 +311,7 @@ const moveDefaultDownHeavySlash = new Move(
             <>
                 <div className="alert">Este es el golpe fuerte agachado por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>,
+        state: MoveState.CROUCH,
         inputList: [Input.DOWN, Input.HS],
         frameList: createFrames([
             {
@@ -339,6 +344,7 @@ const moveDefaultDownRange = new Move(
             <>
                 <div className="alert">Este es el golpe a distancia agachado por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>,
+        state: MoveState.CROUCH,
         inputList: [Input.DOWN, Input.R],
         frameList: createFrames([
             {
@@ -371,6 +377,7 @@ const moveDefaultDownDust = new Move(
             <>
                 <div className="alert">Este es el comodín agachado por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>,
+        state: MoveState.CROUCH,
         inputList: [Input.DOWN, Input.D],
         frameList: createFrames([
             {
@@ -406,6 +413,7 @@ const moveDefaultAirPunch = new Move(
                 <div className="alert">Este es el puñetazo aéreo por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>
         ,
+        state: MoveState.AIR,
         inputList: [Input.P],
         frameList: createFrames([
             {
@@ -438,6 +446,7 @@ const moveDefaultAirKick = new Move(
             <>
                 <div className="alert">Esta es la patada aérea por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>,
+        state: MoveState.AIR,
         inputList: [Input.K],
         frameList: createFrames([
             {
@@ -470,6 +479,7 @@ const moveDefaultAirSlash = new Move(
             <>
                 <div className="alert">Este es el golpe aéreo por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>,
+        state: MoveState.AIR,
         inputList: [Input.S],
         frameList: createFrames([
             {
@@ -502,6 +512,7 @@ const moveDefaultAirHeavySlash = new Move(
             <>
                 <div className="alert">Este es el golpe fuerte aéreo por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>,
+        state: MoveState.AIR,
         inputList: [Input.HS],
         frameList: createFrames([
             {
@@ -534,6 +545,7 @@ const moveDefaultAirRange = new Move(
             <>
                 <div className="alert">Este es el a distancia aéreo por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>,
+        state: MoveState.AIR,
         inputList: [Input.R],
         frameList: createFrames([
             {
@@ -566,6 +578,7 @@ const moveDefaultAirDust = new Move(
             <>
                 <div className="alert">Este es el comodín aéreo por defecto. A la espera de ser sustituido por un movimiento definitivo.</div>
             </>,
+        state: MoveState.AIR,
         inputList: [Input.D],
         frameList: createFrames([
             {

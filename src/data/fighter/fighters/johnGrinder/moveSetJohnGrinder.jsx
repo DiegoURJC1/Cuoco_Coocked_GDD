@@ -6,6 +6,7 @@ import {FrameType} from "../../../../dataTemplate/fighters/moves/enums/frameType
 import {Stance} from "../../../../dataTemplate/fighters/enums/Stance.js";
 import {MoveSet} from "../../../../dataTemplate/fighters/moves/MoveSet.jsx";
 import {UniversalMoveKey} from "../../../../dataTemplate/fighters/moves/enums/UniversalMoveKey.js";
+import {MoveState} from "../../../../dataTemplate/fighters/moves/enums/MoveState.js";
 
 const moveFridgeOverhead = new Move({
     name: "Despensa en arco",
@@ -13,6 +14,7 @@ const moveFridgeOverhead = new Move({
     description: (
         <>Mueve con gran fuerza la nevera sobre su cabeza para cubrir su espacio aéreo.</>
     ),
+    state: MoveState.CROUCH,
     inputList: [Input.DOWN, Input.HS],
     frameList: createFrames([
         {frameType: FrameType.STARTUP, duration: 27},

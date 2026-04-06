@@ -6,13 +6,14 @@ import {FrameType} from "../../../../dataTemplate/fighters/moves/enums/frameType
 import {Stance} from "../../../../dataTemplate/fighters/enums/Stance.js";
 import {MoveSet} from "../../../../dataTemplate/fighters/moves/MoveSet.jsx";
 import {UniversalMoveKey} from "../../../../dataTemplate/fighters/moves/enums/UniversalMoveKey.js";
+import {MoveState} from "../../../../dataTemplate/fighters/moves/enums/MoveState.js";
 
 // region Universal MoveSet
 
 // region Neutral
 const movePincho = new Move({
     name: "Pincho Rápido de Tenedor",
-    moveCategory: MoveCategory.NORMAL,
+    moveCategory: MoveCategory.UNIVERSAL,
     description: (
         <>Ataque de alcance medio con buen control de espacio.</>
     ),
@@ -32,7 +33,7 @@ const movePincho = new Move({
 
 const moveSarten = new Move({
     name: "Golpe de Sartén",
-    moveCategory: MoveCategory.NORMAL,
+    moveCategory: MoveCategory.UNIVERSAL,
     description: (
         <>Golpe pesado vertical. Alto daño.</>
     ),
@@ -54,10 +55,11 @@ const moveSarten = new Move({
 // region Down
 const movePinchazoBajo = new Move({
     name: "Pinchazo Bajo",
-    moveCategory: MoveCategory.NORMAL,
+    moveCategory: MoveCategory.UNIVERSAL,
     description: (
         <>Ataque bajo con tenedor.</>
     ),
+    state: MoveState.CROUCH,
     inputList: [Input.DOWN, Input.S],
     frameList: createFrames([
         {frameType: FrameType.STARTUP, duration: 6},
@@ -74,10 +76,11 @@ const movePinchazoBajo = new Move({
 
 const moveCorte = new Move({
     name: "Corte de Cuchillo",
-    moveCategory: MoveCategory.NORMAL,
+    moveCategory: MoveCategory.UNIVERSAL,
     description: (
         <>Corte diagonal con buena cobertura antiaérea.</>
     ),
+    state: MoveState.CROUCH,
     inputList: [Input.DOWN, Input.K],
     frameList: createFrames([
         {frameType: FrameType.STARTUP, duration: 9},
@@ -94,10 +97,11 @@ const moveCorte = new Move({
 
 const moveBarrido = new Move({
     name: "Barrido de Cazo",
-    moveCategory: MoveCategory.NORMAL,
+    moveCategory: MoveCategory.UNIVERSAL,
     description: (
         <>Barrido amplio que derriba.</>
     ),
+    state: MoveState.CROUCH,
     inputList: [Input.DOWN, Input.HS],
     frameList: createFrames([
         {frameType: FrameType.STARTUP, duration: 15},
@@ -116,10 +120,11 @@ const moveBarrido = new Move({
 // region Aerial
 const moveAereoPincho = new Move({
     name: "Pinchazo Aéreo",
-    moveCategory: MoveCategory.NORMAL,
+    moveCategory: MoveCategory.UNIVERSAL,
     description: (
         <>Jump-in rápido con buen alcance.</>
     ),
+    state: MoveState.AIR,
     inputList: [Input.S],
     frameList: createFrames([
         {frameType: FrameType.STARTUP, duration: 6},
@@ -136,10 +141,11 @@ const moveAereoPincho = new Move({
 
 const moveAereoSarten = new Move({
     name: "Descenso de Sartén",
-    moveCategory: MoveCategory.NORMAL,
+    moveCategory: MoveCategory.UNIVERSAL,
     description: (
         <>Ataque aéreo vertical de gran hitbox.</>
     ),
+    state: MoveState.AIR,
     inputList: [Input.HS],
     frameList: createFrames([
         {frameType: FrameType.STARTUP, duration: 17},
@@ -160,7 +166,7 @@ const moveAereoSarten = new Move({
 // region Normal
 const moveEstocada = new Move({
     name: "Estocada de Tenedor",
-    moveCategory: MoveCategory.SPECIAL,
+    moveCategory: MoveCategory.NORMAL,
     description: (
         <>Herramienta principal de zoning.</>
     ),
