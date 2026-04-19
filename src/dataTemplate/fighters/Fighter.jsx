@@ -207,7 +207,7 @@ export class Fighter {
             .toLowerCase()
             .replace(/[^a-z0-9 ]/g, "")  // quita caracteres no alfanuméricos
             .trim()
-            .replace(/\s+/g, "-");       // espacios → guiones
+            .replace(/\s+/g, "-");       // espacios -> guiones
     }
 
     /**

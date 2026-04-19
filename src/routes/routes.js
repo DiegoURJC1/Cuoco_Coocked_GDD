@@ -8,9 +8,6 @@ export const routes = {
     dressings: {
         path: "/dressings",
     },
-    scenary: {
-        path: "/scenary",
-    },
     gameModes: {
         path: "/game-modes",
     },
@@ -33,5 +30,9 @@ export const routes = {
     fighters: {
         path: "/fighters",
         id: "/fighters/:id"
+    },
+    stages: {
+        path: "/stages",
+        id: "/stages/:id"
     }
 };

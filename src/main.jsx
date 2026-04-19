@@ -13,11 +13,12 @@ import FightersListPage from "./pages/FightersListPage/FightersListPage.jsx";
 import FighterPage from "./pages/FighterPage/FighterPage.jsx";
 import MechanicsPage from "./pages/MechanicsPage.jsx";
 import DressingsPage from "./pages/DressingsPage.jsx";
-import ScenaryListPage from "./pages/ScenaryListPage.jsx";
 import GameModesPage from "./pages/GameModesPage.jsx";
 import AppearancePage from "./pages/AppearancePage.jsx";
 import BusinessPage from "./pages/BusinessPage.jsx";
 import GlosaryPage from "./pages/GlosaryPage.jsx";
+import StagesListPage from "./pages/StagesListPage/StagesListPage.jsx";
+import StagePage from "./pages/StagePage/StagePage.jsx";
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
@@ -29,7 +30,6 @@ createRoot(document.getElementById('root')).render(
                     <Route path={routes.home.path} element={<Home/>}/>
                     <Route path={routes.mechanics.path} element={<MechanicsPage/>}/>
                     <Route path={routes.dressings.path} element={<DressingsPage/>}/>
-                    <Route path={routes.scenary.path} element={<ScenaryListPage/>}/>
                     <Route path={routes.gameModes.path} element={<GameModesPage/>}/>
                     <Route path={routes.appearance.path} element={<AppearancePage/>}/>
                     <Route path={routes.business.path} element={<BusinessPage/>}/>
@@ -39,7 +39,9 @@ createRoot(document.getElementById('root')).render(
                         <Route path={routes.test.links} element={<TestLinks/>}/>
                     </Route>
                     <Route path={routes.fighters.path} element={<FightersListPage/>}/>
-                    <Route path={routes.fighters.id} element={<FighterPage />} />
+                    <Route path={routes.fighters.id} element={<FighterPage/>} />
+                    <Route path={routes.stages.path} element={<StagesListPage/>}/>
+                    <Route path={routes.stages.id} element={<StagePage/>} />
                 </Route>
             </Routes>
         </BrowserRouter>
