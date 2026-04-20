@@ -2,6 +2,7 @@ import { ButtonIcon } from "./ButtonIcon.jsx";
 import { StickIcon } from "./StickIcon.jsx";
 import { detectMotion } from "./enums/detectMotion.js";
 import {LookDirection} from "./enums/LookDirection.js";
+import {Input} from "./enums/Input.js";
 
 /**
  * Renderiza un input como icono.
@@ -31,11 +32,19 @@ export function InputIcon({ inputs }) {
         }
         // Fallback: array de direcciones individuales
         return inputs.map((i, idx) => (
-            <StickIcon key={idx} type="straight" direction={i} />
+            i === Input.NEUTRAL ? (
+                <StickIcon key={idx} type="neutral" direction={i} />
+            ) : (
+                <StickIcon key={idx} type="straight" direction={i} />
+            )
         ));
     }
 
     // Dirección individual
+    if (inputs === Input.NEUTRAL) {
+        return <StickIcon type="neutral" direction={inputs} />;
+    }
+
     if (/^[1-9]$/.test(inputs)) {
         return <StickIcon type="straight" direction={inputs} />;
     }

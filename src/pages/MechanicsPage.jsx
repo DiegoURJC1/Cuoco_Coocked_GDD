@@ -7,7 +7,7 @@ import AlertPanel from "../modules/AlertPanel/AlertPanel.jsx";
 export default function MechanicsPage() {
     return (
         <>
-            <Heading1 id="mechanics">Mecánicas - Sistemas de combate</Heading1>
+            <Heading1 id="mechanics">Mecánicas y Sistemas</Heading1>
             <Heading2 id="core-loop">Core loop</Heading2>
             <p>
                 <b>Cuoco Cooked</b> es un juego de lucha basado en rounds de 99 segundos, con una estructura básica "al
@@ -42,10 +42,61 @@ export default function MechanicsPage() {
                 ▼ <br></br>
                 FIN DE ROUND → siguiente round o fin de match <br></br>
             </div>
-            <Heading2 id="movement">Movimiento</Heading2>
 
+            <Heading2 id="fundamentals">Fundamentos de juegos de peleas</Heading2>
+            <p>
+                Los videojuegos de peleas se basan en dos aspectos básicos:
+                <ul>
+                    <li>Guessing (adivinar) de la misma forma que se hace en
+                        piedra, papel o tijera.
+                    </li>
+                    <li>Principio de la animación: anticipación/acción/vuelta al estado base.</li>
+                </ul>
+                Estos dos sistemas rigen la inmensa mayoría de videojuegos de peleas tradicionales.
+            </p>
+            <p>
+                Guessing funciona siempre que los sistemas de agresión y defensa tengan más de un estado
+                y, cada acción agresiva o defensiva, no cubra todos los estados (de pie, agachado y por encima
+                de la cabeza). O al menos que no lo haga sin consumir un recurso.
+            </p>
+            <p>
+                La animación de los movimientos y acciones de los personajes determinan el balance
+                del juego en gran medida. Todos los ataques suelen contar con tres estados:
+            </p>
+            <ul>
+                <li>Anticipación: cuando el personaje sale del estado base (idle) hasta justo antes
+                    de realizar la acción.
+                </li>
+                <li>Acción activa: cuando la acción que se está realizando está activa. Vease, en
+                    un ataque, es cuando la <i>hitbox</i> está activa y puede golpear.
+                </li>
+                <li>Vuelta al idle: cuando el personaje deja de golpear y vuelve al estado base.</li>
+            </ul>
+            <p>
+                Este ciclo no puede ser cancelado por el jugador que lo realiza de forma normal.
+                Este sistema de animación se combina con la respuesta del rival. Tanto si recibe un
+                golpe como si lo bloquea, ambos resultan en una animación.
+            </p>
+            <p>
+                Aquí es donde se encuentra la base de las animaciones. Se suele buscar que golpear
+                resulte en que el agresor termine su animación de ataque antes de que el rival termine
+                la suya de ser golpeado para premiar con la oportunidad de golpear otra vez antes de
+                que el rival pueda responder. Si el rival bloquea un ataque, en la mayoría de veces se
+                busca premiar al defensor haciendo que su animación de bloqueo termine antes que la del
+                rival.
+            </p>
+
+            <Heading2 id="movement">Movimiento</Heading2>
+            <p>
+                Todos los movimientos de palanca se realizan en base a la posición relativa del
+                jugador y su rival. Cuando estos cambian sus posiciones relativas, los movimientos de
+                palanca cambian de orientación.
+            </p>
+            <p>Siempre se asume que el jugador está a la izquierda y su rival a la derecha.</p>
             <Heading3 id="movement-basic">Movimientos básicos</Heading3>
             <ul>
+                <li><InlineIcon size={2}><InputSequence sequence={[Input.NEUTRAL]}/></InlineIcon>: Por defecto,
+                el jugador está de pie y no se defiende.</li>
                 <li><InlineIcon size={2}><InputSequence sequence={[Input.RIGHT]}/></InlineIcon>: Andar adelante,
                     velocidad estándar
                 </li>
@@ -54,18 +105,18 @@ export default function MechanicsPage() {
                 </li>
                 <li><InlineIcon size={2}><InputSequence sequence={[Input.RIGHT, Input.RIGHT]}/></InlineIcon>/
                     <InlineIcon size={2}><InputSequence sequence={[Input.DASH]}/></InlineIcon>: Dash
-                    adelante, corto, con frames de recuperación
+                    adelante, invencibilidad parcial en startup. Si se mantiene la dirección el personaje corre.
                 </li>
                 <li><InlineIcon size={2}><InputSequence sequence={[Input.LEFT, Input.LEFT]}/></InlineIcon>/
-                    <InlineIcon size={2}><InputSequence sequence={[Input.DASH]}/></InlineIcon>: Backdash, invencibilidad
-                    parcial en startup
+                    <InlineIcon size={2}><InputSequence sequence={[Input.DASH]}/></InlineIcon>: Back dash,
+                    invencibilidad parcial en startup. Si se mantiene la dirección el personaje corre.
                 </li>
                 <li><InlineIcon size={2}><InputSequence sequence={[Input.DOWN]}/></InlineIcon>: Agacharse, cambia
-                    hurtbox, accede a ataques agachado
+                    hurtbox, accede a ataques agachado.
                 </li>
                 <li><InlineIcon size={2}><InputSequence sequence={[Input.UP]}/></InlineIcon>: Saltar, arco neutral</li>
                 <li><InlineIcon size={2}><InputSequence sequence={[Input.UP_RIGHT]}/></InlineIcon>: Saltar adelante,
-                    salto diagonal ofensivo
+                    salto diagonal ofensivo.
                 </li>
                 <li><InlineIcon size={2}><InputSequence sequence={[Input.UP_LEFT]}/></InlineIcon>: Saltar atrás, salto
                     diagonal defensivo / escape
