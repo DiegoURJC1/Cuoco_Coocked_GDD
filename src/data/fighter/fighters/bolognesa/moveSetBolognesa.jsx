@@ -6,7 +6,7 @@ import {createFrames} from "../../../../dataTemplate/fighters/moves/Frame.js";
 import {FrameType} from "../../../../dataTemplate/fighters/moves/enums/frameType.js";
 import {Stance} from "../../../../dataTemplate/fighters/enums/Stance.js";
 import {MoveSet} from "../../../../dataTemplate/fighters/moves/MoveSet.jsx";
-import {MoveState} from "../../../../dataTemplate/fighters/moves/enums/MoveState.js";
+import {MoveState} from "../../../../dataTemplate/fighters/moves/enums/MoveState.jsx";
 
 // region Universal
 

@@ -1,5 +1,5 @@
 import {FrameType} from "./enums/frameType.js";
-import {MoveState} from "./enums/MoveState.js";
+import {MoveState} from "./enums/MoveState.jsx";
 
 /**
  * Representa un movimiento de un luchador.

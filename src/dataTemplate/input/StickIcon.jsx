@@ -1,5 +1,3 @@
-// components/inputs/StickIcon.jsx
-
 import StickNeutral from "../../assets/icons/input/Stick Neutral Icon.svg?react";
 import StickStraight from "../../assets/icons/input/Stick Straight Icon.svg?react";
 import StickQuarter from "../../assets/icons/input/Stick Quarter Icon.svg?react";

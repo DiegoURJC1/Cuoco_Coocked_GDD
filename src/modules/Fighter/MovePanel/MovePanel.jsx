@@ -1,9 +1,11 @@
 import "./MovePanel.css"
 import {InputSequence} from "../../../dataTemplate/input/InputSequence.jsx";
+import {getMoveStateIcon} from "../../../dataTemplate/fighters/moves/enums/MoveState.jsx";
 export default function MovePanel({move, fighter = null}) {
     return (
         <div className="move-panel">
             <div className="name">{move.name}</div>
+            <div className="move-state">{getMoveStateIcon(move.state)}</div>
             <div className="frames-container">
                 {move.frameList.map((f, index) => (
                     <div

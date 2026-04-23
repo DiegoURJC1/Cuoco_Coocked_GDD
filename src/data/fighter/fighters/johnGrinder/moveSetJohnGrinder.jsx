@@ -6,7 +6,53 @@ import {FrameType} from "../../../../dataTemplate/fighters/moves/enums/frameType
 import {Stance} from "../../../../dataTemplate/fighters/enums/Stance.js";
 import {MoveSet} from "../../../../dataTemplate/fighters/moves/MoveSet.jsx";
 import {UniversalMoveKey} from "../../../../dataTemplate/fighters/moves/enums/UniversalMoveKey.js";
-import {MoveState} from "../../../../dataTemplate/fighters/moves/enums/MoveState.js";
+import {MoveState} from "../../../../dataTemplate/fighters/moves/enums/MoveState.jsx";
+
+const moveNPunch = new Move({
+    name: "Puñetazo",
+    moveCategory: MoveCategory.UNIVERSAL,
+    description: (
+        <>Puñetazo frontal a la altura del pecho.</>
+    ),
+    state: MoveState.STAND,
+    inputList: [Input.P],
+    frameList: createFrames([
+        {frameType: FrameType.STARTUP, duration: 6},
+        {frameType: FrameType.ACTIVE, duration: 3},
+        {frameType: FrameType.RECOVERY, duration: 6},
+    ]),
+    moveData: {
+        damage: [10],
+        guard: [Stance.HIGH, Stance.LOW],
+        onBlock: [+3],
+        invuln: false
+    }
+});
+
+const moveNKick = new Move({
+    name: "Puñetazo",
+    moveCategory: MoveCategory.UNIVERSAL,
+    description: (
+        <>
+            Golpe al suelo con el pie inmediatamente al frente.
+            <br/>
+            Golpea bajo.
+        </>
+    ),
+    state: MoveState.STAND,
+    inputList: [Input.K],
+    frameList: createFrames([
+        {frameType: FrameType.STARTUP, duration: 10},
+        {frameType: FrameType.ACTIVE, duration: 9},
+        {frameType: FrameType.RECOVERY, duration: 12},
+    ]),
+    moveData: {
+        damage: [15],
+        guard: [Stance.LOW],
+        onBlock: [-7],
+        invuln: false
+    }
+});
 
 const moveFridgeOverhead = new Move({
     name: "Despensa en arco",
@@ -33,7 +79,7 @@ const moveFridgeOverhead = new Move({
 
 export const moveSetJohnGrinder = new MoveSet({
     universal: {
-        //[UniversalMoveKey.NEUTRAL_P]:,
+        [UniversalMoveKey.NEUTRAL_P]: moveNPunch,
         //[UniversalMoveKey.NEUTRAL_K]:,
         //[UniversalMoveKey.NEUTRAL_S]:,
         //[UniversalMoveKey.NEUTRAL_HS]:,

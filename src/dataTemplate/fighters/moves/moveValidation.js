@@ -1,6 +1,6 @@
 import { Input } from "../../input/enums/Input.js";
 import { detectMotion } from "../../input/enums/detectMotion.js";
-import { MoveState } from "./enums/MoveState.js";
+import { MoveState } from "./enums/MoveState.jsx";
 import { MoveCategory } from "./enums/moveCategory.js";
 
 

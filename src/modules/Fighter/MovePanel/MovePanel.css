@@ -33,3 +33,7 @@
     height: 2.3em;
     display: flex;
 }
+
+.move-state {
+    height: 2em;
+}

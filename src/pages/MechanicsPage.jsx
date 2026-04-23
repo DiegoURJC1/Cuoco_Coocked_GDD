@@ -96,7 +96,8 @@ export default function MechanicsPage() {
             <Heading3 id="movement-basic">Movimientos básicos</Heading3>
             <ul>
                 <li><InlineIcon size={2}><InputSequence sequence={[Input.NEUTRAL]}/></InlineIcon>: Por defecto,
-                el jugador está de pie y no se defiende.</li>
+                    el jugador está de pie y no se defiende.
+                </li>
                 <li><InlineIcon size={2}><InputSequence sequence={[Input.RIGHT]}/></InlineIcon>: Andar adelante,
                     velocidad estándar
                 </li>
@@ -123,6 +124,18 @@ export default function MechanicsPage() {
                 </li>
                 <li> ↓→↑ : Salto bajo, salto más rápido, menor altura</li>
                 {/* Diego: Tengo dudas sobre este input */}
+                <li><InlineIcon size={2}><InputSequence sequence={[Input.D]}/></InlineIcon>: Ataque que siempre golpea a
+                    un personaje de pie. Incluso si se protege.
+                </li>
+                <li><InlineIcon size={2}><InputSequence sequence={[Input.RIGHT, Input.D]}/></InlineIcon>: Agarre que
+                    lanza al rival hacia delante y le tira al suelo.
+                </li>
+                <li><InlineIcon size={2}><InputSequence sequence={[Input.LEFT, Input.D]}/></InlineIcon>: Agarre que
+                    lanza al rival hacia atrás y le tira al suelo.
+                </li>
+                <li><InlineIcon size={2}><InputSequence sequence={[Input.DOWN, Input.D]}/></InlineIcon>: Ataque que siempre golpea a
+                    un personaje agachado. Incluso si se protege.
+                </li>
             </ul>
             <Heading3 id="movement-jump">Características del salto</Heading3>
             <ul>
