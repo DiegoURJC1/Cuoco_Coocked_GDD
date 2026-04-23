@@ -1,6 +1,7 @@
 import {FrameType} from "./enums/frameType.js";
 import {MoveState} from "./enums/MoveState.jsx";
 
+
 /**
  * Representa un movimiento de un luchador.
  */
@@ -26,9 +27,9 @@ export class Move {
 
     /**
      * Estado adicional del movimiento
-     * @type {JSX.Element|string}
+     * @type {Array<{state: string, frameList: Array, moveData: Object}>}
      */
-    #state;
+    #states;
 
     /**
      * Secuencia de inputs que ejecuta el movimiento.
@@ -36,18 +37,6 @@ export class Move {
      */
     #inputList;
 
-    /**
-     * Lista de frames del movimiento.
-     * Cada frame puede tener tipo, color, cancelWindow, projectile
-     * @type {Array<{type: Object, cancelWindow?: boolean, projectile?: boolean}>}
-     */
-    #frameList;
-
-    /**
-     * Datos adicionales del movimiento.
-     * @type {{damage: number[], guard: string|string[], onBlock: number[], invuln: boolean}}
-     */
-    #moveData;
     // endregion
 
     // region Constructor
@@ -60,20 +49,33 @@ export class Move {
      * @property {React.ReactNode} description - Descripción del movimiento (puede usar JSX).
      * @property {Array<string>} inputList - Secuencia de inputs para ejecutar el movimiento.
      * @property {Array<Frame>} frameList - Lista de frames del movimiento.
-     * @property {Object} moveData - Datos adicionales del movimiento.
-     * @property {number[]} moveData.damage - Daño por golpe.
-     * @property {string[]} moveData.guard - Guard de cada golpe ("High", "Low", etc.).
-     * @property {number[]} moveData.onBlock - Frames de ventaja/desventaja al bloquear.
-     * @property {boolean} moveData.invuln - Si el movimiento tiene invulnerabilidad.
+     * @property {Object} states - Propiedades según el estado del movimiento.
+     * @property {string} states.state
+     * @property {Array<{type: Object, cancelWindow?: boolean, projectile?: boolean}>} states.frameList
+     * @property {Object} states.moveData - Datos adicionales del movimiento.
+     * @property {number[]} states.moveData.damage - Daño por golpe.
+     * @property {string[]} states.moveData.guard - Guard de cada golpe ("High", "Low", etc.).
+     * @property {number[]} states.moveData.onBlock - Frames de ventaja/desventaja al bloquear.
+     * @property {boolean} states.moveData.invuln - Si el movimiento tiene invulnerabilidad.
      */
-    constructor({name, moveCategory, description, state = MoveState.STAND, inputList, frameList, moveData}) {
+    constructor({ name, moveCategory, description, inputList, states = [] }) {
         this.#name = name;
         this.#moveCategory = moveCategory;
         this.#description = typeof description === "function" ? description(this) : description;
-        this.#state = state;
         this.#inputList = inputList;
-        this.#frameList = frameList;
-        this.#moveData = moveData;
+
+        // Mapeamos los estados para asegurar que tengan la estructura correcta
+        this.#states = states.map(s => ({
+            state: s.state || MoveState.STAND,
+            frameList: s.frameList || [],
+            moveData: {
+                damage: s.moveData?.damage || [0],
+                guard: s.moveData?.guard || [],
+                onBlock: s.moveData?.onBlock || [0],
+                invuln: s.moveData?.invuln || false,
+                ...s.moveData
+            }
+        }));
     }
     // endregion
 
@@ -83,26 +85,27 @@ export class Move {
      * Si hay secuencias partidas, devuelve un array de números.
      *
      * @param {Object} frameType FrameType a contar (ej. FrameType.STARTUP)
+     * @param state
      * @returns {string} Formato ejemplo: "4(5)4"
      */
-    getFrameSequence(frameType) {
+    getFrameSequence(frameType, state = MoveState.STAND) {
+        const stateObj = this.#states.find(s => s.state === state);
+        const frames = stateObj?.frameList || [];
         const seq = [];
         let count = 0;
-        for (let i = 0; i < this.#frameList.length; i++) {
-            const frame = this.#frameList[i];
-            if (frame.type === frameType) {
+
+        for (let i = 0; i < frames.length; i++) {
+            if (frames[i].type === frameType) {
                 count++;
-            } else {
-                if (count > 0) {
-                    seq.push(count);
-                    count = 0;
-                }
+            } else if (count > 0) {
+                seq.push(count);
+                count = 0;
             }
         }
         if (count > 0) seq.push(count);
-        // convierte [4,5,4] → "4(5)4"
         return seq.map((v, i) => (i === 0 ? v : `(${v})`)).join('');
     }
+
 
     /**
      * Obtiene la secuencia de startup frames.
@@ -125,9 +128,12 @@ export class Move {
     get name() { return this.#name; }
     get moveCategory() { return this.#moveCategory; }
     get description() { return this.#description; }
-    get state() { return this.#state; }
     get inputList() { return this.#inputList; }
-    get frameList() { return this.#frameList; }
-    get moveData() { return this.#moveData; }
+    get states() { return this.#states; }
+
+    /** Helper para obtener el total de frames de un estado específico */
+    getTotalFrames(stateIndex = 0) {
+        return this.#states[stateIndex]?.frameList.length || 0;
+    }
     // endregion
 }

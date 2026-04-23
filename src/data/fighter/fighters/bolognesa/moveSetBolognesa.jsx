@@ -18,17 +18,20 @@ const moveManotazo = new Move({
         <>Una agrupación de pasta golpea con una albóndiga. Rápido y corto alcance.</>
     ),
     inputList: [Input.P],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 4},
-        {frameType: FrameType.ACTIVE, duration: 2},
-        {frameType: FrameType.RECOVERY, duration: 9},
-    ]),
-    moveData: {
-        damage: [10],
-        guard: [Stance.HIGH],
-        onBlock: [-1],
-        invuln: false
-    }
+    states: [{
+        state: MoveState.STAND,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 4},
+            {frameType: FrameType.ACTIVE, duration: 2},
+            {frameType: FrameType.RECOVERY, duration: 9},
+        ]),
+        moveData: {
+            damage: [10],
+            guard: [Stance.HIGH],
+            onBlock: [-1],
+            invuln: false
+        }
+    }]
 });
 // endregion
 
@@ -39,19 +42,21 @@ const moveBarrido = new Move({
     description: (
         <>Barrido rápido bajo.</>
     ),
-    state: MoveState.CROUCH,
     inputList: [Input.DOWN, Input.S],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 5},
-        {frameType: FrameType.ACTIVE, duration: 2},
-        {frameType: FrameType.INACTIVE, duration: 10},
-    ]),
-    moveData: {
-        damage: [8],
-        guard: [Stance.LOW],
-        onBlock: [0],
-        invuln: false
-    }
+    states: [{
+        state: MoveState.CROUCH,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 5},
+            {frameType: FrameType.ACTIVE, duration: 2},
+            {frameType: FrameType.INACTIVE, duration: 10},
+        ]),
+        moveData: {
+            damage: [8],
+            guard: [Stance.LOW],
+            onBlock: [0],
+            invuln: false
+        }
+    }]
 });
 
 const moveGranBarrido = new Move({
@@ -60,19 +65,21 @@ const moveGranBarrido = new Move({
     description: (
         <>Barrido pesado que tumba.</>
     ),
-    state: MoveState.CROUCH,
     inputList: [Input.DOWN, Input.HS],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 13},
-        {frameType: FrameType.ACTIVE, duration: 5},
-        {frameType: FrameType.RECOVERY, duration: 24},
-    ]),
-    moveData: {
-        damage: [18],
-        guard: [Stance.LOW],
-        onBlock: [-14],
-        invuln: false
-    }
+    states: [{
+        state: MoveState.CROUCH,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 13},
+            {frameType: FrameType.ACTIVE, duration: 5},
+            {frameType: FrameType.RECOVERY, duration: 24},
+        ]),
+        moveData: {
+            damage: [18],
+            guard: [Stance.LOW],
+            onBlock: [-14],
+            invuln: false
+        }
+    }]
 });
 // endregion
 
@@ -83,18 +90,20 @@ const moveAereo = new Move({
     description: (
         <>Golpe descendente en salto.</>
     ),
-    state: MoveState.AIR,
     inputList: [Input.S],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 5},
-        {frameType: FrameType.ACTIVE, duration: 4},
-    ]),
-    moveData: {
-        damage: [8],
-        guard: [Stance.HIGH],
-        onBlock: [0],
-        invuln: false
-    }
+    states: [{
+        state: MoveState.AIR,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 5},
+            {frameType: FrameType.ACTIVE, duration: 4},
+        ]),
+        moveData: {
+            damage: [8],
+            guard: [Stance.HIGH],
+            onBlock: [0],
+            invuln: false
+        }
+    }]
 });
 // endregion
 // endregion
@@ -108,17 +117,20 @@ const moveGancho = new Move({
         <>Uppercut ascendente de masa. Antiaéreo situacional.</>
     ),
     inputList: [Input.RIGHT, Input.S],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 12},
-        {frameType: FrameType.ACTIVE, duration: 4},
-        {frameType: FrameType.RECOVERY, duration: 22},
-    ]),
-    moveData: {
-        damage: [25],
-        guard: [Stance.HIGH],
-        onBlock: [-6],
-        invuln: false
-    }
+    states: [{
+        state: MoveState.STAND,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 12},
+            {frameType: FrameType.ACTIVE, duration: 4},
+            {frameType: FrameType.RECOVERY, duration: 22},
+        ]),
+        moveData: {
+            damage: [25],
+            guard: [Stance.HIGH],
+            onBlock: [-6],
+            invuln: false
+        }
+    }]
 });
 
 const moveExtension = new Move({
@@ -128,17 +140,20 @@ const moveExtension = new Move({
         <>Ataque a media distancia.</>
     ),
     inputList: [Input.RIGHT, Input.R],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 14},
-        {frameType: FrameType.ACTIVE, duration: 6},
-        {frameType: FrameType.RECOVERY, duration: 20},
-    ]),
-    moveData: {
-        damage: [18],
-        guard: [Stance.HIGH],
-        onBlock: [-4],
-        invuln: false
-    }
+    states: [{
+        state: MoveState.STAND,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 14},
+            {frameType: FrameType.ACTIVE, duration: 6},
+            {frameType: FrameType.RECOVERY, duration: 20},
+        ]),
+        moveData: {
+            damage: [18],
+            guard: [Stance.HIGH],
+            onBlock: [-4],
+            invuln: false
+        }
+    }]
 });
 // endregion
 
@@ -150,17 +165,20 @@ const movePlancha = new Move({
         <>Caída pesada desde el aire. Alto daño.</>
     ),
     inputList: [Input.RIGHT, Input.DOWN, Input.DOWN_RIGHT, Input.S],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 16},
-        {frameType: FrameType.ACTIVE, duration: 6},
-        {frameType: FrameType.RECOVERY, duration: 16},
-    ]),
-    moveData: {
-        damage: [33],
-        guard: [Stance.HIGH],
-        onBlock: [-4],
-        invuln: true
-    }
+    states: [{
+        state: MoveState.STAND,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 16},
+            {frameType: FrameType.ACTIVE, duration: 6},
+            {frameType: FrameType.RECOVERY, duration: 16},
+        ]),
+        moveData: {
+            damage: [33],
+            guard: [Stance.HIGH],
+            onBlock: [-4],
+            invuln: true
+        }
+    }]
 });
 
 const moveLlave = new Move({
@@ -170,17 +188,20 @@ const moveLlave = new Move({
         <>Agarre con fideos.</>
     ),
     inputList: [Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT, Input.D],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 22},
-        {frameType: FrameType.ACTIVE, duration: 3},
-        {frameType: FrameType.RECOVERY, duration: 32},
-    ]),
-    moveData: {
-        damage: [45],
-        guard: [], // 👈 agarre, no bloqueable
-        onBlock: [0],
-        invuln: true
-    }
+    states: [{
+        state: MoveState.STAND,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 22},
+            {frameType: FrameType.ACTIVE, duration: 3},
+            {frameType: FrameType.RECOVERY, duration: 32},
+        ]),
+        moveData: {
+            damage: [45],
+            guard: [], // esto es un agarre
+            onBlock: [0],
+            invuln: true
+        }
+    }]
 });
 
 const moveSalsa = new Move({
@@ -190,17 +211,20 @@ const moveSalsa = new Move({
         <>Proyectil de salsa que aplica estado.</>
     ),
     inputList: [Input.RIGHT, Input.DOWN_RIGHT, Input.DOWN, Input.DOWN_LEFT, Input.LEFT, Input.R],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 18},
-        {frameType: FrameType.ACTIVE, duration: 8},
-        {frameType: FrameType.RECOVERY, duration: 24},
-    ]),
-    moveData: {
-        damage: [17],
-        guard: [Stance.HIGH],
-        onBlock: [0],
-        invuln: false
-    }
+    states: [{
+        state: MoveState.STAND,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 18},
+            {frameType: FrameType.ACTIVE, duration: 8},
+            {frameType: FrameType.RECOVERY, duration: 24},
+        ]),
+        moveData: {
+            damage: [17],
+            guard: [Stance.HIGH],
+            onBlock: [0],
+            invuln: false
+        }
+    }]
 });
 
 const moveBola = new Move({
@@ -210,17 +234,20 @@ const moveBola = new Move({
         <>Carga diagonal ascendente.</>
     ),
     inputList: [Input.DOWN, Input.DOWN_LEFT, Input.LEFT, Input.S],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 10},
-        {frameType: FrameType.ACTIVE, duration: 5},
-        {frameType: FrameType.RECOVERY, duration: 20},
-    ]),
-    moveData: {
-        damage: [14],
-        guard: [Stance.HIGH],
-        onBlock: [-2],
-        invuln: false
-    }
+    states: [{
+        state: MoveState.STAND,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 10},
+            {frameType: FrameType.ACTIVE, duration: 5},
+            {frameType: FrameType.RECOVERY, duration: 20},
+        ]),
+        moveData: {
+            damage: [14],
+            guard: [Stance.HIGH],
+            onBlock: [-2],
+            invuln: false
+        }
+    }]
 });
 // endregion
 
@@ -235,25 +262,28 @@ const moveSuper = new Move({
         Input.RIGHT, Input.DOWN_RIGHT, Input.DOWN, Input.DOWN_LEFT,
         Input.LEFT, Input.UP_LEFT, Input.UP, Input.UP_RIGHT, Input.S
     ],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 8},
-        {frameType: FrameType.ACTIVE, duration: 12},
-        {frameType: FrameType.INACTIVE, duration: 12},
-        {frameType: FrameType.ACTIVE, duration: 6},
-        {frameType: FrameType.INACTIVE, duration: 8},
-        {frameType: FrameType.ACTIVE, duration: 3},
-        {frameType: FrameType.RECOVERY, duration: 5},
-    ]),
-    moveData: {
-        damage: [72],
-        guard: [Stance.HIGH],
-        onBlock: [-18],
-        invuln: true
-    }
+    states: [{
+        state: MoveState.STAND,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 8},
+            {frameType: FrameType.ACTIVE, duration: 12},
+            {frameType: FrameType.INACTIVE, duration: 12},
+            {frameType: FrameType.ACTIVE, duration: 6},
+            {frameType: FrameType.INACTIVE, duration: 8},
+            {frameType: FrameType.ACTIVE, duration: 3},
+            {frameType: FrameType.RECOVERY, duration: 5},
+        ]),
+        moveData: {
+            damage: [72],
+            guard: [Stance.HIGH],
+            onBlock: [-18],
+            invuln: true
+        }
+    }]
 });
 // endregion
 
-export const bolognesaMoveSet = new MoveSet ({
+export const bolognesaMoveSet = new MoveSet({
     universal: {
         [UniversalMoveKey.NEUTRAL_P]: moveManotazo,
         //[UniversalMoveKey.NEUTRAL_K]:,

@@ -1,6 +1,5 @@
 import {useParams} from "react-router-dom";
 import {Heading1, Heading2} from "../../modules/Heading/Heading.jsx";
-import MovePanel from "../../modules/Fighter/MovePanel/MovePanel.jsx";
 import "./FighterPage.css";
 import {fighters} from "../../data/fighter/fighters.jsx";
 import Stars from "../../modules/Fighter/Star/Stars.jsx";
@@ -13,80 +12,56 @@ export default function FighterPage() {
     const fighter = fighters.find(f => f.id === id);
 
     if (!fighter) return <p>Luchador no encontrado.</p>;
-
     const moveSet = fighter.moveSet;
-
     if (!moveSet) return <p>Sin movimientos definidos.</p>;
 
-    const orderedUniversal = [
-        moveSet.universal.neutral_p,
-        moveSet.universal.neutral_k,
-        moveSet.universal.neutral_s,
-        moveSet.universal.neutral_hs,
-        moveSet.universal.neutral_r,
-        moveSet.universal.neutral_d,
+    // Criterio de orden establecido
+    const UNIVERSAL_ORDER = [
+        'neutral_p', 'neutral_k', 'neutral_s', 'neutral_hs', 'neutral_r', 'neutral_d',
+        'down_p', 'down_k', 'down_s', 'down_hs', 'down_r', 'down_d',
+        'air_p', 'air_k', 'air_s', 'air_hs', 'air_r', 'air_d'
+    ];
 
-        moveSet.universal.down_p,
-        moveSet.universal.down_k,
-        moveSet.universal.down_s,
-        moveSet.universal.down_hs,
-        moveSet.universal.down_r,
-        moveSet.universal.down_d,
-
-        moveSet.universal.air_p,
-        moveSet.universal.air_k,
-        moveSet.universal.air_s,
-        moveSet.universal.air_hs,
-        moveSet.universal.air_r,
-        moveSet.universal.air_d,
-    ].filter(Boolean);
-    {
-        orderedUniversal.map((move, i) => (
-            <MovePanel key={`u-${i}`} move={move} fighter={fighter}/>
-        ))
-    }
+    const orderedUniversal = UNIVERSAL_ORDER
+        .map(key => moveSet.universal[key])
+        .filter(Boolean);
 
     return (
-        <>
+        <div className="fighter-page">
             <Heading1 id="fighter-name">{fighter.name}</Heading1>
+            <div className="fighter-desc">{fighter.description}</div>
 
-            <div>{fighter.description}</div>
+            <div className="fighter-info-grid">
+                <p><strong>Arquetipo:</strong> {fighter.archetype.name}</p>
+                <div><strong>Facilidad:</strong> <InlineIcon size={2}><Stars stars={fighter.easyToUse}/></InlineIcon></div>
+                <FighterRadar fighter={fighter}/>
+                <div><strong>Origen:</strong><br/>{fighter.narrativeOrigin}</div>
+                <div><strong>Tipo:</strong><br/>{fighter.type}</div>
+            </div>
 
-            <p>Arquetipo: {fighter.archetype.name}</p>
-            <div>Facilidad de uso: <InlineIcon size={2}><Stars stars={fighter.easyToUse}/></InlineIcon></div>
-            <FighterRadar fighter={fighter}/>
-            <div>Origen:<br/>{fighter.narrativeOrigin}</div>
-            <div>Tipo:<br/>{fighter.type}</div>
-            <div>
-                <div>Pros</div>
-                <div>
-                    <ul>
-                        {fighter.prosCons.pros.map((pro, index) => (
-                            <li key={index}>{pro}</li>
-                        ))}
-                    </ul>
+            <div className="pros-cons-section">
+                <div className="pros">
+                    <h3>Pros</h3>
+                    <ul>{fighter.prosCons.pros.map((p, i) => <li key={i}>{p}</li>)}</ul>
                 </div>
-                <div>Cons</div>
-                <div>
-                    <ul>
-                        {fighter.prosCons.cons.map((con, index) => (
-                            <li key={index}>{con}</li>
-                        ))}
-                    </ul>
+                <div className="cons">
+                    <h3>Cons</h3>
+                    <ul>{fighter.prosCons.cons.map((c, i) => <li key={i}>{c}</li>)}</ul>
                 </div>
             </div>
-            <Heading2 id="moves">Movimientos</Heading2>
+
+            <Heading2 id="moves">Lista de Movimientos</Heading2>
 
             <div className="moves-panel-list">
-
                 <MoveSection title="Universales" moves={orderedUniversal} fighter={fighter}/>
                 <MoveSection title="Normales" moves={moveSet.normal} fighter={fighter}/>
                 <MoveSection title="Especiales" moves={moveSet.special} fighter={fighter}/>
                 <MoveSection title="Overdrives" moves={moveSet.overdrive} fighter={fighter}/>
-
             </div>
 
-            {fighter.fullArtImg}
-        </>
+            <div className="full-art-container">
+                {fighter.fullArtImg}
+            </div>
+        </div>
     );
 }

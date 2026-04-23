@@ -11,44 +11,50 @@ import {MoveState} from "../../../../dataTemplate/fighters/moves/enums/MoveState
 // region Universal MoveSet
 
 // region Neutral
-const movePincho = new Move({
+const moveNS = new Move({
     name: "Pincho Rápido de Tenedor",
     moveCategory: MoveCategory.UNIVERSAL,
     description: (
         <>Ataque de alcance medio con buen control de espacio.</>
     ),
     inputList: [Input.S],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 6},
-        {frameType: FrameType.ACTIVE, duration: 3},
-        {frameType: FrameType.RECOVERY, duration: 11},
-    ]),
-    moveData: {
-        damage: [10],
-        guard: [Stance.HIGH],
-        onBlock: [-1],
-        invuln: false
-    }
+    states: [{
+        state: MoveState.STAND,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 6},
+            {frameType: FrameType.ACTIVE, duration: 3},
+            {frameType: FrameType.RECOVERY, duration: 11},
+        ]),
+        moveData: {
+            damage: [10],
+            guard: [Stance.HIGH],
+            onBlock: [-1],
+            invuln: false
+        }
+    }]
 });
 
-const moveSarten = new Move({
+const moveNHS = new Move({
     name: "Golpe de Sartén",
     moveCategory: MoveCategory.UNIVERSAL,
     description: (
         <>Golpe pesado vertical. Alto daño.</>
     ),
     inputList: [Input.HS],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 14},
-        {frameType: FrameType.ACTIVE, duration: 5},
-        {frameType: FrameType.RECOVERY, duration: 26},
-    ]),
-    moveData: {
-        damage: [30],
-        guard: [Stance.HIGH],
-        onBlock: [-10],
-        invuln: false
-    }
+    states: [{
+        state: MoveState.STAND,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 14},
+            {frameType: FrameType.ACTIVE, duration: 5},
+            {frameType: FrameType.RECOVERY, duration: 26},
+        ]),
+        moveData: {
+            damage: [30],
+            guard: [Stance.HIGH],
+            onBlock: [-10],
+            invuln: false
+        }
+    }]
 });
 // endregion
 
@@ -59,19 +65,22 @@ const movePinchazoBajo = new Move({
     description: (
         <>Ataque bajo con tenedor.</>
     ),
-    state: MoveState.CROUCH,
+
     inputList: [Input.DOWN, Input.S],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 6},
-        {frameType: FrameType.ACTIVE, duration: 3},
-        {frameType: FrameType.RECOVERY, duration: 12},
-    ]),
-    moveData: {
-        damage: [8],
-        guard: [Stance.LOW],
-        onBlock: [0],
-        invuln: false
-    }
+    states: [{
+        state: MoveState.CROUCH,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 6},
+            {frameType: FrameType.ACTIVE, duration: 3},
+            {frameType: FrameType.RECOVERY, duration: 12},
+        ]),
+        moveData: {
+            damage: [8],
+            guard: [Stance.LOW],
+            onBlock: [0],
+            invuln: false
+        }
+    }]
 });
 
 const moveCorte = new Move({
@@ -80,19 +89,21 @@ const moveCorte = new Move({
     description: (
         <>Corte diagonal con buena cobertura antiaérea.</>
     ),
-    state: MoveState.CROUCH,
     inputList: [Input.DOWN, Input.K],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 9},
-        {frameType: FrameType.ACTIVE, duration: 4},
-        {frameType: FrameType.RECOVERY, duration: 16},
-    ]),
-    moveData: {
-        damage: [25],
-        guard: [Stance.HIGH],
-        onBlock: [-2],
-        invuln: false
-    }
+    states: [{
+        state: MoveState.CROUCH,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 9},
+            {frameType: FrameType.ACTIVE, duration: 4},
+            {frameType: FrameType.RECOVERY, duration: 16},
+        ]),
+        moveData: {
+            damage: [25],
+            guard: [Stance.HIGH],
+            onBlock: [-2],
+            invuln: false
+        }
+    }]
 });
 
 const moveBarrido = new Move({
@@ -101,19 +112,21 @@ const moveBarrido = new Move({
     description: (
         <>Barrido amplio que derriba.</>
     ),
-    state: MoveState.CROUCH,
     inputList: [Input.DOWN, Input.HS],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 15},
-        {frameType: FrameType.ACTIVE, duration: 6},
-        {frameType: FrameType.RECOVERY, duration: 28},
-    ]),
-    moveData: {
-        damage: [18],
-        guard: [Stance.LOW],
-        onBlock: [-12],
-        invuln: false
-    }
+    states: [{
+        state: MoveState.CROUCH,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 15},
+            {frameType: FrameType.ACTIVE, duration: 6},
+            {frameType: FrameType.RECOVERY, duration: 28},
+        ]),
+        moveData: {
+            damage: [18],
+            guard: [Stance.LOW],
+            onBlock: [-12],
+            invuln: false
+        }
+    }]
 });
 // endregion
 
@@ -124,19 +137,22 @@ const moveAereoPincho = new Move({
     description: (
         <>Jump-in rápido con buen alcance.</>
     ),
-    state: MoveState.AIR,
+
     inputList: [Input.S],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 6},
-        {frameType: FrameType.ACTIVE, duration: 5},
-        {frameType: FrameType.RECOVERY, duration: 16},
-    ]),
-    moveData: {
-        damage: [8],
-        guard: [Stance.HIGH],
-        onBlock: [1],
-        invuln: false
-    }
+    states: [{
+        state: MoveState.AIR,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 6},
+            {frameType: FrameType.ACTIVE, duration: 5},
+            {frameType: FrameType.RECOVERY, duration: 16},
+        ]),
+        moveData: {
+            damage: [8],
+            guard: [Stance.HIGH],
+            onBlock: [1],
+            invuln: false
+        }
+    }]
 });
 
 const moveAereoSarten = new Move({
@@ -145,19 +161,21 @@ const moveAereoSarten = new Move({
     description: (
         <>Ataque aéreo vertical de gran hitbox.</>
     ),
-    state: MoveState.AIR,
     inputList: [Input.HS],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 17},
-        {frameType: FrameType.ACTIVE, duration: 8},
-        {frameType: FrameType.RECOVERY, duration: 24},
-    ]),
-    moveData: {
-        damage: [20],
-        guard: [Stance.HIGH],
-        onBlock: [-6],
-        invuln: false
-    }
+    states: [{
+        state: MoveState.AIR,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 17},
+            {frameType: FrameType.ACTIVE, duration: 8},
+            {frameType: FrameType.RECOVERY, duration: 24},
+        ]),
+        moveData: {
+            damage: [20],
+            guard: [Stance.HIGH],
+            onBlock: [-6],
+            invuln: false
+        }
+    }]
 });
 // endregion
 
@@ -171,17 +189,20 @@ const moveEstocada = new Move({
         <>Herramienta principal de zoning.</>
     ),
     inputList: [Input.RIGHT, Input.S],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 12},
-        {frameType: FrameType.ACTIVE, duration: 5},
-        {frameType: FrameType.RECOVERY, duration: 18},
-    ]),
-    moveData: {
-        damage: [18],
-        guard: [Stance.HIGH],
-        onBlock: [-3],
-        invuln: false
-    }
+    states: [{
+        state: MoveState.STAND,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 12},
+            {frameType: FrameType.ACTIVE, duration: 5},
+            {frameType: FrameType.RECOVERY, duration: 18},
+        ]),
+        moveData: {
+            damage: [18],
+            guard: [Stance.HIGH],
+            onBlock: [-3],
+            invuln: false
+        }
+    }]
 });
 // endregion
 
@@ -193,17 +214,20 @@ const movePicante = new Move({
         <>Proyectil que aplica quemado.</>
     ),
     inputList: [Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT, Input.R],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 18},
-        {frameType: FrameType.ACTIVE, duration: 5},
-        {frameType: FrameType.RECOVERY, duration: 22},
-    ]),
-    moveData: {
-        damage: [12],
-        guard: [Stance.HIGH],
-        onBlock: [-5],
-        invuln: false
-    }
+    states: [{
+        state: MoveState.STAND,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 18},
+            {frameType: FrameType.ACTIVE, duration: 5},
+            {frameType: FrameType.RECOVERY, duration: 22},
+        ]),
+        moveData: {
+            damage: [12],
+            guard: [Stance.HIGH],
+            onBlock: [-5],
+            invuln: false
+        }
+    }]
 });
 
 const moveMiel = new Move({
@@ -213,17 +237,20 @@ const moveMiel = new Move({
         <>Proyectil en arco que ralentiza.</>
     ),
     inputList: [Input.RIGHT, Input.DOWN_RIGHT, Input.DOWN, Input.DOWN_LEFT, Input.LEFT, Input.R],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 20},
-        {frameType: FrameType.ACTIVE, duration: 7},
-        {frameType: FrameType.RECOVERY, duration: 24},
-    ]),
-    moveData: {
-        damage: [10],
-        guard: [Stance.HIGH],
-        onBlock: [-4],
-        invuln: false
-    }
+    states: [{
+        state: MoveState.STAND,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 20},
+            {frameType: FrameType.ACTIVE, duration: 7},
+            {frameType: FrameType.RECOVERY, duration: 24},
+        ]),
+        moveData: {
+            damage: [10],
+            guard: [Stance.HIGH],
+            onBlock: [-4],
+            invuln: false
+        }
+    }]
 });
 
 const moveVinagre = new Move({
@@ -233,17 +260,20 @@ const moveVinagre = new Move({
         <>Zona que aplica mareado.</>
     ),
     inputList: [Input.LEFT, Input.DOWN_LEFT, Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT, Input.R],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 22},
-        {frameType: FrameType.ACTIVE, duration: 3},
-        {frameType: FrameType.RECOVERY, duration: 20},
-    ]),
-    moveData: {
-        damage: [14],
-        guard: [Stance.LOW],
-        onBlock: [-6],
-        invuln: false
-    }
+    states: [{
+        state: MoveState.STAND,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 22},
+            {frameType: FrameType.ACTIVE, duration: 3},
+            {frameType: FrameType.RECOVERY, duration: 20},
+        ]),
+        moveData: {
+            damage: [14],
+            guard: [Stance.LOW],
+            onBlock: [-6],
+            invuln: false
+        }
+    }]
 });
 
 const moveCorteMaestro = new Move({
@@ -253,17 +283,20 @@ const moveCorteMaestro = new Move({
         <>Antiaéreo que lanza al rival.</>
     ),
     inputList: [Input.RIGHT, Input.DOWN, Input.DOWN_RIGHT, Input.S],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 7},
-        {frameType: FrameType.ACTIVE, duration: 5},
-        {frameType: FrameType.RECOVERY, duration: 30},
-    ]),
-    moveData: {
-        damage: [22],
-        guard: [Stance.LOW],
-        onBlock: [-14],
-        invuln: true
-    }
+    states: [{
+        state: MoveState.STAND,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 7},
+            {frameType: FrameType.ACTIVE, duration: 5},
+            {frameType: FrameType.RECOVERY, duration: 30},
+        ]),
+        moveData: {
+            damage: [22],
+            guard: [Stance.LOW],
+            onBlock: [-14],
+            invuln: true
+        }
+    }]
 });
 
 const movePinza = new Move({
@@ -273,17 +306,20 @@ const movePinza = new Move({
         <>Agarre especial.</>
     ),
     inputList: [Input.RIGHT, Input.DOWN_RIGHT, Input.DOWN, Input.DOWN_LEFT, Input.LEFT, Input.S],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 19},
-        {frameType: FrameType.ACTIVE, duration: 4},
-        {frameType: FrameType.RECOVERY, duration: 36},
-    ]),
-    moveData: {
-        damage: [35],
-        guard: [],
-        onBlock: [0],
-        invuln: false
-    }
+    states: [{
+        state: MoveState.STAND,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 19},
+            {frameType: FrameType.ACTIVE, duration: 4},
+            {frameType: FrameType.RECOVERY, duration: 36},
+        ]),
+        moveData: {
+            damage: [35],
+            guard: [],
+            onBlock: [0],
+            invuln: false
+        }
+    }]
 });
 // endregion
 
@@ -299,21 +335,24 @@ const moveSuper = new Move({
         Input.RIGHT, Input.DOWN_RIGHT, Input.DOWN, Input.DOWN_LEFT, Input.LEFT,
         Input.UP_LEFT, Input.UP, Input.UP_RIGHT, Input.R
     ],
-    frameList: createFrames([
-        {frameType: FrameType.STARTUP, duration: 17},
-        {frameType: FrameType.ACTIVE, duration: 4},
-        {frameType: FrameType.RECOVERY, duration: 15},
-        {frameType: FrameType.ACTIVE, duration: 4},
-        {frameType: FrameType.RECOVERY, duration: 15},
-        {frameType: FrameType.ACTIVE, duration: 4},
-        {frameType: FrameType.RECOVERY, duration: 22},
-    ]),
-    moveData: {
-        damage: [65],
-        guard: [Stance.HIGH],
-        onBlock: [-8],
-        invuln: true
-    }
+    states: [{
+        state: MoveState.STAND,
+        frameList: createFrames([
+            {frameType: FrameType.STARTUP, duration: 17},
+            {frameType: FrameType.ACTIVE, duration: 4},
+            {frameType: FrameType.RECOVERY, duration: 15},
+            {frameType: FrameType.ACTIVE, duration: 4},
+            {frameType: FrameType.RECOVERY, duration: 15},
+            {frameType: FrameType.ACTIVE, duration: 4},
+            {frameType: FrameType.RECOVERY, duration: 22},
+        ]),
+        moveData: {
+            damage: [65],
+            guard: [Stance.HIGH],
+            onBlock: [-8],
+            invuln: true
+        }
+    }]
 });
 
 // endregion
@@ -322,8 +361,8 @@ export const chefMoveSet = new MoveSet({
     universal: {
         //[UniversalMoveKey.NEUTRAL_P]:,
         //[UniversalMoveKey.NEUTRAL_K]:,
-        [UniversalMoveKey.NEUTRAL_S]: movePincho,
-        [UniversalMoveKey.NEUTRAL_HS]: moveSarten,
+        [UniversalMoveKey.NEUTRAL_S]: moveNS,
+        [UniversalMoveKey.NEUTRAL_HS]: moveNHS,
         //[UniversalMoveKey.NEUTRAL_R]:,
         //[UniversalMoveKey.NEUTRAL_D]:,
 
