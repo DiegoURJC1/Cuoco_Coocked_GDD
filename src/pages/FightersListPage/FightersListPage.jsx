@@ -11,6 +11,8 @@ export default function FightersListPage() {
             <p>
 
             </p>
+            <AlertPanel>Los valores exactos de frames son materia de balance y se definen en fase de prototipo. El GDD
+                establece la estructura; los números emergen del playtesting.</AlertPanel>
             <Heading2 id="fighter-list">Roster completo</Heading2>
             <div className="fighters-list">
                 {fighters.map(f => (

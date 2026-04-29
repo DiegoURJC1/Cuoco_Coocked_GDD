@@ -15,9 +15,33 @@ export default function GlosaryPage() {
             </p>
             <Heading2 id="frames">Tipos de frames especiales</Heading2>
             <p>
-                <b> - Startup </b>:  <br></br>
-                <b> - Active </b>:  <br></br>
-                <b> - Recovery </b>:  <br></br>
+                <ul>
+                    <li><b>Startup </b>: Frames desde el input hasta el primer active frame</li>
+                    <li><b>Active </b>: Frames en los que el ataque tiene hitbox activa</li>
+                    <li><b>Recovery </b>: Frames tras el ataque antes de poder actuar</li>
+                    <li><b>Hitstun</b>: Frames que el rival no puede actuar tras recibir el golpe</li>
+                    <li><b>Blockstun</b>: Frames que el rival no puede actuar tras bloquear</li>
+                    <li><b>Advantage / Disadvantage</b>: Diferencia de frames entre atacante y defensor tras el impacto</li>
+                </ul>
+            </p>
+            <Heading2 id="archetypes">Arquetipos de luchadores</Heading2>
+            <p>
+                <ul>
+                    <li><b>Rushdown </b>: </li>
+                    <li><b>Grappler </b>: </li>
+                    <li><b>Zonner </b>: </li>
+                </ul>
+            </p>
+            <Heading2 id="">Tipos de </Heading2>
+            <p>
+                <b> - Parry </b>:  <br></br>
+                <b> - Bloqueo </b>:  <br></br>
+                <b> - Autocounter </b>: Tras realizar un Parry en el frame exacto el personaje realiza automáticamente
+                un contraataque predefinido (animación fija y daño garantizado) <br></br>
+            </p>
+            <Heading2 id="specialWords">Términos especiales</Heading2>
+            <p>
+                <b> - Chip damage </b>: porcentaje reducido del daño base del ataque <br></br>
             </p>
         </>
     );
