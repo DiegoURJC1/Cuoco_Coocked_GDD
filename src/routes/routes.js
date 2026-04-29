@@ -9,6 +9,9 @@ export const routes = {
             path: "mechanics/cooking"
         }
     },
+    dynamics: {
+        path: "/dynamics",
+    },
     dressings: {
         path: "/dressings",
     },

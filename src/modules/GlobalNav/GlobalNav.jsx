@@ -7,6 +7,7 @@ export function GlobalNav() {
             <ul>
                 <li><PLink href="/">Home</PLink></li>
                 <li><PLink href={routes.mechanics.path}>Mecánicas</PLink></li>
+                <li><PLink href={routes.dynamics.path}>Dinámicas</PLink></li>
                 <li><PLink href={routes.dressings.path}>Aderezos</PLink></li>
                 <li><PLink href={routes.fighters.path}>Fighters</PLink></li>
                 <li><PLink href={routes.stages.path}>Escenarios</PLink></li>
