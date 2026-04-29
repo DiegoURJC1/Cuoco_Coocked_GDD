@@ -1,8 +1,11 @@
-import {Heading1, Heading2, Heading3} from "../modules/Heading/Heading.jsx"
+import {Heading1, Heading2, Heading3} from "../modules/Heading/Heading.jsx";
 import {Input} from "../dataTemplate/input/enums/Input.js";
 import {InlineIcon} from "../modules/InlineIcon/InlineIcon.jsx";
 import {InputSequence} from "../dataTemplate/input/InputSequence.jsx";
 import AlertPanel from "../modules/AlertPanel/AlertPanel.jsx";
+import {getMoveStateIcon, MoveState} from "../dataTemplate/fighters/moves/enums/MoveState.jsx";
+import PLink from "../modules/Link/PLink.jsx";
+import {routes} from "../routes/routes.js";
 
 export default function MechanicsPage() {
     return (
@@ -125,7 +128,7 @@ export default function MechanicsPage() {
                 <li> ↓→↑ : Salto bajo, salto más rápido, menor altura</li>
                 {/* Diego: Tengo dudas sobre este input */}
                 <li><InlineIcon size={2}><InputSequence sequence={[Input.D]}/></InlineIcon>: Ataque que siempre golpea a
-                    un personaje de pie. Incluso si se protege.
+                    un personaje de pie.
                 </li>
                 <li><InlineIcon size={2}><InputSequence sequence={[Input.RIGHT, Input.D]}/></InlineIcon>: Agarre que
                     lanza al rival hacia delante y le tira al suelo.
@@ -133,8 +136,9 @@ export default function MechanicsPage() {
                 <li><InlineIcon size={2}><InputSequence sequence={[Input.LEFT, Input.D]}/></InlineIcon>: Agarre que
                     lanza al rival hacia atrás y le tira al suelo.
                 </li>
-                <li><InlineIcon size={2}><InputSequence sequence={[Input.DOWN, Input.D]}/></InlineIcon>: Ataque que siempre golpea a
-                    un personaje agachado. Incluso si se protege.
+                <li><InlineIcon size={2}><InputSequence sequence={[Input.DOWN, Input.D]}/></InlineIcon>: Ataque que
+                    siempre golpea a
+                    un personaje agachado.
                 </li>
             </ul>
             <Heading3 id="movement-jump">Características del salto</Heading3>
@@ -144,8 +148,6 @@ export default function MechanicsPage() {
                 <li>Vulnerable durante el ascenso a ataques antiaereos</li>
                 <li>Los grabs terrestres no alcanzan a personajes en aire</li>
             </ul>
-            <hr></hr>
-
 
             <Heading3 id="dressing-restrictions">Restricciones por Aderezo</Heading3>
             <ul>
@@ -153,7 +155,87 @@ export default function MechanicsPage() {
             </ul>
             <Heading2 id="offensive-system">Sistema ofensivo</Heading2>
             <p>
-
+                Todos los personajes tienen una serie de movimientos a su disposición. Todos ellos pueden ejecutarse
+                de pie <InlineIcon size={2}>{getMoveStateIcon(MoveState.STAND)}</InlineIcon>,
+                agachado <InlineIcon size={2}>{getMoveStateIcon(MoveState.CROUCH)}</InlineIcon> y
+                en el aire <InlineIcon size={2}>{getMoveStateIcon(MoveState.AIR)}</InlineIcon>.
+            </p>
+            <p>
+                Todos los personajes pueden atacar con los siguientes botones:
+            </p>
+            <ul>
+                <li><InlineIcon size={2}><InputSequence sequence={[Input.P]}/></InlineIcon>Punch: ataques rápidos y
+                    débiles generalmente con puños.
+                </li>
+                <li><InlineIcon size={2}><InputSequence sequence={[Input.K]}/></InlineIcon>Kick: ataque un poco más
+                    lentos que Punch pero algo más fuertes, generalmente con patadas.
+                </li>
+                <li><InlineIcon size={2}><InputSequence sequence={[Input.S]}/></InlineIcon>Slash: ataque básico.</li>
+                <li><InlineIcon size={2}><InputSequence sequence={[Input.HS]}/></InlineIcon>Heavy Slash: ataque fuerte.
+                </li>
+                <li><InlineIcon size={2}><InputSequence sequence={[Input.R]}/></InlineIcon>Range: ataque a distancia.
+                </li>
+                <li><InlineIcon size={2}><InputSequence sequence={[Input.D]}/></InlineIcon>Dust: ataque comodín
+                    normalmente usado para tirar al rival al suelo, agarrarle o superar su defensa.
+                </li>
+            </ul>
+            <p>
+                Algunos personajes tienen a su disposición ataque mientras corren <InlineIcon
+                size={2}>{getMoveStateIcon(MoveState.RUN)}</InlineIcon> o mientras están knoqueados en el
+                suelo <InlineIcon size={2}>{getMoveStateIcon(MoveState.KNOCKED)}</InlineIcon>. Útiles para cortar
+                distancias con el rival y para generar espacio y dar un respiro a aquél que esté en el suelo.
+            </p>
+            <Heading3 id={routes.mechanics.cooking.id}>Cooking</Heading3>
+            <p>
+                <b>Cooking</b> (llamado así intencionalmente por sus <PLink
+                href={"https://www.diy.org/tools/gen-z-slang-dictionary/cooking"}>connotaciones modernas</PLink>) es un
+                sistema de auto-combo. Este permite al jugador dar ataque consecutivos que conectan uno detrás con una
+                combinación simple de botones sin necesidad de recordar y ejecutar la versión compleja. Puede ser
+                activado o desactivado por el jugador en la selección de personaje y la
+                elección será recordad y la por defecto la próxima vez.
+            </p>
+            <p>
+                Un ejemplo podría ser <InlineIcon size={2}><InputSequence
+                sequence={[Input.P, Input.K, Input.S, Input.HS]}/></InlineIcon> que manualmente sea
+                <InlineIcon size={2}>
+                    <InputSequence
+                        sequence={[Input.P, Input.K, Input.S, Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT, Input.HS]}/>
+                </InlineIcon> y otro  <InlineIcon size={2}><InputSequence
+                sequence={[Input.P, Input.P, Input.P]}/></InlineIcon> que manualmente sea
+                <InlineIcon size={2}>
+                    <InputSequence
+                        sequence={[Input.P, Input.K, Input.RIGHT, Input.DOWN, Input.DOWN_RIGHT, Input.S]}/>
+                </InlineIcon>.
+            </p>
+            <p>
+                Aunque pueda ser útil, se espera que un jugador deje de usar este sistema con el tiempo en favor de
+                tener más control sobre su ejecución. Para evitar que sea abusado por jugadores experimentados, las
+                secuencias <i>cooking</i> pueden dejar pequeños huecos entre golpes que un rival puede aprovechar para
+                hacer counter.
+            </p>
+            <p>
+                Estas son algunas de las posibles secuencias:
+            </p>
+            <ul>
+                <li>
+                    <InlineIcon size={2}><InputSequence sequence={[Input.P, Input.P, Input.P]}/></InlineIcon>
+                </li>
+                <li>
+                    <InlineIcon size={2}><InputSequence sequence={[Input.K, Input.K, Input.K]}/></InlineIcon>
+                </li>
+                <li>
+                    <InlineIcon size={2}><InputSequence sequence={[Input.S, Input.S, Input.S]}/></InlineIcon>
+                </li>
+                <li>
+                    <InlineIcon size={2}><InputSequence sequence={[Input.P, Input.K, Input.S, Input.HS]}/></InlineIcon>
+                </li>
+                <li>
+                    <InlineIcon size={2}><InputSequence
+                        sequence={[Input.P, Input.K, Input.S, Input.HS, Input.R]}/></InlineIcon>
+                </li>
+            </ul>
+            <p>
+                No todos los luchadores tendrán acceso a todos los auto-combos.
             </p>
             <Heading2 id="defensive-system">Sistema defensivo</Heading2>
             <p>
@@ -164,5 +246,6 @@ export default function MechanicsPage() {
 
             </p>
         </>
-    );
+    )
+        ;
 }

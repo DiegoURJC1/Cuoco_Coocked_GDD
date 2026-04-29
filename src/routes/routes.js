@@ -4,6 +4,10 @@ export const routes = {
     },
     mechanics: {
         path: "/mechanics",
+        cooking: {
+            id: "cooking",
+            path: "mechanics/cooking"
+        }
     },
     dressings: {
         path: "/dressings",
