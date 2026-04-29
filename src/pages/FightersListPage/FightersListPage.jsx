@@ -2,6 +2,7 @@ import {Heading1, Heading2} from "../../modules/Heading/Heading.jsx";
 import PLink from "../../modules/Link/PLink.jsx";
 import {fighters} from "../../data/fighter/fighters.jsx";
 import "./FightersListPage.css";
+import AlertPanel from "../../modules/AlertPanel/AlertPanel.jsx";
 
 export default function FightersListPage() {
     return (

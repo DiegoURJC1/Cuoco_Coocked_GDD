@@ -20,10 +20,10 @@
 
     background-color: #171717;
     margin-bottom: 10px;
-    /* Toda la página */
-    /* height: calc(100dvh - var(--header-height) - 20px); */
-    height: fit-content;
-    max-width: clamp(80px, fitcontent, 400px);
+
+    max-height: calc(100dvh - var(--header-height) - 20px);
+    overflow-y: auto;
+    align-self: start;
 }
 
 .side-panel ul, .page-content ul {
