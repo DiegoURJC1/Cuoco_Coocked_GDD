@@ -1,6 +1,6 @@
 import {Heading1, Heading2} from "../../modules/Heading/Heading.jsx";
 import PLink from "../../modules/Link/PLink.jsx";
-import "../FightersListPage/FightersListPage.css";
+import "./StagesListPage.css";
 import {stages} from "../../data/stage/stages.jsx";
 
 export default function StagesListPage() {

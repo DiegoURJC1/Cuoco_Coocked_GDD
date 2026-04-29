@@ -1,5 +1,4 @@
 import {Stage} from "../../../dataTemplate/stage/Stage.jsx";
-import {Archetype} from "../../../dataTemplate/fighters/enums/Archetype.js";
 
 export const StageBasurero = new Stage({
     name: "Basurero",
