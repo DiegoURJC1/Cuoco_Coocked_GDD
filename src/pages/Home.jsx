@@ -1,9 +1,11 @@
 import {Heading1, Heading2} from "../modules/Heading/Heading.jsx"
 import RadarChart from "../modules/RadarChart/RadarChart.jsx";
+import AlertPanel from "../modules/AlertPanel/AlertPanel.jsx";
 export default function Home() {
     return (
         <>
             <Heading1 id="home">Home</Heading1>
+            <AlertPanel>TODO: revisar que en todas las páginas cada referencia a inputs esté traducida a su correspondiente icono</AlertPanel>
             <Heading2 id="game-concept">Vision Statement</Heading2>
             <p>
                 <b>Cuoco Cooked</b> es un juego de lucha 2D de vista lateral donde cada combatiente es un plato culinario que

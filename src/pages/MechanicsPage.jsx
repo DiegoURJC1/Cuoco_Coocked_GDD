@@ -504,7 +504,8 @@ export default function MechanicsPage() {
             </pre>
             <Heading4 id="combo-examples-chef">Combo con aderezo del Chef:</Heading4>
             <pre>
-                Input especial (media luna + distancia) <br/>
+                Input especial (<InlineIcon size={2}><InputSequence sequence={[Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT, Input.R]}/></InlineIcon>) <br/>
+
                 │ <br/>
                 └──► Proyectil de salsa → impacto → aderezo aplicado <br/>
             </pre>
