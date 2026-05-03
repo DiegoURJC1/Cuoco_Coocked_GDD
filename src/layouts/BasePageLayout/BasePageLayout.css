@@ -11,6 +11,10 @@
     margin: 0 auto; /* centra el contenido */
 }
 
+.page-content img{
+    width: 100%;
+}
+
 .side-panel {
     font-size: 0.9rem;
     box-sizing: border-box;
