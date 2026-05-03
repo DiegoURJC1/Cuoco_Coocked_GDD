@@ -6,6 +6,7 @@ export function GlobalNav() {
         <div className="web-side-panel side-panel">
             <ul>
                 <li><PLink href="/">Home</PLink></li>
+                <li><PLink href={routes.story.path}>Historia</PLink></li>
                 <li><PLink href={routes.mechanics.path}>Mecánicas</PLink></li>
                 <li><PLink href={routes.dynamics.path}>Dinámicas</PLink></li>
                 <li><PLink href={routes.dressings.path}>Aderezos</PLink></li>

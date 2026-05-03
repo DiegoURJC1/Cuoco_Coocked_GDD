@@ -2,6 +2,9 @@ export const routes = {
     home: {
         path: "/",
     },
+    story: {
+        path: "/story",
+    },
     mechanics: {
         path: "/mechanics",
         cooking: {
