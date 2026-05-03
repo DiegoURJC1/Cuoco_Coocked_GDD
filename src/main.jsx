@@ -6,6 +6,11 @@ import BasePageLayout from "./layouts/BasePageLayout/BasePageLayout.jsx";
 import Combat from "./pages/Combat.jsx";
 import ScrollToTop from "./common/auxFunc/ScrollToTop.jsx";
 import {routes} from "./routes/routes.js";
+
+import { Buffer } from 'buffer';
+window.Buffer = Buffer;
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 // Estilos
 import './styles/imports.css'
 import TestLinks from "./pages/testPage/TestLinks.jsx";
@@ -14,7 +19,7 @@ import FighterPage from "./pages/FighterPage/FighterPage.jsx";
 import MechanicsPage from "./pages/MechanicsPage.jsx";
 import DressingsPage from "./pages/DressingsPage.jsx";
 import GameModesPage from "./pages/GameModesPage.jsx";
-import AppearancePage from "./pages/AppearancePage.jsx";
+import AppearancePage from "./pages/AppearancePage/AppearancePage.jsx";
 import BusinessPage from "./pages/BusinessPage.jsx";
 import GlosaryPage from "./pages/GlosaryPage.jsx";
 import StagesListPage from "./pages/StagesListPage/StagesListPage.jsx";
