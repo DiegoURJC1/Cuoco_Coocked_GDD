@@ -177,3 +177,43 @@
 }
 
 .song-number { margin-right: 15px; opacity: 0.5; }
+
+/* --- VOLUMEN --- */
+.volume-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+    width: 150px; /* Tamaño más pequeño que la barra de progreso */
+}
+
+.volume-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.volume-slider {
+    flex: 1;
+    height: 4px;
+    border-radius: 5px;
+    appearance: none;
+    background: #444; /* Color oscuro para combinar con tu playlist */
+    outline: none;
+    cursor: pointer;
+}
+
+/* Estilo del "thumb" (el puntito) para navegadores Webkit */
+.volume-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #2563eb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.volume-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
