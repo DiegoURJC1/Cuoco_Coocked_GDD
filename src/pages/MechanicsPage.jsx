@@ -6,6 +6,7 @@ import AlertPanel from "../modules/AlertPanel/AlertPanel.jsx";
 import {getMoveStateIcon, MoveState} from "../dataTemplate/fighters/moves/enums/MoveState.jsx";
 import PLink from "../modules/Link/PLink.jsx";
 import {routes} from "../routes/routes.js";
+import InputStrengthDiagam from "../../public/diagrams/Input strength.svg?react"
 
 export default function MechanicsPage() {
     return (
@@ -177,22 +178,103 @@ export default function MechanicsPage() {
             <p>
                 Todos los personajes pueden atacar con los siguientes botones:
             </p>
-            <ul>
-                <li><InlineIcon size={2}><InputSequence sequence={[Input.P]}/></InlineIcon>Punch: ataques rápidos y
-                    débiles generalmente con puños.
-                </li>
-                <li><InlineIcon size={2}><InputSequence sequence={[Input.K]}/></InlineIcon>Kick: ataque un poco más
-                    lentos que Punch pero algo más fuertes, generalmente con patadas.
-                </li>
-                <li><InlineIcon size={2}><InputSequence sequence={[Input.S]}/></InlineIcon>Slash: ataque básico.</li>
-                <li><InlineIcon size={2}><InputSequence sequence={[Input.HS]}/></InlineIcon>Heavy Slash: ataque fuerte.
-                </li>
-                <li><InlineIcon size={2}><InputSequence sequence={[Input.R]}/></InlineIcon>Range: ataque a distancia.
-                </li>
-                <li><InlineIcon size={2}><InputSequence sequence={[Input.D]}/></InlineIcon>Dust: ataque comodín
-                    normalmente usado para tirar al rival al suelo, agarrarle o superar su defensa.
-                </li>
-            </ul>
+            <table>
+                <thead>
+                <tr>
+                    <th>Input</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <InlineIcon size={2}>
+                            <InputSequence sequence={[Input.P]} />
+                        </InlineIcon>
+                    </td>
+                    <td>Punch</td>
+                    <td>Ataques rápidos y débiles, generalmente con puños.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <InlineIcon size={2}>
+                            <InputSequence sequence={[Input.K]} />
+                        </InlineIcon>
+                    </td>
+                    <td>Kick</td>
+                    <td>Ataques un poco más lentos que Punch pero algo más fuertes, con patadas.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <InlineIcon size={2}>
+                            <InputSequence sequence={[Input.S]} />
+                        </InlineIcon>
+                    </td>
+                    <td>Slash</td>
+                    <td>Ataque básico.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <InlineIcon size={2}>
+                            <InputSequence sequence={[Input.HS]} />
+                        </InlineIcon>
+                    </td>
+                    <td>Heavy Slash</td>
+                    <td>Ataque fuerte.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <InlineIcon size={2}>
+                            <InputSequence sequence={[Input.R]} />
+                        </InlineIcon>
+                    </td>
+                    <td>Range</td>
+                    <td>Ataque a distancia.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <InlineIcon size={2}>
+                            <InputSequence sequence={[Input.D]} />
+                        </InlineIcon>
+                    </td>
+                    <td>Dust</td>
+                    <td>
+                        Ataque comodín normalmente usado para tirar al rival al suelo, agarrarle o superar su defensa.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <InlineIcon size={2}>
+                            <InputSequence sequence={[Input.DASH]} />
+                        </InlineIcon>
+                    </td>
+                    <td>Dash</td>
+                    <td>
+                        Atajo de{" "}
+                        <InlineIcon size={2}>
+                            <InputSequence sequence={[Input.RIGHT, Input.RIGHT]} />
+                        </InlineIcon>{" "}
+                        para hacer dashes de forma más rápida.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <InlineIcon size={2}>
+                            <InputSequence sequence={[Input.TAUNT]} />
+                        </InlineIcon>
+                    </td>
+                    <td>Taunt</td>
+                    <td>
+                        Animación especial del personaje. Puede cancelarse con cualquier otro botón tras 2 segundos.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div className="diagram">
+                <InputStrengthDiagam style={{width:'clamp(200px, 50%, 100%)'}}/>
+            </div>
+
             <p>
                 Algunos personajes tienen a su disposición ataque mientras corren <InlineIcon
                 size={2}>{getMoveStateIcon(MoveState.RUN)}</InlineIcon> o mientras están knoqueados en el

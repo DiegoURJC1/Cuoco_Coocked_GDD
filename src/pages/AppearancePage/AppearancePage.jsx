@@ -91,8 +91,22 @@ export default function AppearancePage() {
             </ul>
             <Heading2 id="music">Música</Heading2>
             <p>
-                Música de juego durante la partida.
+                Se busca un tono musical con ritmo acelerado que compagine el ritmo de partidas rápidas de hasta 3
+                rondas de hasta 99 segundos.
+
             </p>
+            <p>
+                Al igual que otros videojuegos. Se pretende usar temas con letras para los temas musicales de personajes
+                que ayuden a presentarlos a ellos y sus motivaciones. Videojuegos dentro del género de peleas como
+                <i>Guilty Gear</i> y fuera del género como <i>Metal Gear Rising Revengence</i>.
+            </p>
+            <p>
+                Se ha desarrollado un tema original capaz de ser usado en multitud de partes del juego:
+            </p>
+            <ul>
+                <li>Tema de selección de escenario y personajes.</li>
+                <li>Tema de modo entrenamiento o modo arcade.</li>
+            </ul>
             <MusicPlayer fileList={[
                 "mainThemeV4.ogg",
                 "02 The Only Thing I Know For Real (Maniac Agenda Mix).flac",

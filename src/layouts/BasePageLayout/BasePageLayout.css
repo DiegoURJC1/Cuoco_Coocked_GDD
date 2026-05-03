@@ -11,10 +11,14 @@
     margin: 0 auto; /* centra el contenido */
 }
 
-.page-content img{
+.page-content > img, .page-content > svg{
     width: 100%;
 }
-
+.page-content .diagram {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .side-panel {
     font-size: 0.9rem;
     box-sizing: border-box;
