@@ -65,9 +65,26 @@ const MusicPlayer = ({ fileList = [] }) => {
     }, [currentIndex, fileList]);
 
     useEffect(() => {
-        if (audioRef.current) {
-            audioRef.current.load();
-            if (isPlaying) audioRef.current.play().catch(() => {});
+        const audio = audioRef.current;
+        if (!audio) return;
+
+        // 1. Pausamos y reseteamos
+        audio.pause();
+
+        // 2. Intentamos cargar la nueva canción
+        audio.load();
+
+        // 3. Solo reproducimos si isPlaying es true
+        if (isPlaying) {
+            const playPromise = audio.play();
+
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.error("Error de reproducción:", error);
+                    // Si hay error, forzamos el estado a pausa para que el botón sea coherente
+                    setIsPlaying(false);
+                });
+            }
         }
     }, [currentIndex]);
 
@@ -144,7 +161,10 @@ const MusicPlayer = ({ fileList = [] }) => {
                 ))}
             </div>
 
-            <audio ref={audioRef} onTimeUpdate={() => setCurrentTime(audioRef.current.currentTime)} onLoadedMetadata={() => setDuration(audioRef.current.duration)} onEnded={() => setCurrentIndex(p => (p + 1) % fileList.length)} />
+            <audio
+                ref={audioRef}
+                src={`${MUSIC_PATH}${fileList[currentIndex]}`}
+                onTimeUpdate={() => setCurrentTime(audioRef.current.currentTime)} onLoadedMetadata={() => setDuration(audioRef.current.duration)} onEnded={() => setCurrentIndex(p => (p + 1) % fileList.length)} />
         </div>
     );
 };

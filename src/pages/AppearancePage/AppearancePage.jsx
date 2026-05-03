@@ -94,7 +94,7 @@ export default function AppearancePage() {
                 Música de juego durante la partida.
             </p>
             <MusicPlayer fileList={[
-                "mainThemeV3.ogg",
+                "mainThemeV4.ogg",
                 "02 The Only Thing I Know For Real (Maniac Agenda Mix).flac",
                 "1.12 Hellfire.mp3",
                 "03 Symphony.flac",
