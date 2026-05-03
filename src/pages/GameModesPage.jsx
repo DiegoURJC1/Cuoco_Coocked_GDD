@@ -1,5 +1,6 @@
 import {Heading1, Heading2, Heading3} from "../modules/Heading/Heading.jsx"
 import PLink from "../modules/Link/PLink.jsx";
+import {routes} from "../routes/routes.js";
 
 export default function GameModesPage() {
     return (
@@ -44,6 +45,19 @@ export default function GameModesPage() {
                 misma forma que en <PLink href={"https://www.ssbwiki.com/Classic_Mode_(SSBU)"}>Classic Mode</PLink> en
                 Super Smash Bros Ultimate.
             </p>
+            <Heading2 id="story">Historia</Heading2>
+            <p>
+                El modo <b>Historia</b> es un modo de juego de un jugador en el que tomas el papel de <b>Chef</b> en su aventura para descubrir nuevos sabores.
+                Según progreses te encontrarás con distintos personajes del juego y podrás aprender más sobre sus orígenes y relaciones.
+                Este modo mezcla una naración que te sumergira en el mundo del juego y una serie de desafíos complejos a medida que vayas dominando a los distintos personajes.
+            </p>
+            <p>
+                Para un vistazo a la introducción del modo <b>Historia</b> diriganse al apartado de <PLink href={routes.story.path}>Historia</PLink>.
+
+
+            </p>
+
+
         </>
     );
 }

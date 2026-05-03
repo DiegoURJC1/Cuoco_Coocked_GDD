@@ -25,6 +25,7 @@ import GlosaryPage from "./pages/GlosaryPage.jsx";
 import StagesListPage from "./pages/StagesListPage/StagesListPage.jsx";
 import StagePage from "./pages/StagePage/StagePage.jsx";
 import DynamicsPage from "./pages/DynamicsPage.jsx";
+import StoryPage from "./pages/StoryPage.jsx";
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
@@ -34,6 +35,7 @@ createRoot(document.getElementById('root')).render(
                 {/* Páginas del documento */}
                 <Route element={<BasePageLayout/>}>
                     <Route path={routes.home.path} element={<Home/>}/>
+                    <Route path={routes.story.path} element={<StoryPage/>}/>
                     <Route path={routes.mechanics.path} element={<MechanicsPage/>}/>
                     <Route path={routes.dynamics.path} element={<DynamicsPage/>}/>
                     <Route path={routes.dressings.path} element={<DressingsPage/>}/>
