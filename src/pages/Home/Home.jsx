@@ -8,10 +8,11 @@ export default function Home() {
     return (
         <>
             <Heading1 id="home">Home</Heading1>
-            <img src="../../../public/logos/Logo%20Cuoco%20Cooked%20v2%20dev.png" alt="Game Logo"/>
+            <img src = "../../../public/cover/portadaConLogo.png" alt="Game Cover Art"/>
             <p className="claim">
                 Con los puños en la masa
             </p>
+
             <Heading2 id="game-concept">Vision Statement</Heading2>
             <p>
                 <b>Cuoco Cooked</b> es un juego de lucha 3D con movimiento 2D de vista lateral donde cada combatiente es
