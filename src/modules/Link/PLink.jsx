@@ -121,13 +121,14 @@ function getLinkType(href) {
  * @returns {(function(*): void)|*} - Handler del evento `onClick`
  * que fuerza _`smooth` scroll_ a una sección de página.
  */
-const handleSameHashClick = (href, currentHash) => (e) => {
-    if (currentHash === href) {
-        e.preventDefault();
+const handleSameHashClick = (href, currentHash) => () => {
+    const targetId = href.includes("#") ? href.split("#").pop() : null;
+    const currentId = currentHash.replace("#", "");
 
-        const id = href.replace("#", "");
-        const el = document.getElementById(id);
-
-        el?.scrollIntoView({behavior: "smooth"});
+    if (targetId && targetId === currentId) {
+        const el = document.getElementById(targetId);
+        if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+        }
     }
 };

@@ -3,15 +3,19 @@ import {Heading1, Heading2} from "../../modules/Heading/Heading.jsx"
 import "./Home.css";
 import PLink from "../../modules/Link/PLink.jsx";
 import {routes} from "../../routes/routes.js";
+import AlertPanel from "../../modules/AlertPanel/AlertPanel.jsx";
 
 export default function Home() {
     return (
         <>
             <Heading1 id="home">Home</Heading1>
-            <img src = "../../../public/cover/portadaConLogo.png" alt="Game Cover Art"/>
+            <img src="../../../public/cover/portadaConLogo.png" alt="Game Cover Art"/>
             <p className="claim">
                 Con los puños en la masa
             </p>
+            <AlertPanel>
+                TODO: revisar que en todas las páginas cada referencia a inputs esté traducida a su correspondiente icono
+            </AlertPanel>
 
             <Heading2 id="game-concept">Vision Statement</Heading2>
             <p>
