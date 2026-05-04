@@ -42,7 +42,7 @@ createRoot(document.getElementById('root')).render(
                     <Route path={routes.gameModes.path} element={<GameModesPage/>}/>
                     <Route path={routes.appearance.path} element={<AppearancePage/>}/>
                     <Route path={routes.business.path} element={<BusinessPage/>}/>
-                    <Route path={routes.glosary.path} element={<GlosaryPage/>}/>
+                    <Route path={routes.glossary.path} element={<GlosaryPage/>}/>
                     <Route path={routes.combat.path} element={<Combat/>}/>
                     <Route path={routes.test.path}>
                         <Route path={routes.test.links} element={<TestLinks/>}/>

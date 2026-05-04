@@ -27,7 +27,7 @@ export const routes = {
     business: {
         path: "/business",
     },
-    glosary: {
+    glossary: {
         path: "/glosary",
     },
     combat: {
