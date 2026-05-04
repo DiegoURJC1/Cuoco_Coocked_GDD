@@ -6,7 +6,9 @@ import AlertPanel from "../modules/AlertPanel/AlertPanel.jsx";
 import {getMoveStateIcon, MoveState} from "../dataTemplate/fighters/moves/enums/MoveState.jsx";
 import PLink from "../modules/Link/PLink.jsx";
 import {routes} from "../routes/routes.js";
-import InputStrengthDiagam from "../../public/diagrams/Input strength.svg?react"
+import InputStrengthDiagram from "../../public/diagrams/Input strength.svg?react";
+import GeneralCombatDiagram from "../../public/diagrams/General combat diagram.svg?react";
+import {BlockText, GrabText, MeleeText, RangeText} from "../modules/ColoredText/ColoredText.jsx";
 
 export default function MechanicsPage() {
     return (
@@ -14,22 +16,27 @@ export default function MechanicsPage() {
             <Heading1 id="mechanics">Mecánicas y Sistemas</Heading1>
             <Heading2 id="core-loop">Core loop</Heading2>
             <p>
-                <b>Cuoco Cooked</b> es un juego de lucha basado en rounds de 99 segundos, con una estructura básica "al
-                mejor de 3", es decir, si uno de los dos contendientes gana dos rounds seguidos gana automáticamente el
-                match. Si el primer round lo gana uno y el segundo lo gana el contrincante, se disputará un último round
-                y saldrá ganador quien venza en este mismo. Para ganar un round hay dos vías:
+                <b>Cuoco Cooked</b> es un juego de lucha basado en rondas de 99 segundos, con una estructura básica "al
+                mejor de 3", es decir, si uno de los dos contendientes gana dos rondas gana la partida.
+                Para ganar un round hay dos vías:
             </p>
-            <b>1.-</b> Bajar la vida del oponente hasta 0, que a partir de ahora llamaremos "COOCKED" a modo de "KO".
-            <br></br>
-            <b>2.-</b> Tener más vida que tu oponente al finalizar la cuenta atrás.
-            <br></br>
+            <ol>
+                <li>
+                    Bajar la vida del oponente hasta 0, que a partir de ahora llamaremos <i>"COOCKED"</i> a modo
+                    de <i>"KO"</i>.
+                </li>
+                <li>
+                    Tener más porcentaje de vida que el oponente al finalizar la ronda.
+                </li>
+            </ol>
+            <br/>
             <p>
                 Se plantea la posibilidad de que la vida represente algún aspecto del universo temático:
-                <br></br>
-                a) La cantidad de comida, por tanto conforme baja vida el luchador está siendo consumido/comido.
-                <br></br>
-                b) Durabilidad, por el cual conforme baja la vida se estaría deteriorando, pasando de caducidad.
             </p>
+            <ol type="a">
+                <li>La cantidad de comida, por tanto conforme baja vida el luchador está siendo consumido/comido.</li>
+                <li>Durabilidad, por el cual conforme baja la vida se estaría deteriorando, pasando de caducidad.</li>
+            </ol>
             <p>
                 La estructura interna de cada round sigue el siguiente esquema/diagrama de flujo:
             </p>
@@ -60,14 +67,14 @@ export default function MechanicsPage() {
             <hr/>
             <br/>
             <Heading2 id="fundamentals">Fundamentos de juegos de peleas</Heading2>
-                Los videojuegos de peleas se basan en dos aspectos básicos:
-                <ul>
-                    <li>Guessing (adivinar) de la misma forma que se hace en
-                        piedra, papel o tijera.
-                    </li>
-                    <li>Principio de la animación: anticipación/acción/vuelta al estado base.</li>
-                </ul>
-                Estos dos sistemas rigen la inmensa mayoría de videojuegos de peleas tradicionales.
+            Los videojuegos de peleas se basan en dos aspectos básicos:
+            <ul>
+                <li>Guessing (adivinar) de la misma forma que se hace en
+                    piedra, papel o tijera.
+                </li>
+                <li>Principio de la animación: anticipación/acción/vuelta al estado base.</li>
+            </ul>
+            Estos dos sistemas rigen la inmensa mayoría de videojuegos de peleas tradicionales.
             <p>
                 Guessing funciona siempre que los sistemas de agresión y defensa tengan más de un estado
                 y, cada acción agresiva o defensiva, no cubra todos los estados (de pie, agachado y por encima
@@ -190,7 +197,7 @@ export default function MechanicsPage() {
                 <tr>
                     <td>
                         <InlineIcon size={2}>
-                            <InputSequence sequence={[Input.P]} />
+                            <InputSequence sequence={[Input.P]}/>
                         </InlineIcon>
                     </td>
                     <td>Punch</td>
@@ -199,7 +206,7 @@ export default function MechanicsPage() {
                 <tr>
                     <td>
                         <InlineIcon size={2}>
-                            <InputSequence sequence={[Input.K]} />
+                            <InputSequence sequence={[Input.K]}/>
                         </InlineIcon>
                     </td>
                     <td>Kick</td>
@@ -208,7 +215,7 @@ export default function MechanicsPage() {
                 <tr>
                     <td>
                         <InlineIcon size={2}>
-                            <InputSequence sequence={[Input.S]} />
+                            <InputSequence sequence={[Input.S]}/>
                         </InlineIcon>
                     </td>
                     <td>Slash</td>
@@ -217,7 +224,7 @@ export default function MechanicsPage() {
                 <tr>
                     <td>
                         <InlineIcon size={2}>
-                            <InputSequence sequence={[Input.HS]} />
+                            <InputSequence sequence={[Input.HS]}/>
                         </InlineIcon>
                     </td>
                     <td>Heavy Slash</td>
@@ -226,7 +233,7 @@ export default function MechanicsPage() {
                 <tr>
                     <td>
                         <InlineIcon size={2}>
-                            <InputSequence sequence={[Input.R]} />
+                            <InputSequence sequence={[Input.R]}/>
                         </InlineIcon>
                     </td>
                     <td>Range</td>
@@ -235,7 +242,7 @@ export default function MechanicsPage() {
                 <tr>
                     <td>
                         <InlineIcon size={2}>
-                            <InputSequence sequence={[Input.D]} />
+                            <InputSequence sequence={[Input.D]}/>
                         </InlineIcon>
                     </td>
                     <td>Dust</td>
@@ -246,14 +253,14 @@ export default function MechanicsPage() {
                 <tr>
                     <td>
                         <InlineIcon size={2}>
-                            <InputSequence sequence={[Input.DASH]} />
+                            <InputSequence sequence={[Input.DASH]}/>
                         </InlineIcon>
                     </td>
                     <td>Dash</td>
                     <td>
                         Atajo de{" "}
                         <InlineIcon size={2}>
-                            <InputSequence sequence={[Input.RIGHT, Input.RIGHT]} />
+                            <InputSequence sequence={[Input.RIGHT, Input.RIGHT]}/>
                         </InlineIcon>{" "}
                         para hacer dashes de forma más rápida.
                     </td>
@@ -261,7 +268,7 @@ export default function MechanicsPage() {
                 <tr>
                     <td>
                         <InlineIcon size={2}>
-                            <InputSequence sequence={[Input.TAUNT]} />
+                            <InputSequence sequence={[Input.TAUNT]}/>
                         </InlineIcon>
                     </td>
                     <td>Taunt</td>
@@ -272,7 +279,7 @@ export default function MechanicsPage() {
                 </tbody>
             </table>
             <div className="diagram">
-                <InputStrengthDiagam style={{width:'clamp(200px, 50%, 100%)'}}/>
+                <InputStrengthDiagram style={{width: 'clamp(200px, 50%, 100%)'}}/>
             </div>
 
             <p>
@@ -341,20 +348,21 @@ export default function MechanicsPage() {
                 temática de cada personaje.
             </p>
             <br/>
-            <AlertPanel>TODO: crear esquema/diagrama</AlertPanel>
-            <pre>
-            MELEE ─────────────► GRAB<br/>
-            ▲                     │<br/>
-            │                     │<br/>
-            └──── DISTANCIA ◄─────┘<br/>
-            </pre>
+            <div className="diagram">
+                <GeneralCombatDiagram style={{width: 'clamp(200px, 50%, 100%)'}}/>
+            </div>
+
             <p>
-                Estos ataques siguen el patrón de diseño de piedra/papel/tijeras donde cada uno gana a otro y pierde
-                contra el tercero: <br/>
-                Melee vence a Grab en distancia/startup <br/>
-                Grab ignora toda defensa <br/>
-                Distancia supera el alcance de Melee <br/>
+                Estos ataques siguen el patrón de diseño de piedra/papel/tijeras ligeramente asimétrico.
+                Siendo <BlockText/> la acción que más veces gana pero la que puede vencerle es la menos exitosa en
+                general, <GrabText/>.
             </p>
+            <ul>
+                <li><MeleeText/> vence a <GrabText/>.</li>
+                <li><RangeText/> domina a <MeleeText/> si la distancia hace que no pueda ser alcanzado y viceversa.</li>
+                <li><RangeText/> vence a <GrabText/>.</li>
+                <li><BlockText/> vence a todos menos a <GrabText/>.</li>
+            </ul>
             <Heading3 id="melee">Cuerpo a cuerpo (Melee)</Heading3>
             <p>
                 Son aquellos ataques de contacto directo con rango corto, daño directo y alta frecuencia de uso.

@@ -16,6 +16,11 @@
     -moz-osx-font-smoothing: grayscale;
 
     --header-height: 3rem;
+
+    --color-melee: #DF2173;
+    --color-grab: #DF7321;
+    --color-block: #2188DF;
+    --color-range: #DFD721;
 }
 * {
     margin: 0;
