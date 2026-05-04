@@ -2,6 +2,9 @@ export const routes = {
     home: {
         path: "/",
     },
+    story: {
+        path: "/story",
+    },
     mechanics: {
         path: "/mechanics",
         cooking: {
@@ -24,7 +27,7 @@ export const routes = {
     business: {
         path: "/business",
     },
-    glosary: {
+    glossary: {
         path: "/glosary",
     },
     combat: {

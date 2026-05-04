@@ -5,3 +5,31 @@ p {
 .alert {
     color: red;
 }
+
+ol {
+    list-style-position: inside;
+}
+
+
+/* /public/diagrams/General combat diagram.svg
+ * This file depends on these class names
+ */
+.melee {
+    color: var(--color-melee);
+    fill: var(--color-melee);
+}
+
+.grab {
+    color: var(--color-grab);
+    fill: var(--color-grab);
+}
+
+.range {
+    color: var(--color-range);
+    fill: var(--color-range);
+}
+
+.block {
+    color: var(--color-block);
+    fill: var(--color-block);
+}
