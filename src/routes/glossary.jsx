@@ -331,20 +331,7 @@ const collisionTerms = {
     }
 };
 
-
-const glossary = {
-
-
-    ...frameDataTerms,
-    ...frameAdvantageTerms,
-    ...stateTerms,
-    ...interactionTerms,
-    ...offensiveTerms,
-    ...defensiveTerms,
-    ...positioningTerms,
-    ...combo,
-    ...collisionTerms,
-
+const inputTerms = {
     inputBuffer: {
         name: "Input buffer",
         content:
@@ -377,7 +364,22 @@ const glossary = {
         id: "motion-input",
         categories: [GlossaryCategory.INPUT]
     }
+};
 
+
+const glossary = {
+
+
+    ...frameDataTerms,
+    ...frameAdvantageTerms,
+    ...stateTerms,
+    ...interactionTerms,
+    ...offensiveTerms,
+    ...defensiveTerms,
+    ...positioningTerms,
+    ...combo,
+    ...collisionTerms,
+    ...inputTerms
 };
 // eslint-disable-next-line react-refresh/only-export-components
 export default glossary;

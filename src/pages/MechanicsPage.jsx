@@ -9,6 +9,7 @@ import {routes} from "../routes/routes.js";
 import InputStrengthDiagram from "../../public/diagrams/Input strength.svg?react";
 import GeneralCombatDiagram from "../../public/diagrams/General combat diagram.svg?react";
 import {BlockText, GrabText, MeleeText, RangeText} from "../modules/ColoredText/ColoredText.jsx";
+import glossary, {getGlossaryLink} from "../routes/glossary.jsx";
 
 export default function MechanicsPage() {
     return (
@@ -18,18 +19,18 @@ export default function MechanicsPage() {
             <p>
                 <b>Cuoco Cooked</b> es un juego de lucha basado en rondas de 99 segundos, con una estructura básica "al
                 mejor de 3", es decir, si uno de los dos contendientes gana dos rondas gana la partida.
-                Para ganar un round hay dos vías:
+                Para ganar una ronda hay dos vías:
             </p>
             <ol>
                 <li>
-                    Bajar la vida del oponente hasta 0, que a partir de ahora llamaremos <i>"COOCKED"</i> a modo
-                    de <i>"KO"</i>.
+                    Bajar la vida del oponente hasta 0, que a partir de ahora llamaremos <PLink
+                    href="https://dictionary.cambridge.org/dictionary/english/cooked#:~:text=in%20serious%20trouble%20and%20unlikely%20to%20be%20able%20to%20return%20to%20a%20successful%20or%20strong%20position%3A">
+                    <i>"COOCKED"</i></PLink> a modo de <i>"KO"</i>.
                 </li>
                 <li>
                     Tener más porcentaje de vida que el oponente al finalizar la ronda.
                 </li>
             </ol>
-            <br/>
             <p>
                 Se plantea la posibilidad de que la vida represente algún aspecto del universo temático:
             </p>
@@ -64,47 +65,46 @@ export default function MechanicsPage() {
                 </pre>
             <br/>
             <hr/>
-            <hr/>
-            <br/>
+
             <Heading2 id="fundamentals">Fundamentos de juegos de peleas</Heading2>
-            Los videojuegos de peleas se basan en dos aspectos básicos:
-            <ul>
-                <li>Guessing (adivinar) de la misma forma que se hace en
-                    piedra, papel o tijera.
-                </li>
-                <li>Principio de la animación: anticipación/acción/vuelta al estado base.</li>
-            </ul>
-            Estos dos sistemas rigen la inmensa mayoría de videojuegos de peleas tradicionales.
             <p>
-                Guessing funciona siempre que los sistemas de agresión y defensa tengan más de un estado
-                y, cada acción agresiva o defensiva, no cubra todos los estados (de pie, agachado y por encima
-                de la cabeza). O al menos que no lo haga sin consumir un recurso.
+                Los juegos de pelea clásicos (2D y 2.5D) no son simples intercambios de golpes. Son sistemas complejos
+                de <b>gestión de riesgos</b> y <b>anatomía de la animación</b>. Se rigen
+                principalmente por dos pilares: la interacción tipo "Piedra, Papel o Tijera" y los principios de la
+                animación.
             </p>
             <p>
-                La animación de los movimientos y acciones de los personajes determinan el balance
-                del juego en gran medida. Todos los ataques suelen contar con tres estados:
+                Cada movimiento en un juego como <i>Street Fighter</i> se divide en tres fases críticas. Entender esto
+                es la diferencia entre "apretar botones" y jugar con estrategia.
             </p>
             <ul>
-                <li>Anticipación: cuando el personaje sale del estado base (idle) hasta justo antes
-                    de realizar la acción.
-                </li>
-                <li>Acción activa: cuando la acción que se está realizando está activa. Vease, en
-                    un ataque, es cuando la <i>hitbox</i> está activa y puede golpear.
-                </li>
-                <li>Vuelta al idle: cuando el personaje deja de golpear y vuelve al estado base.</li>
+                <li>Startup: anticipación.</li>
+                <li>Active: instantes en los que la acción se aplica.</li>
+                <li>Recovery: vuelta a un estado neutral.</li>
             </ul>
             <p>
-                Este ciclo no puede ser cancelado por el jugador que lo realiza de forma normal.
-                Este sistema de animación se combina con la respuesta del rival. Tanto si recibe un
-                golpe como si lo bloquea, ambos resultan en una animación.
+                Este pilar define cuando y cuanto tiempo un jugador se le puede hacer <PLink
+                href={getGlossaryLink(glossary.punish)}>punish</PLink> y por cuanto tiempo por su <PLink
+                href={getGlossaryLink(glossary.hitstun)}>hit stun</PLink>.
             </p>
             <p>
                 Aquí es donde se encuentra la base de las animaciones. Se suele buscar que golpear
                 resulte en que el agresor termine su animación de ataque antes de que el rival termine
                 la suya de ser golpeado para premiar con la oportunidad de golpear otra vez antes de
-                que el rival pueda responder. Si el rival bloquea un ataque, en la mayoría de veces se
-                busca premiar al defensor haciendo que su animación de bloqueo termine antes que la del
-                rival.
+                que el rival pueda responder por el <PLink href={getGlossaryLink(glossary.hitstun)}>hit stun</PLink>.
+                Si el rival bloquea un ataque, en la mayoría de veces se busca premiar al defensor haciendo que su
+                <PLink href={getGlossaryLink(glossary.blockstun)}>block stun</PLink> termine antes que la del rival.
+            </p>
+            <br/>
+            <p>
+                El <b>triángulo</b> de "piedra, papel o tijera" que se crea por las acciones
+                de <MeleeText/>, <GrabText/> y <BlockText/> es un sistema intencionalmente imperfecto en el que ninguna
+                opción es claramente superior a todas las demás.
+            </p>
+            <p>
+                Este triángulo se apoya en el sistema de altura en el que los golpes pueden golpear de frente, por
+                abajo u <PLink href={getGlossaryLink(glossary.overhead)}>overhead</PLink>. Los bloqueos tienen dos
+                estados, agachados que cubren de golpes por abajo y de pie que cubren los de frente y los overhead.
             </p>
             <br/>
             <hr></hr>
@@ -117,60 +117,90 @@ export default function MechanicsPage() {
             </p>
             <p>Siempre se asume que el jugador está a la izquierda y su rival a la derecha.</p>
             <Heading3 id="movement-basic">Movimientos básicos</Heading3>
-            <ul>
-                <li><InlineIcon size={2}><InputSequence sequence={[Input.NEUTRAL]}/></InlineIcon>: Por defecto,
-                    el jugador está de pie y no se defiende.
-                </li>
-                <li><InlineIcon size={2}><InputSequence sequence={[Input.RIGHT]}/></InlineIcon>: Andar adelante,
-                    velocidad estándar
-                </li>
-                <li><InlineIcon size={2}><InputSequence sequence={[Input.LEFT]}/></InlineIcon>: Andar atrás, velocidad
-                    estándar
-                </li>
-                <li><InlineIcon size={2}><InputSequence sequence={[Input.RIGHT, Input.RIGHT]}/></InlineIcon>/
-                    <InlineIcon size={2}><InputSequence sequence={[Input.DASH]}/></InlineIcon>: Dash
-                    adelante, invencibilidad parcial en startup. Si se mantiene la dirección el personaje corre.
-                </li>
-                <li><InlineIcon size={2}><InputSequence sequence={[Input.LEFT, Input.LEFT]}/></InlineIcon>/
-                    <InlineIcon size={2}><InputSequence sequence={[Input.DASH]}/></InlineIcon>: Back dash,
-                    invencibilidad parcial en startup. Si se mantiene la dirección el personaje corre.
-                </li>
-                <li><InlineIcon size={2}><InputSequence sequence={[Input.DOWN]}/></InlineIcon>: Agacharse, cambia
-                    hurtbox, accede a ataques agachado.
-                </li>
-                <li><InlineIcon size={2}><InputSequence sequence={[Input.UP]}/></InlineIcon>: Saltar, arco neutral</li>
-                <li><InlineIcon size={2}><InputSequence sequence={[Input.UP_RIGHT]}/></InlineIcon>: Saltar adelante,
-                    salto diagonal ofensivo.
-                </li>
-                <li><InlineIcon size={2}><InputSequence sequence={[Input.UP_LEFT]}/></InlineIcon>: Saltar atrás, salto
-                    diagonal defensivo / escape
-                </li>
-                <li> ↓→↑ : Salto bajo, salto más rápido, menor altura</li>
-                {/* Diego: Tengo dudas sobre este input */}
-                <li><InlineIcon size={2}><InputSequence sequence={[Input.D]}/></InlineIcon>: Ataque que siempre golpea a
-                    un personaje de pie.
-                </li>
-                <li><InlineIcon size={2}><InputSequence sequence={[Input.RIGHT, Input.D]}/></InlineIcon>: Agarre que
-                    lanza al rival hacia delante y le tira al suelo.
-                </li>
-                <li><InlineIcon size={2}><InputSequence sequence={[Input.LEFT, Input.D]}/></InlineIcon>: Agarre que
-                    lanza al rival hacia atrás y le tira al suelo.
-                </li>
-                <li><InlineIcon size={2}><InputSequence sequence={[Input.DOWN, Input.D]}/></InlineIcon>: Ataque que
-                    siempre golpea a
-                    un personaje agachado.
-                </li>
-            </ul>
+            <table>
+                <thead>
+                <tr>
+                    <th>Input</th>
+                    <th>Descripción</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><InlineIcon size={2}><InputSequence sequence={[Input.NEUTRAL]}/></InlineIcon></td>
+                    <td>Por defecto, el jugador está de pie y no se defiende.</td>
+                </tr>
+                <tr>
+                    <td><InlineIcon size={2}><InputSequence sequence={[Input.RIGHT]}/></InlineIcon></td>
+                    <td>Andar adelante, velocidad estándar.</td>
+                </tr>
+                <tr>
+                    <td><InlineIcon size={2}><InputSequence sequence={[Input.LEFT]}/></InlineIcon></td>
+                    <td>Andar atrás, velocidad estándar.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <InlineIcon size={2}><InputSequence sequence={[Input.RIGHT, Input.RIGHT]}/></InlineIcon> /
+                        <InlineIcon size={2}><InputSequence sequence={[Input.DASH]}/></InlineIcon>
+                    </td>
+                    <td>Dash adelante, invencibilidad parcial en startup. Si se mantiene la dirección el personaje
+                        corre.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <InlineIcon size={2}><InputSequence sequence={[Input.LEFT, Input.LEFT]}/></InlineIcon> /
+                        <InlineIcon size={2}><InputSequence sequence={[Input.DASH]}/></InlineIcon>
+                    </td>
+                    <td>Back dash, invencibilidad parcial en startup. Si se mantiene la dirección el personaje corre.
+                    </td>
+                </tr>
+                <tr>
+                    <td><InlineIcon size={2}><InputSequence sequence={[Input.DOWN]}/></InlineIcon></td>
+                    <td>Agacharse, cambia hurtbox, accede a ataques agachado.</td>
+                </tr>
+                <tr>
+                    <td><InlineIcon size={2}><InputSequence sequence={[Input.UP]}/></InlineIcon></td>
+                    <td>Saltar, arco neutral.</td>
+                </tr>
+                <tr>
+                    <td><InlineIcon size={2}><InputSequence sequence={[Input.UP_RIGHT]}/></InlineIcon></td>
+                    <td>Saltar adelante, salto diagonal ofensivo.</td>
+                </tr>
+                <tr>
+                    <td><InlineIcon size={2}><InputSequence sequence={[Input.UP_LEFT]}/></InlineIcon></td>
+                    <td>Saltar atrás, salto diagonal defensivo / escape.</td>
+                </tr>
+                <tr>
+                    <td><InlineIcon size={2}><InputSequence sequence={[Input.D]}/></InlineIcon></td>
+                    <td>Ataque que siempre golpea a un personaje de pie.</td>
+                </tr>
+                <tr>
+                    <td><InlineIcon size={2}><InputSequence sequence={[Input.RIGHT, Input.D]}/></InlineIcon></td>
+                    <td>Agarre que lanza al rival hacia delante y le tira al suelo.</td>
+                </tr>
+                <tr>
+                    <td><InlineIcon size={2}><InputSequence sequence={[Input.LEFT, Input.D]}/></InlineIcon></td>
+                    <td>Agarre que lanza al rival hacia atrás y le tira al suelo.</td>
+                </tr>
+                <tr>
+                    <td><InlineIcon size={2}><InputSequence sequence={[Input.DOWN, Input.D]}/></InlineIcon></td>
+                    <td>Ataque que siempre golpea a un personaje agachado.</td>
+                </tr>
+                </tbody>
+            </table>
             <Heading3 id="movement-jump">Características del salto</Heading3>
             <ul>
-                <li>Arco fijo una vez iniciado (sin control aéreo extendido)</li>
-                <li>Ataques aéreos disponibles</li>
-                <li>Vulnerable durante el ascenso a ataques antiaereos</li>
-                <li>Los grabs terrestres no alcanzan a personajes en aire</li>
+                <li>Arco fijo una vez iniciado, sin control aéreo extendido.</li>
+                <li>Ataques aéreos disponibles.</li>
+                <li>Los grabs terrestres solo alcanzan a personajes en aire si toca su <PLink
+                    href={getGlossaryLink(glossary.hitbox)}>hitbox</PLink> principal.
+                </li>
+                <li>Se puede bloquear en el aire.</li>
+                <li>Se puede agarrar en el aire.</li>
             </ul>
             <Heading3 id="dressing-restrictions">Restricciones por Aderezo</Heading3>
             <ul>
-                <li><b>- Saciado (debuff) </b>: elimina la capacidad de dash y salto durante su duración</li>
+                <li><b>Saciado (debuff)</b>: elimina la capacidad de dash y salto durante su duración</li>
             </ul>
             <br/>
             <hr></hr>
@@ -594,7 +624,8 @@ export default function MechanicsPage() {
             </pre>
             <Heading4 id="combo-examples-chef">Combo con aderezo del Chef:</Heading4>
             <pre>
-                Input especial (<InlineIcon size={2}><InputSequence sequence={[Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT, Input.R]}/></InlineIcon>) <br/>
+                Input especial (<InlineIcon size={2}><InputSequence
+                sequence={[Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT, Input.R]}/></InlineIcon>) <br/>
 
                 │ <br/>
                 └──► Proyectil de salsa → impacto → aderezo aplicado <br/>
