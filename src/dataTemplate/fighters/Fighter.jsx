@@ -28,6 +28,12 @@ import {MoveSet} from "./moves/MoveSet.jsx";
  * @property {Array<JSX.Element|string|function>} cons Desventajas del personaje
  */
 
+export const baseDefaultStats = {
+    health: 400,
+    walkSpeed: 50,
+    runSpeed: 100
+};
+
 /**
  * Representa un luchador en el juego.
  */
