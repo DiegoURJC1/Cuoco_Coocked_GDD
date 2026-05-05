@@ -10,7 +10,7 @@ export const fighterPeppemoldy = new Fighter({
     description: (fighter) => (
         <>
             No comerse el último trozo tiene consecuencias.
-            {fighter.name} es el resultado de no comerse la última porción de la comida.
+            {fighter.name} es el resultado de no comerse la última porción de la pizza.
             Tras cobrar vida tras un tiempo en la basura, fue en ese contenedor común donde
             encontró sus características gafas.
         </>
