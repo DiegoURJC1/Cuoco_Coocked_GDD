@@ -12,9 +12,15 @@ export default function BusinessPage() {
 
                 | Fase            | Personajes       | Notas                                |
                 | --------------- | ---------------- | ------------------------------------ |
-                | **MVP**         | 4-6 personajes   | Cubriendo los arquetipos principales |
-                | **Lanzamiento** | 8-12 personajes  | Roster completo con 1-2 humanos      |
-                | **Post-launch** | DLC / temporadas | Por definir
+                | **MVP**         | 4-6 personajes   | Cubriendo los arquetipos principales |30000
+                | **Lnzmnto Steam** | 8-12 personajes  | Roster completo con 1-2 humanos    |75100
+                | **Traduc**      | chino, japo      | Por definir                          |77600
+                | **GOG**         | drm free         | Por definir                          |87600
+                | **mods,workshop** | coreano y portugués   | Por definir                   |132500
+                | **epic games**      | arreglar parches, mantenmiento  | Por definir       |137500
+                | **DLC april foods**      | mecáicas nuevas      | Por definir             |170000
+                | **Switch**      |                  | Por definir                          |201000
+                | **Play 4, Play 5**      | nuevosescenarios y aderezos    | Por definir    |286000
             </p>
             <Heading2 id="roadmap">Roadmap</Heading2>
             <p>
