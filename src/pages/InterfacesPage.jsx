@@ -1,19 +1,17 @@
-import {Heading1, Heading2} from "../../modules/Heading/Heading.jsx"
+import {Heading1, Heading2} from "../modules/Heading/Heading.jsx"
+import PLink from "../modules/Link/PLink.jsx";
+import {fighters} from "../data/fighter/fighters.jsx";
+import {exampleFighter} from "../data/fighter/fighters/exampleFighter/exampleFighter.jsx";
+import {routes} from "../routes/routes.js";
 
-import "./Home.css";
-import PLink from "../../modules/Link/PLink.jsx";
-import {routes} from "../../routes/routes.js";
-import AlertPanel from "../../modules/AlertPanel/AlertPanel.jsx";
-import glossary, {getGlossaryLink} from "../../routes/glossary.jsx";
-import {GrabText, MeleeText, RangeText} from "../../modules/ColoredText/ColoredText.jsx";
 
-export default function Home() {
+
+export default function InterfacesPage() {
     return (
         <>
             <Heading1 id="interfaces">Interfaces</Heading1>
-            <img src="../../../public/cover/portadaConLogo.png" alt="Game Cover Art"/>
-            <p className="claim">
-                Con los puños en la masa
+            <p>
+                Esta página contiene todas las interfaces, tanto fuera como dentro del combate.
             </p>
 
             <Heading2 id="combat interface">Interfaz de combate</Heading2>
@@ -23,7 +21,7 @@ export default function Home() {
                 tablas de madera en la parte superior de la pantalla, listas para reflejar el caos de la acción.
             </p>
 
-            <img src="../../../public/interface/combatInterface.png" alt="Combat Interface"/>
+            <img src="../../public/interface/combatInterface.png" alt="Combat Interface"/>
 
             <p>
                 En el rectángulo a la derecha de la tabla de cortar, aparecerá la cara del luchador. Su salud la
@@ -33,7 +31,7 @@ export default function Home() {
             </p>
 
             <p>
-                En el caso del panadero, su vida estará dictada por una barra de pan, que se irá haciendo más
+                En el caso de <PLink href={routes.fighters.path+"\\"+ exampleFighter.id}>El Panadero</PLink>, su salud estará dictada por una barra de pan, que se irá haciendo más
                 pequeña cuanto más daño sufra. En el caso de los puntos especiales, quedan representados por un
                 cuchillo de cortar pan, que se verá manchado por la sangre (o salsa) de su enemigo.
             </p>
@@ -42,7 +40,7 @@ export default function Home() {
                 Abajo se muestra un ejemplo de la disposición de la interfaz en el escenario de juego:
             </p>
 
-            <img src="../../../public/interface/combatInterfaceInScene.png" alt="Combat Interface In-Game"/>
+            <img src="../../public/interface/combatInterfaceInScene.png" alt="Combat Interface In-Game"/>
 
         </>
     );

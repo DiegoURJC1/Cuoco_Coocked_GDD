@@ -44,5 +44,8 @@ export const routes = {
     stages: {
         path: "/stages",
         id: "/stages/:id"
+    },
+    interfaces: {
+        path: "/interfaces",
     }
 };
