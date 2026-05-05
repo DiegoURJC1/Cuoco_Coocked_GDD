@@ -29,13 +29,13 @@ const frameDataTerms = {
         id: "active-frames",
         categories: [GlossaryCategory.FRAME]
     },
-    recovery: {
-        name: "Recovery",
+    recoveryFrames: {
+        name: "Recovery Frames",
         content: <>
             Fase final de un ataque donde el personaje recupera su postura. No se pueden realizar acciones y se
             es vulnerable.
         </>,
-        id: "recovery",
+        id: "recovery-frames",
         categories: [GlossaryCategory.FRAME]
     }
 };
@@ -112,6 +112,16 @@ const stateTerms = {
             </>,
         id: "wake-up",
         categories: [GlossaryCategory.PLAYER_STATE]
+    },
+    knockDown: {
+        name: "Knock Down",
+        content:
+            <>
+                Derribo que deja en el suelo en un estado que no permite realizar acciones. Los ataques pueden tener
+                esta propiedad.
+            </>,
+        id: "knock-down",
+        categories: [GlossaryCategory.PLAYER_STATE, GlossaryCategory.OFFENSIVE]
     }
 };
 

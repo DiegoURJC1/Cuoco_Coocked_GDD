@@ -13,6 +13,8 @@ export class Move {
      */
     #name;
 
+    #id;
+
     /**
      * Categoría del movimiento (universal, simple, special, overdrive)
      * @type {string}
@@ -59,6 +61,7 @@ export class Move {
      * @property {boolean} states.moveData.invuln - Si el movimiento tiene invulnerabilidad.
      */
     constructor({ name, moveCategory, description, inputList, states = [] }) {
+        this.#id = this.#generateIdFromName(name);
         this.#name = name;
         this.#moveCategory = moveCategory;
         this.#description = typeof description === "function" ? description(this) : description;
@@ -78,6 +81,21 @@ export class Move {
         }));
     }
     // endregion
+
+    /**
+     * Genera un ID amigable para URL a partir de un nombre.
+     * @param {string} name Nombre original
+     * @returns {string} ID en minúsculas, sin acentos ni caracteres especiales
+     */
+    #generateIdFromName(name) {
+        return name
+            .normalize("NFD")            // separa acentos
+            .replace(/[\u0300-\u036f]/g, "") // quita acentos
+            .toLowerCase()
+            .replace(/[^a-z0-9 ]/g, "")  // quita caracteres no alfanuméricos
+            .trim()
+            .replace(/\s+/g, "-");       // espacios -> guiones
+    }
 
     // region Frame Analysis
     /**
@@ -118,13 +136,14 @@ export class Move {
     getActiveSequence() { return this.getFrameSequence(FrameType.ACTIVE); }
 
     /**
-     * Obtiene la secuencia de recovery frames.
+     * Obtiene la secuencia de recoveryFrames frames.
      */
     getRecoverySequence() { return this.getFrameSequence(FrameType.RECOVERY); }
     // endregion
 
 
     // region Getters
+    get id() { return this.#id; }
     get name() { return this.#name; }
     get moveCategory() { return this.#moveCategory; }
     get description() { return this.#description; }

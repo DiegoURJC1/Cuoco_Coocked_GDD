@@ -27,6 +27,7 @@ export function InputIcon({ inputs }) {
                     type={motion.type}
                     direction={motion.dir}
                     flip={motion.dir === LookDirection.LEFT}
+                    arc={motion.arc}
                 />
             );
         }

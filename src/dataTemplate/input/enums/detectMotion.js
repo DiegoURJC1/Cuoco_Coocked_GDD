@@ -18,6 +18,10 @@ const motions = [
 
     ["41236", { type: MotionType.HALF, dir: LookDirection.RIGHT }],
     ["63214", { type: MotionType.HALF, dir: LookDirection.LEFT }],
+    ["23698", { type: MotionType.HALF, dir: LookDirection.RIGHT, arc: "UP" }],
+    ["89632", { type: MotionType.HALF, dir: LookDirection.LEFT, arc: "UP" }],
+    ["21478", { type: MotionType.HALF, dir: LookDirection.LEFT, arc: "DOWN" }],
+    ["87412", { type: MotionType.HALF, dir: LookDirection.RIGHT, arc: "DOWN" }],
 
     ["623", { type: MotionType.Z, dir: LookDirection.RIGHT }],
     ["421", { type: MotionType.Z, dir: LookDirection.LEFT }],

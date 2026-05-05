@@ -1,4 +1,4 @@
 export const FighterType = Object.freeze({
-    FOOD: "food",
-    HUMAN: "human"
+    FOOD: "Comida",
+    HUMAN: "Humano"
 });
