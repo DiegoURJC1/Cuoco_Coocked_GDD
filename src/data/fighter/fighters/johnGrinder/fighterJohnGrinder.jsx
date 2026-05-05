@@ -1,43 +1,62 @@
-import {Fighter} from "../../../../dataTemplate/fighters/Fighter.jsx";
+import {baseDefaultStats, Fighter} from "../../../../dataTemplate/fighters/Fighter.jsx";
 import {Archetype} from "../../../../dataTemplate/fighters/enums/Archetype.js";
 import {Source} from "../../../../dataTemplate/fighters/enums/Source.js";
 import {FighterType} from "../../../../dataTemplate/fighters/enums/FighterType.js";
-import {moveSetJohnGrinder} from "./moveSetJohnGrinder.jsx";
+import {moveFridgeTwirl63214, moveSetJohnGrinder} from "./moveSetJohnGrinder.jsx";
 import {InlineIcon} from "../../../../modules/InlineIcon/InlineIcon.jsx";
 import {InputSequence} from "../../../../dataTemplate/input/InputSequence.jsx";
+import PLink from "../../../../modules/Link/PLink.jsx";
+import glossary, {getGlossaryLink} from "../../../../routes/glossary.jsx";
 
+const name = "John Grinder";
 export const fighterJohnGrinder = new Fighter({
-    name: "John Grinder",
+    name: name,
     nickName: "Johnny Fresh",
     archetype: Archetype.POWER,
     description: (fighter) => (
         <>
-            {fighter.name} es más grande que una nevera. Por suerte, siempre lleva una para comparar.
+            Más grande que una nevera. Por suerte, siempre lleva una para comparar.
+            <br/>
+            {fighter.name} es un carnicero local con una fuerza sobrehumana y usa una nevera consigo para defenderse.
+            <br/>
+            Su movimiento estrella es {moveFridgeTwirl63214.name}, con el que mueve con gran fuerza su nevera en
+            movimientos de palanca de medio círculo en cualquier dirección menos arriba que además pueden hacerse en el
+            aire. Este movimiento es lento pero de mucho daño y es capaz de oprimir al rival a media distancia.
         </>
     ),
     easyToUse: 3,
     narrativeOrigin:
         <>
-            Jefe de cocina de un restaurante italiano de la Toscana.
+            Jefe de una carnicería local. Lleva consigo una gran nevera y un corazón todavía más grande.
         </>,
     prosCons: {
         pros: [
             <>Versatil tanto de cerca como a distancia media.</>,
             (fighter) => {
                 return <>
-                    Buen control con {fighter.moveSet.universal.down_hs.name}.
+                    Buen control del espacio con <b>{fighter.moveSet.universal.down_hs.name}</b> para compensar la falta
+                    de {moveFridgeTwirl63214.name} directamente encima.
                 </>;
             },
             (fighter) => {
                 return <>
-                    El input <InlineIcon size={2.5}><InputSequence sequence={fighter.moveSet.universal.down_hs.inputList}/></InlineIcon>
-                    ayuda a mantenerse protegido mientras se realiza.
+                    El input <InlineIcon size={2.5}><InputSequence
+                    sequence={fighter.moveSet.universal.down_hs.inputList}/></InlineIcon>
+                    ayuda a mantenerse protegido mientras se realiza e impide que abusen de su espacio aéreo pese a que
+                    carece de movilidad aérea.
                 </>;
-            }
+            },
+            <><PLink href={getGlossaryLink(glossary.knockDown)}>Knokeos</PLink> consistentes gracias
+                a <b>{moveFridgeTwirl63214.name}</b> que le permite reposicionarse a la distancia ideal para volver a
+                conectar el golpe.
+            </>
+
         ],
         cons: [
             <>Movimientos lentos y predecibles.</>,
-            <>Dificultad para acortar las distancias.</>
+            <>Dificultad para acortar las distancias.</>,
+            <>Opciones defensivas escasas.</>,
+            <>No tiene acción secundaria en el arie (ni dash aéreo ni doble salto).</>
         ]
     },
     type: FighterType.HUMAN,
@@ -50,9 +69,9 @@ export const fighterJohnGrinder = new Fighter({
         zoom: 5
     },
     baseStats: {
-        health: 120,
-        walkSpeed: 40,
-        runSpeed: 80
+        health: baseDefaultStats.health * 1.2,
+        walkSpeed: baseDefaultStats.walkSpeed * 0.8,
+        runSpeed: baseDefaultStats.runSpeed * 0.8
     },
     moveSet: moveSetJohnGrinder,
 });

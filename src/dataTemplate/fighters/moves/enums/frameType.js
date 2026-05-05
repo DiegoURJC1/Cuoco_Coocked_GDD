@@ -26,11 +26,11 @@ export const FrameType = Object.freeze({
         color: "#7f7f7f"
     },
     RECOVERY: {
-        name: "recovery",
+        name: "recoveryFrames",
         color: "#0068b5"
     },
     SPECIAL_RECOVERY: {
-        name: "special recovery",
+        name: "special recoveryFrames",
         color: "#d968cd"
     }
 });

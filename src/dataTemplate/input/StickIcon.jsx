@@ -10,10 +10,19 @@ import {MotionType} from "./enums/MotionType.js";
 export function StickIcon({
                               type,
                               direction = LookDirection.RIGHT,
+                              arc,
                               flip = false,
                               size = 32,
                           }) {
-    const angle = numpadToAngle[direction] ?? 0;
+    let angle = numpadToAngle[direction] ?? 0;
+
+    if (type === MotionType.HALF) {
+        if (arc === "UP") {
+            angle -= 90;
+        } else if (arc === "DOWN") {
+            angle += 90;
+        }
+    }
 
     const style = {
         width: "auto",
