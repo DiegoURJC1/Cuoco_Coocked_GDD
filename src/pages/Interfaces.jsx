@@ -1,0 +1,49 @@
+import {Heading1, Heading2} from "../../modules/Heading/Heading.jsx"
+
+import "./Home.css";
+import PLink from "../../modules/Link/PLink.jsx";
+import {routes} from "../../routes/routes.js";
+import AlertPanel from "../../modules/AlertPanel/AlertPanel.jsx";
+import glossary, {getGlossaryLink} from "../../routes/glossary.jsx";
+import {GrabText, MeleeText, RangeText} from "../../modules/ColoredText/ColoredText.jsx";
+
+export default function Home() {
+    return (
+        <>
+            <Heading1 id="interfaces">Interfaces</Heading1>
+            <img src="../../../public/cover/portadaConLogo.png" alt="Game Cover Art"/>
+            <p className="claim">
+                Con los puños en la masa
+            </p>
+
+            <Heading2 id="combat interface">Interfaz de combate</Heading2>
+            <p>
+                La interfaz de combate sigue la temática general del juego, haciendo referencia a utensilios de
+                cocina y a comida para lograr una estética cohesionada. Al iniciar cada combate, aparecerán dos
+                tablas de madera en la parte superior de la pantalla, listas para reflejar el caos de la acción.
+            </p>
+
+            <img src="../../../public/interface/combatInterface.png" alt="Combat Interface"/>
+
+            <p>
+                En el rectángulo a la derecha de la tabla de cortar, aparecerá la cara del luchador. Su salud la
+                refleja la barra superior dentro de la tabla, y sus puntos especiales, la barra inferior.
+                Dichas barras cambiarán de estética dependiendo del luchador que aparezca en pantalla, reflejando
+                la comida que representa o, en el caso de los cocineros, la que es su especialidad.
+            </p>
+
+            <p>
+                En el caso del panadero, su vida estará dictada por una barra de pan, que se irá haciendo más
+                pequeña cuanto más daño sufra. En el caso de los puntos especiales, quedan representados por un
+                cuchillo de cortar pan, que se verá manchado por la sangre (o salsa) de su enemigo.
+            </p>
+
+            <p>
+                Abajo se muestra un ejemplo de la disposición de la interfaz en el escenario de juego:
+            </p>
+
+            <img src="../../../public/interface/combatInterfaceInScene.png" alt="Combat Interface In-Game"/>
+
+        </>
+    );
+}
