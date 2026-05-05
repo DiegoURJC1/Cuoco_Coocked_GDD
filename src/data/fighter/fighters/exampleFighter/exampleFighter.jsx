@@ -8,21 +8,24 @@ export const exampleFighter = new Fighter({
     archetype: Archetype.BALANCE,
     description: (fighter) => (
         <>
-            {fighter.name} es un cocinero novato pero con mucho ánimo.<br/>
+            {fighter.name} es un panadero novato pero con mucho ánimo. Su arma (y escudo) favorito es la primera barra de pan que
+            hizo, la cual está tan dura como llena de orgullo. Su falta de práctica hace que todavía le cuesta ser
+            agresivo con la masa, así no suele sacar cuchillo de cortar pan al combate, a no ser que su querida baguette
+            no ha sido suficiente para defenderle.<br/>
 
         </>
     ),
     easyToUse: 5,
     narrativeOrigin:
         <>
-            Restaurante italiano de la Toscana.
+            Panadería de la Toscana.
         </>,
     prosCons: {
         pros: [
-            <>Muchas oportunidades para optar a la defensa.</>
+            <> Estilo de juego pausado y ágil, con muchas oportunidades para optar a la defensa. Además, cuando queda poca vida, se desbloquea el uso del cuchillo, que permite actuar de forma más agresiva.</>
         ],
         cons: [
-            <>Pocas herramientas para generar gran presión.</>,
+            <> Dispone de pocas herramientas para generar gran presión cuando dispone de mucha vida.</>,
 
         ]
     },

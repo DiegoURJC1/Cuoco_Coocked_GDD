@@ -14,6 +14,7 @@ export function GlobalNav() {
                 <li><PLink href={routes.stages.path}>Escenarios</PLink></li>
                 <li><PLink href={routes.gameModes.path}>Modos de juego</PLink></li>
                 <li><PLink href={routes.appearance.path}>Apariencia</PLink></li>
+                <li><PLink href={routes.interfaces.path}>Interfaces</PLink></li>
                 <li><PLink href={routes.business.path}>Modelo de negocio</PLink></li>
                 <li><PLink href={routes.glossary.path}>Glosario</PLink></li>
                 <li><PLink href="/combat">Combate</PLink></li>
