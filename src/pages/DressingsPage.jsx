@@ -109,59 +109,62 @@ export default function DressingsPage() {
             <hr></hr>
             <Heading2 id="generation">¿Cómo se generan?</Heading2>
             <Heading3>Los aderezos se generan por dos vías:</Heading3>
-            <ol>
-                <li><b>Vía 1: Directa, por técnicas y combos del personaje:</b></li>
+            <p>
+                <b>Vía 1: Directa, por técnicas y combos del personaje:</b><br/>
                 Cada luchador tiene métodos propios de generación de aderezos, integrados en su moveset y coherentes
                 con su temática.
                 La aplicación de aderezo siempre está incorporada visualmente en la animación del personaje. Pueden
                 ser:
-                <ul>
-                    <li><b>Por ataque especial directo:</b> El aderezo se aplica como efecto secundario de un ataque
-                        específico.
-                        Ejemplo: El Chef ejecuta <InlineIcon size={2}><InputSequence
-                            sequence={[Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT, Input.R]}/></InlineIcon>
-                        → lanza un bote de salsa picante → aplica "Quemado" al rival si impacta
-                    </li>
-                    <li><b>Por consecución de ataques:</b> El aderezo se aplica al completar una cadena específica
-                        de ataques.
-                        Ejemplo: Boloñesa ejecuta 3 o más ataques melee consecutivos completos → aplica
-                        automáticamente su aderezo característico
-                    </li>
-                </ul>
-                <br></br>
-                <li><b>Vía 2: Indirecta, por elementos de entorno:</b></li>
+            </p>
+
+            <ul>
+                <li><b>Por ataque especial directo:</b> El aderezo se aplica como efecto secundario de un ataque
+                    específico.
+                    Ejemplo: El Chef ejecuta <InlineIcon size={2}><InputSequence
+                        sequence={[Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT, Input.R]}/></InlineIcon>
+                    → lanza un bote de salsa picante → aplica "Quemado" al rival si impacta
+                </li>
+                <li><b>Por consecución de ataques:</b> El aderezo se aplica al completar una cadena específica
+                    de ataques.
+                    Ejemplo: Boloñesa ejecuta 3 o más ataques melee consecutivos completos → aplica
+                    automáticamente su aderezo característico
+                </li>
+            </ul>
+            <p>
+                <b>Vía 2: Indirecta, por elementos de entorno:</b><br/>
                 Los escenarios pueden contener elementos interactivos (botes de salsa, especias, ingredientes en
                 estanterías) que generan aderezos al ser activados.
                 Reglas de activación por entorno:
-                <ul>
-                    <li>Solo se activan con <b>ataques sin target específico</b>: ataques de distancia y especiales
-                        que generen daño en área (AoE)
-                    </li>
-                    <li>Los ataques melee y grabs, al requerir contacto directo con el rival, no activan elementos
-                        de entorno
-                    </li>
-                    <li>El efecto producido es <b>AOE</b>: afecta por posición, pudiendo impactar a ambos
-                        luchadores, solo al atacante, solo al defensor, o a ninguno
-                    </li>
-                    <li>El jugador debe considerar la posición relativa antes de lanzar un ataque que pueda activar
-                        el entorno
-                    </li>
-                    <p>
-                        <b>Ejemplo:</b><br></br>
-                        Personaje A lanza proyectil hacia el personaje B<br></br>
-                        Personaje B está frente a una estantería de botes de "Salsa Especiada"<br></br>
-                        └──► El proyectil alcanza la estantería<br></br>
-                        └──► AOE de "Salsa Especiada"<br></br>
-                        <ul>
-                            Casos:
-                            <li>A estaba muy cerca y B no se mueve: ambos reciben el aderezo</li>
-                            <li>A estaba a una cierta distancia y B no se mueve: sólo B recibe el aderezo</li>
-                            <li>A estaba muy cerca de la estantería y B se mueve: sólo A recibe el aderezo</li>
-                            <li>A estaba a una cierta distancia y B se mueve: ninguno recibe el aderezo</li>
-                        </ul>
-                    </p>
-                </ul>
-            </ol>
+            </p>
+
+            <ul>
+                <li>Solo se activan con <b>ataques sin target específico</b>: ataques de distancia y especiales
+                    que generen daño en área (AoE)
+                </li>
+                <li>Los ataques melee y grabs, al requerir contacto directo con el rival, no activan elementos
+                    de entorno
+                </li>
+                <li>El efecto producido es <b>AOE</b>: afecta por posición, pudiendo impactar a ambos
+                    luchadores, solo al atacante, solo al defensor, o a ninguno
+                </li>
+                <li>El jugador debe considerar la posición relativa antes de lanzar un ataque que pueda activar
+                    el entorno
+                </li>
+            </ul>
+            <p>
+                <b>Ejemplo:</b><br/>
+                Personaje A lanza proyectil hacia el personaje B<br/>
+                Personaje B está frente a una estantería de botes de "Salsa Especiada"<br/>
+                └──► El proyectil alcanza la estantería<br/>
+                └──► AOE de "Salsa Especiada"<br/>
+            </p>
+            <ul>
+                Casos:
+                <li>A estaba muy cerca y B no se mueve: ambos reciben el aderezo</li>
+                <li>A estaba a una cierta distancia y B no se mueve: sólo B recibe el aderezo</li>
+                <li>A estaba muy cerca de la estantería y B se mueve: sólo A recibe el aderezo</li>
+                <li>A estaba a una cierta distancia y B se mueve: ninguno recibe el aderezo</li>
+            </ul>
         </>
     );
 }
