@@ -4,7 +4,8 @@ import {Source} from "../../../../dataTemplate/fighters/enums/Source.js";
 import {FighterType} from "../../../../dataTemplate/fighters/enums/FighterType.js";
 
 export const exampleFighter = new Fighter({
-    name: "Alan",
+    name: "Pancracio",
+    nickName: "El panadero",
     archetype: Archetype.BALANCE,
     description: (fighter) => (
         <>

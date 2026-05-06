@@ -1,9 +1,7 @@
 import {Heading1, Heading2} from "../modules/Heading/Heading.jsx"
 import PLink from "../modules/Link/PLink.jsx";
-import {fighters} from "../data/fighter/fighters.jsx";
 import {exampleFighter} from "../data/fighter/fighters/exampleFighter/exampleFighter.jsx";
 import {routes} from "../routes/routes.js";
-
 
 
 export default function InterfacesPage() {
@@ -31,11 +29,21 @@ export default function InterfacesPage() {
             </p>
 
             <p>
-                En el caso de <PLink href={routes.fighters.path+"\\"+ exampleFighter.id}>El Panadero</PLink>, su salud estará dictada por una barra de pan, que se irá haciendo más
-                pequeña cuanto más daño sufra. En el caso de los puntos especiales, quedan representados por un
+                En el caso de <PLink href={routes.fighters.path + "\\" + exampleFighter.id}>{exampleFighter.nickName}</PLink>, su
+                salud estará dictada por una barra de pan, que se irá haciendo más
+                pequeña cuanto más daño sufra. En el caso de la barra de movimientos <b>Overdrive</b>, quedan
+                representados por un
                 cuchillo de cortar pan, que se verá manchado por la sangre (o salsa) de su enemigo.
             </p>
 
+            <p>
+                Los círculos marrones son las ranuras sobre las que se pondrán los aderezos activos en cada jugador.
+            </p>
+            <p>
+                Las manzanas representan las rondas y se quedarán comidas, solo con el corazón de la manzana, cuando se
+                pierde una ronda. En el caso de las imágenes, se muestran 3 manzanas como ejemplo de una partida al meor
+                de 5.
+            </p>
             <p>
                 Abajo se muestra un ejemplo de la disposición de la interfaz en el escenario de juego:
             </p>

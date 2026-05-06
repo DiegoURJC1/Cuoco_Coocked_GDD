@@ -2,7 +2,7 @@ import {baseDefaultStats, Fighter} from "../../../../dataTemplate/fighters/Fight
 import {Archetype} from "../../../../dataTemplate/fighters/enums/Archetype.js";
 import {Source} from "../../../../dataTemplate/fighters/enums/Source.js";
 import {FighterType} from "../../../../dataTemplate/fighters/enums/FighterType.js";
-import {moveFridgeTwirl63214, moveSetJohnGrinder} from "./moveSetJohnGrinder.jsx";
+import {moveCheckTheFridgeSpicy, moveFridgeTwirl63214, moveSetJohnGrinder} from "./moveSetJohnGrinder.jsx";
 import {InlineIcon} from "../../../../modules/InlineIcon/InlineIcon.jsx";
 import {InputSequence} from "../../../../dataTemplate/input/InputSequence.jsx";
 import PLink from "../../../../modules/Link/PLink.jsx";
@@ -19,9 +19,17 @@ export const fighterJohnGrinder = new Fighter({
             <br/>
             {fighter.name} es un carnicero local con una fuerza sobrehumana y usa una nevera consigo para defenderse.
             <br/>
-            Su movimiento estrella es {moveFridgeTwirl63214.name}, con el que mueve con gran fuerza su nevera en
-            movimientos de palanca de medio círculo en cualquier dirección menos arriba que además pueden hacerse en el
-            aire. Este movimiento es lento pero de mucho daño y es capaz de oprimir al rival a media distancia.
+            <p>
+                Su movimiento estrella es <b>{moveFridgeTwirl63214.name}</b>, con el que mueve con gran fuerza su nevera
+                en
+                movimientos de palanca de medio círculo en cualquier dirección menos arriba que además pueden hacerse en
+                el
+                aire. Este movimiento es lento pero de mucho daño y es capaz de oprimir al rival a media distancia.
+            </p>
+            <p>
+                Su otro movimiento notable es <b>{moveCheckTheFridgeSpicy.name}</b>, con él, saca alimentos de su nevera
+                y da la oportunidad de aplicarlos a si mismo o al rival según cómo se golpee.
+            </p>
         </>
     ),
     easyToUse: 3,

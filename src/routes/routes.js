@@ -17,6 +17,7 @@ export const routes = {
     },
     dressings: {
         path: "/dressings",
+
     },
     gameModes: {
         path: "/game-modes",

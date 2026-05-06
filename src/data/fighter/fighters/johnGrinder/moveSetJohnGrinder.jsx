@@ -12,6 +12,8 @@ import {InlineIcon} from "../../../../modules/InlineIcon/InlineIcon.jsx";
 import {InputSequence} from "../../../../dataTemplate/input/InputSequence.jsx";
 import {UniversalMoveKey} from "../../../../dataTemplate/fighters/moves/enums/UniversalMoveKey.js";
 import {MoveSet} from "../../../../dataTemplate/fighters/moves/MoveSet.jsx";
+import {routes} from "../../../../routes/routes.js";
+
 
 export const MoveRegistry = {};
 
@@ -251,6 +253,93 @@ const moveQuickCrusher = new Move({
 // endregion
 
 // region Special
+
+export const moveCheckTheFridgeSpicy = new Move({
+    name: "Check the fridge (Spicy)",
+    moveCategory: MoveCategory.SPECIAL,
+    description:
+        <>
+            <p>
+                Saca de la nevera un <PLink href={routes.dressings.path}>aderezo</PLink> de tipo <b>Picante</b>
+                en un arco hacia arriba.
+            </p>
+            <p>
+                Si se golpea con un movimiento universal se aplica a si mismo.
+            </p>
+            <p>
+                Si se golpea con <b>Fridge twirl</b> a la distancia correcta y se romperá en pedazos en una pequeña zona
+                hacia delante aplicandole el efecto al rival si le golpea <b>Fridge twirl</b> o el splash del aderezo.
+            </p>
+            <p>
+                Si el rival lo rompe en el aire se cancela.
+            </p>
+            <p>
+                Eficaz aplicarselo si se está dominando para terminar más rápido. Eficaz aplicarlo al rival si se
+                encuentran pocas oportunidades para golpear al rival y hacer que estas oportunidades hagan más daño.
+            </p>
+        </>,
+    inputList: [Input.DOWN, Input.DOWN_LEFT, Input.LEFT, Input.P],
+    states: [
+        {
+            state: MoveState.STAND,
+            frameList: createFrames([
+                {frameType: FrameType.STARTUP, duration: 17},
+                {frameType: FrameType.INACTIVE, duration: 5},
+                {frameType: FrameType.RECOVERY, duration: 5},
+            ]),
+            moveData: {
+                damage: [0],
+                guard: [Stance.HIGH, Stance.LOW],
+                onBlock: [0],
+                invuln: false
+            }
+        },
+    ]
+});
+
+const moveCheckTheFridge = new Move({
+    name: "Check the fridge (Sticky)",
+    moveCategory: MoveCategory.SPECIAL,
+    description:
+        <>
+            <p>
+                Saca de la nevera un <PLink href={routes.dressings.path}>aderezo</PLink> de tipo <b>Pringoso</b>
+                en un arco hacia arriba.
+            </p>
+            <p>
+                Si se golpea con un movimiento universal se aplica a si mismo.
+            </p>
+            <p>
+                Si se golpea con <b>Fridge twirl</b> a la distancia correcta y se romperá en pedazos en una pequeña zona
+                hacia delante aplicandole el efecto al rival si le golpea <b>Fridge twirl</b> o el splash del aderezo.
+            </p>
+            <p>
+                Si el rival lo rompe en el aire se rompe hacia el jugador y si le golpea se lo aplica.
+            </p>
+            <p>
+                Eficaz aplicarlo a uno mismo para cancelar un efecto activo. Eficaz aplicarlo al rival es mucho más
+                rápido.
+            </p>
+        </>,
+    inputList: [Input.DOWN, Input.DOWN_LEFT, Input.LEFT, Input.K],
+    states: [
+        {
+            state: MoveState.STAND,
+            frameList: createFrames([
+                {frameType: FrameType.STARTUP, duration: 17},
+                {frameType: FrameType.INACTIVE, duration: 5},
+                {frameType: FrameType.RECOVERY, duration: 5},
+            ]),
+            moveData: {
+                damage: [0],
+                guard: [Stance.HIGH, Stance.LOW],
+                onBlock: [0],
+                invuln: false
+            }
+        },
+    ]
+});
+
 const fridgeTwirlStates = [
     {
         state: MoveState.STAND,
@@ -283,7 +372,7 @@ const fridgeTwirlStates = [
 ]
 
 export const moveFridgeTwirl63214 = new Move({
-    name: "Frindge twirl",
+    name: "Fridge twirl",
     moveCategory: MoveCategory.SPECIAL,
     description: "Mueve con gran fuerza la nevera de delante hacia atrás en un gran arco.",
     inputList: [Input.RIGHT, Input.DOWN_RIGHT, Input.DOWN, Input.DOWN_LEFT, Input.LEFT, Input.HS],
@@ -291,7 +380,7 @@ export const moveFridgeTwirl63214 = new Move({
 });
 
 const moveFridgeTwirl41236 = new Move({
-    name: "Frindge twirl",
+    name: "Fridge twirl",
     moveCategory: MoveCategory.SPECIAL,
     description: "Mueve con gran fuerza la nevera de detrás hacia delante en un gran arco.",
     inputList: [Input.LEFT, Input.DOWN_LEFT, Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT, Input.HS],
@@ -299,7 +388,7 @@ const moveFridgeTwirl41236 = new Move({
 });
 
 const moveFridgeTwirl23698 = new Move({
-    name: "Frindge twirl",
+    name: "Fridge twirl",
     moveCategory: MoveCategory.SPECIAL,
     description: "Mueve con gran fuerza la nevera de abajo hacia arriba en un gran arco delante suya.",
     inputList: [Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT, Input.UP_RIGHT, Input.UP, Input.HS],
@@ -307,7 +396,7 @@ const moveFridgeTwirl23698 = new Move({
 });
 
 const moveFridgeTwirl89632 = new Move({
-    name: "Frindge twirl",
+    name: "Fridge twirl",
     moveCategory: MoveCategory.SPECIAL,
     description: "Mueve con gran fuerza la nevera de arriba hacia abajo en un gran arco delante suya.",
     inputList: [Input.UP, Input.UP_RIGHT, Input.RIGHT, Input.DOWN_RIGHT, Input.DOWN, Input.HS],
@@ -315,7 +404,7 @@ const moveFridgeTwirl89632 = new Move({
 });
 
 const moveFridgeTwirl21478 = new Move({
-    name: "Frindge twirl",
+    name: "Fridge twirl",
     moveCategory: MoveCategory.SPECIAL,
     description: "Mueve con gran fuerza la nevera de abajo hacia arriba en un gran arco detrás suya.",
     inputList: [Input.DOWN, Input.DOWN_LEFT, Input.LEFT, Input.UP_LEFT, Input.UP, Input.HS],
@@ -323,7 +412,7 @@ const moveFridgeTwirl21478 = new Move({
 });
 
 const moveFridgeTwirl87412 = new Move({
-    name: "Frindge twirl",
+    name: "Fridge twirl",
     moveCategory: MoveCategory.SPECIAL,
     description: "Mueve con gran fuerza la nevera de arriba hacia abajo en un gran arco delante suya.",
     inputList: [Input.UP, Input.UP_LEFT, Input.LEFT, Input.DOWN_LEFT, Input.DOWN, Input.HS],
@@ -350,7 +439,7 @@ const moveOverdriveBolingFreezer = new Move({
     inputList: [Input.RIGHT, Input.DOWN_RIGHT, Input.DOWN, Input.DOWN_LEFT, Input.LEFT, Input.RIGHT, Input.HS],
     states: [
         {
-            state: MoveState.RUN,
+            state: MoveState.STAND,
             frameList: createFrames([
                 {frameType: FrameType.STARTUP, duration: 11},
                 {frameType: FrameType.ACTIVE, duration: 5},
@@ -387,6 +476,8 @@ export const moveSetJohnGrinder = new MoveSet({
         moveQuickCrusher
     ],
     special: [
+        moveCheckTheFridgeSpicy,
+        moveCheckTheFridge,
         moveFridgeTwirl63214,
         moveFridgeTwirl41236,
         moveFridgeTwirl23698,
