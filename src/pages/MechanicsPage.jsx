@@ -63,9 +63,21 @@ export default function MechanicsPage() {
                 ▼ <br></br>
                 FIN DE ROUND → siguiente round o fin de match <br></br>
                 </pre>
+            <Heading2 id="resources">Recursos</Heading2>
+            <p>
+                Todos los personajes tienen las siguientes barras de recursos.
+            </p>
+            <ul>
+                <li><p><b>Salud</b>: indica la cantidad de salud del personaje.</p></li>
+                <li><p><b>Breaker</b>: usable mientras el jugador es golpeado para quitarselo de encima cuando está
+                    completa.</p></li>
+                <li><p><b>Guard-Break</b>: se rellena al bloquear ataques y deja en <PLink
+                    href={getGlossaryLink(glossary.stunLock)}>stun lock</PLink> cuando se llena.</p></li>
+                <li><p><b>Overdrive</b>: barra que se rellena al golpear o bloquear que permite hacer los ataques más fuertes.</p></li>
+            </ul>
+
             <br/>
             <hr/>
-
             <Heading2 id="fundamentals">Fundamentos de juegos de peleas</Heading2>
             <p>
                 Los juegos de pelea clásicos (2D y 2.5D) no son simples intercambios de golpes. Son sistemas complejos
@@ -308,7 +320,7 @@ export default function MechanicsPage() {
                 </tr>
                 </tbody>
             </table>
-            <div className="diagram">
+            <div id={routes.mechanics.inputStrengthDiagram.id} className="diagram">
                 <InputStrengthDiagram style={{width: 'clamp(200px, 50%, 100%)'}}/>
             </div>
 
@@ -317,6 +329,308 @@ export default function MechanicsPage() {
                 size={2}>{getMoveStateIcon(MoveState.RUN)}</InlineIcon> o mientras están knoqueados en el
                 suelo <InlineIcon size={2}>{getMoveStateIcon(MoveState.KNOCKED)}</InlineIcon>. Útiles para cortar
                 distancias con el rival y para generar espacio y dar un respiro a aquél que esté en el suelo.
+            </p>
+
+            <Heading3 id="macro-game">Marco general</Heading3>
+            <p>
+
+                El sistema ofensivo se estructura en tres tipos de ataque con propiedades, alcances y funciones
+                claramente diferenciadas. Esta división no es solo mecánica, tiene coherencia directa con la identidad
+                temática de cada personaje.
+            </p>
+            <br/>
+            <div className="diagram">
+                <GeneralCombatDiagram style={{width: 'clamp(200px, 50%, 100%)'}}/>
+            </div>
+
+            <p>
+                Estos ataques siguen el patrón de diseño de piedra/papel/tijeras ligeramente asimétrico.
+                Siendo <BlockText/> la acción que más veces gana pero la que puede vencerle es la menos exitosa en
+                general, <GrabText/>.
+            </p>
+            <ul>
+                <li><MeleeText/> vence a <GrabText/>.</li>
+                <li><RangeText/> domina a <MeleeText/> si la distancia hace que no pueda ser alcanzado y viceversa.</li>
+                <li><RangeText/> vence a <GrabText/>.</li>
+                <li><BlockText/> vence a todos menos a <GrabText/>.</li>
+            </ul>
+            <Heading3 id="melee">Melee (Cuerpo a cuerpo)</Heading3>
+            <p>
+                Son aquellos ataques de contacto directo con rango corto, daño directo y alta frecuencia de uso.
+            </p>
+            <p>
+                Tiene las siguientes propiedades:
+            </p>
+            <ul>
+                <li>Rango: corto (requiere proximidad al rival)</li>
+                <li>Se cancela en especiales y supers.</li>
+                <li>Puede ejecutarse en standing, crouch y aire.</li>
+                <li>Es el tipo de ataque que el bloqueo neutraliza completamente.</li>
+            </ul>
+            <p><b>
+                Ejemplo temático — Boloñesa
+            </b></p>
+            <p>
+                Cada ataque melee lanza visualmente manchas de salsa. Si ejecuta una consecución de 3 o más ataques
+                melee consecutivos completos, aplica el aderezo correspondiente de forma automática. La generación del
+                aderezo está marcada visualmente en la animación (la salsa acumula presencia en pantalla antes de
+                aplicarse y tras aplicarse aparece un pequeño icono bajo la barra de vida).
+            </p>
+            <Heading3 id="range">Range (Distancia)</Heading3>
+            <p>
+                Son aquellos ataques de proyectil o alcance extendido que sirven para control de espacio, zoning,
+                presión a distancia. Son el tipo de ataque contra el que el Parry es efectivo y el Bloqueo genera
+                <PLink href={getGlossaryLink(glossary.chipDamage)}>chip damage</PLink>.
+            </p>
+            <p><i>Leer sobre sus <PLink href={routes.dynamics.range.path}>dinámicas</PLink></i>,</p>
+            <p>
+                Tiene las siguientes propiedades:
+            </p>
+            <ul>
+                <li>Rango: medio para los ataques de extensión y largo para los proyectiles generalmente.</li>
+                <li>Daño: variable (menor que <InlineIcon size={2}><InputSequence sequence={[Input.HS]}/></InlineIcon>,
+                    pero acumula <PLink href={getGlossaryLink(glossary.chipDamage)}>chip damage</PLink> al bloquear)
+                </li>
+                <li>Puede activar elementos de entorno (ver sección 9.3)</li>
+                <AlertPanel>TODO: importante enlazar con la parte donde se expliquen aderezos en entorno, quitar
+                    (ver sección 9.3)</AlertPanel>
+                <li>Puede ser neutralizado con <PLink href={getGlossaryLink(glossary.parry)}>Parry</PLink>.
+                </li>
+                <li>Bloquear un ataque de distancia genera chip damage y acumula stacks de guardbreak.</li>
+            </ul>
+            <p>
+                Debido a la naturaleza de la mayoría de los luchadores se diferencian dos tipos distintos de ataques
+                a distancia:
+            </p>
+            <ul>
+                <li>Proyectil: Sale del personaje y viaja hasta el rival.</li>
+                <li>Extensión: El personaje extiende parte de su cuerpo a mayor alcance y por tanto su <PLink
+                    href={getGlossaryLink(glossary.hurtbox)}>hurtbox</PLink> se extiende también.
+                </li>
+            </ul>
+            <p><b>Ejemplo temático — El Chef</b></p>
+            <p>
+                Ataque de distancia estándar: estocada con el tenedor gigante (extensión). Input especial (media luna +
+                botón distancia): saca un bote de salsa picante y lanza un chorro (proyectil). Ambos son ataques de
+                distancia, ambos son vulnerables al Parry, pero tienen propiedades diferentes (velocidad, hitbox,
+                efectos
+                secundarios).
+            </p>
+            <Heading3 id="grabs">Grabs (Agarres)</Heading3>
+            <p>
+                Ataques de agarre que ignoran completamente el sistema defensivo del rival. Son la herramienta perfecta
+                si el rival es
+                excesivamente defensivo o reactivo. Requieren proximidad y tienen startup visible.
+            </p>
+            <p><b>Propiedades generales</b></p>
+            <ul>
+                <li>Rango: muy corto (más que melee estándar, pero requieren contacto).</li>
+                <li>El Bloqueo no los detiene.</li>
+                <li>Los <MeleeText/> tienen prioridad.</li>
+                <li>Un <GrabText/> en el momento oportuno cancela el del rival y hace que ambos jugadores retrocedan
+                    ligeramente.
+                </li>
+                <li>Generan situaciones de <PLink href={getGlossaryLink(glossary.okizeme)}>okizeme</PLink> favorables
+                    tras el <PLink href={getGlossaryLink(glossary.knockDown)}>knock down</PLink>.
+                </li>
+            </ul>
+            <p><b>Tipos de agarres</b></p>
+            <ul>
+                <li>Grab estándar: Agarre directo con daño y knockdown</li>
+                <li>Command grab: Agarre que resulta de un <PLink href={getGlossaryLink(glossary.motionInput)}>motion
+                    Input</PLink> de un personaje particular. No todos tienen uno.
+                </li>
+                <li>Grab aéreo: Agarre similar al estándar, pero con el jugador y el rival en el aire.</li>
+            </ul>
+
+            <p><b>Ejemplo temático — Boloñesa</b></p>
+            <p>
+                El grab especial <InlineIcon size={2}><InputSequence
+                sequence={[Input.RIGHT, Input.DOWN_RIGHT, Input.DOWN, Input.DOWN_LEFT, Input.LEFT, Input.HS]}/></InlineIcon> inicia
+                una llave donde los fideos envuelven al rival. Animación larga, altamente legible, daño alto y posición
+                post-grab favorable.
+            </p>
+            <br></br>
+            <hr></hr>
+            <Heading2 id="defensive-system">Sistema defensivo</Heading2>
+            <Heading3 id="macro-game-defense">Marco general</Heading3>
+            <table>
+                <thead>
+                <tr>
+                    <th>Estado</th>
+                    <th>Efecto contra <MeleeText/></th>
+                    <th>Efecto contra <RangeText/></th>
+                    <th>Efecto contra <GrabText/></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Bloqueo</td>
+                    <td>Neutralización total</td>
+                    <td><PLink href={getGlossaryLink(glossary.chipDamage)}>Chip damage</PLink> y acumula stacks de
+                        <PLink href={routes.mechanics.guardbreak.path}>guard-break</PLink>
+                    </td>
+                    <td>No lo bloquea</td>
+                </tr>
+                <tr>
+                    <td>Parry</td>
+                    <td>Deja en <PLink href={getGlossaryLink(glossary.plusFrames)}>ventaja de frames</PLink>.</td>
+                    <td>Neutralización total y auto-counter en el frame exacto</td>
+                    <td>No lo bloquea</td>
+                </tr>
+                <tr>
+                    <td>Sin defensa</td>
+                    <td>Daño completo</td>
+                    <td>Daño completo</td>
+                    <td>No lo bloquea</td>
+                </tr>
+                </tbody>
+            </table>
+            <Heading3 id="block">Bloqueo</Heading3>
+            <ul>
+                <li>
+                    Mantener atrás <InlineIcon size={2}><InputSequence sequence={[Input.LEFT]}/></InlineIcon> respecto
+                    al rival en el suelo para proteger de ataques <PLink
+                    href={getGlossaryLink(glossary.overhead)}>overhead</PLink> y ataques medios.
+                </li>
+                <li>
+                    Mantener atrás <InlineIcon size={2}><InputSequence
+                    sequence={[Input.DOWN_LEFT]}/></InlineIcon> respecto
+                    al rival en el suelo para proteger de ataques bajos.
+                </li>
+                <li>
+                    Mantener atrás <InlineIcon size={2}><InputSequence
+                    sequence={[Input.UP_LEFT]}/></InlineIcon> respecto
+                    al rival en el aire para proteger de todos los ataques.
+                </li>
+            </ul>
+            <p><b>Contra <MeleeText/></b></p>
+            <ul>
+                <li>Neutralización total del daño</li>
+                <li>El personaje entra en <PLink href={getGlossaryLink(glossary.blockstun)}>block stun</PLink> durante
+                    X frames
+                </li>
+                <li>No genera stacks de <PLink href={routes.mechanics.guardbreak.path}>guard-break</PLink></li>
+            </ul>
+            <p><b>Contra <RangeText/></b></p>
+            <ul>
+                <li>El personaje recibe chip damage</li>
+                <li>Rellena el medidor <PLink
+                    href={routes.mechanics.guardbreak.path}>guard-break</PLink> en un 30%.
+                </li>
+                <li>Los stacks se resetean si el rival deja de presionar con ataques de distancia
+                    durante 2 segundos o el defensor realizar con exito un Parry.
+                </li>
+            </ul>
+            <Heading3 id="parry">Parry</Heading3>
+            <p>
+                El Parry es una acción activa de alta habilidad en el que un ataque queda completamente neutralizado si
+                se mueve la palanca hacia el rival <InlineIcon size={2}><InputSequence
+                sequence={[Input.RIGHT]}/></InlineIcon> en un margen de hasta 4 frames antes de que conecte el golpe
+                rival.
+                Además requiere de input preciso en la ventana de active frames del ataque entrante.
+            </p>
+            <ul>
+                <li><InlineIcon size={2}><InputSequence sequence={[Input.RIGHT]}/></InlineIcon>
+                    En el momento exacto del impacto.
+                </li>
+            </ul>
+            <Heading4 id="design-notes">Notas de diseño</Heading4>
+            <ul>
+                <li>El auto-counter del parry perfecto es un momento de alta recompensa, visualmente
+                    marcado.
+                </li>
+                <li>El riesgo de intentar parry contra un rival que realiza <PLink
+                    href={getGlossaryLink(glossary.mixUp)}>mix ups</PLink> es que la dirección de palanca usada en el
+                    parry no coincida con la del ataque.
+                </li>
+            </ul>
+            <Heading3 id={routes.mechanics.guardbreak.id}>Guard-break</Heading3>
+            <p>
+                Estado especial activado por acumulación de 3 bloqueos consecutivos de ataques <RangeText/> o por
+                bloquear una gran cantidad de ataques <MeleeText/>.
+                Este estado funciona como penalización por un uso prolongado de una defensa incorrecta o excesiva.
+            </p>
+            <p><b>Propiedades</b></p>
+            <ul>
+                <li>El medidor guard-break baja poco a poco con el tiempo si se bloquea y más rapido si no.</li>
+                <li>Durante el estado: el personaje queda en <PLink href={getGlossaryLink(glossary.stunLock)}>stun
+                    lock</PLink> y queda a merced del rival.
+                </li>
+                <li>Visualmente marcado de forma clara (animación de "guardia rota" + efecto visual en
+                    el personaje y elementos particulares a cada personaje sobre su cabeza como estrellas o patitos de
+                    goma).
+                </li>
+                <li>
+                    Es el escenario de mayor peligro del sistema defensivo: el rival tiene una ventana
+                    garantizada de presión sin respuesta posible
+                </li>
+                <li>
+                    Tras llenarse y entrar en stun lock, se vacia y se vuelve a un estado normal tras unos instantes o
+                    tras ser golpeado.
+                </li>
+            </ul>
+            <br/>
+            <hr></hr>
+            <Heading2 id="combos">Combos y cancelaciones</Heading2>
+            <Heading3 id="cancelTree">Árbol de cancelaciones</Heading3>
+            <p>
+                Las cancelaciones son la base de la generación de combos. Un movimiento puede cancelarse en otro si
+                el árbol lo permite o el movimiento en particular está diseñado para cancelar en otro de forma natural,
+                interrumpiendo su <PLink href={getGlossaryLink(glossary.recoveryFrames)}>animación de
+                recovery</PLink> para encadenar el siguiente ataque.
+            </p>
+            <AlertPanel>TODO: esquema/diagrama </AlertPanel>
+            <pre>
+                UNIVERSAL<br/>
+                │<br/>
+                └──► NORMAL<br/>
+                │<br/>
+                └──► SPECIAL<br/>
+                │<br/>
+                └──► OVERDRIVE<br/>
+            </pre>
+            <Heading3 id="chain-combo">Cadenas de normales</Heading3>
+            <p>
+                Dentro de los normales existe un sistema de cadena basado en jerarquía de fuerza de ataque del <PLink
+                href={routes.mechanics.inputStrengthDiagram.path}>diagrama</PLink>.
+            </p>
+            <ul>
+                <li>Un ataque ligero puede cancelarse en medio o fuerte</li>
+                <li>Un ataque medio puede cancelarse en fuerte</li>
+                <li>Un ataque fuerte <b>no</b> se cancela en otro normal (sí en especial)</li>
+                <li>Los ataques en crouch siguen la misma jerarquía</li>
+                <li>Los ataques aéreos también generan sus propias cadenas</li>
+            </ul>
+            <Heading3 id="combo-examples">Ejemplos de generación de combos y condiciones</Heading3>
+            <Heading4 id="standar-combo">Combo estándar (ejemplo genérico)</Heading4>
+            <p><b>Convert default export to named</b></p>
+            <p>
+                <InlineIcon size={2}><InputSequence sequence={[Input.P, Input.K, Input.S, Input.HS]}/></InlineIcon>→
+                Cancelar en Special → (Cancelar en Overdrive).
+            </p>
+            <p><b>Combo generador de aderezo (ejemplo Boloñesa)</b></p>
+            <pre>
+                <MeleeText/> x3 o más consecutivos completados<br/>
+            │<br/>
+            └──► Aplicación automática de <PLink href={routes.dressings.path}>aderezo</PLink><br/>
+            (marcada visualmente en animación)<br/>
+            </pre>
+            <p><b>Combo con aderezo del Chef</b></p>
+            <pre>
+                Input especial (<InlineIcon size={2}><InputSequence
+                sequence={[Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT, Input.R]}/></InlineIcon>) <br/>
+
+                │ <br/>
+                └──► Proyectil de salsa → impacto → aderezo aplicado <br/>
+            </pre>
+            <AlertPanel>TODO: añadir parte de dinámicas o generar una página completa nueva con todas dinámicas
+                juntas</AlertPanel>
+            <p>
+                **Dinámica estratégica generada:**
+                El jugador defensor debe decidir si arriesga Parry para evitar acumular stacks, sabiendo que si el rival
+                mixupea con grab, queda completamente expuesto. La gestión de este riesgo es el núcleo de la tensión
+                defensiva del juego.
             </p>
             <Heading3 id={routes.mechanics.cooking.id}>Cooking</Heading3>
             <p>
@@ -369,274 +683,6 @@ export default function MechanicsPage() {
             </ul>
             <p>
                 No todos los luchadores tendrán acceso a todos los auto-combos.
-            </p>
-            <Heading3 id="macro-game">Marco general</Heading3>
-            <p>
-
-                El sistema ofensivo se estructura en tres tipos de ataque con propiedades, alcances y funciones
-                claramente diferenciadas. Esta división no es solo mecánica, tiene coherencia directa con la identidad
-                temática de cada personaje.
-            </p>
-            <br/>
-            <div className="diagram">
-                <GeneralCombatDiagram style={{width: 'clamp(200px, 50%, 100%)'}}/>
-            </div>
-
-            <p>
-                Estos ataques siguen el patrón de diseño de piedra/papel/tijeras ligeramente asimétrico.
-                Siendo <BlockText/> la acción que más veces gana pero la que puede vencerle es la menos exitosa en
-                general, <GrabText/>.
-            </p>
-            <ul>
-                <li><MeleeText/> vence a <GrabText/>.</li>
-                <li><RangeText/> domina a <MeleeText/> si la distancia hace que no pueda ser alcanzado y viceversa.</li>
-                <li><RangeText/> vence a <GrabText/>.</li>
-                <li><BlockText/> vence a todos menos a <GrabText/>.</li>
-            </ul>
-            <Heading3 id="melee">Cuerpo a cuerpo (Melee)</Heading3>
-            <p>
-                Son aquellos ataques de contacto directo con rango corto, daño directo y alta frecuencia de uso.
-                Representan el núcleo del rushdown y el motor principal de generación de combos en personajes cuerpo a
-                cuerpo.
-            </p>
-            <Heading4 id="melee-properties">Propiedades generales</Heading4>
-            <ul>
-                <li>Rango: corto (requiere proximidad al rival)</li>
-                <li>Daño: estándar</li>
-                <li>Se cancela en especiales y supers</li>
-                <li>Puede ejecutarse en standing, crouch y aire</li>
-                <li>Es el tipo de ataque que el bloqueo neutraliza completamente</li>
-            </ul>
-            <Heading4 id="melee-examples-bolognesa">Ejemplo temático — Boloñesa:</Heading4>
-            <p>
-                Cada ataque melee lanza visualmente manchas de salsa. Si ejecuta una consecución de 3 o más ataques
-                melee consecutivos completos, aplica el aderezo correspondiente de forma automática. La generación del
-                aderezo está marcada visualmente en la animación (la salsa acumula presencia en pantalla antes de
-                aplicarse y tras aplicarse aparece un pequeño icono bajo la barra de vida).
-            </p>
-
-            <Heading3 id="range">Range (Distancia)</Heading3>
-            <p>
-                Son aquellos ataques de proyectil o alcance extendido que sirven para control de espacio, zoning,
-                presión a distancia. Son el tipo de ataque contra el que el Parry es efectivo y el Bloqueo genera chip
-                damage.
-            </p>
-            <Heading4 id="range-properties">Propiedades generales</Heading4>
-            <ul>
-                <li>Rango: medio para los ataques de extensión y largo para los proyectiles</li>
-                <li>Daño: variable (menor que melee en impacto directo, pero acumula chip en guardia)</li>
-                <li>Puede activar elementos de entorno (ver sección 9.3)</li>
-                <AlertPanel>TODO: importante enlazar con la parte donde se expliquen aderezos en entorno, quitar
-                    (ver sección 9.3)</AlertPanel>
-                <li>Puede ser neutralizado con Parry, ventana pequeña</li>
-                <li>Bloquear un ataque de distancia genera chip damage y acumula stacks de guardbreak</li>
-            </ul>
-            <Heading4 id="range-categories">Dos categorías de ataques de distancia:</Heading4>
-            <p>Debido a la naturaleza de la mayoría de los luchadores se diferencian dos tipos distintos de ataques
-                a distancia:</p>
-            <ul>
-                <li>Proyectil: Sale del personaje y viaja hasta el rival</li>
-                <li>Extensión: El personaje extiende parte de su cuerpo a mayor alcance</li>
-            </ul>
-            <Heading4 id="range-examples-chef">Ejemplo temático — El Chef</Heading4>
-            <p>
-                Ataque de distancia estándar: estocada con el tenedor gigante (extensión). Input especial (media luna +
-                botón distancia): saca un bote de salsa picante y lanza un chorro (proyectil). Ambos son ataques de
-                distancia, ambos son vulnerables al Parry, pero tienen propiedades diferentes (velocidad, hitbox,
-                efectos
-                secundarios).
-            </p>
-            <Heading3 id="grabs">Grabs (Agarres)</Heading3>
-            <p>
-                Ataques de agarre que ignoran completamente el sistema defensivo del rival. Son el punisher del jugador
-                excesivamente defensivo o reactivo. Requieren proximidad y tienen startup visible.
-            </p>
-            <Heading4 id="grabs-explanation">Propiedades generales</Heading4>
-            <ul>
-                <li>Rango: muy corto (más que melee estándar, pero requieren contacto)</li>
-                <li>El Bloqueo no los detiene</li>
-                <li>El Parry no los detiene: un intento de Parry en el frame de un grab es tratado como si no hubiera
-                    defensa
-                </li>
-                <li>Tienen startup más lento que los ataques melee, lo que los hace legibles con práctica</li>
-                <li>Generan situaciones de okizeme favorables tras el knockdown</li>
-            </ul>
-            <Heading4 id="grab-types">Tipología de grabs</Heading4>
-            <ul>
-                <li>Grab estándar: Agarre directo con daño y knockdown</li>
-                <li>Grab técnico o llave: Secuencia de inputs, mayor daño, posición específica</li>
-                <li>Grab aéreo: Agarre similar al estándar, pero con el oponente en el aire</li>
-            </ul>
-            <Heading4 id="grab-examples-Bolognesa">Ejemplo temático — Boloñesa</Heading4>
-            <p>
-                El grab especial (media luna + botón grab) inicia una llave donde los fideos envuelven al rival.
-                Animación larga, altamente legible, daño alto y posición post-grab favorable.
-            </p>
-            <br></br>
-            <hr></hr>
-            <br></br>
-            <Heading2 id="defensive-system">Sistema defensivo</Heading2>
-            <Heading3 id="macro-game-defense">Marco general</Heading3>
-            <ul>
-                <AlertPanel>TODO: se puede poner en formato tabla o esquema o dejarlo así</AlertPanel>
-                <li>Bloqueo: Neutralización total de Melee. Chip damage de Distancia y acumula stacks de
-                    guardbreak.
-                    El Grab lo ignora.
-                </li>
-                <li>Parry: No aplicable a Melee. Neutralización total a Distancia y autocounter en el frame
-                    exacto
-                    a Distancia. El Grab lo ignora.
-                </li>
-                <li>Sin defensa: Daño completo en todos los casos.</li>
-            </ul>
-            <Heading3 id="block">Bloqueo</Heading3>
-            <ul>
-                <li><InlineIcon size={2}><InputSequence sequence={[Input.LEFT]}/></InlineIcon>
-                    Mantener atrás respecto al rival. Acción pasiva y accesible.
-                </li>
-            </ul>
-            <Heading4 id="block-melee-counter">Contra Melee</Heading4>
-            <ul>
-                <li>Neutralización total del daño</li>
-                <li>El personaje entra en blockstun durante X frames</li>
-                <li>No genera stacks de guardbreak</li>
-            </ul>
-            <Heading4 id="block-range-counter">Contra Distancia</Heading4>
-            <ul>
-                <li>El personaje recibe chip damage</li>
-                <li>Genera 1 stack de guardbreak</li>
-                <li>A los 3 stacks consecutivos, se activa el estado Guardbreak</li>
-                <li>Los stacks se resetean si el rival deja de presionar con ataques de distancia
-                    durante
-                    2 segundos o el defensor realizar con exito un Parry o ataque
-                </li>
-            </ul>
-            <Heading4 id="block-grab-counter">Contra Grab</Heading4>
-            <ul>
-                <li>El bloqueo no se aplica. El grab se ejecuta como si no hubiera defensa.</li>
-            </ul>
-            <Heading3 id="parry">Parry</Heading3>
-            <p>
-                El Parry es una acción activa de alta habilidad que sólo funciona contra ataques de distancia.
-                Además requiere de input preciso en la ventana de active frames del ataque entrante.
-            </p>
-            <ul>
-                <li><InlineIcon size={2}><InputSequence sequence={[Input.RIGHT]}/></InlineIcon>
-                    En el momento exacto del impacto.
-                </li>
-            </ul>
-            <Heading4 id="parry-explanation">Funcionamiento:</Heading4>
-            <ul>
-                <li>Ventana de activación: pequeña (pocos frames), sin margen de error generoso</li>
-                <li>Si se ejecuta en el <b>frame exacto</b>: activa un autocounter con animación fija y
-                    daño garantizado
-                </li>
-                <li>Si se ejecuta fuera del frame exacto, pero dentro de la ventana: anula el daño
-                    entrante.
-                </li>
-                <li>Si se ejecuta fuera de la ventana: : no pasa nada (el personaje no está en animación
-                    de parry, simplemente falla el timing)
-                </li>
-            </ul>
-            <Heading4 id="parry-grab-counter">Contra Grab:</Heading4>
-            <ul>
-                <li>Un intento de Parry activo en el momento en que un grab conecta es tratado igual que
-                    el bloqueo: el grab lo ignora completamente. El personaje queda atrapado.
-                </li>
-            </ul>
-            <Heading4 id="design-notes">Notas de diseño</Heading4>
-            <ul>
-                <li>El autocounter del parry perfecto es un momento de alta recompensa, visualmente
-                    marcado
-                </li>
-                <li>El riesgo de intentar parry contra un rival que mezcla (mixup) grab/distancia es la
-                    razón por la que los grabs funcionan como punisher del jugador reactivo
-                </li>
-            </ul>
-            <Heading3 id="guardbreak">Guardbreak</Heading3>
-            <p>
-                Estado especial activado por acumulación de 3 bloqueos consecutivos de ataques a distancia. Este
-                estado funciona como penalización por un uso prolongado de una defensa incorrecta.
-            </p>
-            <Heading4 id="guardbreak-properties">Propiedades</Heading4>
-            <ul>
-                <li>Duración: entre 100-500 milisegundos (depende del cada personaje)</li>
-                <li>Durante el estado: el personaje no puede realizar ningún input (pseudo-stun)</li>
-                <li>El personaje queda completamente expuesto a cualquier ataque</li>
-                <li>Visualmente marcado de forma clara (animación de "guardia rota" + efecto visual en
-                    el personaje)
-                </li>
-                <li>Es el escenario de mayor peligro del sistema defensivo: el rival tiene una ventana
-                    garantizada de presión sin respuesta posible
-                </li>
-            </ul>
-            <br/>
-            <hr></hr>
-            <br/>
-            <Heading2 id="combos">Combos y cancelaciones</Heading2>
-            <Heading3 id="cancelTree">Árbol de cancelaciones</Heading3>
-            <p>
-                Las cancelaciones son la base de la generación de combos. Un movimiento puede cancelarse en otro si
-                el árbol lo permite, interrumpiendo su animación de recovery para encadenar el siguiente ataque.
-            </p>
-            <AlertPanel>TODO: esquema/diagrama </AlertPanel>
-            <pre>
-                NORMAL (standing/crouch/aéreo)<br/>
-                │<br/>
-                └──► ESPECIAL<br/>
-                │<br/>
-                └──► SUPER<br/>
-            </pre>
-            <Heading4 id="general-rules">Reglas generales:</Heading4>
-            <ul>
-                <li>Los normales se cancelan en especiales <b>solo si han conectado</b> (en golpe o en bloqueo)
-                </li>
-                <li>Los especiales se cancelan en supers solo durante una ventana específica para cada
-                    especial
-                </li>
-                <li>Los normales <b>no</b> se cancelan directamente en supers (salvo personajes con mecánica
-                    especial)
-                </li>
-                <li>Los movimientos de distancia si son proyectil se pueden cancelar en otro de tipo extensión
-                </li>
-            </ul>
-            <Heading3 id="chain-combo">Cadenas de normales</Heading3>
-            <p>
-                Dentro de los normales existe un sistema de cadena basado en jerarquía de fuerza de ataque:<br></br>
-                Ataque Ligero → Ataque Medio → Ataque Fuerte<br></br>
-            </p>
-            <ul>
-                <li>Un ataque ligero puede cancelarse en medio o fuerte</li>
-                <li>Un ataque medio puede cancelarse en fuerte</li>
-                <li>Un ataque fuerte <b>no</b> se cancela en otro normal (sí en especial)</li>
-                <li>Los ataques en crouch siguen la misma jerarquía</li>
-                <li>Los ataques aéreos también generan sus propias cadenas</li>
-            </ul>
-            <Heading3 id="combo-examples">Ejemplos de generación de combos y condiciones</Heading3>
-            <Heading4 id="standar-combo">Combo estándar (ejemplo genérico)</Heading4>
-            Ligero → Medio → Fuerte → Cancelar en Especial → (Cancelar en Super)
-            <Heading4 id="combo-examples-bolognesa">Combo generador de aderezo (ejemplo Boloñesa):</Heading4>
-            <pre>
-                Melee x3 o más consecutivos completados<br/>
-            │<br/>
-            └──► Aplicación automática de aderezo<br/>
-            (marcada visualmente en animación)<br/>
-            </pre>
-            <Heading4 id="combo-examples-chef">Combo con aderezo del Chef:</Heading4>
-            <pre>
-                Input especial (<InlineIcon size={2}><InputSequence
-                sequence={[Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT, Input.R]}/></InlineIcon>) <br/>
-
-                │ <br/>
-                └──► Proyectil de salsa → impacto → aderezo aplicado <br/>
-            </pre>
-            <AlertPanel>TODO: añadir parte de dinámicas o generar una página completa nueva con todas dinámicas
-                juntas</AlertPanel>
-            <p>
-                **Dinámica estratégica generada:**
-                El jugador defensor debe decidir si arriesga Parry para evitar acumular stacks, sabiendo que si el rival
-                mixupea con grab, queda completamente expuesto. La gestión de este riesgo es el núcleo de la tensión
-                defensiva del juego.
             </p>
         </>
     );

@@ -7,13 +7,25 @@ export const routes = {
     },
     mechanics: {
         path: "/mechanics",
+        inputStrengthDiagram: {
+            id: "input-strength-diagram",
+            path: "/mechanics#input-strength-diagram"
+        },
         cooking: {
             id: "cooking",
-            path: "mechanics/cooking"
+            path: "/mechanics#cooking"
+        },
+        guardbreak: {
+            id: "guardbreak",
+            path: "/mechanics#guardbreak",
         }
     },
     dynamics: {
         path: "/dynamics",
+        range: {
+            id: "range",
+            path: "/dynamics#range",
+        },
     },
     dressings: {
         path: "/dressings",

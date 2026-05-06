@@ -1,5 +1,8 @@
 import {routes} from "./routes.js";
 import PLink from "../modules/Link/PLink.jsx";
+import {InlineIcon} from "../modules/InlineIcon/InlineIcon.jsx";
+import {InputSequence} from "../dataTemplate/input/InputSequence.jsx";
+import {Input} from "../dataTemplate/input/enums/Input.js";
 
 export const GlossaryCategory = Object.freeze({
     MATCH_STATE: "Estado de la partida",
@@ -193,6 +196,21 @@ const offensiveTerms = {
 };
 
 const defensiveTerms = {
+    parry: {
+        name: "Parry",
+        content:
+            <>
+                Movimiento de palanca hacia delante <InlineIcon size={2}><InputSequence
+                sequence={[Input.RIGHT]}/></InlineIcon> en un margen de hasta 4 frames antes de recibir un ataque para
+                anularlo completamente si se está en el suelo y el ataque es de frente u <b>overhead</b>. Ofrece ventaja
+                por estar en frame positivo y no distanciar a los jugadores entre
+                si.
+                <br/>
+                Si el ataque es en el suelo y es un golpe bajo o el jugador está en el aire el parry se hace con la
+                palanca hacia abajo <InlineIcon size={2}><InputSequence
+                sequence={[Input.DOWN]}/></InlineIcon>.
+            </>
+    },
     reversal: {
         name: "Reversal",
         content:
@@ -264,8 +282,8 @@ const combo = {
         name: "True Combo",
         content:
             <>
-                Un combo verdadero es una combinación de ataques en el que en ningún momento el jugador rival sale del
-                estado <PLink href={getGlossaryLink(stateTerms.hitstun)}>hit stun</PLink>.
+            Un combo verdadero es una combinación de ataques en el que en ningún momento el jugador rival sale del
+            estado <PLink href={getGlossaryLink(stateTerms.hitstun)}>hit stun</PLink>.
             </>,
         id: "true-combo",
         categories: [GlossaryCategory.OFFENSIVE]
