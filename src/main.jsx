@@ -30,7 +30,7 @@ import InterfacesPage from "./pages/InterfacesPage.jsx";
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
-        <BrowserRouter>
+        <BrowserRouter basename="/Cuoco_Coocked_GDD">
             <ScrollToTop />
             <Routes>
                 {/* Páginas del documento */}
