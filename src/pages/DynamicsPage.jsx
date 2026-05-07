@@ -7,6 +7,8 @@ import {InputSequence} from "../dataTemplate/input/InputSequence.jsx";
 import {Input} from "../dataTemplate/input/enums/Input.js";
 import glossary, {getGlossaryLink} from "../routes/glossary.jsx";
 
+import RoundFlowDiagram from "../../public/diagrams/Round flow diagram.svg?react";
+
 export default function DynamicsPage() {
     return (<>
         <Heading1 id="dynamics">Dinámicas</Heading1>
@@ -15,14 +17,21 @@ export default function DynamicsPage() {
             gestión de la pseudo aleatoriedad de los <PLink href={routes.dressings.path}>aderezos</PLink> y la alta
             movilidad.
         </p>
-        <Heading2 id="motion-inputs">Motion inputs</Heading2>
+        <Heading2 id="match">Partida</Heading2>
+        <p>
+            La estructura interna de cada round sigue el siguiente esquema/diagrama de flujo para el jugador:
+        </p>
+        <div className="diagram">
+            <RoundFlowDiagram/>
+        </div>
+        <Heading3 id="motion-inputs">Motion inputs</Heading3>
         <p>
             Los <PLink href={getGlossaryLink(glossary.motionInput)}>motion inputs</PLink> de los personajes para
             realizar ciertos movimientos son parte del balance del juego. Al contrario que los botones asignados a los
             distintos ataques, estas acciones no pueden cambiarse y quedan atadas a los movimientos de la palanca o la
             cruceta.
         </p>
-        <Heading2 id={routes.dynamics.path.id}>Botón Range</Heading2>
+        <Heading3 id={routes.dynamics.path.id}>Botón Range</Heading3>
         <p>
             Ciertos juegos de pelea limitan los ataques a distancia a ciertos personajes cuyo objetivo es castigar
             al rival que pretende crear distancia e incentivarle a acercarse.

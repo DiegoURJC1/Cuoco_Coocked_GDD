@@ -11,7 +11,15 @@ export default function Home() {
     return (
         <>
             <Heading1 id="home">Home</Heading1>
-            <img src="../../../public/cover/portadaConLogo.png" alt="Game Cover Art"/>
+            <div className="diagram">
+                <img style={{maxHeight: "80vh",
+                    maxWidth: "100%",
+                    width: "auto",
+                    height: "auto",
+                    objectFit: "contain",
+                    display: "block"}} src="../../../public/cover/portadaConLogo.png" alt="Game Cover Art"/>
+            </div>
+
             <p className="claim">
                 Con los puños en la masa
             </p>

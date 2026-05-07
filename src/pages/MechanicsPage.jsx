@@ -40,31 +40,7 @@ export default function MechanicsPage() {
                 <li>La cantidad de comida, por tanto conforme baja vida el luchador está siendo consumido/comido.</li>
                 <li>Durabilidad, por el cual conforme baja la vida se estaría deteriorando, pasando de caducidad.</li>
             </ol>
-            <p>
-                La estructura interna de cada round sigue el siguiente esquema/diagrama de flujo:
-            </p>
-            <AlertPanel>TODO: crear esquema/diagrama</AlertPanel>
-            <br></br>
-            <pre>
-                INICIO DE ROUND <br></br>
-                │ <br></br>
-                ▼ <br></br>
-                FASE NEUTRAL <br></br>
-                (movimiento, control de espacio, lectura del rival) <br></br>
-                │ <br></br>
-                ├──► Ataque exitoso → presión / combo / aderezo aplicado <br></br>
-                │ <br></br>
-                ├──► Defensa exitosa (bloqueo/parry) → reseteo a neutral o contraataque <br></br>
-                │ <br></br>
-                └──► Error defensivo → daño / guardbreak / stun <br></br>
-                │ <br></br>
-                ▼ <br></br>
-                CONDICIÓN DE VICTORIA <br></br>
-                (vida del rival a cero) <br></br>
-                │ <br></br>
-                ▼ <br></br>
-                FIN DE ROUND → siguiente round o fin de match <br></br>
-                </pre>
+
             <Heading2 id="resources">Recursos</Heading2>
             <p>
                 Todos los personajes tienen las siguientes barras de recursos.
@@ -335,7 +311,7 @@ export default function MechanicsPage() {
                 </tbody>
             </table>
             <div id={routes.mechanics.inputStrengthDiagram.id} className="diagram">
-                <InputStrengthDiagram style={{width: 'clamp(200px, 50%, 100%)'}}/>
+                <img style={{width: 'clamp(200px, 50%, 500px)'}} src="../../public/diagrams/Input%20strength.svg"/>
             </div>
 
             <p>
