@@ -311,7 +311,7 @@ export default function MechanicsPage() {
                 </tbody>
             </table>
             <div id={routes.mechanics.inputStrengthDiagram.id} className="diagram">
-                <img style={{width: 'clamp(200px, 50%, 500px)'}} src="../../public/diagrams/Input%20strength.svg"/>
+                <img style={{width: 'clamp(200px, 50%, 500px)'}} src={`${import.meta.env.BASE_URL}diagrams/Input%20strength.svg`}/>
             </div>
 
             <p>
