@@ -70,7 +70,7 @@ export const fighterJohnGrinder = new Fighter({
     type: FighterType.HUMAN,
     source: Source.BASE_GAME,
     icon: `${import.meta.env.BASE_URL}fighters/icon/alan_icon.svg`,
-    fullArt: `${import.meta.env.BASE_URL}fighters/fullart/john-grinder_fullArt.png`,
+    fullArt: `john-grinder_fullArt.png`,
     portraitConfig: {
         x: 0.6,
         y: 0,

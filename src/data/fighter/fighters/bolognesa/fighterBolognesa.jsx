@@ -21,7 +21,7 @@ export const fighterBolognesa = new Fighter({
     easyToUse: 3,
     type: FighterType.HUMAN,
     source: Source.BASE_GAME,
-    fullArt: `${import.meta.env.BASE_URL}fighters/fullart/la-bolognesa_fullArt.png`,
+    fullArt: `la-bolognesa_fullArt.png`,
     portraitConfig: {
         x: 0.5,
         y: 0.2,

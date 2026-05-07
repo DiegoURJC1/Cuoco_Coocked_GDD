@@ -22,7 +22,7 @@ export class Stage {
      */
     #imagePath;
 
-    #STAGE_PATH = "/public/stages/"
+    #STAGE_PATH = `${import.meta.env.BASE_URL}stages/`
     constructor({name, description, imageName}) {
         this.#id = this.#generateIdFromName(name);
         this.#name = name;
