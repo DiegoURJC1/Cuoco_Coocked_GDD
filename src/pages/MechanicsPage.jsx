@@ -6,10 +6,12 @@ import AlertPanel from "../modules/AlertPanel/AlertPanel.jsx";
 import {getMoveStateIcon, MoveState} from "../dataTemplate/fighters/moves/enums/MoveState.jsx";
 import PLink from "../modules/Link/PLink.jsx";
 import {routes} from "../routes/routes.js";
+import ControllerInputs from "../../public/diagrams/Controller Inputs.svg?react";
 import InputStrengthDiagram from "../../public/diagrams/Input strength.svg?react";
 import GeneralCombatDiagram from "../../public/diagrams/General combat diagram.svg?react";
 import {BlockText, GrabText, MeleeText, RangeText} from "../modules/ColoredText/ColoredText.jsx";
 import glossary, {getGlossaryLink} from "../routes/glossary.jsx";
+import {InputIcon} from "../dataTemplate/input/InputIcon.jsx";
 
 export default function MechanicsPage() {
     return (
@@ -68,12 +70,16 @@ export default function MechanicsPage() {
                 Todos los personajes tienen las siguientes barras de recursos.
             </p>
             <ul>
-                <li><p><b>Salud</b>: indica la cantidad de salud del personaje.</p></li>
-                <li><p><b>Breaker</b>: usable mientras el jugador es golpeado para quitarselo de encima cuando está
-                    completa.</p></li>
-                <li><p><b>Guard-Break</b>: se rellena al bloquear ataques y deja en <PLink
-                    href={getGlossaryLink(glossary.stunLock)}>stun lock</PLink> cuando se llena.</p></li>
-                <li><p><b>Overdrive</b>: barra que se rellena al golpear o bloquear que permite hacer los ataques más fuertes.</p></li>
+                <li><b>Salud</b>: indica la cantidad de salud del personaje.</li>
+                <li><b>Breaker</b>: usable mientras el jugador es golpeado para quitarselo de encima cuando está
+                    completa.
+                </li>
+                <li><b>Guard-Break</b>: se rellena al bloquear ataques y deja en <PLink
+                    href={getGlossaryLink(glossary.stunLock)}>stun lock</PLink> cuando se llena.
+                </li>
+                <li><b>Overdrive</b>: barra que se rellena al golpear o bloquear que permite hacer los ataques más
+                    fuertes.
+                </li>
             </ul>
 
             <br/>
@@ -120,14 +126,22 @@ export default function MechanicsPage() {
             </p>
             <br/>
             <hr></hr>
-            <br/>
-            <Heading2 id="movement">Movimiento</Heading2>
+
+            <Heading2 id={routes.mechanics.inputDiagram.id}>Input</Heading2>
+
             <p>
                 Todos los movimientos de palanca se realizan en base a la posición relativa del
                 jugador y su rival. Cuando estos cambian sus posiciones relativas, los movimientos de
-                palanca cambian de orientación.
+                palanca cambian de orientación. Los que se hacían a la derecha, se harán a la izquierda.
             </p>
             <p>Siempre se asume que el jugador está a la izquierda y su rival a la derecha.</p>
+            <Heading3 id="input">Controles</Heading3>
+            <p>
+                Los controles del juego tienen la siguiente distribución en un mando de juego convencional.
+            </p>
+            <div className="diagram">
+                <ControllerInputs style={{width: 'clamp(200px, 80%, 100%)'}}/>
+            </div>
             <Heading3 id="movement-basic">Movimientos básicos</Heading3>
             <table>
                 <thead>
@@ -382,7 +396,7 @@ export default function MechanicsPage() {
                 presión a distancia. Son el tipo de ataque contra el que el Parry es efectivo y el Bloqueo genera
                 <PLink href={getGlossaryLink(glossary.chipDamage)}>chip damage</PLink>.
             </p>
-            <p><i>Leer sobre sus <PLink href={routes.dynamics.range.path}>dinámicas</PLink></i>,</p>
+            <p><i>Leer sobre sus <PLink href={routes.dynamics.range.path}>dinámicas</PLink></i>.</p>
             <p>
                 Tiene las siguientes propiedades:
             </p>
@@ -450,6 +464,55 @@ export default function MechanicsPage() {
                 una llave donde los fideos envuelven al rival. Animación larga, altamente legible, daño alto y posición
                 post-grab favorable.
             </p>
+            <Heading3 id="motion-inputs">Motion inputs</Heading3>
+            <p>
+                Los <PLink href={getGlossaryLink(glossary.motionInput)}>motion inputs</PLink> son combinaciones de
+                botones de ataque y movimientos de palanca que resultan en ataques específicos del personaje.
+            </p>
+            <p><b>Tipos de ataque</b></p>
+            <table>
+                <thead>
+                <tr>
+                    <th>Tipo de ataque</th>
+                    <th>Requisito</th>
+                    <th>Recurso</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Universal</td>
+                    <td>Movimientos a los que todos los personajes tienen acceso. Estos se hacen solo con los botones de
+                        ataque y por tanto no son <i>motion inputs</i>.
+                    </td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Normal</td>
+                    <td>Ataques acompañados de una dirección de palanca. Los ataques agachados
+                        <InlineIcon size={2}>{getMoveStateIcon(MoveState.CROUCH)}</InlineIcon> no entran en esta
+                        categoría.
+                    </td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Super</td>
+                    <td>Ataques acompañados de un movimiento de palanca sencillo como cuarto de círculo
+                        <InlineIcon size={2}><InputIcon
+                            inputs={[Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT]}/></InlineIcon>, en Z
+                        <InlineIcon size={2}><InputIcon
+                            inputs={[Input.RIGHT, Input.DOWN, Input.DOWN_RIGHT]}/></InlineIcon>, o medio círculo
+                        <InlineIcon size={2}><InputIcon
+                            inputs={[Input.LEFT, Input.DOWN_LEFT, Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT]}/></InlineIcon>.
+                    </td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Overdrive</td>
+                    <td>Ataques acompañados de un movimiento de palanca complejo.</td>
+                    <td>Barra Overdrive</td>
+                </tr>
+                </tbody>
+            </table>
             <br></br>
             <hr></hr>
             <Heading2 id="defensive-system">Sistema defensivo</Heading2>
@@ -522,19 +585,39 @@ export default function MechanicsPage() {
                     durante 2 segundos o el defensor realizar con exito un Parry.
                 </li>
             </ul>
+            <Heading3 id={routes.mechanics.breaker.id}>Breaker</Heading3>
+            <p>
+                El medidor <b>Breaker</b> se utiliza para cancelar una cadena de combos del rival. Puede activarse en
+                cualquier momento incluso durante <PLink href={getGlossaryLink(glossary.hitstun)}>hit stun</PLink> pero
+                no durante <PLink href={routes.mechanics.guardbreak.path}>guard-break</PLink>. Al activarse el jugador
+                se vuelve vulnerable mientras realiza una animación y vuelve a un estado de pie y empuja lejos al rival
+                para dejarlo en un estado <PLink href={getGlossaryLink(glossary.neutral)}>neutral</PLink>.
+            </p>
+            <p>
+                Comienza completo al comienzo de una partida y se rellena con el tiempo tras ser usado. El tiempo para
+                rellenarse es 50 segundos. No se reinicia entre rondas.
+            </p>
+            <p>
+                Se activa pulsando dos botones de ataque y DUST <InlineIcon
+                size={2}><InputSequence sequence={[Input.P]}/></InlineIcon>/
+                <InlineIcon size={2}><InputSequence sequence={[Input.K]}/></InlineIcon>/
+                <InlineIcon size={2}><InputSequence sequence={[Input.S]}/></InlineIcon>/
+                <InlineIcon size={2}><InputSequence sequence={[Input.HS]}/></InlineIcon>+
+                <InlineIcon size={2}><InputSequence sequence={[Input.D]}/></InlineIcon>.
+            </p>
+            <p><i>Leer sobre sus <PLink href={routes.dynamics.breaker.path}>dinámicas</PLink></i>.</p>
             <Heading3 id="parry">Parry</Heading3>
             <p>
                 El Parry es una acción activa de alta habilidad en el que un ataque queda completamente neutralizado si
                 se mueve la palanca hacia el rival <InlineIcon size={2}><InputSequence
                 sequence={[Input.RIGHT]}/></InlineIcon> en un margen de hasta 4 frames antes de que conecte el golpe
                 rival.
-                Además requiere de input preciso en la ventana de active frames del ataque entrante.
             </p>
-            <ul>
-                <li><InlineIcon size={2}><InputSequence sequence={[Input.RIGHT]}/></InlineIcon>
-                    En el momento exacto del impacto.
-                </li>
-            </ul>
+            <p>
+                Si el jugador va a recibir un golpe bajo o en el aire, para hacer parry la palanca se debe mover hacia
+                abajo <InlineIcon size={2}><InputSequence sequence={[Input.DOWN]}/></InlineIcon> con el mismo margen de
+                frames de activación.
+            </p>
             <Heading4 id="design-notes">Notas de diseño</Heading4>
             <ul>
                 <li>El auto-counter del parry perfecto es un momento de alta recompensa, visualmente
@@ -603,8 +686,7 @@ export default function MechanicsPage() {
                 <li>Los ataques aéreos también generan sus propias cadenas</li>
             </ul>
             <Heading3 id="combo-examples">Ejemplos de generación de combos y condiciones</Heading3>
-            <Heading4 id="standar-combo">Combo estándar (ejemplo genérico)</Heading4>
-            <p><b>Convert default export to named</b></p>
+            <p><b>Combo estándar (ejemplo genérico)</b></p>
             <p>
                 <InlineIcon size={2}><InputSequence sequence={[Input.P, Input.K, Input.S, Input.HS]}/></InlineIcon>→
                 Cancelar en Special → (Cancelar en Overdrive).

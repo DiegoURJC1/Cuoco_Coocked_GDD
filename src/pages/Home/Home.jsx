@@ -69,6 +69,21 @@ export default function Home() {
             <p>
                 Arcade, Windows, Linux, PS5, XBox Game Pass.
             </p>
+            <AlertPanel>
+                <p>
+                    Las medidas de tiempo a lo largo de esta documentación asumen 60 fotogramas por
+                    segundo.
+                </p>
+                <p>
+                    Relevante en las siguientes páginas:
+                </p>
+                <ul>
+                    <li><PLink href={routes.mechanics.path}>Mecánicas</PLink></li>
+                    <li><PLink href={routes.dynamics.path}>Dinámicas</PLink></li>
+                    <li><PLink href={routes.fighters.path}>Luchadores</PLink></li>
+                </ul>
+                {/*Esta alerta es intencional y no debe quitarse*/}
+            </AlertPanel>
         </>
     );
 }
