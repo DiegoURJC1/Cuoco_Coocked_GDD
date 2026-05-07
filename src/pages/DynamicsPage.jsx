@@ -31,6 +31,37 @@ export default function DynamicsPage() {
             distintos ataques, estas acciones no pueden cambiarse y quedan atadas a los movimientos de la palanca o la
             cruceta.
         </p>
+        <p>
+            Esto es vital para dos aspectos del juego, el <PLink href={routes.mechanics.block.id}>bloqueo</PLink> y
+            la valoración de la recompensa riesgo.
+        </p>
+        <p>
+            El <b>bloqueo</b> en sus distintos estados se hace siempre con la palanca hacia atrás <InlineIcon
+            size={2}><InputSequence sequence={[Input.LEFT]}/></InlineIcon> o en una de sus diagonales. Esta mecánica
+            genera situaciones según los ataques con motion inputs que tenga disponible el personaje. Movimientos
+            que comiencen con la palanca en posiciones que no sean las del bloqueo como <InlineIcon
+            size={2}><InputSequence sequence={[Input.RIGHT, Input.DOWN, Input.DOWN_RIGHT]}/></InlineIcon> u otras
+            como <InlineIcon
+            size={2}><InputSequence
+            sequence={[Input.RIGHT, Input.DOWN_RIGHT, Input.DOWN, Input.DOWN_LEFT, Input.LEFT]}/></InlineIcon> que
+            intencionalmente generan instantes en los que el jugador debe dejar de bloquear para comenzar a realizar el
+            movimiento. Otros como <InlineIcon
+            size={2}><InputSequence
+            sequence={[Input.LEFT, Input.RIGHT]}/></InlineIcon> o <InlineIcon
+            size={2}><InputSequence
+            sequence={[Input.LEFT, Input.DOWN_LEFT, Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT]}/></InlineIcon> son más
+            seguros aposta al necesitar menos movimientos si se comienza desde una posición defensiva.
+        </p>
+        <p>
+            El <b>riesgo/recompensa</b> resulta de la capacidad mecánica del jugador de realizar correctamente los
+            movimientos que resultan ideales en cada situación sin fallar el motion input. Aunque dos ataque puedan
+            golpear de tal forma que protegen el espacio aéreo del jugador y la más compleja sea claramente mejor porque
+            sea igual de rápida en su animación, haga más daño o cubra más espacio, un movimiento <InlineIcon
+            size={2}><InputSequence sequence={[Input.DOWN, Input.HS]}/></InlineIcon> no se puede fallar pero <InlineIcon
+            size={2}><InputSequence
+            sequence={[Input.RIGHT, Input.DOWN, Input.DOWN_RIGHT, Input.HS]}/></InlineIcon> si.
+        </p>
+
         <Heading3 id={routes.dynamics.path.id}>Botón Range</Heading3>
         <p>
             Ciertos juegos de pelea limitan los ataques a distancia a ciertos personajes cuyo objetivo es castigar
@@ -44,7 +75,8 @@ export default function DynamicsPage() {
         </p>
         <p>
             La interacción especial de <RangeText/> con <PLink
-            href={routes.mechanics.guardbreak.path}>guard-break</PLink> que castiga gravemente a aquel que bloquea genera
+            href={routes.mechanics.guardbreak.path}>guard-break</PLink> que castiga gravemente a aquel que bloquea
+            genera
             un gran incentivo y prisa en salir del estado de alto riesgo.
         </p>
         <Heading2 id="defense">Defensa</Heading2>

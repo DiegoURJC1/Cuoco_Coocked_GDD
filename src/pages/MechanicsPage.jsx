@@ -525,7 +525,7 @@ export default function MechanicsPage() {
                 </tr>
                 </tbody>
             </table>
-            <Heading3 id="block">Bloqueo</Heading3>
+            <Heading3 id={routes.mechanics.block.id}>Bloqueo</Heading3>
             <ul>
                 <li>
                     Mantener atrás <InlineIcon size={2}><InputSequence sequence={[Input.LEFT]}/></InlineIcon> respecto

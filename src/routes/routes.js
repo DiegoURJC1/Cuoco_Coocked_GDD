@@ -15,6 +15,10 @@ export const routes = {
             id: "input-strength-diagram",
             path: "/mechanics#input-strength-diagram"
         },
+        block: {
+            id: "block",
+            path: "/mechanics#block"
+        },
         breaker: {
             id: "breaker",
             path: "/mechanics#breaker"
