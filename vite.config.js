@@ -4,5 +4,6 @@ import svgr from "vite-plugin-svgr";
 
 // https://vite.dev/config/
 export default defineConfig({
-    plugins: [react(), svgr()]
+    plugins: [react(), svgr()],
+    base: "/URJC_25-26_FDJ_GDD"
 })
