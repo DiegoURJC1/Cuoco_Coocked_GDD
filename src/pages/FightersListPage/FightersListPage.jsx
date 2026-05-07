@@ -45,7 +45,7 @@ export default function FightersListPage() {
             <Heading2 id="fighter-list">Roster completo</Heading2>
             <div className="fighters-list">
                 {fighters.map(f => (
-                    <PLink key={f.id} href={`${import.meta.env.BASE_URL}fighters/${f.id}`}>
+                    <PLink key={f.id} href={`/fighters/${f.id}`}>
                         <div
                             style={{
                                 height: "200px",

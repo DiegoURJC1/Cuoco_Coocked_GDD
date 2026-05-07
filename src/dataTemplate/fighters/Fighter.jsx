@@ -40,7 +40,7 @@ export const baseDefaultStats = {
 export class Fighter {
     // region Variables
 
-    #FULL_ART_PATH = `${import.meta.env.BASE_URL}fighters/fullart/`;
+    #FULL_ART_PATH = `${import.meta.env.BASE_URL}fighters/fullArt/`;
 
     /**
      * ID del luchador.
