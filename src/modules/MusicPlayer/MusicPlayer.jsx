@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import * as mm from 'music-metadata-browser';
 import './MusicPlayer.css';
 
-const MUSIC_PATH = '/music/';
+const MUSIC_PATH = `${import.meta.env.BASE_URL}music/`;
 
 const MusicPlayer = ({fileList = []}) => {
     const [currentIndex, setCurrentIndex] = useState(0);

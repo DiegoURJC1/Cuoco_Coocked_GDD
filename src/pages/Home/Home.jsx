@@ -17,7 +17,7 @@ export default function Home() {
                     width: "auto",
                     height: "auto",
                     objectFit: "contain",
-                    display: "block"}} src="../../../public/cover/portadaConLogo.png" alt="Game Cover Art"/>
+                    display: "block"}} src={`${import.meta.env.BASE_URL}cover/portadaConLogo.png`} alt="Game Cover Art"/>
             </div>
 
             <p className="claim">

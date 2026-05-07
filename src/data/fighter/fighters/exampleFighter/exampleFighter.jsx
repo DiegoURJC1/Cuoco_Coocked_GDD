@@ -32,8 +32,8 @@ export const exampleFighter = new Fighter({
     },
     type: FighterType.HUMAN,
     source: Source.BASE_GAME,
-    icon: "../../../public/fighters/icon/alan_icon.svg",
-    fullArt: "../../../public/fighters/fullart/alan_fullart.png",
+    icon: `${import.meta.env.BASE_URL}fighters/icon/alan_icon.svg`,
+    fullArt: `${import.meta.env.BASE_URL}fighters/fullart/alan_fullart.png`,
     portraitConfig: {
         x: 0.5,
         y: 0.2,

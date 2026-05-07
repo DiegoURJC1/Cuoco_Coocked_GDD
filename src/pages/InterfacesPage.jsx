@@ -19,7 +19,7 @@ export default function InterfacesPage() {
                 tablas de madera en la parte superior de la pantalla, listas para reflejar el caos de la acción.
             </p>
 
-            <img src="../../public/interface/combatInterface.png" alt="Combat Interface"/>
+            <img src={`${import.meta.env.BASE_URL}interface/combatInterface.png`} alt="Combat Interface"/>
 
             <p>
                 En el rectángulo a la derecha de la tabla de cortar, aparecerá la cara del luchador. Su salud la
@@ -48,7 +48,7 @@ export default function InterfacesPage() {
                 Abajo se muestra un ejemplo de la disposición de la interfaz en el escenario de juego:
             </p>
 
-            <img src="../../public/interface/combatInterfaceInScene.png" alt="Combat Interface In-Game"/>
+            <img src={`${import.meta.env.BASE_URL}interface/combatInterfaceInScene.png`} alt="Combat Interface In-Game"/>
 
         </>
     );

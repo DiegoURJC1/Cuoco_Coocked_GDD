@@ -32,7 +32,7 @@ export const fighterPeppemoldy = new Fighter({
     type: FighterType.FOOD,
     source: Source.BASE_GAME,
     icon: "",
-    fullArt: "../../../public/fighters/fullart/peppemoldy_fullArt_temp.png",
+    fullArt: `${import.meta.env.BASE_URL}fighters/fullart/peppemoldy_fullArt_temp.png`,
     portraitConfig: {
         x: 0.6,
         y: 0,

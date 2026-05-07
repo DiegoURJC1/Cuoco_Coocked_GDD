@@ -32,7 +32,7 @@ export const fighterElChef = new Fighter({
     source: Source.BASE_GAME,
 
     icon: "",
-    fullArt: "../../../public/fighters/fullart/el-chef_fullArt.png",
+    fullArt: `${import.meta.env.BASE_URL}fighters/fullart/el-chef_fullArt.png`,
     portraitConfig: {
         x: 0.4,
         y: -0.4,
