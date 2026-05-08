@@ -1,0 +1,27 @@
+.archetype-table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.archetype-name-cell {
+    width: 10em;
+    height: 2em;
+}
+
+.archetype-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 80%;
+    height: fit-content;
+
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #242424;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    border-radius: 4px;
+}
+
