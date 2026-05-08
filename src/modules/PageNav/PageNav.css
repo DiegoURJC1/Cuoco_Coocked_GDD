@@ -9,6 +9,18 @@
 
 
 /* indentación por nivel */
-.page-nav .level-3 { padding-left: 12px; }
-.page-nav .level-4 { padding-left: 24px; }
-.page-nav .level-5 { padding-left: 36px; }
+.page-nav .level-2 {
+    font-weight: bold;
+}
+.page-nav .level-3 {
+    padding-left: 12px;
+    font-size: 0.9em;
+}
+.page-nav .level-4 {
+    padding-left: 24px;
+    font-size: 0.8em;
+}
+.page-nav .level-5 {
+    padding-left: 36px;
+    font-size: 0.7em;
+}

@@ -1,5 +1,6 @@
 import PLink from "../Link/PLink.jsx";
 import {routes} from "../../routes/routes.js";
+import "./GlobalNav.css";
 
 export function GlobalNav() {
     return (

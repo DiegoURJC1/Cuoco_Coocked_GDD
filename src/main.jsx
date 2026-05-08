@@ -16,7 +16,7 @@ import TestLinks from "./pages/testPage/TestLinks.jsx";
 import FightersListPage from "./pages/FightersListPage/FightersListPage.jsx";
 import FighterPage from "./pages/FighterPage/FighterPage.jsx";
 import MechanicsPage from "./pages/MechanicsPage.jsx";
-import DressingsPage from "./pages/DressingsPage.jsx";
+import DressingsPage from "./pages/DressingsPage/DressingsPage.jsx";
 import GameModesPage from "./pages/GameModesPage.jsx";
 import AppearancePage from "./pages/AppearancePage/AppearancePage.jsx";
 import BusinessPage from "./pages/BusinessPage.jsx";

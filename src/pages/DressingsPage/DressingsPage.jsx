@@ -1,8 +1,19 @@
-import {Heading1, Heading2, Heading3} from "../modules/Heading/Heading.jsx"
-import AlertPanel from "../modules/AlertPanel/AlertPanel.jsx";
-import {InlineIcon} from "../modules/InlineIcon/InlineIcon.jsx";
-import {InputSequence} from "../dataTemplate/input/InputSequence.jsx";
-import {Input} from "../dataTemplate/input/enums/Input.js";
+import {Heading1, Heading2, Heading3} from "../../modules/Heading/Heading.jsx"
+import AlertPanel from "../../modules/AlertPanel/AlertPanel.jsx";
+import {InlineIcon} from "../../modules/InlineIcon/InlineIcon.jsx";
+import {InputSequence} from "../../dataTemplate/input/InputSequence.jsx";
+import {Input} from "../../dataTemplate/input/enums/Input.js";
+
+import Fermentado from "../../assets/icons/dressing/Fermentado.svg?react";
+import Glaseado from "../../assets/icons/dressing/Glaseado.svg?react";
+import Mareado from "../../assets/icons/dressing/Mareado.svg?react";
+import Picante from "../../assets/icons/dressing/Picante.svg?react";
+import Pringoso from "../../assets/icons/dressing/Pringoso.svg?react";
+import Quemado from "../../assets/icons/dressing/Quemado.svg?react";
+import Saciado from "../../assets/icons/dressing/Saciado.svg?react";
+import SalsaEspecial from "../../assets/icons/dressing/Salsa Especiada.svg?react";
+
+import "./DressingsPage.css";
 
 export default function DressingsPage() {
     return (
@@ -42,41 +53,68 @@ export default function DressingsPage() {
             <br></br>
             <hr></hr>
             <Heading2 id="catalog">Catálogo completo de aderezos</Heading2>
-            <AlertPanel>TODO: Añadir iconos de cada estado, similar a los de comandos input</AlertPanel>
 
             <Heading3 id="possitive-dressings">Aderezos positivos (<b>Buffs</b>)</Heading3>
-            <ul>
-                <li><b>Glaseado</b>: Absorbe 1 hit completo sin stun ni daño. Se consume a los 3 segundos o tras
-                    absorber un hit. Ejemplos temáticos: Caramelo, miel, azucar caramelizada.
-                </li>
-                <li><b>Picante</b>: Aumenta el daño en ataques y reduce la resistencia al daño recibido. Se consume
-                    a los 2 segundos. Ejemplos temáticos: Chile, sriracha, tabasco.
-                </li>
-                <li><b>Salsa Especiada</b>: Aumenta el rango en todos los ataques del personaje. Se representa con
-                    visuales especiales que no deforman las animaciones del personaje. Se consume a los 2
-                    segundos. Ejemplos temáticos: Romero, albahaca, tomillo.
-                </li>
-                <li><b>Fermentado</b>: Proporciona regeneración lenta de vida durante 3 segundos. Ejemplos
-                    temáticos:
-                    Kimchi, masa madre, miso.
-                </li>
-            </ul>
+            <table>
+                <tbody>
+                <tr>
+                    <td className="dressing-icon"><Glaseado/></td>
+                    <td>Glaseado</td>
+                    <td>Absorbe 1 hit completo sin stun ni daño. Se consume a los 3 segundos o tras
+                        absorber un hit. Ejemplos temáticos: Caramelo, miel, azucar caramelizada.</td>
+                </tr>
+                <tr>
+                    <td className="dressing-icon"><Picante/></td>
+                    <td>Picante</td>
+                    <td>Aumenta el daño en ataques y reduce la resistencia al daño recibido. Se consume
+                        a los 2 segundos. Ejemplos temáticos: Chile, sriracha, tabasco.</td>
+                </tr>
+                <tr>
+                    <td className="dressing-icon"><SalsaEspecial/></td>
+                    <td>Salsa Especiada</td>
+                    <td>Aumenta el rango en todos los ataques del personaje. Se representa con
+                        visuales especiales que no deforman las animaciones del personaje. Se consume a los 2
+                        segundos. Ejemplos temáticos: Romero, albahaca, tomillo.</td>
+                </tr>
+                <tr>
+                    <td className="dressing-icon"><Fermentado/></td>
+                    <td>Fermentado</td>
+                    <td>Proporciona regeneración lenta de vida durante 3 segundos. Ejemplos
+                        temáticos:
+                        Kimchi, masa madre, miso.</td>
+                </tr>
+                </tbody>
+            </table>
 
             <Heading3 id="negative-dressings">Aderezos negativos (<b>Debuffs</b>)</Heading3>
-            <ul>
-                <li><b>Pringoso</b>: Reduce la velocidad de movimiento durante 1,5 segundos. Ejemplos temáticos:
-                    Caramelo quemado, jarabe.
-                </li>
-                <li><b>Mareado</b>: Inputs invertidos durante 2 segundos. Ejemplos temáticos: Alcohol, vinagre
-                    fuerte.
-                </li>
-                <li><b>Saciado</b>: Sin posibilidad de dash ni salto 1,5 segundos. Ejemplos temáticos:
-                    Sobrealimentación, salsa densa.
-                </li>
-                <li><b>Quemado</b>: Daño continuo leve (DoT) durante 5 segundos (mínimo 1, no puede hacer kill).
-                    Ejemplos temáticos: Picante extremo, curry, brasa.
-                </li>
-            </ul>
+            <table>
+                <tbody>
+                <tr>
+                    <td className="dressing-icon"><Pringoso/></td>
+                    <td>Pringoso</td>
+                    <td>Reduce la velocidad de movimiento durante 1,5 segundos. Ejemplos temáticos:
+                        Caramelo quemado, jarabe.</td>
+                </tr>
+                <tr>
+                    <td className="dressing-icon"><Mareado/></td>
+                    <td>Mareado</td>
+                    <td>Inputs invertidos durante 2 segundos. Ejemplos temáticos: Alcohol, vinagre
+                        fuerte.</td>
+                </tr>
+                <tr>
+                    <td className="dressing-icon"><Saciado/></td>
+                    <td>Saciado</td>
+                    <td>Sin posibilidad de dash ni salto 1,5 segundos. Ejemplos temáticos:
+                        Sobrealimentación, salsa densa.</td>
+                </tr>
+                <tr>
+                    <td className="dressing-icon"><Quemado/></td>
+                    <td>Quemado</td>
+                    <td>Daño continuo leve (DoT) durante 5 segundos (mínimo 1, no puede hacer kill).
+                        Ejemplos temáticos: Picante extremo, curry, brasa.</td>
+                </tr>
+                </tbody>
+            </table>
 
             <br></br>
             <hr></hr>
