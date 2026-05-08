@@ -10,7 +10,7 @@ import {GrabText, MeleeText, RangeText} from "../../modules/ColoredText/ColoredT
 export default function Home() {
     return (
         <>
-            <Heading1 id="home">Home</Heading1>
+            <Heading1 id="home">La cocina</Heading1>
             <div className="diagram">
                 <img style={{maxHeight: "80vh",
                     maxWidth: "100%",

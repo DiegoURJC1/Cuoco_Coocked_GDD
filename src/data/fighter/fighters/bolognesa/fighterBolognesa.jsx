@@ -32,7 +32,7 @@ export const fighterBolognesa = new Fighter({
     },
     type: FighterType.HUMAN,
     source: Source.BASE_GAME,
-    fullArt: `la-bolognesa_fullArt.png`,
+    fullArt: `bolognesa_fullArt.png`,
     portraitConfig: {
         x: 0.5,
         y: 0.2,
