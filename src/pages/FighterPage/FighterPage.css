@@ -3,3 +3,104 @@
     flex-direction: column;
     gap: 20px;
 }
+
+.fighter-proscons-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    margin:
+            1.5rem
+            0;
+}
+
+.fighter-proscons-column {
+    background: #1b1b1b;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    border: 1px solid #333;
+}
+
+.fighter-proscons-header {
+    padding:
+            0.9rem
+            1rem;
+
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 0.03em;
+
+    border-bottom: 1px solid #333;
+}
+
+.fighter-pros .fighter-proscons-header {
+    background:
+            linear-gradient(
+                    90deg,
+                    rgba(46, 204, 113, 0.35),
+                    rgba(46, 204, 113, 0.08)
+            );
+
+    color: #7dffb0;
+}
+
+.fighter-cons .fighter-proscons-header {
+    background:
+            linear-gradient(
+                    90deg,
+                    rgba(231, 76, 60, 0.35),
+                    rgba(231, 76, 60, 0.08)
+            );
+
+    color: #ff9a90;
+}
+
+.fighter-proscons-column ul {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.fighter-proscons-column li {
+    padding:
+            0.9rem
+            1rem;
+
+    border-top: 1px solid #2d2d2d;
+
+    line-height: 1.45;
+}
+
+.fighter-proscons-column li:nth-child(even) {
+    background-color: #232323;
+}
+
+.fighter-pros li::before {
+    content: "+ ";
+
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.fighter-cons li::before {
+    content: "− ";
+
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Avoid moves section not using full width because of infobox */
+#moves {
+    clear: both;
+}
+
+@media (max-width: 768px) {
+    .fighter-proscons-table {
+        grid-template-columns: 1fr;
+    }
+}

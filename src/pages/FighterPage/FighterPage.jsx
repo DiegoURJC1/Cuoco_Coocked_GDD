@@ -2,10 +2,9 @@ import {useParams} from "react-router-dom";
 import {Heading1, Heading2} from "../../modules/Heading/Heading.jsx";
 import "./FighterPage.css";
 import {fighters} from "../../data/fighter/fighters.jsx";
-import Stars from "../../modules/Fighter/Star/Stars.jsx";
 import MoveSection from "../../modules/Fighter/MovePanel/MoveSection.jsx"
-import {InlineIcon} from "../../modules/InlineIcon/InlineIcon.jsx";
 import {FighterRadar} from "../../modules/RadarChart/FighterRadar.jsx";
+import FighterInfobox from "../../modules/Fighter/FighterInfobox/FighterInfobox.jsx";
 
 export default function FighterPage() {
     const {id} = useParams();
@@ -28,25 +27,34 @@ export default function FighterPage() {
 
     return (
         <div className="fighter-page">
+            <FighterInfobox fighter={fighter} />
             <Heading1 id="fighter-name">{fighter.name}</Heading1>
+            <Heading2 id="">Arte completo</Heading2>
             <div className="fighter-desc">{fighter.description}</div>
+            <FighterRadar fighter={fighter} />
+            <div className="fighter-proscons-table">
+                <div className="fighter-proscons-column fighter-pros">
+                    <div className="fighter-proscons-header">
+                        ✔ Pros
+                    </div>
 
-            <div className="fighter-info-grid">
-                <p><strong>Arquetipo:</strong> {fighter.archetype.name}</p>
-                <div><strong>Facilidad:</strong> <InlineIcon size={2}><Stars stars={fighter.easyToUse}/></InlineIcon></div>
-                <FighterRadar fighter={fighter}/>
-                <div><strong>Origen:</strong><br/>{fighter.narrativeOrigin}</div>
-                <div><strong>Tipo:</strong><br/>{fighter.type}</div>
-            </div>
-
-            <div className="pros-cons-section">
-                <div className="pros">
-                    <h3>Pros</h3>
-                    <ul>{fighter.prosCons.pros.map((p, i) => <li key={i}>{p}</li>)}</ul>
+                    <ul>
+                        {fighter.prosCons.pros.map((p, i) => (
+                            <li key={i}>{p}</li>
+                        ))}
+                    </ul>
                 </div>
-                <div className="cons">
-                    <h3>Cons</h3>
-                    <ul>{fighter.prosCons.cons.map((c, i) => <li key={i}>{c}</li>)}</ul>
+
+                <div className="fighter-proscons-column fighter-cons">
+                    <div className="fighter-proscons-header">
+                        ✖ Cons
+                    </div>
+
+                    <ul>
+                        {fighter.prosCons.cons.map((c, i) => (
+                            <li key={i}>{c}</li>
+                        ))}
+                    </ul>
                 </div>
             </div>
 
@@ -58,6 +66,8 @@ export default function FighterPage() {
                 <MoveSection title="Especiales" moves={moveSet.special} fighter={fighter}/>
                 <MoveSection title="Overdrives" moves={moveSet.overdrive} fighter={fighter}/>
             </div>
+
+            <Heading2 id="full-art">Arte completo</Heading2>
 
             <div className="full-art-container">
                 {fighter.fullArtImg}

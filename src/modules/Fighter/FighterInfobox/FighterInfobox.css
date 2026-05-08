@@ -1,0 +1,242 @@
+.fighter-infobox {
+    float: right;
+
+    width: 100%;
+    max-width: 420px;
+
+    margin:
+            0
+            0
+            1.5rem
+            1.5rem;
+
+    background: #181818;
+    border: 2px solid #2d2d2d;
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    color: #f5f5f5;
+
+    font-family: sans-serif;
+
+    box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.fighter-infobox__header {
+    position: relative;
+}
+
+.fighter-infobox__portrait {
+    position: relative;
+
+    aspect-ratio: 1 / 1;
+
+    width: 100%;
+
+    background: #111;
+
+    overflow: hidden;
+}
+
+.fighter-infobox__portrait-default,
+.fighter-infobox__portrait-full {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    transition:
+            opacity 0.25s ease,
+            transform 0.25s ease;
+}
+
+/* Portrait normal */
+.fighter-infobox__portrait-default {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Full art oculto */
+.fighter-infobox__portrait-full {
+    opacity: 0;
+    z-index: 2;
+
+    background: #111;
+}
+
+/* Hover */
+.fighter-infobox__portrait:hover .fighter-infobox__portrait-default {
+    opacity: 0;
+    transform: scale(1.03);
+}
+
+.fighter-infobox__portrait:hover .fighter-infobox__portrait-full {
+    opacity: 1;
+}
+
+.fighter-infobox__identity {
+    padding: 1rem 1.25rem;
+    background:
+            linear-gradient(
+                    180deg,
+                    rgba(0,0,0,0.2),
+                    rgba(0,0,0,0.7)
+            );
+}
+
+.fighter-infobox__identity h2 {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.fighter-infobox__nickname {
+    margin-top: 0.4rem;
+
+    color: #c9c9c9;
+    font-style: italic;
+}
+
+.fighter-infobox__section {
+    padding: 1.2rem 1.25rem;
+    border-top: 1px solid #2b2b2b;
+}
+
+.fighter-infobox__section h3 {
+    margin: 0 0 1rem 0;
+
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: #ffcc4d;
+}
+
+.fighter-infobox__grid {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    row-gap: 0.8rem;
+    column-gap: 1rem;
+
+    align-items: center;
+}
+
+.fighter-infobox__label {
+    font-weight: 700;
+    color: #c8c8c8;
+}
+
+.fighter-infobox__value {
+    text-align: right;
+}
+
+.fighter-infobox__difficulty {
+    color: #ffcc4d;
+    letter-spacing: 0.12em;
+    font-size: 1.1rem;
+}
+
+.fighter-infobox__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.fighter-infobox__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.fighter-infobox__stat-top {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 0.95rem;
+}
+
+.fighter-infobox__bar {
+    width: 100%;
+    height: 12px;
+
+    background: #2d2d2d;
+    border-radius: 999px;
+
+    overflow: hidden;
+}
+
+.fighter-infobox__bar-fill {
+    height: 100%;
+
+    border-radius: inherit;
+
+    transition: width 0.25s ease;
+}
+
+.fighter-infobox__proscons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+}
+
+.fighter-infobox__proscons ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.fighter-infobox__proscons li {
+    margin-bottom: 0.5rem;
+    line-height: 1.35;
+}
+
+.fighter-infobox__pros-title {
+    margin-top: 0;
+    color: #2ecc71;
+}
+
+.fighter-infobox__cons-title {
+    margin-top: 0;
+    color: #e74c3c;
+}
+
+@media (max-width: 500px) {
+    .fighter-infobox {
+        max-width: 100%;
+    }
+
+    .fighter-infobox__proscons {
+        grid-template-columns: 1fr;
+    }
+
+    .fighter-infobox__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fighter-infobox__value {
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .fighter-infobox {
+        float: none;
+
+        max-width: 100%;
+
+        margin: 0 0 1.5rem 0;
+    }
+}
+
+.fighter-infobox__stars {
+    height: 22px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.15rem;
+
+    color: #ffcc4d;
+}
