@@ -14,6 +14,7 @@ import Saciado from "../../assets/icons/dressing/Saciado.svg?react";
 import SalsaEspecial from "../../assets/icons/dressing/Salsa Especiada.svg?react";
 
 import "./DressingsPage.css";
+import {routes} from "../../routes/routes.js";
 
 export default function DressingsPage() {
     return (
@@ -57,26 +58,26 @@ export default function DressingsPage() {
             <Heading3 id="possitive-dressings">Aderezos positivos (<b>Buffs</b>)</Heading3>
             <table>
                 <tbody>
-                <tr>
+                <tr id={routes.dressings.dressing.glazed.id}>
                     <td className="dressing-icon"><Glaseado/></td>
                     <td>Glaseado</td>
                     <td>Absorbe 1 hit completo sin stun ni daño. Se consume a los 3 segundos o tras
                         absorber un hit. Ejemplos temáticos: Caramelo, miel, azucar caramelizada.</td>
                 </tr>
-                <tr>
+                <tr id={routes.dressings.dressing.spicy.id}>
                     <td className="dressing-icon"><Picante/></td>
                     <td>Picante</td>
                     <td>Aumenta el daño en ataques y reduce la resistencia al daño recibido. Se consume
                         a los 2 segundos. Ejemplos temáticos: Chile, sriracha, tabasco.</td>
                 </tr>
-                <tr>
+                <tr id={routes.dressings.dressing.specialSalad.id}>
                     <td className="dressing-icon"><SalsaEspecial/></td>
                     <td>Salsa Especiada</td>
                     <td>Aumenta el rango en todos los ataques del personaje. Se representa con
                         visuales especiales que no deforman las animaciones del personaje. Se consume a los 2
                         segundos. Ejemplos temáticos: Romero, albahaca, tomillo.</td>
                 </tr>
-                <tr>
+                <tr id={routes.dressings.dressing.fermented.id}>
                     <td className="dressing-icon"><Fermentado/></td>
                     <td>Fermentado</td>
                     <td>Proporciona regeneración lenta de vida durante 3 segundos. Ejemplos
@@ -89,25 +90,25 @@ export default function DressingsPage() {
             <Heading3 id="negative-dressings">Aderezos negativos (<b>Debuffs</b>)</Heading3>
             <table>
                 <tbody>
-                <tr>
+                <tr id={routes.dressings.dressing.sticky.id}>
                     <td className="dressing-icon"><Pringoso/></td>
                     <td>Pringoso</td>
                     <td>Reduce la velocidad de movimiento durante 1,5 segundos. Ejemplos temáticos:
                         Caramelo quemado, jarabe.</td>
                 </tr>
-                <tr>
+                <tr id={routes.dressings.dressing.dizzy.id}>
                     <td className="dressing-icon"><Mareado/></td>
                     <td>Mareado</td>
                     <td>Inputs invertidos durante 2 segundos. Ejemplos temáticos: Alcohol, vinagre
                         fuerte.</td>
                 </tr>
-                <tr>
+                <tr id={routes.dressings.dressing.satiated.id}>
                     <td className="dressing-icon"><Saciado/></td>
                     <td>Saciado</td>
                     <td>Sin posibilidad de dash ni salto 1,5 segundos. Ejemplos temáticos:
                         Sobrealimentación, salsa densa.</td>
                 </tr>
-                <tr>
+                <tr id={routes.dressings.dressing.burned.id}>
                     <td className="dressing-icon"><Quemado/></td>
                     <td>Quemado</td>
                     <td>Daño continuo leve (DoT) durante 5 segundos (mínimo 1, no puede hacer kill).

@@ -45,7 +45,40 @@ export const routes = {
     },
     dressings: {
         path: "/dressings",
-
+        dressing: {
+            glazed: {
+                id: "glazed",
+                path: "/dressings#glazed",
+            },
+            spicy: {
+                id: "spicy",
+                path: "/dressings#spicy",
+            },
+            specialSalad: {
+                id: "special-salad",
+                path: "/dressings#special-salad",
+            },
+            fermented: {
+                id: "fermented",
+                path: "/dressings#fermented",
+            },
+            sticky: {
+                id: "sticky",
+                path: "/dressings#sticky",
+            },
+            dizzy: {
+                id: "dizzy",
+                path: "/dressings#dizzy",
+            },
+            satiated: {
+                id: "satiated",
+                path: "/dressings#satiated",
+            },
+            burned: {
+                id: "burned",
+                path: "/dressings#burned",
+            },
+        }
     },
     gameModes: {
         path: "/game-modes",
