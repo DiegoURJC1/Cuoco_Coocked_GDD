@@ -249,6 +249,15 @@ export default function InterfacesPage() {
 
             <img src={`${import.meta.env.BASE_URL}interface/combatInterfaceInScene.png`}
                  alt="Combat Interface In-Game"/>
+            <br/><br/><br/>
+            <Heading2 id="combat-interface">Interfaz de combate</Heading2>
+
+            <img style={{
+                width: 'clamp(200px, 100%, 500px)',
+                transformOrigin: 'center', // CamelCase y en un solo objeto
+                display: 'block',           // Necesario para que el margen funcione
+                margin: '0 auto'            // Para centrarla
+            }} src={`${import.meta.env.BASE_URL}GUI/pizarraMenúPausa.png`}/>
 
         </>
     );
