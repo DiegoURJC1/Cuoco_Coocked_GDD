@@ -121,16 +121,12 @@ export default function AppearancePage() {
             </ul>
             <Heading3 id="visualReferences">Referentes estéticos</Heading3>
             <ul>
-                <li>Guilty Gear Strive: Identidad visual fuerte y disruptiva como declaración de intenciones del
-                    género
+                <li>Guilty Gear Strive: Identidad visual fuerte y disruptiva de alta velocidad y resalte sobre escenarios.
                 </li>
-                <li>Skullgirls: Personajes con identidad visual completamente original dentro del género</li>
-                <li>Food photography / Instagram food styling: Iluminación, paleta, composición visual de personajes y
-                    escenarios
-                </li>
-                <li>Studio Ghibli: Comida como objeto con carisma, textura y presencia</li>
-                <li>Cuphead: Personajes con identidad fuerte derivada de su "material base"</li>
-                <li>Hi-Fi Rush: Colores fuertes y vivos con estética comic marcada</li>
+                <li>Skullgirls: Personajes con identidad visual completamente original dentro del género con siluetas dispares.</li>
+                <li>Studio Ghibli: Comida como objeto con carisma, textura y presencia.</li>
+                <li>Cuphead: Personajes con identidad fuerte derivada de su "material base".</li>
+                <li>Hi-Fi Rush: Colores fuertes y vivos con estética comic marcada.</li>
             </ul>
             <Heading2 id="music">Música</Heading2>
             <p>
