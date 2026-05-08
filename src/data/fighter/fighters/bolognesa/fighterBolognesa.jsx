@@ -3,13 +3,14 @@ import {Archetype} from "../../../../dataTemplate/fighters/enums/Archetype.js";
 import {Source} from "../../../../dataTemplate/fighters/enums/Source.js";
 import {bolognesaMoveSet} from "./moveSetBolognesa.jsx";
 import {FighterType} from "../../../../dataTemplate/fighters/enums/FighterType.js";
+import {moveFridgeTwirl63214} from "../johnGrinder/moveSetJohnGrinder.jsx";
 
 export const fighterBolognesa = new Fighter({
     name: "La Boloñesa",
     archetype: Archetype.RUSHDOWN,
     description: (fighter) => (
         <>
-            This is a <b>description</b> of {fighter.name} La Boloñesa es una masa
+            {fighter.name} es una masa
             viva de tagliatelle, ragú y albóndigas que se ha convencido a si misma de
             que el mundo le debe una disculpa. Presenta un aspecto impecable,
             brillante y bien presentada con una salsa de color bermellón y de actitud
@@ -19,6 +20,16 @@ export const fighterBolognesa = new Fighter({
         </>
     ),
     easyToUse: 3,
+    prosCons: {
+        pros: [
+            <>Gran capacidad para encadenar daño sostenido.</>,
+            <>Facilidad para aplicar quemado acumulando ataques melee.</>,
+            ],
+        cons: [
+            <>Poca vida en general.</>,
+            <>Opciones defensivas escasas.</>,
+        ]
+    },
     type: FighterType.HUMAN,
     source: Source.BASE_GAME,
     fullArt: `la-bolognesa_fullArt.png`,

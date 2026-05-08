@@ -124,7 +124,7 @@ export default function DressingsPage() {
                 <li>Cada personaje sólo puede tener <b>un único aderezo activo</b> en cada momento. Se puede aumentar en
                     los parámetros personalizados de una partida.
                 </li>
-                <li>Si se aplica un nuevo aderezo mientras uno está activo, el nuevo <b>cancela y sobreescribe</b>
+                <li>Si se aplica un nuevo aderezo mientras uno está activo, el nuevo <b>cancela y sobreescribe </b>
                     al anterior inmediatamente.
                 </li>
                 <li>Esto último genera una posible <b>dinámica de uso reactivo</b> del sistema: un jugador puede
