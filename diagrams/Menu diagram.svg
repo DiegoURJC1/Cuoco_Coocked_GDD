@@ -1,0 +1,455 @@
+<svg viewBox="0 0 1260 3083" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+     style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:1.5">
+  <path style="fill:none" d="M3769 0h1971v5614H3769z" transform="matrix(.63927 0 0 .54916 -2409.406 0)"/>
+    <path d="M210.5 239 198 264l-12.5-25z" style="fill:#e2e2e2" transform="translate(.009)"/>
+    <path d="M198 192v52" style="fill:none;stroke:#e2e2e2;stroke-width:8.33px" transform="translate(.009)"/>
+    <path d="M210.5 455 198 480l-12.5-25z" style="fill:#e2e2e2" transform="translate(.009)"/>
+    <path d="M198 408v52" style="fill:none;stroke:#e2e2e2;stroke-width:8.33px" transform="translate(.009)"/>
+    <path d="m173 755.5 25 12.5-25 12.5z" style="fill:#e2e2e2" transform="translate(.009)"/>
+    <path d="M126 624v144h52" style="fill:none;stroke:#e2e2e2;stroke-width:8.33px" transform="translate(.009)"/>
+    <path d="m317 971.5 25 12.5-25 12.5z" style="fill:#e2e2e2" transform="translate(.009 .001)"/>
+    <path d="M270 840v144h52" style="fill:none;stroke:#e2e2e2;stroke-width:8.33px" transform="translate(.009 .001)"/>
+    <path d="m317 2051.5 25 12.5-25 12.5z" style="fill:#e2e2e2" transform="translate(.009 .003)"/>
+    <path d="M270 1920v144h52" style="fill:none;stroke:#e2e2e2;stroke-width:8.33px" transform="translate(.009 .003)"/>
+    <path d="m893 971.5 25 12.5-25 12.5z" style="fill:#e2e2e2" transform="translate(.008 .001)"/>
+    <path d="M846 840v144h52" style="fill:none;stroke:#e2e2e2;stroke-width:8.33px" transform="translate(.008 .001)"/>
+    <path d="m893 2051.5 25 12.5-25 12.5z" style="fill:#e2e2e2" transform="translate(.008 .003)"/>
+    <path d="M846 1920v144h52" style="fill:none;stroke:#e2e2e2;stroke-width:8.33px" transform="translate(.008 .003)"/>
+    <path d="m317 1187.5 25 12.5-25 12.5z" style="fill:#e2e2e2" transform="translate(.009 .001)"/>
+    <path d="M270 840v360h52" style="fill:none;stroke:#e2e2e2;stroke-width:8.33px" transform="translate(.009 .001)"/>
+    <path d="m317 2267.5 25 12.5-25 12.5z" style="fill:#e2e2e2" transform="translate(.009 .003)"/>
+    <path d="M270 1920v360h52" style="fill:none;stroke:#e2e2e2;stroke-width:8.33px" transform="translate(.009 .003)"/>
+    <path d="m893 1187.5 25 12.5-25 12.5z" style="fill:#e2e2e2" transform="translate(.008 .001)"/>
+    <path d="M846 840v360h52" style="fill:none;stroke:#e2e2e2;stroke-width:8.33px" transform="translate(.008 .001)"/>
+    <path d="m893 2267.5 25 12.5-25 12.5z" style="fill:#e2e2e2" transform="translate(.008 .003)"/>
+    <path d="M846 1920v360h52" style="fill:none;stroke:#e2e2e2;stroke-width:8.33px" transform="translate(.008 .003)"/>
+    <path d="m317 1403.5 25 12.5-25 12.5z" style="fill:#e2e2e2" transform="translate(.009 .001)"/>
+    <path d="M270 840v576h52" style="fill:none;stroke:#e2e2e2;stroke-width:8.33px" transform="translate(.009 .001)"/>
+    <path d="m317 2483.5 25 12.5-25 12.5z" style="fill:#e2e2e2" transform="translate(.009 .003)"/>
+    <path d="M270 1920v576h52" style="fill:none;stroke:#e2e2e2;stroke-width:8.33px" transform="translate(.009 .003)"/>
+    <path d="m893 1403.5 25 12.5-25 12.5z" style="fill:#e2e2e2" transform="translate(.008 .001)"/>
+    <path d="M846 840v576h52" style="fill:none;stroke:#e2e2e2;stroke-width:8.33px" transform="translate(.008 .001)"/>
+    <path d="m317 1619.5 25 12.5-25 12.5z" style="fill:#e2e2e2" transform="translate(.009 .001)"/>
+    <path d="M270 840v792h52" style="fill:none;stroke:#e2e2e2;stroke-width:8.33px" transform="translate(.009 .001)"/>
+    <path d="m893 1619.5 25 12.5-25 12.5z" style="fill:#e2e2e2" transform="translate(.008 .001)"/>
+    <path d="M846 840v792h52" style="fill:none;stroke:#e2e2e2;stroke-width:8.33px" transform="translate(.008 .001)"/>
+    <path d="m749 755.5 25 12.5-25 12.5z" style="fill:#e2e2e2" transform="translate(.009)"/>
+    <path d="M126 624v36h576v108h52" style="fill:none;stroke:#e2e2e2;stroke-width:8.33px" transform="translate(.009)"/>
+    <path d="m749 1835.5 25 12.5-25 12.5z" style="fill:#e2e2e2" transform="translate(.009)"/>
+    <path d="M126 624v36h576v1188h52" style="fill:none;stroke:#e2e2e2;stroke-width:8.33px" transform="translate(.009)"/>
+    <path d="m749 2699.5 25 12.5-25 12.5z" style="fill:#e2e2e2" transform="translate(.009)"/>
+    <path d="M126 624v36h576v2052h52" style="fill:none;stroke:#e2e2e2;stroke-width:8.33px" transform="translate(.009)"/>
+    <path d="m173 1835.5 25 12.5-25 12.5z" style="fill:#e2e2e2" transform="translate(.009)"/>
+    <path d="M126 624v1224h52" style="fill:none;stroke:#e2e2e2;stroke-width:8.33px" transform="translate(.009)"/>
+    <path d="m173 1835.5 25 12.5-25 12.5z" style="fill:#e2e2e2" transform="translate(.009)"/>
+    <path d="M126 624v1224h52" style="fill:none;stroke:#e2e2e2;stroke-width:8.33px" transform="translate(.009)"/>
+    <path d="m173 2699.5 25 12.5-25 12.5z" style="fill:#e2e2e2" transform="translate(.009)"/>
+    <path d="M126 624v2088h52" style="fill:none;stroke:#e2e2e2;stroke-width:8.33px" transform="translate(.009)"/>
+    <path d="m173 2915.5 25 12.5-25 12.5z" style="fill:#e2e2e2" transform="translate(.009)"/>
+    <path d="M126 624v2304h52" style="fill:none;stroke:#e2e2e2;stroke-width:8.33px" transform="translate(.009)"/>
+    <g transform="matrix(2 0 0 1 -2454 1090.994)">
+    <g id="diagram-missions" class="flow-diagram-node">
+    <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"
+          style="fill:#171717"/>
+        <g transform="matrix(16.7 0 0 33.3 1801.851 121.5)"/>
+        <text x="1740.297" y="121.5"
+              style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+              transform="matrix(.5 0 0 1 844 0)">MISIONES</text>
+        <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6m-4.167 0c0-7.322-2.972-13.267-6.633-13.267h-122.4c-3.661 0-6.633 5.945-6.633 13.267v100.8c0 7.322 2.972 13.267 6.633 13.267h122.4c3.661 0 6.633-5.945 6.633-13.267z"
+              style="fill:#fafad2"/>
+    </g>
+  </g>
+    <g transform="matrix(2 0 0 1 -2454 874.995)">
+    <g id="diagram-training" class="flow-diagram-node">
+    <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"
+          style="fill:#171717"/>
+        <clipPath id="b">
+      <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"/>
+    </clipPath>
+        <g clip-path="url(#b)">
+      <g transform="matrix(16.7 0 0 33.3 1826.156 121.5)"/>
+            <text x="1691.688" y="121.5"
+                  style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+                  transform="matrix(.5 0 0 1 844 0)">EN<tspan x="1733.501" y="121.5">T</tspan>REN<tspan x="1817.974"
+                                                                                                        y="121.5">A</tspan>MIEN
+                <tspan x="1921.132px 1941.298px" y="121.5px 121.5px">TO</tspan></text>
+    </g>
+        <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6m-4.167 0c0-7.322-2.972-13.267-6.633-13.267h-122.4c-3.661 0-6.633 5.945-6.633 13.267v100.8c0 7.322 2.972 13.267 6.633 13.267h122.4c3.661 0 6.633-5.945 6.633-13.267z"
+              style="fill:#fafad2"/>
+  </g>
+  </g>
+    <g transform="matrix(2 0 0 1 -2598 658.996)">
+    <g id="diagram-cata" class="flow-diagram-node">
+    <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"
+          style="fill:#171717"/>
+        <clipPath id="c">
+      <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"/>
+    </clipPath>
+        <g clip-path="url(#c)">
+      <g transform="matrix(16.7 0 0 33.3 1778.845 121.5)"/>
+            <text x="1786.309" y="121.5"
+                  style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+                  transform="matrix(.5 0 0 1 844 0)">CA<tspan x="1828.594px 1847.263px" y="121.5px 121.5px">TA</tspan></text>
+    </g>
+        <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6m-4.167 0c0-7.322-2.972-13.267-6.633-13.267h-122.4c-3.661 0-6.633 5.945-6.633 13.267v100.8c0 7.322 2.972 13.267 6.633 13.267h122.4c3.661 0 6.633-5.945 6.633-13.267z"
+              style="fill:#fafad2"/>
+  </g>
+    </g>
+    <g transform="matrix(2 0 0 1 -2598 1738.99)">
+    <g id="diagram-story" class="flow-diagram-node">
+    <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"
+          style="fill:#171717"/>
+        <g clip-path="url(#d)">
+      <g transform="matrix(16.7 0 0 33.3 1795.663 121.5)"/>
+            <text x="1752.674" y="121.5"
+                  style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+                  transform="matrix(.5 0 0 1 844 0)">HIST<tspan x="1826.6" y="121.5">O</tspan>RI
+                <tspan x="1880.897" y="121.5">A</tspan></text>
+    </g>
+        <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6m-4.167 0c0-7.322-2.972-13.267-6.633-13.267h-122.4c-3.661 0-6.633 5.945-6.633 13.267v100.8c0 7.322 2.972 13.267 6.633 13.267h122.4c3.661 0 6.633-5.945 6.633-13.267z"
+              style="fill:#fafad2"/>
+  </g>
+    </g>
+    <g transform="matrix(2 0 0 1 -3174 2602.987)">
+    <g id="diagram-settings" class="flow-diagram-node">
+    <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"
+          style="fill:#171717"/>
+        <clipPath id="e">
+      <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"/>
+    </clipPath>
+        <g clip-path="url(#e)">
+      <g transform="matrix(16.7 0 0 33.3 1793.836 121.5)"/>
+            <text x="1756.328" y="121.5"
+                  style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+                  transform="matrix(.5 0 0 1 844 0)">AJUSTES</text>
+    </g>
+        <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6m-4.167 0c0-7.322-2.972-13.267-6.633-13.267h-122.4c-3.661 0-6.633 5.945-6.633 13.267v100.8c0 7.322 2.972 13.267 6.633 13.267h122.4c3.661 0 6.633-5.945 6.633-13.267z"
+              style="fill:#fafad2"/>
+  </g>
+    </g>
+    <g transform="matrix(2 0 0 1 -2598 2602.987)">
+    <g id="diagram-store" class="flow-diagram-node">
+    <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"
+          style="fill:#171717"/>
+        <clipPath id="f">
+      <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"/>
+    </clipPath>
+        <g clip-path="url(#f)">
+      <g transform="matrix(16.7 0 0 33.3 1787.093 121.5)"/>
+            <text x="1769.813" y="121.5"
+                  style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+                  transform="matrix(.5 0 0 1 844 0)">TIEND<tspan x="1863.758" y="121.5">A</tspan></text>
+    </g>
+        <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6m-4.167 0c0-7.322-2.972-13.267-6.633-13.267h-122.4c-3.661 0-6.633 5.945-6.633 13.267v100.8c0 7.322 2.972 13.267 6.633 13.267h122.4c3.661 0 6.633-5.945 6.633-13.267z"
+              style="fill:#fafad2"/>
+  </g>
+    </g>
+    <g transform="matrix(2 0 0 1 -3174 2818.985)">
+    <g id="diagram-exit" class="flow-diagram-node">
+    <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"
+          style="fill:#171717"/>
+        <clipPath id="g">
+      <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"/>
+    </clipPath>
+        <g clip-path="url(#g)">
+      <g transform="matrix(16.7 0 0 33.3 1780.99 121.5)"/>
+            <text x="1782.02" y="121.5"
+                  style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+                  transform="matrix(.5 0 0 1 844 0)">SALIR</text>
+    </g>
+        <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6m-4.167 0c0-7.322-2.972-13.267-6.633-13.267h-122.4c-3.661 0-6.633 5.945-6.633 13.267v100.8c0 7.322 2.972 13.267 6.633 13.267h122.4c3.661 0 6.633-5.945 6.633-13.267z"
+              style="fill:#fafad2"/>
+  </g>
+    </g>
+    <g transform="matrix(2 0 0 1 -2454 1306.993)">
+    <g id="diagram-tutorial" class="flow-diagram-node">
+    <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"
+          style="fill:#171717"/>
+        <clipPath id="h">
+      <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"/>
+    </clipPath>
+        <g clip-path="url(#h)">
+      <g transform="matrix(16.7 0 0 33.3 1797.376 121.5)"/>
+            <text x="1749.248" y="121.5"
+                  style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+                  transform="matrix(.5 0 0 1 844 0)">TUT<tspan x="1811.976" y="121.5">O</tspan>RI<tspan x="1866.273"
+                                                                                                        y="121.5">A</tspan>L</text>
+    </g>
+        <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6m-4.167 0c0-7.322-2.972-13.267-6.633-13.267h-122.4c-3.661 0-6.633 5.945-6.633 13.267v100.8c0 7.322 2.972 13.267 6.633 13.267h122.4c3.661 0 6.633-5.945 6.633-13.267z"
+              style="fill:#fafad2"/>
+  </g>
+    </g>
+    <g transform="matrix(2 0 0 1 -2454 1522.992)">
+    <g id="diagram-combos" class="flow-diagram-node">
+    <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"
+          style="fill:#171717"/>
+        <clipPath id="i">
+      <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"/>
+    </clipPath>
+        <g clip-path="url(#i)">
+      <g transform="matrix(16.7 0 0 33.3 1792.7 121.5)"/>
+            <text x="1758.599" y="121.5"
+                  style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+                  transform="matrix(.5 0 0 1 844 0)">COMBOS</text>
+    </g>
+        <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6m-4.167 0c0-7.322-2.972-13.267-6.633-13.267h-122.4c-3.661 0-6.633 5.945-6.633 13.267v100.8c0 7.322 2.972 13.267 6.633 13.267h122.4c3.661 0 6.633-5.945 6.633-13.267z"
+              style="fill:#fafad2"/>
+  </g>
+    </g>
+    <g transform="matrix(2 0 0 1 -2454 1954.99)">
+    <g id="diagram-play-story" class="flow-diagram-node">
+    <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"
+          style="fill:#171717"/>
+        <clipPath id="j">
+      <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"/>
+    </clipPath>
+        <g clip-path="url(#j)">
+      <g transform="matrix(16.7 0 0 33.3 1824.48 121.5)"/>
+            <text x="1695.041" y="121.5"
+                  style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+                  transform="matrix(.5 0 0 1 844 0)">JUGAR HIST<tspan x="1884.234" y="121.5">O</tspan>RI
+                <tspan x="1938.531" y="121.5">A</tspan></text>
+    </g>
+        <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6m-4.167 0c0-7.322-2.972-13.267-6.633-13.267h-122.4c-3.661 0-6.633 5.945-6.633 13.267v100.8c0 7.322 2.972 13.267 6.633 13.267h122.4c3.661 0 6.633-5.945 6.633-13.267z"
+              style="fill:#fafad2"/>
+  </g>
+    </g>
+    <g transform="matrix(2 0 0 1 -2454 2170.989)">
+    <g id="diagram-cuoco-world" class="flow-diagram-node">
+    <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"
+          style="fill:#171717"/>
+        <clipPath id="k">
+      <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"/>
+    </clipPath>
+        <g clip-path="url(#k)">
+      <g transform="matrix(16.7 0 0 33.3 1817.81 121.5)"/>
+            <text x="1708.379" y="121.5"
+                  style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+                  transform="matrix(.5 0 0 1 844 0)">MUNDO CUOCO</text>
+    </g>
+        <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6m-4.167 0c0-7.322-2.972-13.267-6.633-13.267h-122.4c-3.661 0-6.633 5.945-6.633 13.267v100.8c0 7.322 2.972 13.267 6.633 13.267h122.4c3.661 0 6.633-5.945 6.633-13.267z"
+              style="fill:#fafad2"/>
+  </g>
+    </g>
+    <g transform="matrix(2 0 0 1 -3318 442.997)">
+    <g id="diagram-main-menu" class="flow-diagram-node">
+    <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"
+          style="fill:#171717"/>
+        <clipPath id="l">
+      <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"/>
+    </clipPath>
+        <g clip-path="url(#l)">
+      <g transform="matrix(16.7 0 0 33.3 1825.09 121.5)"/>
+            <text x="1693.82" y="121.5"
+                  style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+                  transform="matrix(.5 0 0 1 844 0)">MENÚ PRINCIP<tspan x="1921.701" y="121.5">A</tspan>L</text>
+    </g>
+        <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6m-4.167 0c0-7.322-2.972-13.267-6.633-13.267h-122.4c-3.661 0-6.633 5.945-6.633 13.267v100.8c0 7.322 2.972 13.267 6.633 13.267h122.4c3.661 0 6.633-5.945 6.633-13.267z"
+              style="fill:#fafad2"/>
+  </g>
+    </g>
+    <g transform="matrix(2 0 0 1 -3318 11)">
+    <g class="flow-diagram-node no-link">
+    <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"
+          style="fill:#171717"/>
+        <clipPath id="m">
+      <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"/>
+    </clipPath>
+        <g clip-path="url(#m)">
+      <text x="1746.205" y="101.969"
+            style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+            transform="matrix(.5 0 0 1 844 0)">INICI<tspan x="1820.993" y="101.969">A</tspan>R EL</text>
+            <g transform="matrix(16.7 0 0 33.3 1784.258 141.031)"/>
+            <text x="1775.485" y="141.031"
+                  style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+                  transform="matrix(.5 0 0 1 844 0)">JUEGO</text>
+    </g>
+        <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6m-4.167 0c0-7.322-2.972-13.267-6.633-13.267h-122.4c-3.661 0-6.633 5.945-6.633 13.267v100.8c0 7.322 2.972 13.267 6.633 13.267h122.4c3.661 0 6.633-5.945 6.633-13.267z"
+              style="fill:#fafad2"/>
+  </g>
+    </g>
+    <g transform="matrix(2 0 0 1 -3318 226.999)">
+    <g id="diagram-game-connect" class="flow-diagram-node">
+    <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"
+          style="fill:#171717"/>
+        <clipPath id="n">
+      <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"/>
+    </clipPath>
+        <g clip-path="url(#n)">
+      <text x="1734.445" y="82.437"
+            style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+            transform="matrix(.5 0 0 1 844 0)">IN<tspan x="1767.225" y="82.437">T</tspan>EN<tspan
+              x="1829.66px 1849.826px" y="82.437px 82.437px">TO</tspan> DE</text>
+            <text x="1721.335" y="121.5"
+                  style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+                  transform="matrix(.5 0 0 1 844 0)">CONEXIÓN AL</text>
+            <g transform="matrix(16.7 0 0 33.3 1797.417 160.563)"/>
+            <text x="1749.167" y="160.562"
+                  style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+                  transform="matrix(.5 0 0 1 844 0)">SER<tspan x="1809.372" y="160.562">V</tspan>IDOR</text>
+    </g>
+        <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6m-4.167 0c0-7.322-2.972-13.267-6.633-13.267h-122.4c-3.661 0-6.633 5.945-6.633 13.267v100.8c0 7.322 2.972 13.267 6.633 13.267h122.4c3.661 0 6.633-5.945 6.633-13.267z"
+              style="fill:#fafad2"/>
+  </g>
+    </g>
+    <g transform="matrix(2 0 0 1 -3174 658.996)">
+    <g id="diagram-online" class="flow-diagram-node">
+    <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"
+          style="fill:#171717"/>
+        <clipPath id="o">
+      <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"/>
+    </clipPath>
+        <g clip-path="url(#o)">
+      <g transform="matrix(16.7 0 0 33.3 1787.15 121.5)"/>
+            <text x="1769.699" y="121.5"
+                  style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+                  transform="matrix(.5 0 0 1 844 0)">ONLINE</text>
+    </g>
+        <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6m-4.167 0c0-7.322-2.972-13.267-6.633-13.267h-122.4c-3.661 0-6.633 5.945-6.633 13.267v100.8c0 7.322 2.972 13.267 6.633 13.267h122.4c3.661 0 6.633-5.945 6.633-13.267z"
+              style="fill:#fafad2"/>
+  </g>
+    </g>
+    <g transform="matrix(2 0 0 1 -3030 874.995)">
+    <g id="diagram-ranked" class="flow-diagram-node">
+    <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"
+          style="fill:#171717"/>
+        <clipPath id="p">
+      <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"/>
+    </clipPath>
+        <g clip-path="url(#p)">
+      <g transform="matrix(16.7 0 0 33.3 1790.202 121.5)"/>
+            <text x="1763.596" y="121.5"
+                  style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+                  transform="matrix(.5 0 0 1 844 0)">RANKED</text>
+    </g>
+        <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6m-4.167 0c0-7.322-2.972-13.267-6.633-13.267h-122.4c-3.661 0-6.633 5.945-6.633 13.267v100.8c0 7.322 2.972 13.267 6.633 13.267h122.4c3.661 0 6.633-5.945 6.633-13.267z"
+              style="fill:#fafad2"/>
+  </g>
+    </g>
+    <g transform="matrix(2 0 0 1 -3030 1090.994)">
+    <g id="diagram-quick-match" class="flow-diagram-node">
+    <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"
+          style="fill:#171717"/>
+        <clipPath id="q">
+      <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"/>
+    </clipPath>
+        <g clip-path="url(#q)">
+      <g transform="matrix(16.7 0 0 33.3 1823.637 121.5)"/>
+            <text x="1696.726" y="121.5"
+                  style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+                  transform="matrix(.5 0 0 1 844 0)">P<tspan x="1715.329px 1737.757px 1758.216px"
+                                                             y="121.5px 121.5px 121.5px">ART</tspan>ID<tspan
+                    x="1809.877" y="121.5">A</tspan> RÁPID
+                <tspan x="1936.846" y="121.5">A</tspan></text>
+    </g>
+        <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6m-4.167 0c0-7.322-2.972-13.267-6.633-13.267h-122.4c-3.661 0-6.633 5.945-6.633 13.267v100.8c0 7.322 2.972 13.267 6.633 13.267h122.4c3.661 0 6.633-5.945 6.633-13.267z"
+              style="fill:#fafad2"/>
+  </g>
+    </g>
+    <g transform="matrix(2 0 0 1 -3174 1738.99)">
+    <g id="diagram-local" class="flow-diagram-node">
+    <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"
+          style="fill:#171717"/>
+        <clipPath id="r">
+      <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"/>
+    </clipPath>
+        <g clip-path="url(#r)">
+      <g transform="matrix(16.7 0 0 33.3 1783.578 121.5)"/>
+            <text x="1776.844" y="121.5"
+                  style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+                  transform="matrix(.5 0 0 1 844 0)">L<tspan x="1793.853" y="121.5">O</tspan>CAL</text>
+    </g>
+        <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6m-4.167 0c0-7.322-2.972-13.267-6.633-13.267h-122.4c-3.661 0-6.633 5.945-6.633 13.267v100.8c0 7.322 2.972 13.267 6.633 13.267h122.4c3.661 0 6.633-5.945 6.633-13.267z"
+              style="fill:#fafad2"/>
+  </g>
+    </g>
+    <g transform="matrix(2 0 0 1 -3030 1306.993)">
+    <g id="diagram-public-lobby" class="flow-diagram-node">
+    <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"
+          style="fill:#171717"/>
+        <clipPath id="s">
+      <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"/>
+    </clipPath>
+        <g clip-path="url(#s)">
+      <g transform="matrix(16.7 0 0 33.3 1819.971 121.5)"/>
+            <text x="1704.058" y="121.5"
+                  style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+                  transform="matrix(.5 0 0 1 844 0)">L<tspan x="1721.066" y="121.5">O</tspan>BB<tspan x="1785.731"
+                                                                                                      y="121.5">Y</tspan> PÚBLICO</text>
+    </g>
+        <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6m-4.167 0c0-7.322-2.972-13.267-6.633-13.267h-122.4c-3.661 0-6.633 5.945-6.633 13.267v100.8c0 7.322 2.972 13.267 6.633 13.267h122.4c3.661 0 6.633-5.945 6.633-13.267z"
+              style="fill:#fafad2"/>
+  </g>
+    </g>
+    <g transform="matrix(2 0 0 1 -3030 1522.992)">
+    <g id="diagram-private-lobby" class="flow-diagram-node">
+    <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"
+          style="fill:#171717"/>
+        <clipPath id="t">
+      <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"/>
+    </clipPath>
+        <g clip-path="url(#t)">
+      <g transform="matrix(16.7 0 0 33.3 1820.687 121.5)"/>
+            <text x="1702.626" y="121.5"
+                  style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+                  transform="matrix(.5 0 0 1 844 0)">L<tspan x="1719.634" y="121.5">O</tspan>BB<tspan x="1784.299"
+                                                                                                      y="121.5">Y</tspan> PRIV<tspan
+                    x="1886.268" y="121.5">A</tspan>DO</text>
+    </g>
+        <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6m-4.167 0c0-7.322-2.972-13.267-6.633-13.267h-122.4c-3.661 0-6.633 5.945-6.633 13.267v100.8c0 7.322 2.972 13.267 6.633 13.267h122.4c3.661 0 6.633-5.945 6.633-13.267z"
+              style="fill:#fafad2"/>
+  </g>
+    </g>
+    <g transform="matrix(2 0 0 1 -3030 1954.99)">
+    <g id="diagram-arcade" class="flow-diagram-node">
+    <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"
+          style="fill:#171717"/>
+        <clipPath id="u">
+      <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"/>
+    </clipPath>
+        <g clip-path="url(#u)">
+      <g transform="matrix(16.7 0 0 33.3 1790.088 121.5)"/>
+            <text x="1763.824" y="121.5"
+                  style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+                  transform="matrix(.5 0 0 1 844 0)">ARCADE</text>
+    </g>
+        <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6m-4.167 0c0-7.322-2.972-13.267-6.633-13.267h-122.4c-3.661 0-6.633 5.945-6.633 13.267v100.8c0 7.322 2.972 13.267 6.633 13.267h122.4c3.661 0 6.633-5.945 6.633-13.267z"
+              style="fill:#fafad2"/>
+  </g>
+    </g>
+    <g transform="matrix(2 0 0 1 -3030 2170.989)">
+    <g id="diagram-versus" class="flow-diagram-node">
+    <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"
+          style="fill:#171717"/>
+        <clipPath id="v">
+      <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"/>
+    </clipPath>
+        <g clip-path="url(#v)">
+      <g transform="matrix(16.7 0 0 33.3 1789.185 121.5)"/>
+            <text x="1765.63" y="121.5"
+                  style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+                  transform="matrix(.5 0 0 1 844 0)">VERSUS</text>
+    </g>
+        <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6m-4.167 0c0-7.322-2.972-13.267-6.633-13.267h-122.4c-3.661 0-6.633 5.945-6.633 13.267v100.8c0 7.322 2.972 13.267 6.633 13.267h122.4c3.661 0 6.633-5.945 6.633-13.267z"
+              style="fill:#fafad2"/>
+  </g>
+    </g>
+    <g transform="matrix(2 0 0 1 -3030 2386.988)">
+    <g id="diagram-survival" class="flow-diagram-node">
+    <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"
+          style="fill:#171717"/>
+        <clipPath id="w">
+      <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6"/>
+    </clipPath>
+        <g clip-path="url(#w)">
+      <g transform="matrix(16.7 0 0 33.3 1821.371 121.5)"/>
+            <text x="1701.258" y="121.5"
+                  style="font-family:&quot;Roboto-Bold&quot;,&quot;Roboto&quot;;font-weight:700;font-size:33.333px;fill:#e3e3e3"
+                  transform="matrix(.5 0 0 1 844 0)">SUPER<tspan x="1804.904" y="121.5">V</tspan>IVENCI
+                <tspan x="1932.313" y="121.5">A</tspan></text>
+    </g>
+        <path d="M1830 58.6v100.8c0 11.921-4.839 21.6-10.8 21.6h-122.4c-5.961 0-10.8-9.679-10.8-21.6V58.6c0-11.921 4.839-21.6 10.8-21.6h122.4c5.961 0 10.8 9.679 10.8 21.6m-4.167 0c0-7.322-2.972-13.267-6.633-13.267h-122.4c-3.661 0-6.633 5.945-6.633 13.267v100.8c0 7.322 2.972 13.267 6.633 13.267h122.4c3.661 0 6.633-5.945 6.633-13.267z"
+              style="fill:#fafad2"/>
+  </g>
+    </g>
+</svg>
