@@ -33,7 +33,7 @@ export default function DynamicsPage() {
         </p>
         <p>
             Esto es vital para dos aspectos del juego, el <PLink href={routes.mechanics.block.id}>bloqueo</PLink> y
-            la valoración de la recompensa riesgo.
+            la valoración de la riesgo/recompensa.
         </p>
         <p>
             El <b>bloqueo</b> en sus distintos estados se hace siempre con la palanca hacia atrás <InlineIcon
@@ -43,8 +43,8 @@ export default function DynamicsPage() {
             size={2}><InputSequence sequence={[Input.RIGHT, Input.DOWN, Input.DOWN_RIGHT]}/></InlineIcon> u otras
             como <InlineIcon
             size={2}><InputSequence
-            sequence={[Input.RIGHT, Input.DOWN_RIGHT, Input.DOWN, Input.DOWN_LEFT, Input.LEFT]}/></InlineIcon> que
-            intencionalmente generan instantes en los que el jugador debe dejar de bloquear para comenzar a realizar el
+            sequence={[Input.RIGHT, Input.DOWN_RIGHT, Input.DOWN, Input.DOWN_LEFT, Input.LEFT]}/></InlineIcon> intencionalmente
+            generan instantes en los que el jugador debe dejar de bloquear para comenzar a realizar el
             movimiento. Otros como <InlineIcon
             size={2}><InputSequence
             sequence={[Input.LEFT, Input.RIGHT]}/></InlineIcon> o <InlineIcon
@@ -54,10 +54,11 @@ export default function DynamicsPage() {
         </p>
         <p>
             El <b>riesgo/recompensa</b> resulta de la capacidad mecánica del jugador de realizar correctamente los
-            movimientos que resultan ideales en cada situación sin fallar el motion input. Aunque dos ataque puedan
+            movimientos que resultan ideales en cada situación teniendo en cuenta que pueda fallar el motion input.
+            Aunque dos ataque puedan
             golpear de tal forma que protegen el espacio aéreo del jugador y la más compleja sea claramente mejor porque
             sea igual de rápida en su animación, haga más daño o cubra más espacio, un movimiento <InlineIcon
-            size={2}><InputSequence sequence={[Input.DOWN, Input.HS]}/></InlineIcon> no se puede fallar pero <InlineIcon
+            size={2}><InputSequence sequence={[Input.DOWN, Input.HS]}/></InlineIcon> (usado generalmente para anti aéreos) no se puede fallar pero <InlineIcon
             size={2}><InputSequence
             sequence={[Input.RIGHT, Input.DOWN, Input.DOWN_RIGHT, Input.HS]}/></InlineIcon> si.
         </p>
@@ -78,33 +79,51 @@ export default function DynamicsPage() {
             La interacción especial de <RangeText/> con <PLink
             href={routes.mechanics.guardbreak.path}>guard-break</PLink> que castiga gravemente a aquel que bloquea
             genera
-            un gran incentivo y prisa en salir del estado de alto riesgo. Al mismo tiempo que se incrementa el riesgo por
+            un gran incentivo y prisa en salir del estado de alto riesgo. Al mismo tiempo que se incrementa el riesgo
+            por
             un mal uso del sistema defensivo o un uso abusivo del mismo, se fomenta un juego rápido beneficiando los
-            reflejos con la incorporación del parry que no genera chip damage e incluso en su versión más perfecta genera
+            reflejos con la incorporación del parry que no genera chip damage e incluso en su versión más perfecta
+            genera
             un autoataque de retorno (sólo en el frame exacto).
         </p>
         <Heading3 id={routes.dynamics.breaker.id}>Breaker</Heading3>
         <p>
             El medidor Breaker debe usarse como un comodín, es una forma de “soft reset” de la partida cuando por alguna
-            circunstancia has caído en una trampa de la que no puedas salir (secuencia pseudo infinita de daño recibido),
+            circunstancia has caído en una trampa de la que no puedas salir (secuencia pseudo infinita de daño
+            recibido),
             fomentando que en todo momento haya un margen de esperanza para el jugador que va perdiendo.
+        </p>
+        <p>
+            El tiempo de recarga debe ser lo suficientemente alto como para que practicamente solo se pueda usar una vez
+            por ronda de forma práctica. Si necesita 50 segundos de recarga, tiene que haberse usado de forma muy
+            temprana para poder ser usada otra vez en la misma ronda.
         </p>
         <Heading3 id={routes.dynamics.dressing.id}>Aderezos</Heading3>
         <p>
             El sistema de aderezos genera por si mismo al menos dos dinámicas fundamentales en Cuoco Cooked:
-            <ul>
-                <li>El entorno como generador natural de aderezos provoca una ventaja o desventaja competitiva en
-                mantenerse dentro o fuera de una determinada zona a la vez que provoca la "limitación" subjetiva en
-                determinados entornos de ciertas técnicas. Por ejemplo, en una de las estanterías del escenario "despensa"
-                aparece un bote de glaseado, situarse en las proximidades o tratar de empujar al rival fuera de la zona
-                de afección es una buena forma de aprovechar la situación. Y a la vez el rival tratará de no hacer ataques
-                que activen el efecto salvo que esté seguro de que él mismo también se verá beneficiado.</li>
-                <li>El propio funcionamiento del sistema (un único estado activo de corta duración) provoca también el
-                uso y la rotación de los mismos. El uso intencional de una técnica sobre el entorno para descartar un
-                aderezo esperando a que el próximo sea más beneficioso para ti que para el rival o adquirir un aderezo
-                a proposito para eliminar la aplicación de otro que te resulte peor para una determinada situación son
-                sólo algunos ejemplos de estas dinámicas.</li>
-            </ul>
         </p>
+        <ul>
+            <li>
+                El entorno como generador natural de aderezos provoca una ventaja o desventaja competitiva en
+                mantenerse dentro o fuera de una determinada zona a la vez que provoca la "limitación" subjetiva en
+                determinados entornos de ciertas técnicas. Por ejemplo, en una de las estanterías del
+                escenario <i>"despensa"</i> aparece un bote de glaseado, situarse en las proximidades o tratar de
+                empujar al rival fuera de la zona de afección es una buena forma de aprovechar la situación.
+                Y a la vez el rival tratará de no hacer ataques que activen el efecto salvo que esté seguro de que él
+                mismo también se verá beneficiado.
+            </li>
+            <li>El propio funcionamiento del sistema (un único estado activo de corta duración) provoca también el
+                uso y la rotación de los mismos.
+                El uso intencional de una técnica sobre el entorno para descartar un aderezo esperando a que el próximo
+                sea más beneficioso para ti que para el rival o adquirir un aderezo a proposito para eliminar la
+                aplicación de otro que te resulte peor para una determinada situación son sólo algunos ejemplos de estas
+                dinámicas.
+            </li>
+            <li>
+                Elementos posicionales como estos pueden invitar a los jugadores a mantener una posición central en el
+                escenario en lugar de acosar al jugador en los límites del escenario. Permitiendo más momentos de
+                respiro y vuelta al <PLink href={getGlossaryLink(glossary.neutral)}>neutral</PLink>.
+            </li>
+        </ul>
     </>);
 }

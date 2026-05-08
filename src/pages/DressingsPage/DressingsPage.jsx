@@ -1,5 +1,4 @@
 import {Heading1, Heading2, Heading3} from "../../modules/Heading/Heading.jsx"
-import AlertPanel from "../../modules/AlertPanel/AlertPanel.jsx";
 import {InlineIcon} from "../../modules/InlineIcon/InlineIcon.jsx";
 import {InputSequence} from "../../dataTemplate/input/InputSequence.jsx";
 import {Input} from "../../dataTemplate/input/enums/Input.js";
@@ -62,27 +61,31 @@ export default function DressingsPage() {
                     <td className="dressing-icon"><Glaseado/></td>
                     <td>Glaseado</td>
                     <td>Absorbe 1 hit completo sin stun ni daño. Se consume a los 3 segundos o tras
-                        absorber un hit. Ejemplos temáticos: Caramelo, miel, azucar caramelizada.</td>
+                        absorber un hit. Ejemplos temáticos: Caramelo, miel, azucar caramelizada.
+                    </td>
                 </tr>
                 <tr id={routes.dressings.dressing.spicy.id}>
                     <td className="dressing-icon"><Picante/></td>
                     <td>Picante</td>
                     <td>Aumenta el daño en ataques y reduce la resistencia al daño recibido. Se consume
-                        a los 2 segundos. Ejemplos temáticos: Chile, sriracha, tabasco.</td>
+                        a los 2 segundos. Ejemplos temáticos: Chile, sriracha, tabasco.
+                    </td>
                 </tr>
                 <tr id={routes.dressings.dressing.specialSalad.id}>
                     <td className="dressing-icon"><SalsaEspecial/></td>
                     <td>Salsa Especiada</td>
                     <td>Aumenta el rango en todos los ataques del personaje. Se representa con
                         visuales especiales que no deforman las animaciones del personaje. Se consume a los 2
-                        segundos. Ejemplos temáticos: Romero, albahaca, tomillo.</td>
+                        segundos. Ejemplos temáticos: Romero, albahaca, tomillo.
+                    </td>
                 </tr>
                 <tr id={routes.dressings.dressing.fermented.id}>
                     <td className="dressing-icon"><Fermentado/></td>
                     <td>Fermentado</td>
                     <td>Proporciona regeneración lenta de vida durante 3 segundos. Ejemplos
                         temáticos:
-                        Kimchi, masa madre, miso.</td>
+                        Kimchi, masa madre, miso.
+                    </td>
                 </tr>
                 </tbody>
             </table>
@@ -94,25 +97,29 @@ export default function DressingsPage() {
                     <td className="dressing-icon"><Pringoso/></td>
                     <td>Pringoso</td>
                     <td>Reduce la velocidad de movimiento durante 1,5 segundos. Ejemplos temáticos:
-                        Caramelo quemado, jarabe.</td>
+                        Caramelo quemado, jarabe.
+                    </td>
                 </tr>
                 <tr id={routes.dressings.dressing.dizzy.id}>
                     <td className="dressing-icon"><Mareado/></td>
                     <td>Mareado</td>
                     <td>Inputs invertidos durante 2 segundos. Ejemplos temáticos: Alcohol, vinagre
-                        fuerte.</td>
+                        fuerte.
+                    </td>
                 </tr>
                 <tr id={routes.dressings.dressing.satiated.id}>
                     <td className="dressing-icon"><Saciado/></td>
                     <td>Saciado</td>
                     <td>Sin posibilidad de dash ni salto 1,5 segundos. Ejemplos temáticos:
-                        Sobrealimentación, salsa densa.</td>
+                        Sobrealimentación, salsa densa.
+                    </td>
                 </tr>
                 <tr id={routes.dressings.dressing.burned.id}>
                     <td className="dressing-icon"><Quemado/></td>
                     <td>Quemado</td>
                     <td>Daño continuo leve (DoT) durante 5 segundos (mínimo 1, no puede hacer kill).
-                        Ejemplos temáticos: Picante extremo, curry, brasa.</td>
+                        Ejemplos temáticos: Picante extremo, curry, brasa.
+                    </td>
                 </tr>
                 </tbody>
             </table>
@@ -135,7 +142,7 @@ export default function DressingsPage() {
                     peso como cuándo aplicárselo al rival.
                 </li>
             </ul>
-            <Heading3>Ejemplo de dinámica reactiva:</Heading3>
+            <p><b>Ejemplo de dinámica reactiva</b></p>
             <p>
                 El rival lanza un ataque de área sobre la zona dónde te sitúas<br></br>
                 └──► la estanteria que hay detras tuya se rompe, cayendote encima un botecito de vinagre<br></br>
@@ -147,15 +154,14 @@ export default function DressingsPage() {
             <br></br>
             <hr></hr>
             <Heading2 id="generation">¿Cómo se generan?</Heading2>
-            <Heading3>Los aderezos se generan por dos vías:</Heading3>
+            <p><b>Los aderezos se generan por dos vías</b></p>
             <p>
-                <b>Vía 1: Directa, por técnicas y combos del personaje:</b><br/>
+                <b>Vía 1: Directa, por técnicas y combos del personaje</b><br/>
                 Cada luchador tiene métodos propios de generación de aderezos, integrados en su moveset y coherentes
                 con su temática.
                 La aplicación de aderezo siempre está incorporada visualmente en la animación del personaje. Pueden
                 ser:
             </p>
-
             <ul>
                 <li><b>Por ataque especial directo:</b> El aderezo se aplica como efecto secundario de un ataque
                     específico.
@@ -169,8 +175,8 @@ export default function DressingsPage() {
                     automáticamente su aderezo característico
                 </li>
             </ul>
+            <p><b>Vía 2: Indirecta, por elementos de entorno</b></p>
             <p>
-                <b>Vía 2: Indirecta, por elementos de entorno:</b><br/>
                 Los escenarios pueden contener elementos interactivos (botes de salsa, especias, ingredientes en
                 estanterías) que generan aderezos al ser activados.
                 Reglas de activación por entorno:
