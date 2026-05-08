@@ -65,7 +65,8 @@ export default function DynamicsPage() {
         <Heading3 id={routes.dynamics.path.id}>Botón Range</Heading3>
         <p>
             Ciertos juegos de pelea limitan los ataques a distancia a ciertos personajes cuyo objetivo es castigar
-            al rival que pretende crear distancia e incentivarle a acercarse.
+            al rival que pretende crear distancia e incentivarle a acercarse; aquí no, todos los personajes disponen de
+            herramientas válidas si bien no todos se aprovechan de igual modo de las mismas.
         </p>
         <p>
             El objetivo de añadir una opción <RangeText/> <InlineIcon size={2}><InputSequence
@@ -77,12 +78,33 @@ export default function DynamicsPage() {
             La interacción especial de <RangeText/> con <PLink
             href={routes.mechanics.guardbreak.path}>guard-break</PLink> que castiga gravemente a aquel que bloquea
             genera
-            un gran incentivo y prisa en salir del estado de alto riesgo.
+            un gran incentivo y prisa en salir del estado de alto riesgo. Al mismo tiempo que se incrementa el riesgo por
+            un mal uso del sistema defensivo o un uso abusivo del mismo, se fomenta un juego rápido beneficiando los
+            reflejos con la incorporación del parry que no genera chip damage e incluso en su versión más perfecta genera
+            un autoataque de retorno (sólo en el frame exacto).
         </p>
-        <Heading2 id="defense">Defensa</Heading2>
         <Heading3 id={routes.dynamics.breaker.id}>Breaker</Heading3>
         <p>
-            El medidor Breaker debe usarse como un comodín
+            El medidor Breaker debe usarse como un comodín, es una forma de “soft reset” de la partida cuando por alguna
+            circunstancia has caído en una trampa de la que no puedas salir (secuencia pseudo infinita de daño recibido),
+            fomentando que en todo momento haya un margen de esperanza para el jugador que va perdiendo.
+        </p>
+        <Heading3 id={routes.dynamics.dressing.id}>Aderezos</Heading3>
+        <p>
+            El sistema de aderezos genera por si mismo al menos dos dinámicas fundamentales en Cuoco Cooked:
+            <ul>
+                <li>El entorno como generador natural de aderezos provoca una ventaja o desventaja competitiva en
+                mantenerse dentro o fuera de una determinada zona a la vez que provoca la "limitación" subjetiva en
+                determinados entornos de ciertas técnicas. Por ejemplo, en una de las estanterías del escenario "despensa"
+                aparece un bote de glaseado, situarse en las proximidades o tratar de empujar al rival fuera de la zona
+                de afección es una buena forma de aprovechar la situación. Y a la vez el rival tratará de no hacer ataques
+                que activen el efecto salvo que esté seguro de que él mismo también se verá beneficiado.</li>
+                <li>El propio funcionamiento del sistema (un único estado activo de corta duración) provoca también el
+                uso y la rotación de los mismos. El uso intencional de una técnica sobre el entorno para descartar un
+                aderezo esperando a que el próximo sea más beneficioso para ti que para el rival o adquirir un aderezo
+                a proposito para eliminar la aplicación de otro que te resulte peor para una determinada situación son
+                sólo algunos ejemplos de estas dinámicas.</li>
+            </ul>
         </p>
     </>);
 }

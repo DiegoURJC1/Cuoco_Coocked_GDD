@@ -42,6 +42,10 @@ export const routes = {
             id: "breaker",
             path: "/dynamics#breaker"
         },
+        dressing: {
+            id: "dressing",
+            path: "/dynamics#dressing"
+        },
     },
     dressings: {
         path: "/dressings",
