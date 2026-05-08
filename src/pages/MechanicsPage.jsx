@@ -7,7 +7,6 @@ import {getMoveStateIcon, MoveState} from "../dataTemplate/fighters/moves/enums/
 import PLink from "../modules/Link/PLink.jsx";
 import {routes} from "../routes/routes.js";
 import ControllerInputs from "../../public/diagrams/Controller Inputs.svg?react";
-import InputStrengthDiagram from "../../public/diagrams/Input strength.svg?react";
 import GeneralCombatDiagram from "../../public/diagrams/General combat diagram.svg?react";
 import {BlockText, GrabText, MeleeText, RangeText} from "../modules/ColoredText/ColoredText.jsx";
 import glossary, {getGlossaryLink} from "../data/glossary/glossary.jsx";
@@ -86,8 +85,8 @@ export default function MechanicsPage() {
                 resulte en que el agresor termine su animación de ataque antes de que el rival termine
                 la suya de ser golpeado para premiar con la oportunidad de golpear otra vez antes de
                 que el rival pueda responder por el <PLink href={getGlossaryLink(glossary.hitstun)}>hit stun</PLink>.
-                Si el rival bloquea un ataque, en la mayoría de veces se busca premiar al defensor haciendo que su
-                <PLink href={getGlossaryLink(glossary.blockstun)}>block stun</PLink> termine antes que la del rival.
+                Si el rival bloquea un ataque, en la mayoría de veces se busca premiar al defensor haciendo que
+                su <PLink href={getGlossaryLink(glossary.blockstun)}>block stun</PLink> termine antes que la del rival.
             </p>
             <br/>
             <p>
@@ -311,7 +310,8 @@ export default function MechanicsPage() {
                 </tbody>
             </table>
             <div id={routes.mechanics.inputStrengthDiagram.id} className="diagram">
-                <img style={{width: 'clamp(200px, 50%, 500px)'}} src={`${import.meta.env.BASE_URL}diagrams/Input%20strength.svg`}/>
+                <img style={{width: 'clamp(200px, 50%, 500px)'}}
+                     src={`${import.meta.env.BASE_URL}diagrams/Input%20strength.svg`}/>
             </div>
 
             <p>
@@ -398,8 +398,10 @@ export default function MechanicsPage() {
             </ul>
             <p><b>Ejemplo temático — El Chef</b></p>
             <p>
-                Ataque de distancia estándar: estocada con el tenedor gigante (extensión). Input especial  <InlineIcon size={2}>
-                <InputSequence sequence={[Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT, Input.R]}/></InlineIcon>: saca un bote de salsa picante y lanza un chorro (proyectil). Ambos son ataques de
+                Ataque de distancia estándar: estocada con el tenedor gigante (extensión). Input especial <InlineIcon
+                size={2}>
+                <InputSequence sequence={[Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT, Input.R]}/></InlineIcon>: saca un
+                bote de salsa picante y lanza un chorro (proyectil). Ambos son ataques de
                 distancia, ambos son vulnerables al Parry, pero tienen propiedades diferentes (velocidad, hitbox,
                 efectos
                 secundarios).

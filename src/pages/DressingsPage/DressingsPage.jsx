@@ -61,7 +61,7 @@ export default function DressingsPage() {
                     <td className="dressing-icon"><Glaseado/></td>
                     <td>Glaseado</td>
                     <td>Absorbe 1 hit completo sin stun ni daño. Se consume a los 3 segundos o tras
-                        absorber un hit. Ejemplos temáticos: Caramelo, miel, azucar caramelizada.
+                        absorber un hit. Ejemplos temáticos: Caramelo, miel, azúcar caramelizada.
                     </td>
                 </tr>
                 <tr id={routes.dressings.dressing.spicy.id}>
@@ -144,11 +144,11 @@ export default function DressingsPage() {
             </ul>
             <p><b>Ejemplo de dinámica reactiva</b></p>
             <p>
-                El rival lanza un ataque de área sobre la zona dónde te sitúas<br></br>
-                └──► la estanteria que hay detras tuya se rompe, cayendote encima un botecito de vinagre<br></br>
-                └──► aplica "Mareado" (inputs invertidos) a tu personaje<br></br>
-                └──► Ejecutas una técnica que genera "Glaseado" (buff propio)<br></br>
-                └──► Mareado queda cancelado instantaneamente y obtienes Glaseado<br></br>
+                El rival lanza un ataque de área sobre la zona dónde te sitúas:<br></br>
+                └──► La estanteria que hay detras tuya se rompe, cayendote encima un botecito de vinagre.<br></br>
+                └──► Aplica "Mareado" (inputs invertidos) a tu personaje.<br></br>
+                └──► Ejecutas una técnica que genera "Glaseado" (buff propio).<br></br>
+                └──► Mareado queda cancelado instantaneamente y obtienes Glaseado.<br></br>
                 Glaseado activo (absorbe 1 hit)<br></br>
             </p>
             <br></br>
@@ -166,8 +166,8 @@ export default function DressingsPage() {
                 <li><b>Por ataque especial directo:</b> El aderezo se aplica como efecto secundario de un ataque
                     específico.
                     Ejemplo: El Chef ejecuta <InlineIcon size={2}><InputSequence
-                        sequence={[Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT, Input.R]}/></InlineIcon>
-                    → lanza un bote de salsa picante → aplica "Quemado" al rival si impacta
+                        sequence={[Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT, Input.R]}/></InlineIcon>, lanza un bote de
+                    salsa picante → aplica "Quemado" al rival si impacta
                 </li>
                 <li><b>Por consecución de ataques:</b> El aderezo se aplica al completar una cadena específica
                     de ataques.
@@ -199,9 +199,9 @@ export default function DressingsPage() {
             <p>
                 <b>Ejemplo:</b><br/>
                 Personaje A lanza proyectil hacia el personaje B<br/>
-                Personaje B está frente a una estantería de botes de "Salsa Especiada"<br/>
-                └──► El proyectil alcanza la estantería<br/>
-                └──► AOE de "Salsa Especiada"<br/>
+                Personaje B está frente a una estantería de botes de "Salsa Especiada".<br/>
+                └──► El proyectil alcanza la estantería.<br/>
+                └──► AOE de "Salsa Especiada".<br/>
             </p>
             <ul>
                 Casos:

@@ -6,18 +6,21 @@ import {routes} from "../../routes/routes.js";
 import AlertPanel from "../../modules/AlertPanel/AlertPanel.jsx";
 import glossary, {getGlossaryLink} from "../../data/glossary/glossary.jsx";
 import {GrabText, MeleeText, RangeText} from "../../modules/ColoredText/ColoredText.jsx";
+import {fighterBolognesa} from "../../data/fighter/fighters/bolognesa/fighterBolognesa.jsx";
 
 export default function Home() {
     return (
         <>
             <Heading1 id="home">La cocina</Heading1>
             <div className="diagram">
-                <img style={{maxHeight: "80vh",
+                <img style={{
+                    maxHeight: "80vh",
                     maxWidth: "100%",
                     width: "auto",
                     height: "auto",
                     objectFit: "contain",
-                    display: "block"}} src={`${import.meta.env.BASE_URL}cover/portadaConLogo.png`} alt="Game Cover Art"/>
+                    display: "block"
+                }} src={`${import.meta.env.BASE_URL}cover/portadaConLogo.png`} alt="Game Cover Art"/>
             </div>
 
             <p className="claim">
@@ -37,7 +40,6 @@ export default function Home() {
                 }}
             >
                 <video
-                    autoPlay
                     loop
                     muted
                     playsInline
@@ -87,7 +89,8 @@ export default function Home() {
                 técnicas de cada luchador y del entorno mismo, generando situaciones caóticas, reversibles y
                 narrativamente absurdas en cada combate.
                 Al comentar como te ha ido la partida son normales frases como:
-                <i>"la boloñesa me estaba destrozando con albondigazos y no podía reaccionar,
+                <i>"<PLink href={routes.fighters.path + "/" + fighterBolognesa.id}>La Boloñesa</PLink> me estaba
+                    destrozando con albondigazos y no podía reaccionar,
                     pero en un instante lancé un tenedor a la estantería,
                     se le cayó la salsa brava por encima y ahí supe que me la iba a comer"</i>.
             </p>
@@ -98,7 +101,8 @@ export default function Home() {
             </p>
             <Heading2 id="game-genre">Género</Heading2>
             <p>
-                Se trata de un fighting game (o juego de peleas) clásico 2D hecho en 3D, vista lateral con motion inputs, y en el que ambos rivales conocen toda la información de la
+                Se trata de un fighting game (o juego de peleas) clásico 2D hecho en 3D, vista lateral con motion
+                inputs, y en el que ambos rivales conocen toda la información de la
                 partida.
             </p>
             <Heading2 id="game-platform">Plataforma</Heading2>
@@ -136,8 +140,9 @@ export default function Home() {
             </p>
             <p>
                 No se espera un modo <i>entrenamiento</i> por nada. No se puede apelar a un público dedicado y a uno que
-                no, ni juegos que se han propuesto tener un equilibrio entre accesibilidad y <i>novice ready</i>
-                como <PLink href={"https://2xko.riotgames.com/es-es/"}>2XKO</PLink> lo han conseguido.
+                no, ni juegos que se han propuesto tener un equilibrio entre accesibilidad y <i>novice
+                ready</i> (listo para jugadores casuales) como <PLink
+                href={"https://2xko.riotgames.com/es-es/"}>2XKO</PLink> lo han conseguido.
                 Se busca agradar la experiencia de aquellos que estén dispuestos a probarlos y estudiarlos lo suficiente
                 como para recordar sus mecánicas básicas o entender las dinámicas generales.
             </p>

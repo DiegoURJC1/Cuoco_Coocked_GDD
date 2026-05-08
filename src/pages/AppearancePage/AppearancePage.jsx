@@ -1,8 +1,9 @@
 import {Heading1, Heading2, Heading3} from "../../modules/Heading/Heading.jsx"
-import AlertPanel from "../../modules/AlertPanel/AlertPanel.jsx";
 import MusicPlayer from "../../modules/MusicPlayer/MusicPlayer.jsx";
 import PLink from "../../modules/Link/PLink.jsx";
 import {routes} from "../../routes/routes.js";
+import {fighterBolognesa} from "../../data/fighter/fighters/bolognesa/fighterBolognesa.jsx";
+import "./AppearancePage.css";
 
 export default function AppearancePage() {
     return (
@@ -16,21 +17,61 @@ export default function AppearancePage() {
             <Heading3 id="art-direction">Principios de art direction</Heading3>
             <ul>
                 <li><b>Food styling como lenguaje visual base: </b>
-                    Cada personaje parte de referencias reales de fotografía culinaria de alta gama. Los materiales
-                    deben evocar apetito: gloss en las salsas, subsurface scattering en masas y carnes, vapor,
-                    brillo
-                    húmedo, texturas que parecen tocables. La iluminación de personajes en idle debe recordar a una
-                    sesión fotográfica con iluminación de estudio.
+                    Cada personaje parte de referencias reales, ya sea por oficios culinarios o por platos reales.
                 </li>
                 <li><b>Saturación alta, contraste controlado: </b>
                     La paleta general es saturada y cálida, con excepciones frías para personajes temáticamente
                     opuestos (personajes basados en sushi, helados, etc.). Los efectos de golpe y las partículas de
                     los aderezos deben tener sus propios lenguajes cromáticos claramente diferenciados y
-                    reconocibles
-                    por el jugador.
+                    reconocibles por el jugador como efectos de polvo o cartóon para exagerar las acciones.
+                    <br/>
+                    Deben contrastar claramente con el escenario para mantenerse claros y seguir un estilo cartoon que
+                    ayude a leer las siluetas y reducir la cantidad de colores y degradados.
+                    <br/>
+                    Ejemplos del estilo visual:
                 </li>
+                <br/>
+                <div className="gallery">
+                    <div className="gallery-item">
+                        <img
+                            src={`${import.meta.env.BASE_URL}artReferences/DNF_Duel_Reference.jpg`}
+                            alt="Referencia 1"
+                        />
+                    </div>
+                    <div className="gallery-item">
+                        <img
+                            src={`${import.meta.env.BASE_URL}artReferences/guilty-gear-strive-aba.jpg`}
+                        />
+                    </div>
+                    <div className="gallery-item">
+                        <img
+                            src={`${import.meta.env.BASE_URL}artReferences/hifiRush.JPG`}
+                            alt="Referencia 3"
+                        />
+                    </div>
+                    <div className="gallery-item">
+                        <img
+                            src={`${import.meta.env.BASE_URL}artReferences/CupHead.JPG`}
+                            alt="Referencia 4"
+                        />
+                    </div>
+                    <div className="gallery-item">
+                        <img
+                            src={`${import.meta.env.BASE_URL}artReferences/GuiltyGearStrive_Reference.png`}
+                            alt="Referencia 4"
+                        />
+                    </div>
+                    <div className="gallery-item">
+                        <img
+                            src={`${import.meta.env.BASE_URL}artReferences/StudioGhibli.jpg`}
+                            alt="Referencia 4"
+                        />
+                    </div>
+                </div>
+
+                <br/>
                 <li><b>Materiales como carácter: </b>
-                    La textura del material de cada personaje comunica su arquetipo:
+                    La textura del material y de cada personaje comunica su arquetipo:
                     <ul>
                         <li>Personajes densos y pesados (grappler): masas, carnes, texturas opacas</li>
                         <li>Personajes rápidos (rushdown): líquidos, salsas, elementos que se deforman</li>
@@ -38,24 +79,25 @@ export default function AppearancePage() {
                     </ul>
                 </li>
                 <li><b>Animaciones con física de alimento: </b>
-                    Los movimientos deben tener bounce, drip y splash coherentes con su base gastronómica. Un golpe
-                    de la Boloñesa no termina en el impacto — la salsa salpica, los fideos rebotan, hay inercia.
+                    Los movimientos deben tener bounce, drip y splash coherentes con su base gastronómica.
+                    Un golpe de <PLink href={routes.fighters.path + "/" + fighterBolognesa.id}>la Boloñesa</PLink> no
+                    termina en el impacto - la salsa salpica, los fideos rebotan, hay inercia.
                 </li>
                 <li><b>Contraste de escala: </b>
-                    Los personajes humanos son anatómicamente normales, visualmente grandes (personajes fuertes),
-                    pero realistas en relación al entorno (escenarios).Lo cual contrasta fuertemente con los platos,
-                    que son desproporcionadamente enormes, lo que genera un desequilibrio visual que refuerza lo
+                    Los personajes humanos son anatómicamente "normales", visualmente grandes (personajes fuertes),
+                    pero realistas en relación al entorno (escenarios). Lo cual contrasta fuertemente con las comidas,
+                    que no son necesariamente humanoides, lo que genera un desequilibrio visual que refuerza lo
                     absurdo de la situación.
                 </li>
                 <li><b>Escenarios: </b>
                     Los escenarios son cocinas, despensas, mercados y espacios relacionados con la gastronomía.
-                    Siguen el mismo principio de "food photography": bien iluminados, coloridos, con profundidad de
-                    campo y elementos interactivos que participan en las mecánicas de combate (ver <PLink href={routes.dressings.path}>aderezos</PLink>).
+                    Todos ellos tienen elementos interactivos que participan en las mecánicas de combate de <PLink
+                        href={routes.dressings.path}>aderezos</PLink>.
                 </li>
             </ul>
             <Heading3 id="menus-and-screens">Menús y pantallas</Heading3>
             <ul>
-                <li>Para la pantalla de selección de personaje usar fotos de la comida con nuestra estética.</li>
+                <li>Para la pantalla de selección de personaje usa elementos temáticos culinarios.</li>
                 <li>Para las partes de los menús con opciones de texto usar como referente la carta de un restaurante
                     (ejemplo, el menú de pausa).
                 </li>

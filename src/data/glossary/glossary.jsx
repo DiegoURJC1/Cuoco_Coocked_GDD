@@ -364,17 +364,17 @@ const inputTerms = {
         name: "Input buffer",
         content:
             <>
-                El Input Buffer es una lista interna que se actualiza constante mente con las pulsaciones de botones y
+                El Input Buffer es una lista interna que se actualiza constantemente con las pulsaciones de botones y
                 movimientos de palancas.
                 <br/>
                 Esta lista también guarda el instante en el que se hace cada acción y tiene un limitador para los
                 movimientos de palanca que impide la captura infinita de la posición de la palanca cuando se inclina en
                 una cierta dirección.
                 <br/>
-                Esta lista es releida cada vez que cambia para comprobar si se cumplen las condiciones para realizar
+                Esta lista es releída cada vez que cambia para comprobar si se cumplen las condiciones para realizar
                 movimientos especiales.
                 <br/>
-                Los parámetros de medición del Input Buffer definen la dificultad o facilidad para realizar motion
+                Los parámetros de medición del Input Buffer definen el rango de dificultad o facilidad para realizar motion
                 inputs.
             </>,
         id: "input-buffer",
@@ -386,8 +386,9 @@ const inputTerms = {
             <>
                 Acción física del jugador para realizar una cierta acción que exige una combinación de pulsación de
                 botón y movimiento específico de palanca.
-                <b/>
-                El Input Buffer define la facilidad o dificultad para realizar uno exitosamente.
+                <br/>
+                Los parámetros de medición del Input Buffer definen el rango de dificultad o facilidad para realizar motion
+                inputs.
             </>,
         id: "motion-input",
         categories: [GlossaryCategory.INPUT]

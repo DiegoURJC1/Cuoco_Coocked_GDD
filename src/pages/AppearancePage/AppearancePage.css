@@ -1,0 +1,24 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.gallery-item {
+    flex: 1 1 300px;
+    max-width: 500px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #1e1e1e;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    /* Mantiene proporción sin deformar */
+    object-fit: contain;
+}
