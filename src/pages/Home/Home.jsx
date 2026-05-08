@@ -66,10 +66,7 @@ export default function Home() {
             </p>
             <Heading2 id="game-genre">Género</Heading2>
             <p>
-                Fighting game clásico 2D hecho en 3D, vista lateral con motion inputs.
-            </p>
-            <p>
-                Se trata de un juego de información perfecta en el que ambos rivales conocen toda la información de la
+                Se trata de un fighting game (o juego de peleas) clásico 2D hecho en 3D, vista lateral con motion inputs, y en el que ambos rivales conocen toda la información de la
                 partida.
             </p>
             <Heading2 id="game-platform">Plataforma</Heading2>
