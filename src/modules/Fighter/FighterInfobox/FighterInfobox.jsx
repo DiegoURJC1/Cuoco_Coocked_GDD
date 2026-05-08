@@ -49,7 +49,7 @@ export default function FighterInfobox({ fighter }) {
                     />
 
                     <InfoRow
-                        label="Dificultad"
+                        label="Facilidad de uso"
                         value={
                             <div className="fighter-infobox__stars">
                                 <Stars stars={fighter.easyToUse} />
