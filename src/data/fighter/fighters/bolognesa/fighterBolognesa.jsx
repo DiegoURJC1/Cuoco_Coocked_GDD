@@ -1,9 +1,10 @@
-import {Fighter} from "../../../../dataTemplate/fighters/Fighter.jsx";
+import {baseDefaultStats, Fighter} from "../../../../dataTemplate/fighters/Fighter.jsx";
 import {Archetype} from "../../../../dataTemplate/fighters/enums/Archetype.js";
 import {Source} from "../../../../dataTemplate/fighters/enums/Source.js";
 import {bolognesaMoveSet} from "./moveSetBolognesa.jsx";
 import {FighterType} from "../../../../dataTemplate/fighters/enums/FighterType.js";
 import {moveFridgeTwirl63214} from "../johnGrinder/moveSetJohnGrinder.jsx";
+import {MeleeText} from "../../../../modules/ColoredText/ColoredText.jsx";
 
 export const fighterBolognesa = new Fighter({
     name: "La Boloñesa",
@@ -23,7 +24,7 @@ export const fighterBolognesa = new Fighter({
     prosCons: {
         pros: [
             <>Gran capacidad para encadenar daño sostenido.</>,
-            <>Facilidad para aplicar quemado acumulando ataques melee.</>,
+            <>Facilidad para aplicar quemado acumulando ataques <MeleeText/>.</>,
             ],
         cons: [
             <>Poca vida en general.</>,
@@ -36,12 +37,12 @@ export const fighterBolognesa = new Fighter({
     portraitConfig: {
         x: 0.5,
         y: 0.2,
-        zoom: 2
+        zoom: 1.3
     },
     baseStats: {
-        health: 100,
-        walkSpeed: 55,
-        runSpeed: 110
+        health: baseDefaultStats.health * 0.6,
+        walkSpeed: baseDefaultStats.walkSpeed * 0.9,
+        runSpeed: baseDefaultStats.runSpeed * 1.2
     },
     moveSet: bolognesaMoveSet,
     manualRadarChart: [

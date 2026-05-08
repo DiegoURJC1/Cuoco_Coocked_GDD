@@ -1,4 +1,4 @@
-import {Fighter} from "../../../../dataTemplate/fighters/Fighter.jsx";
+import {baseDefaultStats, Fighter} from "../../../../dataTemplate/fighters/Fighter.jsx";
 import {Archetype} from "../../../../dataTemplate/fighters/enums/Archetype.js";
 import {Source} from "../../../../dataTemplate/fighters/enums/Source.js";
 import {FighterType} from "../../../../dataTemplate/fighters/enums/FighterType.js";
@@ -9,11 +9,15 @@ export const exampleFighter = new Fighter({
     archetype: Archetype.BALANCE,
     description: (fighter) => (
         <>
-            {fighter.name} es un panadero novato pero con mucho ánimo. Su arma (y escudo) favorito es la primera barra de pan que
+            {fighter.name} es un panadero novato pero con mucho ánimo. Su arma (y escudo) favorito es la primera barra
+            de pan que
             hizo, la cual está tan dura como llena de orgullo. Su falta de práctica hace que todavía le cuesta ser
             agresivo con la masa, así no suele sacar cuchillo de cortar pan al combate, a no ser que su querida baguette
-            no ha sido suficiente para defenderle.<br/>
-
+            no ha sido suficiente para defenderle.
+            <br/>
+            <br/>
+            Su mecánica especial le permite cambiar de arma a un cuchillo de cocina cuando le queda poca vida. Esto
+            cambia todos sus movimientos que usan la barra de pan y descarta el escudo.
         </>
     ),
     easyToUse: 5,
@@ -23,11 +27,12 @@ export const exampleFighter = new Fighter({
         </>,
     prosCons: {
         pros: [
-            <> Estilo de juego pausado y ágil, con muchas oportunidades para optar a la defensa. Además, cuando queda poca vida, se desbloquea el uso del cuchillo, que permite actuar de forma más agresiva.</>
+            <>Estilo de juego pausado y ágil, con muchas oportunidades para optar a la defensa.</>,
+            <>Cuando queda poca vida, se desbloquea el uso del cuchillo, que permite actuar de forma más agresiva.</>
         ],
         cons: [
-            <> Dispone de pocas herramientas para generar gran presión cuando dispone de mucha vida.</>,
-
+            <>Dispone de pocas herramientas para generar gran presión cuando dispone de mucha vida.</>,
+            <>Perdida de opciones defensivas al tener poca vida y cambiar al modo con cuchillo.</>
         ]
     },
     type: FighterType.HUMAN,
@@ -39,13 +44,18 @@ export const exampleFighter = new Fighter({
         y: 0.2,
         zoom: 2
     },
+    baseStats: {
+        health: baseDefaultStats.health,
+        walkSpeed: baseDefaultStats.walkSpeed,
+        runSpeed: baseDefaultStats.runSpeed * 1.2
+    },
     manualRadarChart: [
-        { label: "Fuerza", value: 60, max: 100 },
-        { label: "Velocidad", value: 55, max: 100 },
-        { label: "Dificultad", value: 20, max: 100 },
-        { label: "Técnica", value: 55, max: 100 },
-        { label: "Movilidad", value: 60, max: 100 },
-        { label: "Defensa", value: 40, max: 100 },
+        {label: "Fuerza", value: 60, max: 100},
+        {label: "Velocidad", value: 55, max: 100},
+        {label: "Dificultad", value: 20, max: 100},
+        {label: "Técnica", value: 55, max: 100},
+        {label: "Movilidad", value: 60, max: 100},
+        {label: "Defensa", value: 40, max: 100},
     ]
 });
 
