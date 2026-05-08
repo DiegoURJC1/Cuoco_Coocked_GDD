@@ -25,7 +25,10 @@ export default function Home() {
             </p>
             <AlertPanel>
                 TODO: revisar que en todas las páginas cada referencia a inputs esté traducida a su correspondiente
-                icono
+                icono.
+            </AlertPanel>
+            <AlertPanel>
+                TODO: asegurarse que todos los enlaces de la barra lateral y en el propio texto funcionan.
             </AlertPanel>
 
             <Heading2 id="game-concept">Vision Statement</Heading2>
