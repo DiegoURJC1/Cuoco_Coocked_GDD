@@ -5,10 +5,20 @@ import {FighterType} from "../../../../dataTemplate/fighters/enums/FighterType.j
 
 export const fighterZombKingna = new Fighter({
     name: "Zomb Kingña",
-    nickName: "Piña Zombi",
-    archetype: Archetype.BALANCE,
+    nickName: "El Todopoderoso Rey del Trópico",
+    archetype: Archetype.PUPPET,
     description: (fighter) => (
         <>
+            Jugar con la comida puede traer graves consecuencias...
+            <br/>
+            Tras escapar de su hogar y avistar tierra hay algo que queda bien claro...
+            <br/>
+            El Todopoderoso Rey del Trópico ha llegado para gobernar.
+            <br/>
+            <br/>
+            Con un combate pesado basado en las invocaciones, deberá gestionar sus recursos para digerir vivos a sus enemigos.
+            Deberá combinar distintos tipos de piñas para crear combinaciones adecuadas a sus necesidades y someter a los infieles ante su control.
+
 
         </>
     ),
@@ -42,11 +52,11 @@ export const fighterZombKingna = new Fighter({
     },
     //moveSet:
     manualRadarChart: [
-        { label: "Fuerza", value: 30, max: 100 },
-        { label: "Velocidad", value: 85, max: 100 },
-        { label: "Dificultad", value: 60, max: 100 },
+        { label: "Fuerza", value: 50, max: 100 },
+        { label: "Velocidad", value: 30, max: 100 },
+        { label: "Dificultad", value: 65, max: 100 },
         { label: "Técnica", value: 75, max: 100 },
-        { label: "Movilidad", value: 70, max: 100 },
-        { label: "Defensa", value: 25, max: 100 },
+        { label: "Movilidad", value: 40, max: 100 },
+        { label: "Defensa", value: 35, max: 100 },
     ]
 });
