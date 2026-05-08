@@ -21,6 +21,9 @@
     --color-grab: #DF7321;
     --color-block: #2188DF;
     --color-range: #DFD721;
+
+    position: relative;
+    z-index: 1;
 }
 * {
     margin: 0;
@@ -37,6 +40,53 @@ html {
 body {
     width: 100%;
     font-family: 'Roboto', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -3;
+
+    background-image: url("/backgrounds/fondoPNGWebHorizontal.png");
+    background-size: contain;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+
+    filter: brightness(0.8) opacity(0.25);
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+
+    background-image: url("/backgrounds/verticalPNGFinalVertical.png");
+    background-size: contain;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+
+    display: none;
+
+    filter: brightness(0.8) opacity(0.25);
+}
+
+
+
+@media (max-width: 768px) {
+    body::before {
+        display: none;
+    }
+
+    body::after {
+        display: block;
+    }
 }
 
 h1,     h2, h3, h4, h5, h6 {
