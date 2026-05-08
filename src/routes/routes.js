@@ -5,6 +5,9 @@ export const routes = {
     story: {
         path: "/story",
     },
+    team: {
+        path: "/team",
+    },
     mechanics: {
         path: "/mechanics",
         inputDiagram: {

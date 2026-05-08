@@ -27,6 +27,7 @@ import DynamicsPage from "./pages/DynamicsPage.jsx";
 import StoryPage from "./pages/StoryPage.jsx";
 import InterfacesPage from "./pages/InterfacesPage/InterfacesPage.jsx";
 import AchievementsPage from "./pages/AchievementsPage/AchievementsPage.jsx";
+import TeamPage from "./pages/TeamPage/TeamPage.jsx";
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
@@ -54,6 +55,7 @@ createRoot(document.getElementById('root')).render(
                     <Route path={routes.stages.id} element={<StagePage/>} />
                     <Route path={routes.interfaces.path} element={<InterfacesPage/>}/>
                     <Route path={routes.achievements.path} element={<AchievementsPage/>}/>
+                    <Route path={routes.team.path} element={<TeamPage/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>
