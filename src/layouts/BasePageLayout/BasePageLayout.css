@@ -30,8 +30,8 @@
     background-color: #1b1b1b;
 }
 
-.page-content table th, .page-content > table td {
-    padding: 4px 2px;
+.page-content table th, .page-content table td {
+    padding: 4px 6px;
 
 }
 

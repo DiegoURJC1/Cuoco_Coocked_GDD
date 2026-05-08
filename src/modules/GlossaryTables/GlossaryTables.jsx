@@ -25,8 +25,7 @@ export function GlossaryTables({ glossary, glossaryCategory }) {
                             {label}
                         </Heading2>
 
-                        <table style={{ borderCollapse: "separate",
-                            borderSpacing: "12px" }}>
+                        <table>
                             <thead>
                             <tr>
                                 <th>Término</th>
