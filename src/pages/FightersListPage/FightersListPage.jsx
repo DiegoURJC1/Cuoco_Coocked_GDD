@@ -35,6 +35,7 @@ export default function FightersListPage() {
             <ArchetypesPanel/>
             <AlertPanel>Los valores exactos de frames son materia de balance y se definen en fase de prototipo. El GDD
                 establece la estructura; los números emergen del playtesting.</AlertPanel>
+            {/*Esta alerta es intencional y no debe quitarse*/}
             <br></br>
             <hr></hr>
             <br></br>

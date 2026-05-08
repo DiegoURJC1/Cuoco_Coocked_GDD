@@ -370,7 +370,7 @@ export default function MechanicsPage() {
             <p>
                 Son aquellos ataques de proyectil o alcance extendido que sirven para control de espacio, zoning,
                 presión a distancia. Son el tipo de ataque contra el que el Parry es efectivo y el Bloqueo genera
-                <PLink href={getGlossaryLink(glossary.chipDamage)}>chip damage</PLink>.
+                <PLink href={getGlossaryLink(glossary.chipDamage)}> chip damage</PLink>.
             </p>
             <p><i>Leer sobre sus <PLink href={routes.dynamics.range.path}>dinámicas</PLink></i>.</p>
             <p>
@@ -381,9 +381,7 @@ export default function MechanicsPage() {
                 <li>Daño: variable (menor que <InlineIcon size={2}><InputSequence sequence={[Input.HS]}/></InlineIcon>,
                     pero acumula <PLink href={getGlossaryLink(glossary.chipDamage)}>chip damage</PLink> al bloquear)
                 </li>
-                <li>Puede activar elementos de entorno (ver sección 9.3)</li>
-                <AlertPanel>TODO: importante enlazar con la parte donde se expliquen aderezos en entorno, quitar
-                    (ver sección 9.3)</AlertPanel>
+                <li>Puede activar elementos de entorno (ver <PLink href={routes.dressings.path}>aderezos</PLink>)</li>
                 <li>Puede ser neutralizado con <PLink href={getGlossaryLink(glossary.parry)}>Parry</PLink>.
                 </li>
                 <li>Bloquear un ataque de distancia genera chip damage y acumula stacks de guardbreak.</li>
@@ -400,8 +398,8 @@ export default function MechanicsPage() {
             </ul>
             <p><b>Ejemplo temático — El Chef</b></p>
             <p>
-                Ataque de distancia estándar: estocada con el tenedor gigante (extensión). Input especial (media luna +
-                botón distancia): saca un bote de salsa picante y lanza un chorro (proyectil). Ambos son ataques de
+                Ataque de distancia estándar: estocada con el tenedor gigante (extensión). Input especial  <InlineIcon size={2}>
+                <InputSequence sequence={[Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT, Input.R]}/></InlineIcon>: saca un bote de salsa picante y lanza un chorro (proyectil). Ambos son ataques de
                 distancia, ambos son vulnerables al Parry, pero tienen propiedades diferentes (velocidad, hitbox,
                 efectos
                 secundarios).
@@ -682,14 +680,6 @@ export default function MechanicsPage() {
                 │ <br/>
                 └──► Proyectil de salsa → impacto → aderezo aplicado <br/>
             </pre>
-            <AlertPanel>TODO: añadir parte de dinámicas o generar una página completa nueva con todas dinámicas
-                juntas</AlertPanel>
-            <p>
-                **Dinámica estratégica generada:**
-                El jugador defensor debe decidir si arriesga Parry para evitar acumular stacks, sabiendo que si el rival
-                mixupea con grab, queda completamente expuesto. La gestión de este riesgo es el núcleo de la tensión
-                defensiva del juego.
-            </p>
             <Heading3 id={routes.mechanics.cooking.id}>Cooking</Heading3>
             <p>
                 <b>Cooking</b> (llamado así intencionalmente por sus <PLink

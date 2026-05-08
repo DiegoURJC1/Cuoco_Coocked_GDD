@@ -14,6 +14,11 @@ export const achievements = {
         text: "[MISIÓN] Completa 5 misiones de dificultad nivel 1.",
         hidden: false,
     },
+    proPlayer: {
+        name: "Por fin un verdadero pro player",
+        text: "[ARCADE] Pulsa todos los botones a la vez.",
+        hidden: true,
+    },
     imTheBossNow: {
         name: "Ahora yo soy el jefe",
         text: "[ARCADE] Derrota al jefe con un solo personaje.",

@@ -296,7 +296,7 @@ const collisionTerms = {
         content:
             <>
                 Área invisible asociada a un ataque que determina dónde puede hacer daño. Si la
-                <i>hitbox</i> de tu ataque entra en contacto con la <i>hurtbox</i> del oponente,
+                <i> hitbox</i> de tu ataque entra en contacto con la <i>hurtbox</i> del oponente,
                 el golpe conectará.
             </>,
         id: "hitbox",
@@ -307,7 +307,7 @@ const collisionTerms = {
         content:
             <>
                 Área invisible que define el espacio que ocupa el cuerpo de tu personaje. Si una
-                <i>hitbox</i> enemiga toca tu <i>hurtbox</i>, recibirás daño. Durante ciertos ataques,
+                <i> hitbox</i> enemiga toca tu <i>hurtbox</i>, recibirás daño. Durante ciertos ataques,
                 las <i>hurtboxes</i> pueden cambiar de forma o incluso desaparecer (invulnerabilidad).
             </>,
         id: "hurtbox",
@@ -330,7 +330,7 @@ const collisionTerms = {
             <>
                 Un objeto o energía disparada que posee su propia <i>hitbox</i> y viaja de forma
                 independiente al cuerpo del personaje. Es la herramienta principal del
-                <PLink href={getGlossaryLink(positioningTerms.zoning)}>Zoning</PLink>.
+                <PLink href={getGlossaryLink(positioningTerms.zoning)}> Zoning</PLink>.
             </>,
         id: "projectile",
         categories: [GlossaryCategory.OFFENSIVE]
@@ -341,7 +341,7 @@ const collisionTerms = {
             <>
                 Estado en el que las <i>hurtboxes</i> del personaje son ignoradas total o parcialmente
                 por las <i>hitboxes</i> del rival. Común en movimientos tipo
-                <PLink href={getGlossaryLink(defensiveTerms.reversal)}>Reversal</PLink>.
+                <PLink href={getGlossaryLink(defensiveTerms.reversal)}> Reversal</PLink>.
             </>,
         id: "invincibility",
         categories: [GlossaryCategory.DEFENSE]

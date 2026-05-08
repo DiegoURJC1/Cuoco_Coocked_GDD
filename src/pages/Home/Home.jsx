@@ -24,10 +24,6 @@ export default function Home() {
                 Con los puños en la masa
             </p>
             <AlertPanel>
-                TODO: revisar que en todas las páginas cada referencia a inputs esté traducida a su correspondiente
-                icono.
-            </AlertPanel>
-            <AlertPanel>
                 TODO: asegurarse que todos los enlaces de la barra lateral y en el propio texto funcionan.
             </AlertPanel>
 

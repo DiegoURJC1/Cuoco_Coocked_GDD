@@ -2,6 +2,9 @@ import { Heading1, Heading2 } from "../../modules/Heading/Heading.jsx";
 import PLink from "../../modules/Link/PLink.jsx";
 import "./StagesListPage.css";
 import { stages } from "../../data/stage/stages.jsx";
+import {InputSequence} from "../../dataTemplate/input/InputSequence.jsx";
+import {Input} from "../../dataTemplate/input/enums/Input.js";
+import {InlineIcon} from "../../modules/InlineIcon/InlineIcon.jsx";
 
 export default function StagesListPage() {
     return (
@@ -15,8 +18,8 @@ export default function StagesListPage() {
             <ul>
                 <li>El tamaño del escenario es de 2880x1080 píxeles (HD apaisado donde todo el contenido vertical cabe en 1080px y el contenido horizontal
                     representa vez y media una pantalla estandar).</li>
-                <li>El corner aumenta la presión del atacante (sin salida de dash, escape solo por salto o reversals).</li>
-                <li>El entorno tiene elementos interactivos, activables por ataques de distancia y AoE</li>
+                <li>El corner aumenta la presión del atacante (sin salida de dash<InlineIcon size={2}><InputSequence sequence={[Input.DASH]}/></InlineIcon>, escape solo por salto o reversals).</li>
+                <li>El entorno tiene elementos interactivos, activables por ataques de distancia<InlineIcon size={2}><InputSequence sequence={[Input.R]}/></InlineIcon> y AoE</li>
                 <li>El escenario hace scroll horizontal, con limites visuales y de colisión</li>
             </ul>
             <p>
@@ -32,7 +35,7 @@ export default function StagesListPage() {
             <ul>
                 <li>
                     <b>La Despensa</b>: Estantes repletos de conservas, especias y botes de salsas. Luz de almacén cálida. El escenario
-                    tiene multitud de elementos interactivos, activables por ataques de distancia y AoE, como estanterías de botes de diferentes
+                    tiene multitud de elementos interactivos, activables por ataques de distancia<InlineIcon size={2}><InputSequence sequence={[Input.R]}/></InlineIcon> y AoE, como estanterías de botes de diferentes
                     aderezos (aleatorios en cada diferente partida).
                 </li>
                 <li>
@@ -41,7 +44,7 @@ export default function StagesListPage() {
                 </li>
                 <li>
                     <b>El Mercado</b>: Puesto de mercado con ingredientes apilados, iluminación de exterior mediterránea. El escenario
-                    tiene elementos interactivos geneeradores de aderezos como montones de ingredientes que cambian conforme el spawn aleatorio de
+                    tiene elementos interactivos generadores de aderezos como montones de ingredientes que cambian conforme el spawn aleatorio de
                     los diferentes puestos entre diferentes partidas.
                 </li>
                 <li>

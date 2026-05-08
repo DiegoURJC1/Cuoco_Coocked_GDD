@@ -15,21 +15,21 @@ export default function AppearancePage() {
             <br></br>
             <Heading3 id="art-direction">Principios de art direction</Heading3>
             <ul>
-                <li><b>Food styling como lenguaje visual base:</b>
+                <li><b>Food styling como lenguaje visual base: </b>
                     Cada personaje parte de referencias reales de fotografía culinaria de alta gama. Los materiales
                     deben evocar apetito: gloss en las salsas, subsurface scattering en masas y carnes, vapor,
                     brillo
                     húmedo, texturas que parecen tocables. La iluminación de personajes en idle debe recordar a una
                     sesión fotográfica con iluminación de estudio.
                 </li>
-                <li><b>Saturación alta, contraste controlado:</b>
+                <li><b>Saturación alta, contraste controlado: </b>
                     La paleta general es saturada y cálida, con excepciones frías para personajes temáticamente
                     opuestos (personajes basados en sushi, helados, etc.). Los efectos de golpe y las partículas de
                     los aderezos deben tener sus propios lenguajes cromáticos claramente diferenciados y
                     reconocibles
                     por el jugador.
                 </li>
-                <li><b>Materiales como carácter:</b>
+                <li><b>Materiales como carácter: </b>
                     La textura del material de cada personaje comunica su arquetipo:
                     <ul>
                         <li>Personajes densos y pesados (grappler): masas, carnes, texturas opacas</li>
@@ -37,17 +37,17 @@ export default function AppearancePage() {
                         <li>Personajes de distancia (zoner): elementos que se estiran, alargan o se proyectan</li>
                     </ul>
                 </li>
-                <li><b>Animaciones con física de alimento:</b>
+                <li><b>Animaciones con física de alimento: </b>
                     Los movimientos deben tener bounce, drip y splash coherentes con su base gastronómica. Un golpe
                     de la Boloñesa no termina en el impacto — la salsa salpica, los fideos rebotan, hay inercia.
                 </li>
-                <li><b>Contraste de escala:</b>
+                <li><b>Contraste de escala: </b>
                     Los personajes humanos son anatómicamente normales, visualmente grandes (personajes fuertes),
                     pero realistas en relación al entorno (escenarios).Lo cual contrasta fuertemente con los platos,
                     que son desproporcionadamente enormes, lo que genera un desequilibrio visual que refuerza lo
                     absurdo de la situación.
                 </li>
-                <li><b>Escenarios:</b>
+                <li><b>Escenarios: </b>
                     Los escenarios son cocinas, despensas, mercados y espacios relacionados con la gastronomía.
                     Siguen el mismo principio de "food photography": bien iluminados, coloridos, con profundidad de
                     campo y elementos interactivos que participan en las mecánicas de combate (ver <PLink href={routes.dressings.path}>aderezos</PLink>).
@@ -99,7 +99,7 @@ export default function AppearancePage() {
             <p>
                 Al igual que otros videojuegos. Se pretende usar temas con letras para los temas musicales de personajes
                 que ayuden a presentarlos a ellos y sus motivaciones. Videojuegos dentro del género de peleas como
-                <i>Guilty Gear</i> y fuera del género como <i>Metal Gear Rising Revengence</i>.
+                <i> Guilty Gear</i> y fuera del género como <i>Metal Gear Rising Revengence</i>.
             </p>
             <p>
                 Se ha desarrollado un tema original capaz de ser usado en multitud de partes del juego:

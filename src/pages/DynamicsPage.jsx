@@ -86,6 +86,11 @@ export default function DynamicsPage() {
             genera
             un autoataque de retorno (sólo en el frame exacto).
         </p>
+        <p>
+            El jugador defensor debe decidir si arriesga Parry para evitar acumular stacks, sabiendo que si el rival
+            mixupea con grab, queda completamente expuesto. La gestión de este riesgo es el núcleo de la tensión
+            defensiva del juego.
+        </p>
         <Heading3 id={routes.dynamics.breaker.id}>Breaker</Heading3>
         <p>
             El medidor Breaker debe usarse como un comodín, es una forma de “soft reset” de la partida cuando por alguna
