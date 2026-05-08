@@ -27,6 +27,38 @@ export default function Home() {
                 TODO: asegurarse que todos los enlaces de la barra lateral y en el propio texto funcionan.
             </AlertPanel>
 
+
+            <div
+                className="diagram"
+                style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    marginBottom: "2rem"
+                }}
+            >
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    controls
+                    style={{
+                        maxHeight: "80vh",
+                        maxWidth: "100%",
+                        width: "100%",
+                        borderRadius: "12px",
+                        objectFit: "contain",
+                        display: "block"
+                    }}
+                >
+                    <source
+                        src={`${import.meta.env.BASE_URL}videos/trailer.mp4`}
+                        type="video/mp4"
+                    />
+                    Tu navegador no soporta vídeos HTML5.
+                </video>
+            </div>
+
             <Heading2 id="game-concept">Vision Statement</Heading2>
             <p>
                 <b>Cuoco Cooked</b> es un juego de lucha 3D con movimiento 2D de vista lateral donde la comida se alza
