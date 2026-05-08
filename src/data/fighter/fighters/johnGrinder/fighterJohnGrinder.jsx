@@ -6,7 +6,7 @@ import {moveCheckTheFridgeSpicy, moveFridgeTwirl63214, moveSetJohnGrinder} from 
 import {InlineIcon} from "../../../../modules/InlineIcon/InlineIcon.jsx";
 import {InputSequence} from "../../../../dataTemplate/input/InputSequence.jsx";
 import PLink from "../../../../modules/Link/PLink.jsx";
-import glossary, {getGlossaryLink} from "../../../../routes/glossary.jsx";
+import glossary, {getGlossaryLink} from "../../../glossary/glossary.jsx";
 
 const name = "John Grinder";
 export const fighterJohnGrinder = new Fighter({

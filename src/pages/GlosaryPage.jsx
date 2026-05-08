@@ -1,6 +1,6 @@
 import {Heading1, Heading2} from "../modules/Heading/Heading.jsx"
 import {GlossaryTables} from "../modules/GlossaryTables/GlossaryTables.jsx";
-import glossary, {GlossaryCategory} from "../routes/glossary.jsx";
+import glossary, {GlossaryCategory} from "../data/glossary/glossary.jsx";
 
 export default function GlosaryPage() {
     return (

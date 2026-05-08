@@ -5,7 +5,7 @@ import {RangeText} from "../modules/ColoredText/ColoredText.jsx";
 import {InlineIcon} from "../modules/InlineIcon/InlineIcon.jsx";
 import {InputSequence} from "../dataTemplate/input/InputSequence.jsx";
 import {Input} from "../dataTemplate/input/enums/Input.js";
-import glossary, {getGlossaryLink} from "../routes/glossary.jsx";
+import glossary, {getGlossaryLink} from "../data/glossary/glossary.jsx";
 
 import RoundFlowDiagram from "../../public/diagrams/Round flow diagram.svg?react";
 

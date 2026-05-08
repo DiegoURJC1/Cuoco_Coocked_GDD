@@ -4,7 +4,7 @@ import "./Home.css";
 import PLink from "../../modules/Link/PLink.jsx";
 import {routes} from "../../routes/routes.js";
 import AlertPanel from "../../modules/AlertPanel/AlertPanel.jsx";
-import glossary, {getGlossaryLink} from "../../routes/glossary.jsx";
+import glossary, {getGlossaryLink} from "../../data/glossary/glossary.jsx";
 import {GrabText, MeleeText, RangeText} from "../../modules/ColoredText/ColoredText.jsx";
 
 export default function Home() {

@@ -1,8 +1,8 @@
-import {routes} from "./routes.js";
-import PLink from "../modules/Link/PLink.jsx";
-import {InlineIcon} from "../modules/InlineIcon/InlineIcon.jsx";
-import {InputSequence} from "../dataTemplate/input/InputSequence.jsx";
-import {Input} from "../dataTemplate/input/enums/Input.js";
+import {routes} from "../../routes/routes.js";
+import PLink from "../../modules/Link/PLink.jsx";
+import {InlineIcon} from "../../modules/InlineIcon/InlineIcon.jsx";
+import {InputSequence} from "../../dataTemplate/input/InputSequence.jsx";
+import {Input} from "../../dataTemplate/input/enums/Input.js";
 
 export const GlossaryCategory = Object.freeze({
     MATCH_STATE: "Estado de la partida",

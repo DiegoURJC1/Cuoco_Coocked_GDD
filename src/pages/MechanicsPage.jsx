@@ -10,7 +10,7 @@ import ControllerInputs from "../../public/diagrams/Controller Inputs.svg?react"
 import InputStrengthDiagram from "../../public/diagrams/Input strength.svg?react";
 import GeneralCombatDiagram from "../../public/diagrams/General combat diagram.svg?react";
 import {BlockText, GrabText, MeleeText, RangeText} from "../modules/ColoredText/ColoredText.jsx";
-import glossary, {getGlossaryLink} from "../routes/glossary.jsx";
+import glossary, {getGlossaryLink} from "../data/glossary/glossary.jsx";
 import {InputIcon} from "../dataTemplate/input/InputIcon.jsx";
 
 export default function MechanicsPage() {

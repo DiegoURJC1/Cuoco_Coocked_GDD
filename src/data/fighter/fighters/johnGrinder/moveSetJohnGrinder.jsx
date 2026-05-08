@@ -7,7 +7,7 @@ import {Stance} from "../../../../dataTemplate/fighters/enums/Stance.js";
 import {MoveState} from "../../../../dataTemplate/fighters/moves/enums/MoveState.jsx";
 import {baseDefaultStats} from "../../../../dataTemplate/fighters/Fighter.jsx";
 import PLink from "../../../../modules/Link/PLink.jsx";
-import glossary, {getGlossaryLink} from "../../../../routes/glossary.jsx";
+import glossary, {getGlossaryLink} from "../../../glossary/glossary.jsx";
 import {InlineIcon} from "../../../../modules/InlineIcon/InlineIcon.jsx";
 import {InputSequence} from "../../../../dataTemplate/input/InputSequence.jsx";
 import {UniversalMoveKey} from "../../../../dataTemplate/fighters/moves/enums/UniversalMoveKey.js";
