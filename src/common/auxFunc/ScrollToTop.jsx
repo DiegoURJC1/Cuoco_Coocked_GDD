@@ -25,42 +25,48 @@ import {useEffect, useRef} from "react";
  * @constructor
  */
 export default function ScrollToTop() {
-    const {pathname, hash} = useLocation();
-    const prevPathname = useRef(pathname);
+    const location = useLocation();
+    const prevPathname = useRef(location.pathname);
+    const prevKey = useRef(location.key);
 
-    // Comprobar cambios en el PATH
     useEffect(() => {
-        const samePage = prevPathname.current === pathname;
 
+        const samePage = prevPathname.current === location.pathname;
+
+        // SIEMPRE intentar scroll al hash cuando cambia la navegación
         if (samePage) {
-            scrollToHash(hash);
-            return;
+            scrollToHash(location.hash);
+        } else {
+            scrollToTopInstant();
+            scrollToHash(location.hash, {waitForRender: true});
         }
 
-        scrollToTopInstant();
-        scrollToHash(hash, {waitForRender: true});
+        prevPathname.current = location.pathname;
+        prevKey.current = location.key;
 
-        prevPathname.current = pathname;
-    }, [pathname, hash]);
+    }, [location.pathname, location.hash, location.key]);
 
     return null;
 }
-
 
 function getIdFromHash(hash) {
     return hash ? hash.replace("#", "") : null;
 }
 
-function scrollToHash (hash, {waitForRender = false} = {}) {
+function scrollToHash(hash, {waitForRender = false} = {}) {
     const id = getIdFromHash(hash);
     if (!id) return;
 
     const scroll = () => {
         const el = document.getElementById(id);
-        el?.scrollIntoView({behavior: "smooth"});
+        if (!el) return;
+
+        el.scrollIntoView({behavior: "smooth"});
     };
 
-    return waitForRender ? requestAnimationFrame(scroll) : scroll();
+    return waitForRender
+        ? requestAnimationFrame(scroll)
+        : scroll();
 }
 
 function scrollToTopInstant() {

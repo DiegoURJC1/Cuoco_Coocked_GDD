@@ -86,6 +86,18 @@ export const routes = {
     },
     gameModes: {
         path: "/game-modes",
+        training: {
+            id: "training",
+            path: "/game-modes#training",
+        },
+        arcade: {
+            id: "arcade",
+            path: "/game-modes#arcade",
+        },
+        story: {
+            id: "story",
+            path: "/game-modes#story",
+        }
     },
     appearance: {
         path: "/appearance",
@@ -113,5 +125,95 @@ export const routes = {
     },
     interfaces: {
         path: "/interfaces",
+        menuDiagram: {
+            gameConnect: {
+                id: "game-connect",
+                path: "/interfaces#game-connect",
+            },
+            mainMenu: {
+                id: "main-menu",
+                path: "/interfaces#main-menu",
+            },
+            online: {
+                id: "online",
+                path: "/interfaces#online",
+            },
+            ranked: {
+                id: "ranked",
+                path: "/interfaces#ranked",
+            },
+            quickMatch: {
+                id: "quick-match",
+                path: "/interfaces#quick-match",
+            },
+            publicLobby: {
+                id: "public-lobby",
+                path: "/interfaces#public-lobby",
+            },
+            privateLobby: {
+                id: "private-lobby",
+                path: "/interfaces#private-lobby",
+            },
+            cata: {
+                id: "cata",
+                path: "/interfaces#cata",
+            },
+            training: {
+                id: "training",
+                path: "/interfaces#training",
+            },
+            missions: {
+                id: "missions",
+                path: "/interfaces#missions",
+            },
+            tutorial: {
+                id: "tutorial",
+                path: "/interfaces#tutorial",
+            },
+            combos: {
+                id: "combos",
+                path: "/interfaces#combos",
+            },
+            local: {
+                id: "local",
+                path: "/interfaces#local",
+            },
+            arcade: {
+                id: "arcade",
+                path: "/interfaces#arcade",
+            },
+            versus: {
+                id: "versus",
+                path: "/interfaces#versus",
+            },
+            survival: {
+                id: "survival",
+                path: "/interfaces#survival",
+            },
+            story: {
+                id: "story",
+                path: "/interfaces#story",
+            },
+            playStory: {
+                id: "play-story",
+                path: "/interfaces#play-story",
+            },
+            cuocoWorld: {
+                id: "cuoco-world",
+                path: "/interfaces#cuoco-world",
+            },
+            settings: {
+                id: "settings",
+                path: "/interfaces#settings",
+            },
+            store: {
+                id: "store",
+                path: "/interfaces#store",
+            },
+            exit: {
+                id: "exit",
+                path: "/interfaces#exit",
+            },
+        }
     }
 };

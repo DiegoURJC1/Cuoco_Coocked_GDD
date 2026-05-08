@@ -10,7 +10,7 @@ export default function GameModesPage() {
             <p>
                 El modo <b>Versus</b> permite a dos jugadores enfrentarse entre ellos en local multijugador.
             </p>
-            <Heading2 id="training">Entrenamiento</Heading2>
+            <Heading2 id={routes.gameModes.training.id}>Entrenamiento</Heading2>
             <p>
                 El modo <b>Entrenamiento</b> permite a uno o dos jugadores entrar a una partida con modificadores
                 particulares. Este tipo de modificadores tienen el objetivo de facilitar la experimentación del
@@ -38,24 +38,20 @@ export default function GameModesPage() {
                     <li>Repetir una secuencia de movimientos guardada.</li>
                 </ul>
             </p>
-            <Heading2 id="arcade">Arcade</Heading2>
+            <Heading2 id={routes.gameModes.arcade.id}>Arcade</Heading2>
             <p>
                 El modo <b>Arcade</b> es un modo de juego de un solo jugador en el que, según el luchador que se elija,
                 el jugador se enfrentará a una serie de retos y combates temáticos específicos al luchador elegido de la
                 misma forma que en <PLink href={"https://www.ssbwiki.com/Classic_Mode_(SSBU)"}>Classic Mode</PLink> en
                 Super Smash Bros Ultimate.
             </p>
-            <Heading2 id="story">Historia</Heading2>
+            <Heading2 id={routes.gameModes.story.id}>Historia</Heading2>
             <p>
                 El modo <b>Historia</b> es un modo de juego de un jugador en el que tomas el papel de <b>Chef</b> en su aventura para descubrir nuevos sabores.
                 Según progreses te encontrarás con distintos personajes del juego y podrás aprender más sobre sus orígenes y relaciones.
-                Este modo mezcla una naración que te sumergira en el mundo del juego y una serie de desafíos complejos a medida que vayas dominando a los distintos personajes.
+                Este modo mezcla una narración que te sumergira en el mundo del juego y una serie de desafíos complejos a medida que vayas dominando a los distintos personajes.
             </p>
-            <p>
-                Para un vistazo a la introducción del modo <b>Historia</b> diriganse al apartado de <PLink href={routes.story.path}>Historia</PLink>.
-
-
-            </p>
+            <p>Leer más en la página de <PLink href={routes.story.path}>historia</PLink>.</p>
 
 
         </>

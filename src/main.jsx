@@ -25,7 +25,7 @@ import StagesListPage from "./pages/StagesListPage/StagesListPage.jsx";
 import StagePage from "./pages/StagePage/StagePage.jsx";
 import DynamicsPage from "./pages/DynamicsPage.jsx";
 import StoryPage from "./pages/StoryPage.jsx";
-import InterfacesPage from "./pages/InterfacesPage.jsx";
+import InterfacesPage from "./pages/InterfacesPage/InterfacesPage.jsx";
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>

@@ -1,0 +1,16 @@
+.flow-diagram-node {
+    transition:
+            transform 0.25s ease,
+            filter 0.25s ease;
+
+    transform-origin: center;
+    transform-box: fill-box;
+
+    cursor: pointer;
+}
+
+.flow-diagram-node:hover {
+    transform: scale(1.06);
+
+    filter: drop-shadow(0 0 6px rgb(208 142 239));
+}
