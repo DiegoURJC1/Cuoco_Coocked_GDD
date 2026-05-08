@@ -1,0 +1,28 @@
+
+.achievements-table tr {
+    transition: background 0.2s ease;
+}
+.achievements-table td {
+    padding: 8px!important;
+}
+
+.achievement-name {
+    font-weight: bold;
+    color: #f5f5dc;
+    width: 30%;
+}
+
+.achievement-text {
+    color: rgba(255, 255, 255, 0.85);
+    transition: filter 0.2s ease, opacity 0.2s ease;
+}
+
+.achievements-table tr.hidden .achievement-text {
+    filter: blur(6px);
+    opacity: 0.6;
+}
+
+.achievements-table tr.hidden:hover .achievement-text {
+    filter: blur(0px);
+    opacity: 1;
+}

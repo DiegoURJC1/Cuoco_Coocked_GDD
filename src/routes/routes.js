@@ -215,5 +215,8 @@ export const routes = {
                 path: "/interfaces#exit",
             },
         }
+    },
+    achievements: {
+        path: "/achievements",
     }
 };

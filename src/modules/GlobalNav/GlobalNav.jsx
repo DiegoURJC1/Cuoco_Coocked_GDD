@@ -18,6 +18,7 @@ export function GlobalNav() {
                 <li><PLink href={routes.interfaces.path}>Interfaces</PLink></li>
                 <li><PLink href={routes.business.path}>Modelo de negocio</PLink></li>
                 <li><PLink href={routes.glossary.path}>Glosario</PLink></li>
+                <li><PLink href={routes.achievements.path}>Logros</PLink></li>
                 {/*<<li><PLink href="/combat">Combate</PLink></li>*/}
                 {/*<<li><PLink href="/test/links">Test Links</PLink></li>*/}
             </ul>
