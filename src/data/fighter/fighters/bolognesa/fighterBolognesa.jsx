@@ -32,5 +32,13 @@ export const fighterBolognesa = new Fighter({
         walkSpeed: 55,
         runSpeed: 110
     },
-    moveSet: bolognesaMoveSet
+    moveSet: bolognesaMoveSet,
+    manualRadarChart: [
+        { label: "Fuerza", value: 50, max: 100 },
+        { label: "Velocidad", value: 75, max: 100 },
+        { label: "Dificultad", value: 40, max: 100 },
+        { label: "Técnica", value: 65, max: 100 },
+        { label: "Movilidad", value: 70, max: 100 },
+        { label: "Defensa", value: 30, max: 100 },
+    ]
 });

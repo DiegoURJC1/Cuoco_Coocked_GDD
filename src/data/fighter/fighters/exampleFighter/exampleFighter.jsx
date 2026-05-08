@@ -39,5 +39,13 @@ export const exampleFighter = new Fighter({
         y: 0.2,
         zoom: 2
     },
+    manualRadarChart: [
+        { label: "Fuerza", value: 60, max: 100 },
+        { label: "Velocidad", value: 55, max: 100 },
+        { label: "Dificultad", value: 20, max: 100 },
+        { label: "Técnica", value: 55, max: 100 },
+        { label: "Movilidad", value: 60, max: 100 },
+        { label: "Defensa", value: 40, max: 100 },
+    ]
 });
 

@@ -133,6 +133,8 @@ export class Fighter {
      */
     #portraitConfig;
 
+    #manualRadarChart;
+
     // endregion
 
     /**
@@ -169,7 +171,8 @@ export class Fighter {
                     source = Source.BASE_GAME,
                     icon,
                     fullArt,
-                    portraitConfig
+                    portraitConfig,
+                    manualRadarChart
                 }) {
         this.#id = this.#generateIdFromName(name);
         this.#name = name;
@@ -196,6 +199,7 @@ export class Fighter {
         this.#icon = icon;
         this.#fullArt = this.#FULL_ART_PATH + fullArt;
         this.#portraitConfig = portraitConfig;
+        this.#manualRadarChart = manualRadarChart;
     }
 
     // endregion
@@ -339,5 +343,8 @@ export class Fighter {
         );
     }
 
+    get manualRadarChart() {
+        return this.#manualRadarChart;
+    }
     // endregion
 }

@@ -19,7 +19,7 @@ import React from "react";
  */
 const RadarChart = ({
                         data = [],
-                        size = 300,
+                        size = 400,
                         levels = 5, // círculos de fondo
                     }) => {
     const center = size / 2;

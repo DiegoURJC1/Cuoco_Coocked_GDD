@@ -43,5 +43,13 @@ export const fighterElChef = new Fighter({
         walkSpeed: 45,
         runSpeed: 95
     },
-    moveSet: chefMoveSet
+    moveSet: chefMoveSet,
+    manualRadarChart: [
+        { label: "Fuerza", value: 50, max: 100 },
+        { label: "Velocidad", value: 50, max: 100 },
+        { label: "Dificultad", value: 95, max: 100 },
+        { label: "Técnica", value: 85, max: 100 },
+        { label: "Movilidad", value: 60, max: 100 },
+        { label: "Defensa", value: 40, max: 100 },
+    ]
 });

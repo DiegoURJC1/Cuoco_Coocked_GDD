@@ -44,4 +44,12 @@ export const fighterPeppemoldy = new Fighter({
         runSpeed: 85
     },
     //moveSet:
+    manualRadarChart: [
+        { label: "Fuerza", value: 30, max: 100 },
+        { label: "Velocidad", value: 85, max: 100 },
+        { label: "Dificultad", value: 60, max: 100 },
+        { label: "Técnica", value: 75, max: 100 },
+        { label: "Movilidad", value: 70, max: 100 },
+        { label: "Defensa", value: 25, max: 100 },
+    ]
 });

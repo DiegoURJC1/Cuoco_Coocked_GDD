@@ -5,6 +5,7 @@ import {fighters} from "../../data/fighter/fighters.jsx";
 import MoveSection from "../../modules/Fighter/MovePanel/MoveSection.jsx"
 import {FighterRadar} from "../../modules/RadarChart/FighterRadar.jsx";
 import FighterInfobox from "../../modules/Fighter/FighterInfobox/FighterInfobox.jsx";
+import RadarChart from "../../modules/RadarChart/RadarChart.jsx";
 
 export default function FighterPage() {
     const {id} = useParams();
@@ -31,7 +32,7 @@ export default function FighterPage() {
             <Heading1 id="fighter-name">{fighter.name}</Heading1>
             <Heading2 id="information">Información</Heading2>
             <div className="fighter-desc">{fighter.description}</div>
-            <FighterRadar fighter={fighter} />
+            <RadarChart data={fighter.manualRadarChart}/>
             <div className="fighter-proscons-table">
                 <div className="fighter-proscons-column fighter-pros">
                     <div className="fighter-proscons-header">

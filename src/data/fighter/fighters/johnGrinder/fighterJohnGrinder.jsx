@@ -82,4 +82,12 @@ export const fighterJohnGrinder = new Fighter({
         runSpeed: baseDefaultStats.runSpeed * 0.8
     },
     moveSet: moveSetJohnGrinder,
+    manualRadarChart: [
+        { label: "Fuerza", value: 80, max: 100 },
+        { label: "Velocidad", value: 25, max: 100 },
+        { label: "Dificultad", value: 70, max: 100 },
+        { label: "Técnica", value: 65, max: 100 },
+        { label: "Movilidad", value: 30, max: 100 },
+        { label: "Defensa", value: 70, max: 100 },
+    ]
 });
