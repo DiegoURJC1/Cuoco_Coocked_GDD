@@ -29,7 +29,7 @@ export default function FighterPage() {
         <div className="fighter-page">
             <FighterInfobox fighter={fighter} />
             <Heading1 id="fighter-name">{fighter.name}</Heading1>
-            <Heading2 id="">Arte completo</Heading2>
+            <Heading2 id="information">Información</Heading2>
             <div className="fighter-desc">{fighter.description}</div>
             <FighterRadar fighter={fighter} />
             <div className="fighter-proscons-table">
