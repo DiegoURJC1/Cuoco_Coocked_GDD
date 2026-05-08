@@ -1,6 +1,8 @@
 import {Heading1, Heading2, Heading3} from "../../modules/Heading/Heading.jsx"
 import AlertPanel from "../../modules/AlertPanel/AlertPanel.jsx";
 import MusicPlayer from "../../modules/MusicPlayer/MusicPlayer.jsx";
+import PLink from "../../modules/Link/PLink.jsx";
+import {routes} from "../../routes/routes.js";
 
 export default function AppearancePage() {
     return (
@@ -48,8 +50,7 @@ export default function AppearancePage() {
                 <li><b>Escenarios:</b>
                     Los escenarios son cocinas, despensas, mercados y espacios relacionados con la gastronomía.
                     Siguen el mismo principio de "food photography": bien iluminados, coloridos, con profundidad de
-                    campo y elementos interactivos que participan en las mecánicas de combate (ver aderezos).
-                    <AlertPanel>TODO: importante, linkar con aderezos</AlertPanel>
+                    campo y elementos interactivos que participan en las mecánicas de combate (ver <PLink href={routes.dressings.path}>aderezos</PLink>).
                 </li>
             </ul>
             <Heading3 id="menus-and-screens">Menús y pantallas</Heading3>
