@@ -9,14 +9,53 @@ export default function TeamPage() {
                 Seis alumnos de Fundamentos de la Jugabilidad son los programadores y artistas desarrolladores de
                 Cuoco Cooked.
 
-                Desarrollo web - Diego
-                Diseño de interfaces web - Diego, Paula
-                Diseño de personajes - Diego, Chus, Carla, Fernando
-                Historia - Fernando
-                Diseño de interfaces del juego - Carla, Paula
-                Diseño y desarrollo de mecánicas -
+           </p>
+                    <table>
+    <tbody>
+        <tr>
+            <td><strong>Desarrollo web</strong></td>
+            <td>Diego</td>
+        </tr>
+        <tr>
+            <td><strong>Diseño de interfaces web</strong></td>
+            <td>Diego, Paula</td>
+        </tr>
+        <tr>
+            <td><strong>Diseño de personajes</strong></td>
+            <td>Diego, Chus, Carla, Fernando</td>
+        </tr>
+        <tr>
+            <td><strong>Diseño de escenarios y aderezos</strong></td>
+            <td>Diego, Chus, Carla</td>
+        </tr>
+        <tr>
+            <td><strong>Historia</strong></td>
+            <td>Fernando</td>
+        </tr>
+        <tr>
+            <td><strong>Diseño de interfaces del juego</strong></td>
+            <td>Carla, Paula</td>
+        </tr>
+        <tr>
+            <td><strong>Diseño y desarrollo de mecánicas</strong></td>
+            <td>Chus</td>
+        </tr>
+        <tr>
+            <td><strong>Música original</strong></td>
+            <td>Carla</td>
+        </tr>
+        <tr>
+            <td><strong>Tipografía original</strong></td>
+            <td>Chus</td>
+        </tr>
+        <tr>
+            <td><strong>Modelo de negocio</strong></td>
+            <td>Fernando, Paula</td>
+        </tr>
+    </tbody>
+</table>
 
-            </p>
+
             <img style={{
                 width: 'clamp(200px, 130%, 500px)',
                 transformOrigin: 'center', // CamelCase y en un solo objeto
