@@ -3,14 +3,13 @@ import {createRoot} from 'react-dom/client'
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "./pages/Home/Home.jsx";
 import BasePageLayout from "./layouts/BasePageLayout/BasePageLayout.jsx";
-import Combat from "./pages/Combat.jsx";
 import ScrollToTop from "./common/auxFunc/ScrollToTop.jsx";
 import {routes} from "./routes/routes.js";
 
 import { Buffer } from 'buffer';
 window.Buffer = Buffer;
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+
 // Estilos
 import './styles/imports.css'
 import TestLinks from "./pages/testPage/TestLinks.jsx";
@@ -44,7 +43,7 @@ createRoot(document.getElementById('root')).render(
                     <Route path={routes.appearance.path} element={<AppearancePage/>}/>
                     <Route path={routes.business.path} element={<BusinessPage/>}/>
                     <Route path={routes.glossary.path} element={<GlosaryPage/>}/>
-                    <Route path={routes.combat.path} element={<Combat/>}/>
+                    {/*<Route path={routes.combat.path} element={<Combat/>}/>*/}
                     <Route path={routes.test.path}>
                         <Route path={routes.test.links} element={<TestLinks/>}/>
                     </Route>
