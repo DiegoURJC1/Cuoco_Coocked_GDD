@@ -9,12 +9,7 @@ export default function StoryPage() {
     return (
         <>
             <Heading1 id="story-page">Historia</Heading1>
-            <AlertPanel>
-                TODO: Los contenidos de esta página deben cumplir los requisitos.<br/>
-                historia a grandes rasgos: (planteamiento - nudo - desenlace). Como es un juego de peleas el conflicto
-                general de la comida mutante puede no resolverse.<br/>
-                Añadir escaleta
-            </AlertPanel>
+
             <Heading2 id="synopsis">Sinopsis</Heading2>
             <p>
                 ¡La comida está mutando!
