@@ -76,7 +76,7 @@ export default function MechanicsPage() {
                 <li>Recovery: vuelta a un estado neutral.</li>
             </ul>
             <p>
-                Este pilar define cuando y cuanto tiempo un jugador se le puede hacer <PLink
+                Este pilar define cuándo y cuanto tiempo un jugador se le puede hacer <PLink
                 href={getGlossaryLink(glossary.punish)}>punish</PLink> y por cuanto tiempo por su <PLink
                 href={getGlossaryLink(glossary.hitstun)}>hit stun</PLink>.
             </p>
@@ -88,7 +88,6 @@ export default function MechanicsPage() {
                 Si el rival bloquea un ataque, en la mayoría de veces se busca premiar al defensor haciendo que
                 su <PLink href={getGlossaryLink(glossary.blockstun)}>block stun</PLink> termine antes que la del rival.
             </p>
-            <br/>
             <p>
                 El <b>triángulo</b> de "piedra, papel o tijera" que se crea por las acciones
                 de <MeleeText/>, <GrabText/> y <BlockText/> es un sistema intencionalmente imperfecto en el que ninguna
@@ -335,7 +334,7 @@ export default function MechanicsPage() {
 
             <p>
                 Estos ataques siguen el patrón de diseño de piedra/papel/tijeras ligeramente asimétrico.
-                Siendo <BlockText/> la acción que más veces gana pero la que puede vencerle es la menos exitosa en
+                Siendo <BlockText/> la acción que más veces gana, pero la que puede vencerle es la menos exitosa en
                 general, <GrabText/>.
             </p>
             <ul>

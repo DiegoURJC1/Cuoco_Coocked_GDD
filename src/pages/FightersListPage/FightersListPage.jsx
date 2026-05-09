@@ -1,4 +1,4 @@
-import {Heading1, Heading2, Heading3} from "../../modules/Heading/Heading.jsx";
+import {Heading1, Heading2} from "../../modules/Heading/Heading.jsx";
 import PLink from "../../modules/Link/PLink.jsx";
 import {fighters} from "../../data/fighter/fighters.jsx";
 import "./FightersListPage.css";
@@ -13,20 +13,16 @@ export default function FightersListPage() {
             <p>
                 Cada personaje es una <b>modulación del sistema base</b>. El sistema de combate no cambia para ningún
                 personaje lo que varía es:
-                <ul>
-                    <li>Qué ataques tienen acceso y con qué propiedades</li>
-                    <li>Qué aderezos pueden generar y cómo</li>
-                    <li>Cómo se mueve y qué oportunidades tiene para iniciar combos</li>
-                    <li>Qué playstyle privilegia su moveset</li>
-                </ul>
-                <Heading3>Humanos en el roster</Heading3>
-                El juego incluye pocos personajes humanos y con relación directa con la gastronomía (cocineros,
-                críticos, etc.). Su presencia funciona como
-                "excepción que confirma la regla": haciendo aún más absurdo el universo que les rodea.
             </p>
+            <ul>
+                <li>Qué ataques tienen acceso y con qué propiedades</li>
+                <li>Qué aderezos pueden generar y cómo</li>
+                <li>Cómo se mueve y qué oportunidades tiene para iniciar combos</li>
+                <li>Qué playstyle privilegia su moveset</li>
+            </ul>
+
             <br></br>
             <hr></hr>
-            <br></br>
             <Heading2 id="archetypes">Arquetipos</Heading2>
             <p>
                 Los arquetipos del género fighting (shoto, rushdown, zoner, grappler, poke, puppet) se expresan
