@@ -9,21 +9,29 @@ export const fighterGomilo = new Fighter({
     archetype: Archetype.BALANCE,
     description: (fighter) => (
         <>
-
+            ¡Y en el lado derecho del ring!, ¡Con la destreza y la fuerza de un caballero y le velocidad de un luchador experto!, busca una nueva presa...
+            ¡¡EL GRAN GO-MI-LOOOOOOOOO!!
+            <br/>
+            <br/>
+            Luchador diestro y equilibrado que, pese a ausencia de su brazo izquiero, logra adaptarse a cualquier escenario con elementos de su entorno. Al ser golpeado puede perder su brazo, en ese caso todos sus movimientos
+            se vuelven más ágiles y veloces, pero estará expuesto y no podrá pelear en sus mejores condiciones.
+            <br/>
+            Una vez encuentre una pieza adecuada significa que la cosa se pone seria. Dependiendo de que brazo obtenga gana distintas ventajas... ¡¡y un movimiento especial!!
         </>
     ),
-    easyToUse: 4,
+    easyToUse: 3.5,
     narrativeOrigin:
         <>
             Origen
         </>,
     prosCons: {
         pros: [
-            <>Texto 1.</>,
-            <>Texto 2.</>
+            <>Versatil.</>,
+            <>Adaptable.</>
         ],
         cons: [
-            <>Texto 1.</>
+            <>Expuesto a represalias.</>,
+            <>Dependencia de Parry.</>,
         ]
     },
     type: FighterType.FOOD,
@@ -36,17 +44,18 @@ export const fighterGomilo = new Fighter({
         zoom: 1.4
     },
     baseStats: {
-        health: baseDefaultStats.health * 1,
-        walkSpeed: baseDefaultStats.walkSpeed * 1,
-        runSpeed: baseDefaultStats.runSpeed * 1
+        health: baseDefaultStats.health * 1.05,
+        walkSpeed: baseDefaultStats.walkSpeed * 0.9,
+        runSpeed: baseDefaultStats.runSpeed * 0.85
     },
     //moveSet:
     manualRadarChart: [
-        { label: "Fuerza", value: 30, max: 100 },
-        { label: "Velocidad", value: 85, max: 100 },
-        { label: "Dificultad", value: 60, max: 100 },
-        { label: "Técnica", value: 75, max: 100 },
+        { label: "Fuerza", value: 50, max: 100 },
+        { label: "Velocidad", value: 75, max: 100 },
+        { label: "Dificultad", value: 65, max: 100 },
+        { label: "Técnica", value: 60, max: 100 },
         { label: "Movilidad", value: 70, max: 100 },
-        { label: "Defensa", value: 25, max: 100 },
+        { label: "Defensa", value: 65
+            , max: 100 },
     ]
 });

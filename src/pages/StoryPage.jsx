@@ -83,10 +83,10 @@ export default function StoryPage() {
                     Crear y vincular los enlaces de las paginas de personaje a la historia.
                 </AlertPanel>
 
-                <Heading2 id="story-progression">Progresion</Heading2>
+                <Heading2 id="story-progression">Progresión</Heading2>
                 <br/>
                 La historia comienza con la premisa anterior. Un Gran Chef que debido a una serie de conflictos con sus compañeros se deja llebar por su visión ambiciosa, dandole una vuelta a su vida, lo que le lleva a
-                para explorar el mundo lleno de nuevas experiencias inexploradas, siendo esta la historia del {fighterComilon.name}.
+                 explorar el mundo lleno de nuevas experiencias inexploradas, siendo esta la historia del {fighterComilon.name}.
                 <br/>
                 <br/>
                 La historia de este juego (al igual que otros juegos indefinidamente expandibles) no contará con un final en sí, sino que se encontrará atascado en un nudo constante, lo que permite desarrollar y profundizar en distintos aspectos del mundo
@@ -100,25 +100,37 @@ export default function StoryPage() {
                 <Heading3 id="story-part-1">Capítulo 1: En los callejones</Heading3>
                 El Gran Chef derrota a {fighterComilon.name} (si se le consigue derrotar aparecerá una escena especial, pero el desenlace será el mismo) Tras el gran caos este se retira no sin antes anunciar su empresa en búsqueda del sabor perfecto y jura venganza. Al salir del restaurante por la puerta trasera, {fighterComilon.name} golpea furioso todo
                 lo que se encuentra a su paso. Al golpear una papelera una bolsa de basura sale volando contra la pared y luego se vuelve contra él, la bolsa no era algo ordinario (Comienza enfrentamiento entre {fighterComilon.name} y {fighterPeppemoldy.name}).
-                <Heading3 id="story-part-2">Capítulo 2: Subidón de azucar</Heading3>
+                <Heading3 id="story-part-2">Capítulo 2: Subidón de azúcar</Heading3>
                 Tras derrotar a {fighterPeppemoldy.name} descubre las propiedades experimentales de la nueva fermentacion y distintos aromas intensos. Lleno de adrenalina y emocionado por su primer descubrimiento, {fighterComilon.name} recorre los callejones hasta llegar a los bajos fondos,
                 donde tienen lugar las peleas callejeras más pringosas. <br/>
                 {fighterComilon.name} logra entrar en un local escondido donde unas personas le ofrecen dinero facil si aguanta 3 minutos peleando con un amalgama muy peculiar. Decide aceptar y subirse al ring. (Da comienzo un combate entre {fighterComilon.name} y {fighterGomilo.name}).
 
 
-
-
-                <Heading2 id="story-fighters">Personajes</Heading2>
-                <Heading3 id="story-fighters-zombkingna">ZombKingna: El Todopoderoso Rey del Trópico</Heading3>
+                <br/>
+                <br/>
+                <Heading2 id="story-fighters">BackStory</Heading2>
+                <Heading3 id="story-fighters-zombkingna">Zomb Kingna: El Todopoderoso Rey del Trópico</Heading3>
                 Durante las primeras fases de investigación para mejorar la producción de los alimentos, el gobierno de los Estómagos Urgidos decidió probar distintos químicos y técnicas de laboratorio de forma masiva, para ello escogieron una isla tropical muy rica en variedad de vegetación y la rociaron con estos compuestos para investigar su evolución a lo largo de los años.
                 <br/>
                 <br/>
                 Lo que no esperaban era que, a los pocos días, todas plantas “Despertaran” a la vez. La sensación era agonizante. Infinidad de nuevos seres provocan una guerra sin igual.
-                Aquel que logró someter al resto debió ganar una gran batalla de resistencia, aquél debía alimentarse de sus enemigos para volverse más fuerte. Aquel, nombrado el Todopoderoso Rey del trópico, fue ZombKingña.
+                Aquel que logró someter al resto debió ganar una gran batalla de resistencia, aquél debía alimentarse de sus enemigos para volverse más fuerte. Aquel, nombrado el Todopoderoso Rey del trópico, fue Zomb Kingña.
                 <br/>
                 <br/>
                 Cuando los científicos regresaron para comenzar con sus investigaciones, se encontraron una isla completamente destrozada, solo podían ver jugos y restos de plantas por todas partes. Concluyeron que aún era muy pronto para empezar a utilizar estos compuestos, lo que no se dieron cuenta era que habían creado la primera generación de mutantes.
-
+                <br/>
+                <br/>
+                <Heading3 id="story-fighters-Comilo">Comilo: </Heading3>
+                Desde tiempos pasados hay una tradición que siempre ha fascinado al hombre, acumular cosas…
+                <br/>
+                La familia Gomez-nolas lleva años guardando chucherías que le regalaban a los niños en las fiestas y eventos especiales. Esas golosinas nunca veían la luz, con los años caducaban sin que nadie se las llegase a comer, pero aún así el montón no hacía nada más que crecer, hasta el punto que pasó lo inevitable. Las tiraron...
+                <br/>
+                <br/>
+                Esas gominolas han sobrevivido distintas cribas, han superado grandes adversidades, ni el calor extremo ha podido con ellas. Llegaron a desarrollar cierta adicción a la autosuperación… ¡Necesitaban más!.
+                Su determinación logró lo impensable, por alguna razón lograron modificar su propia estructura interna, como si hubieran alterado su propio código. Todo con el objetivo de lograr algo grande, algo común que las uniera a todas. Una criatura imperfectamente perfecta. Capaz de ser un molde que trate de refinarse a sí mismo.
+                <br/>
+                <br/>
+                Aquél amalgama ahora busca en cada rincón las peleas más arduas para que le hierva el azúcar de nuevo, no por ser un temerario, sino para aprender y seguir adelante.
 
             </p>
         </>

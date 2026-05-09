@@ -16,24 +16,31 @@ export const fighterZombKingna = new Fighter({
             El Todopoderoso Rey del Trópico ha llegado para gobernar.
             <br/>
             <br/>
-            Con un combate pesado basado en las invocaciones, deberá gestionar sus recursos para digerir vivos a sus enemigos.
+            Con un combate pesado basado en las invocaciones, deberá gestionar sus recursos para digerir vivos a sus enemigos, ¡¡lo que puede llegar a curarle!!.
             Deberá combinar distintos tipos de piñas para crear combinaciones adecuadas a sus necesidades y someter a los infieles ante su control.
+            <br/>
+            <br/>
+            <b>Especial:</b><br/>
+            Cierta probabilidad de generar <b>Piña Ácida</b>. Esta piña espera al momento oportuno para lanzarse al enemigo. Sus jugos internos succionan vida al enemigo y potencia al resto de piñas. (Deja al enemigo vulnerable a “Digestión”).
+            <br/>
+            <b>Digestión:</b> Ciertos ataques pueden digerir vivos a los enemigos, curando a Zomb Kingña y sus subordinados.
 
 
         </>
     ),
-    easyToUse: 4,
+    easyToUse: 1.5,
     narrativeOrigin:
         <>
             Origen
         </>,
     prosCons: {
         pros: [
-            <>Texto 1.</>,
-            <>Texto 2.</>
+            <>Especialmente fuerte en peleas de desgaste. Su curación y habilidades se enfocan en un juego lento e intercambios de daño</>,
+            <>Capacidad de abrumar al enemigo.</>
         ],
         cons: [
-            <>Texto 1.</>
+            <>Gestion de recursos compleja. Manejar las distintas piñas al mismo tiempo y beneficiarse de sus efectos es muy complejo</>,
+            <>Vulnerable. Poca capacidad de movimiento. Depende en gran medida de los Parry.</>
         ]
     },
     type: FighterType.FOOD,
@@ -46,17 +53,17 @@ export const fighterZombKingna = new Fighter({
         zoom: 1.2
     },
     baseStats: {
-        health: baseDefaultStats.health * 1,
-        walkSpeed: baseDefaultStats.walkSpeed * 1,
-        runSpeed: baseDefaultStats.runSpeed * 1
+        health: baseDefaultStats.health * 1.2,
+        walkSpeed: baseDefaultStats.walkSpeed * 0.5,
+        runSpeed: baseDefaultStats.runSpeed * 0.5
     },
     //moveSet:
     manualRadarChart: [
         { label: "Fuerza", value: 50, max: 100 },
         { label: "Velocidad", value: 30, max: 100 },
-        { label: "Dificultad", value: 65, max: 100 },
-        { label: "Técnica", value: 75, max: 100 },
-        { label: "Movilidad", value: 40, max: 100 },
-        { label: "Defensa", value: 35, max: 100 },
+        { label: "Dificultad", value: 50, max: 100 },
+        { label: "Técnica", value: 80, max: 100 },
+        { label: "Movilidad", value: 35, max: 100 },
+        { label: "Defensa", value: 60, max: 100 },
     ]
 });
