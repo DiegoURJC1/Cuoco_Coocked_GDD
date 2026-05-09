@@ -252,7 +252,7 @@ export default function InterfacesPage() {
             <br/><br/><br/>
             <Heading2 id="pause-interface">Interfaz de pantalla de pausa</Heading2>
             <p>
-                La pantalla de pausa toma elementos reales siendo un menu real.
+                La pantalla de pausa toma elementos reales siendo un menú real.
             </p>
             <div className="diagram">
                 <img style={{
