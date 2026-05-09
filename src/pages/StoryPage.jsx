@@ -13,62 +13,63 @@ export default function StoryPage() {
             <Heading1 id="story-page">Historia</Heading1>
             <Heading2 id="synopsis">Sinopsis</Heading2>
             <p>
-                ¡La comida está mutando!
-                Unos alimentos descontrolados están destruyendo nuestro planeta, para detenerlos necesitamos tu ayuda.
+                ¡La comida está mutando! Unos alimentos descontrolados están destruyendo nuestro planeta, para detenerlos necesitamos tu ayuda.
                 <br/>
-                <b>¡La ayuda de los Couco!</b>
+                <b>¡La ayuda de los Cuoco!
+                </b>
             </p>
             <p>
-                Elige un bando y enfréntate en una deliciosa batalla contra tus enemigos.
-                De ti depende quién se coronará como Rey de la <b>Cadena Alimenticia</b>
+                Elige un bando y enfréntate en una deliciosa batalla contra tus enemigos. De ti depende quién se coronará como Rey de la
+                <b>Cadena Alimenticia</b>
             </p>
 
             <Heading2 id="story-gamemoge-introduction">Introducción</Heading2>
             <p>
-                Desde hace décadas el gran crecimiento demográfico está asfixiando a la población, los recursos de
-                nuestro planeta son muy limitados. Aunque podamos crear edificios más altos, el suelo es un gran
-                problema.
-                Cada vez hay menos espacio y la contaminación que provoca la humanidad está perjudicando gravemente a la
-                calidad de la tierra.
+                Desde hace décadas el gran crecimiento demográfico está asfixiando a la población, y los recursos de nuestro planeta se han vuelto muy limitados. Aunque podamos crear edificios más altos, el espacio constituye un gran problema: cada vez hay menos, y la contaminación que provoca la humanidad está perjudicando gravemente a la calidad de la tierra.
+
                 <p>
-                    Para poder enfrentar la hambruna y el desabastecimiento ya no podíamos recurrir a los métodos
-                    tradicionales, debíamos poner nuestro foco en la biotecnología.
-                    Debido a la creciente situación de emergencia tuvimos que dejar a un lado nuestra moral y explotar
-                    lo que ya tenemos.
+                    Para poder enfrentar la hambruna y el desabastecimiento, ya no es posible recurrir a los métodos tradicionales, por lo que se ha puesto el foco en la biotecnología, explotando lo que la genética nos había enseñado sobre la biologia con acciones que rozan lo inmoral. Sin embargo, la creciente situación de emergencia no nos dejaba otra opción.
+
                 </p>
 
                 <p>
-                    Logramos desarrollar alimentos de gran calidad en muy poco tiempo. Aumentamos la eficiencia de la
-                    producción y al fin parece que podemos enfrentar la crisis pero, todo tiene un precio.
-                    La manipulación del ADN y los nuevos químicos son demasiado inestables y requieren de procesos
-                    demasiado complejos para su uso efectivo. Esto provocó el "Despertar" de nuevos seres, nuevas
-                    abominaciones creadas por el hombre, deliciosas abominaciones…
+                    Gracias a este foco tecnológico, logramos desarrollar alimentos de gran calidad en muy poco tiempo y aumentar la eficiencia de la producción. Esto nos dio la esperanza de poder enfrentarnos a la crisis, pero… Todo tiene un precio. La manipulación del ADN y los nuevos químicos resultaron ser más inestables de lo que creíamos, y han acabado requiriendo procesos demasiado complejos para su uso efectivo. Esto desencadenó el inicio de un proceso: el "Despertar" de nuevos seres; abominaciones creadas por el hombre. Abominaciones… deliciosas.
+
                 </p>
                 <p>
-                    Como el "Despertar" podía surgir en cualquier momento y era imposible de prever. La única forma de
-                    contener la posible tragedia mientras se seguía investigando en métodos de producción fue crearnos a
-                    nosotros, los Cuoco, la nueva generación de Chefs.
+                    El inicio fue lento, pero el "Despertar" sólo daba señales de ir acelerándose. Ante la posibilidad de que el proceso se disparara en cualquier momento y con difícil previsión, la comunidad científica barajó varias opciones para extinguir la posible tragedia, sin dejar atrás la investigación de los métodos de producción. El “Eureka” que marcó la lucha contra este cataclismo fue crearnos a nosotros, los Cuoco, una nueva generación de Chefs preparada para luchar contra cualquier adversidad, gracias a un duro entrenamiento en las distintas artes del especiado, teoría avanzada del sabor, técnicas ancestrales evolutivas del corte.
+
+                </p>
+                <p>
+                Yo soy uno de ellos.
                 </p>
 
                 <p>
-                    Los mejores Chefs teníamos que estar preparados para cualquier adversidad. Nos enseñaron las
-                    distintas artes del especiado, teoría avanzada del sabor, técnicas ancestrales evolutivas del corte,
-                    y más, mucho más, debíamos estar preparados ante todo.
+                    Y estoy harto. Harto de la mentalidad pija y conservadora de los incompetentes que se hacen llamar mis compañeros.
+
                 </p>
-                <p><i>
-                    Estoy harto de la mentalidad tan pija y conservadora de los incompetentes de mis compañeros. Me
-                    niego a anclarme en esta cocina tan arcaica que defienden, me da igual que las personas más ricas
-                    del
-                    mundo vayan a nuestro restaurante, tienen miedo a descubrir, tienen miedo a ver el nuevo mundo...
-                    Lleno de sabores, texturas y experiencias únicas. Todo está a nuestro alcance, podemos crearlo todo.
-                    Pero dicen que el riesgo es muy alto y que los comensales prefieren comida menos "sintética"...
-                    ja... mis tortillas.
-                </i></p>
-                <p><i>
-                    Me despidieron… No… ¡NO! ¡YO LES DEJÉ, LES ABANDONÉ!, ¡NO ENTIENDEN LA OPORTUNIDAD QUE ESTÁN
-                    DEJANDO PASAR!, ¡LES DEMOSTRARÉ LA COCINA DEL FUTURO!, ¡LES DEMOSTRARÉ DE QUÉ ESTOY HECHO!,
-                    ¡VOY A ENCONTRAR EL SABOR PERFECTO EN ESTE MUNDO TAN SABROSO!
-                </i></p>
+                <p>
+                    Me niego a anclarme en esta cocina tan arcaica que defienden. Me da igual que las personas más ricas del mundo vayan a nuestro restaurante, porque sé que tienen miedo a abrir los ojos a este nuevo mundo lleno de sabores, texturas y experiencias únicas. ¡Ahora todo está a nuestro alcance! Tenemos el potencial de crearlo todo, pero estos patanes prefieren refugiarse en el miedo: dicen que el riesgo es muy alto, que los comensales prefieren comida menos "sintética", que no debemos de jugar más con la comida... ¡Ja! Mis tortillas.
+
+                </p>
+                <p>
+                    Esos mismos insulsos son los que piensan que me despidieron, pero siguen ocultándose de la verdad. Me da igual cuántos me digan que me equivoco, yo les abandoné. ¡Les abandoné! ¿Quién iba a soportar su cocina, plagada de carencias de ambición? ¡No saben la oportunidad que están dejando pasar!
+
+                </p>
+
+                <p>
+                    ¡Pero yo sí! ¡Les demostraré de lo que estoy hecho! ¡VOY A ENCONTRAR EL SABOR PERFECTO EN ESTE MUNDO TAN SABROSO!
+
+                </p>
+
+                <p>
+                    Y cuando lo haga… ¡VERÁN QUIÉN ES EL VERDADERO CUOCO!
+
+
+                </p>
+
+
+
                 <br/>
                 <Heading2 id="story-progression">Progresión</Heading2>
                 <p>

@@ -121,7 +121,7 @@ export default function Home() {
             </p>
             <p>
                 Pese a estos esfuerzos, sabemos que un público casual real nunca se quedará con este juego ya que
-                requiere un cierto nivel de compromiso. Generos como los First Person Shootes tienen una gran extensión,
+                requiere un cierto nivel de compromiso. Generos como los First Person Shooter tienen una gran extensión,
                 unido a su simpleza mecánica que los puede reducir a <i>juegos de mirar</i>. Esto es contrario a la
                 naturaleza de los juegos de pelea, no están extendidos y la pelea se reduce a agitar los brazos con la
                 esperanza de ganar.
