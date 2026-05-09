@@ -135,7 +135,7 @@ const moveCSlash = new Move({
     name: "Es \"futil\"",
     moveCategory: MoveCategory.UNIVERSAL,
     description: <>
-        Saca rápidamente un fuet de la nevera y golpea con el a la altura de los pies y lo descata al terminar.
+        Saca rápidamente un fuet de la nevera y golpea con el a la altura de los pies y lo descarta al terminar.
     </>,
     inputList: [Input.DOWN, Input.S],
     states: [
@@ -193,8 +193,8 @@ const moveOpenDoorHeavySlash = new Move({
                 Pulsa <InlineIcon
                 size={2}><InputSequence sequence={[Input.HS]}/></InlineIcon> tras <b>{moveNHeavySlash.name}</b> para
                 abrir la puerta de la
-                nevera mientras el movimiento esté <PLink href={getGlossaryLink(glossary.activeFrames)}>activo</PLink>
-                o al inicio de la <PLink href={getGlossaryLink(glossary.recoveryFrames)}>recuperación</PLink>.
+                nevera mientras el movimiento esté <PLink href={getGlossaryLink(glossary.activeFrames)}>activo</PLink> o
+                al inicio de la <PLink href={getGlossaryLink(glossary.recoveryFrames)}>recuperación</PLink>.
             </p>
 
             <p>
@@ -260,8 +260,8 @@ export const moveCheckTheFridgeSpicy = new Move({
     description:
         <>
             <p>
-                Saca de la nevera un <PLink href={routes.dressings.path}>aderezo</PLink> de tipo <b>Picante</b>
-                en un arco hacia arriba.
+                Saca de la nevera un <PLink href={routes.dressings.path}>aderezo</PLink> de tipo <b>Picante</b> en un
+                arco hacia arriba.
             </p>
             <p>
                 Si se golpea con un movimiento universal se aplica a si mismo.
@@ -303,8 +303,8 @@ const moveCheckTheFridge = new Move({
     description:
         <>
             <p>
-                Saca de la nevera un <PLink href={routes.dressings.path}>aderezo</PLink> de tipo <b>Pringoso</b>
-                en un arco hacia arriba.
+                Saca de la nevera un <PLink href={routes.dressings.path}>aderezo</PLink> de tipo <b>Pringoso</b> en un
+                arco hacia arriba.
             </p>
             <p>
                 Si se golpea con un movimiento universal se aplica a si mismo.

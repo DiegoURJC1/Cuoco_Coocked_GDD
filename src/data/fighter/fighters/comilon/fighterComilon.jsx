@@ -21,7 +21,7 @@ export const fighterComilon = new Fighter({
             Destaca por un combate frenético basado en abrumar a sus enemigos con ataques encadenados. Al iniciar el combate es lento y pesado, lo que
             aumenta su defensa pero reduce su ataque y velocidad e ataque pero, a medida que acierta ataques consecutivos, su estado de <b>Frenesí</b> aumenta
             lo que le permite moverse a gran velocidad y asestar ataques más veloces. Según aumenta el <b>Frenesí</b> se vuelve más vulnerable a los ataques.
-            Cuando llega al máximo de <b>Frensí</b> entra en estado <b>Berserker</b>. Durante <b>Berserker</b> obtiene su máxima velocidad de ataque y movimiento,
+            Cuando llega al máximo de <b>Frenesí</b> entra en estado <b>Berserker</b>. Durante <b>Berserker</b> obtiene su máxima velocidad de ataque y movimiento,
             además de no poder ser derribado. Este estado dura unos pocos segundos y, una vez finalizado, se restablece el <b>Frenesí</b>.
             <br/>
 
