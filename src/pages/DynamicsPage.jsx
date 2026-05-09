@@ -58,9 +58,16 @@ export default function DynamicsPage() {
             Aunque dos ataque puedan
             golpear de tal forma que protegen el espacio aéreo del jugador y la más compleja sea claramente mejor porque
             sea igual de rápida en su animación, haga más daño o cubra más espacio, un movimiento <InlineIcon
-            size={2}><InputSequence sequence={[Input.DOWN, Input.HS]}/></InlineIcon> (usado generalmente para anti aéreos) no se puede fallar pero <InlineIcon
+            size={2}><InputSequence sequence={[Input.DOWN, Input.HS]}/></InlineIcon> (usado generalmente para anti
+            aéreos) no se puede fallar pero <InlineIcon
             size={2}><InputSequence
             sequence={[Input.RIGHT, Input.DOWN, Input.DOWN_RIGHT, Input.HS]}/></InlineIcon> si.
+        </p>
+        <p>
+            Además, todos los movimientos tienen valores que indican las ventajas <PLink
+            href={getGlossaryLink(glossary.plusFrames)}>plus</PLink> o <PLink
+            href={getGlossaryLink(glossary.minusOnBlock)}>minus</PLink>. Estas indican quién de los dos personajes será
+            el primero en comenzar a realizar una acción.
         </p>
 
         <Heading3 id={routes.dynamics.path.id}>Botón Range</Heading3>

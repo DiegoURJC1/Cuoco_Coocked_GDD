@@ -28,7 +28,7 @@ export const Archetype = Object.freeze({
     },
     RUSHDOWN: {
         name: "Rushdown",
-        description: "Abruma al oponente con presión rápida y contínua."
+        description: "Abruma al oponente con presión rápida y continua."
     },
     UNIQUE: {
         name: "Único",
