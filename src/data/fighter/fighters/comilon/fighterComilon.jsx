@@ -11,7 +11,7 @@ export const fighterComilon = new Fighter({
     archetype: Archetype.BALANCE,
     description: (fighter) => (
         <>
-            (Personaje principal del <PLink href={routes.gameModes.arcade.path}>modo historia</PLink>).
+            Es el personaje principal del <PLink href={routes.gameModes.arcade.path}>modo historia</PLink> de Cuoco Cooked.
             <br/>
             Ex-Chef experto entrenado como Cuoco con una visión clara del arte culinario, está estancado.
             Ahora viaja por el mundo buscando las comidas más extravagantes y atrevidas, experimentando con el "Despertar" con un

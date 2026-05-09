@@ -10,10 +10,9 @@ export const fighterGomilo = new Fighter({
     description: (fighter) => (
         <>
             ¡Y en el lado derecho del ring!, ¡Con la destreza y la fuerza de un caballero y la velocidad de un luchador experto!, busca una nueva presa...
-            ¡¡EL GRAN GO-MI-LOOOOOOOOO!!
+            ¡EL GRAN GO-MI-LOOOOOOOOO!
             <br/>
-            <br/>
-            Luchador diestro y equilibrado que, pese a ausencia de su brazo izquiero, logra adaptarse a cualquier escenario con elementos de su entorno. Al ser golpeado puede perder su brazo, en ese caso todos sus movimientos
+            Luchador diestro y equilibrado que, pese a ausencia de su brazo izquierdo, logra adaptarse a cualquier escenario con elementos de su entorno. Al ser golpeado puede perder su brazo, en ese caso todos sus movimientos
             se vuelven más ágiles y veloces, pero estará expuesto y no podrá pelear en sus mejores condiciones.
             <br/>
             Una vez encuentre una pieza adecuada significa que la cosa se pone seria. Dependiendo de que brazo obtenga gana distintas ventajas... ¡¡y un movimiento especial!!
