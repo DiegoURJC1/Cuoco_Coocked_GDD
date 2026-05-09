@@ -1,6 +1,7 @@
 import {Heading1, Heading2, Heading3} from "../modules/Heading/Heading.jsx"
 import PLink from "../modules/Link/PLink.jsx";
 import {routes} from "../routes/routes.js";
+import {fighterComilon} from "../data/fighter/fighters/comilon/fighterComilon.jsx";
 
 export default function GameModesPage() {
     return (
@@ -47,9 +48,10 @@ export default function GameModesPage() {
             </p>
             <Heading2 id={routes.gameModes.story.id}>Historia</Heading2>
             <p>
-                El modo <b>Historia</b> es un modo de juego de un jugador en el que tomas el papel de <b>Chef</b> en su aventura para descubrir nuevos sabores.
-                Según progreses te encontrarás con distintos personajes del juego y podrás aprender más sobre sus orígenes y relaciones.
-                Este modo mezcla una narración que te sumergira en el mundo del juego y una serie de desafíos complejos a medida que vayas dominando a los distintos personajes.
+                El modo <b>Historia</b> es un modo de juego de un jugador en el que toma el papel de <PLink href={routes.fighters.path + "/" + fighterComilon.id}>{fighterComilon.name}</PLink> en
+                su aventura para descubrir nuevos sabores.
+                Según progreses el jugador se encontrará con distintos personajes del juego y podrá aprender más sobre sus orígenes y relaciones.
+                Este modo mezcla una narración que le sumergirá en el mundo del juego y una serie de desafíos complejos a medida que vaya dominando a los distintos personajes.
             </p>
             <p>Leer más en la página de <PLink href={routes.story.path}>historia</PLink>.</p>
 

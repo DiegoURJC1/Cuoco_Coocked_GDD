@@ -45,14 +45,14 @@ export default function MechanicsPage() {
                 Todos los personajes tienen las siguientes barras de recursos.
             </p>
             <ul>
-                <li><b>Salud</b>: indica la cantidad de salud del personaje.</li>
-                <li><b>Breaker</b>: usable mientras el jugador es golpeado para quitarselo de encima cuando está
+                <li><b>Salud</b>: Indica la cantidad de salud del personaje.</li>
+                <li><b>Breaker</b>: Usable mientras el jugador es golpeado para quitarselo de encima cuando está
                     completa.
                 </li>
-                <li><b>Guard-Break</b>: se rellena al bloquear ataques y deja en <PLink
+                <li><b>Guard-Break</b>: Se rellena al bloquear ataques y deja en <PLink
                     href={getGlossaryLink(glossary.stunLock)}>stun lock</PLink> cuando se llena.
                 </li>
-                <li><b>Overdrive</b>: barra que se rellena al golpear o bloquear que permite hacer los ataques más
+                <li><b>Overdrive</b>: Barra que se rellena al golpear o bloquear que permite hacer los ataques más
                     fuertes.
                 </li>
             </ul>
@@ -63,7 +63,7 @@ export default function MechanicsPage() {
             <p>
                 Los juegos de pelea clásicos (2D y 2.5D) no son simples intercambios de golpes. Son sistemas complejos
                 de <b>gestión de riesgos</b> y <b>anatomía de la animación</b>. Se rigen
-                principalmente por dos pilares: la interacción tipo "Piedra, Papel o Tijera" y los principios de la
+                principalmente por dos pilares: La interacción tipo "Piedra, Papel o Tijera" y los principios de la
                 animación.
             </p>
             <p>
@@ -71,9 +71,9 @@ export default function MechanicsPage() {
                 es la diferencia entre "apretar botones" y jugar con estrategia.
             </p>
             <ul>
-                <li>Startup: anticipación.</li>
-                <li>Active: instantes en los que la acción se aplica.</li>
-                <li>Recovery: vuelta a un estado neutral.</li>
+                <li>Startup: Anticipación.</li>
+                <li>Active: Instantes en los que la acción se aplica.</li>
+                <li>Recovery: Vuelta a un estado neutral.</li>
             </ul>
             <p>
                 Este pilar define cuándo y cuanto tiempo un jugador se le puede hacer <PLink
@@ -200,7 +200,7 @@ export default function MechanicsPage() {
             </ul>
             <Heading3 id="dressing-restrictions">Restricciones por Aderezo</Heading3>
             <ul>
-                <li><b>Saciado (debuff)</b>: elimina la capacidad de dash y salto durante su duración</li>
+                <li><b>Saciado (debuff)</b>: Elimina la capacidad de dash y salto durante su duración</li>
             </ul>
             <br/>
             <hr></hr>
@@ -351,7 +351,7 @@ export default function MechanicsPage() {
                 Tiene las siguientes propiedades:
             </p>
             <ul>
-                <li>Rango: corto (requiere proximidad al rival)</li>
+                <li>Rango: Corto (requiere proximidad al rival)</li>
                 <li>Se cancela en especiales y supers.</li>
                 <li>Puede ejecutarse en standing, crouch y aire.</li>
                 <li>Es el tipo de ataque que el bloqueo neutraliza completamente.</li>
@@ -376,8 +376,8 @@ export default function MechanicsPage() {
                 Tiene las siguientes propiedades:
             </p>
             <ul>
-                <li>Rango: medio para los ataques de extensión y largo para los proyectiles generalmente.</li>
-                <li>Daño: variable (menor que <InlineIcon size={2}><InputSequence sequence={[Input.HS]}/></InlineIcon>,
+                <li>Rango: Medio para los ataques de extensión y largo para los proyectiles generalmente.</li>
+                <li>Daño: Variable (menor que <InlineIcon size={2}><InputSequence sequence={[Input.HS]}/></InlineIcon>,
                     pero acumula <PLink href={getGlossaryLink(glossary.chipDamage)}>chip damage</PLink> al bloquear)
                 </li>
                 <li>Puede activar elementos de entorno (ver <PLink href={routes.dressings.path}>aderezos</PLink>)</li>
@@ -397,9 +397,9 @@ export default function MechanicsPage() {
             </ul>
             <p><b>Ejemplo temático — El Chef</b></p>
             <p>
-                Ataque de distancia estándar: estocada con el tenedor gigante (extensión). Input especial <InlineIcon
+                Ataque de distancia estándar: Estocada con el tenedor gigante (extensión). Input especial <InlineIcon
                 size={2}>
-                <InputSequence sequence={[Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT, Input.R]}/></InlineIcon>: saca un
+                <InputSequence sequence={[Input.DOWN, Input.DOWN_RIGHT, Input.RIGHT, Input.R]}/></InlineIcon>: Saca un
                 bote de salsa picante y lanza un chorro (proyectil). Ambos son ataques de
                 distancia, ambos son vulnerables al Parry, pero tienen propiedades diferentes (velocidad, hitbox,
                 efectos
@@ -413,7 +413,7 @@ export default function MechanicsPage() {
             </p>
             <p><b>Propiedades generales</b></p>
             <ul>
-                <li>Rango: muy corto (más que melee estándar, pero requieren contacto).</li>
+                <li>Rango: Muy corto (más que melee estándar, pero requieren contacto).</li>
                 <li>El Bloqueo no los detiene.</li>
                 <li>Los <MeleeText/> tienen prioridad.</li>
                 <li>Un <GrabText/> en el momento oportuno cancela el del rival y hace que ambos jugadores retrocedan
@@ -612,7 +612,7 @@ export default function MechanicsPage() {
             <p><b>Propiedades</b></p>
             <ul>
                 <li>El medidor guard-break baja poco a poco con el tiempo si se bloquea y más rapido si no.</li>
-                <li>Durante el estado: el personaje queda en <PLink href={getGlossaryLink(glossary.stunLock)}>stun
+                <li>Durante el estado: El personaje queda en <PLink href={getGlossaryLink(glossary.stunLock)}>stun
                     lock</PLink> y queda a merced del rival.
                 </li>
                 <li>Visualmente marcado de forma clara (animación de "guardia rota" + efecto visual en
@@ -620,11 +620,11 @@ export default function MechanicsPage() {
                     goma).
                 </li>
                 <li>
-                    Es el escenario de mayor peligro del sistema defensivo: el rival tiene una ventana
+                    Es el escenario de mayor peligro del sistema defensivo: El rival tiene una ventana
                     garantizada de presión sin respuesta posible
                 </li>
                 <li>
-                    Tras llenarse y entrar en stun lock, se vacia y se vuelve a un estado normal tras unos instantes o
+                    Tras llenarse y entrar en stun lock, se vacía y se vuelve a un estado normal tras unos instantes o
                     tras ser golpeado.
                 </li>
             </ul>
@@ -638,7 +638,7 @@ export default function MechanicsPage() {
                 interrumpiendo su <PLink href={getGlossaryLink(glossary.recoveryFrames)}>animación de
                 recovery</PLink> para encadenar el siguiente ataque.
             </p>
-            <AlertPanel>TODO: esquema/diagrama </AlertPanel>
+            <AlertPanel>TODO: Esquema/diagrama </AlertPanel>
             <pre>
                 UNIVERSAL<br/>
                 │<br/>

@@ -10,7 +10,7 @@ export const StageTrainBar = new Stage({
                 La aclamada cadena de bar restaurantes <b>La Pelusa</b> ahora en movimiento.
             </p>
             <p>
-                Este gran restaurante conocido por su limieza y cuidado ahora disponible en una serie de
+                Este gran restaurante conocido por su limpieza y cuidado ahora disponible en una serie de
                 trenes de alta gama para pasajeros. Disfruta de su comida y debida tanto en mesa como en barra.
                 Esperemos que siga así de limpio mucho tiempo.
             </p>

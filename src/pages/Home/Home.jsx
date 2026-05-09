@@ -77,8 +77,7 @@ export default function Home() {
                 una capa de estados alterados (buffs y debuffs de corta duración y alta rotación) que emergen de las
                 técnicas de cada luchador y del entorno mismo, generando situaciones caóticas, reversibles y
                 narrativamente absurdas en cada combate.
-                Al comentar como te ha ido la partida son normales frases como:
-                <i>"<PLink href={routes.fighters.path + "/" + fighterBolognesa.id}>La Boloñesa</PLink> me estaba
+                Al comentar como te ha ido la partida son normales frases como: <i>"<PLink href={routes.fighters.path + "/" + fighterBolognesa.id}>La Boloñesa</PLink> me estaba
                     destrozando con albondigazos y no podía reaccionar,
                     pero en un instante lancé un tenedor a la estantería,
                     se le cayó la salsa brava por encima y ahí supe que me la iba a comer"</i>.

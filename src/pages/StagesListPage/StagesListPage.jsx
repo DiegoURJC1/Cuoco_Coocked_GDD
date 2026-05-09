@@ -17,10 +17,10 @@ export default function StagesListPage() {
             </p>
             <ul>
                 <li>El tamaño del escenario es de 2880x1080 píxeles (HD apaisado donde todo el contenido vertical cabe en 1080px y el contenido horizontal
-                    representa vez y media una pantalla estandar).</li>
+                    representa vez y media una pantalla estándar).</li>
                 <li>El corner aumenta la presión del atacante (sin salida de dash<InlineIcon size={2}><InputSequence sequence={[Input.DASH]}/></InlineIcon>, escape solo por salto o reversals).</li>
                 <li>El entorno tiene elementos interactivos, activables por ataques de distancia<InlineIcon size={2}><InputSequence sequence={[Input.R]}/></InlineIcon> y AoE</li>
-                <li>El escenario hace scroll horizontal, con limites visuales y de colisión</li>
+                <li>El escenario hace scroll horizontal, con límites visuales y de colisión</li>
             </ul>
             <p>
                 <br></br>
@@ -40,7 +40,7 @@ export default function StagesListPage() {
                 </li>
                 <li>
                     <b>La Cocina en Hora Punta</b>: Cocinas industriales con fuegos encendidos, vapor y superficies de acero. El escenario
-                    tiene elementos interactivos que generan aderezo como quemadores encendidos que aplican "Quemado" en AOE.
+                    tiene elementos interactivos que generan aderezo como quemadores encendidos que aplican "Quemado" en AoE.
                 </li>
                 <li>
                     <b>El Mercado</b>: Puesto de mercado con ingredientes apilados, iluminación de exterior mediterránea. El escenario

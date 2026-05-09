@@ -106,7 +106,7 @@ export default function DynamicsPage() {
             fomentando que en todo momento haya un margen de esperanza para el jugador que va perdiendo.
         </p>
         <p>
-            El tiempo de recarga debe ser lo suficientemente alto como para que practicamente solo se pueda usar una vez
+            El tiempo de recarga debe ser lo suficientemente alto como para que prácticamente solo se pueda usar una vez
             por ronda de forma práctica. Si necesita 50 segundos de recarga, tiene que haberse usado de forma muy
             temprana para poder ser usada otra vez en la misma ronda.
         </p>
@@ -127,7 +127,7 @@ export default function DynamicsPage() {
             <li>El propio funcionamiento del sistema (un único estado activo de corta duración) provoca también el
                 uso y la rotación de los mismos.
                 El uso intencional de una técnica sobre el entorno para descartar un aderezo esperando a que el próximo
-                sea más beneficioso para ti que para el rival o adquirir un aderezo a proposito para eliminar la
+                sea más beneficioso para ti que para el rival o adquirir un aderezo a propósito para eliminar la
                 aplicación de otro que te resulte peor para una determinada situación son sólo algunos ejemplos de estas
                 dinámicas.
             </li>

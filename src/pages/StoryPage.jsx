@@ -19,7 +19,7 @@ export default function StoryPage() {
                 <b>¡La ayuda de los Couco!</b>
             </p>
             <p>
-                Elige un bando y enfrentate en una deliciosa batalla contra tus enemigos.
+                Elige un bando y enfréntate en una deliciosa batalla contra tus enemigos.
                 De ti depende quién se coronará como Rey de la <b>Cadena Alimenticia</b>
             </p>
 

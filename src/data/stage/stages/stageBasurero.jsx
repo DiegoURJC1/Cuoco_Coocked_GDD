@@ -11,7 +11,7 @@ export const StageBasurero = new Stage({
             La parte trasera de un restaurante abandonado. Ahora sólo lo habitan una cocinera fantasma que se cuela en
             la cocina para practicar. Éste sigue utilizando el basurero para deshacerse de los desechos de la cocina,
             pero como el restaurante ha salido de la ruta de los basureros, se queda acumulada. Esto lo hace uno de los
-            callejones más péfidos de la ciudad. De hecho, se dice que el olor es tan intenso, que se rumorea que ha
+            callejones más fétidos de la ciudad. De hecho, se dice que el olor es tan intenso, que se rumorea que ha
             dado lugar a diversas mutaciones del mundo de la comida, como el misterioso <PLink href={`${routes.fighters.path}/${fighterPeppemoldy.id}`}>Peppemoldy</PLink>.
         </p>
 

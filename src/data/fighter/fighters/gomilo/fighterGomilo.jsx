@@ -9,7 +9,7 @@ export const fighterGomilo = new Fighter({
     archetype: Archetype.BALANCE,
     description: (fighter) => (
         <>
-            ¡Y en el lado derecho del ring!, ¡Con la destreza y la fuerza de un caballero y le velocidad de un luchador experto!, busca una nueva presa...
+            ¡Y en el lado derecho del ring!, ¡Con la destreza y la fuerza de un caballero y la velocidad de un luchador experto!, busca una nueva presa...
             ¡¡EL GRAN GO-MI-LOOOOOOOOO!!
             <br/>
             <br/>

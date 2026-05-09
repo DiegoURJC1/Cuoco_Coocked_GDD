@@ -33,10 +33,10 @@ export default function DressingsPage() {
 
             <Heading3 id="system-principles">Principios del sistema</Heading3>
             <ul>
-                <li>Son estados de <b>corta duración y alta rotación</b>: se prefieren muchas aplicaciones breves a
+                <li>Son estados de <b>corta duración y alta rotación</b>: Se prefieren muchas aplicaciones breves a
                     un único estado largo.
                 </li>
-                <li>Son información <b>global del sistema</b>: sus efectos son idénticos para todos los luchadores,
+                <li>Son información <b>global del sistema</b>: Sus efectos son idénticos para todos los luchadores,
                     aunque el impacto varía según el playstyle de cada uno.
                 </li>
                 <li>Cada luchador tiene sus propios métodos de generación de aderezos, coherentes con su identidad
@@ -131,24 +131,24 @@ export default function DressingsPage() {
                 <li>Cada personaje sólo puede tener <b>un único aderezo activo</b> en cada momento. Se puede aumentar en
                     los parámetros personalizados de una partida.
                 </li>
-                <li>Si se aplica un nuevo aderezo mientras uno está activo, el nuevo <b>cancela y sobreescribe </b>
+                <li>Si se aplica un nuevo aderezo mientras uno está activo, el nuevo <b>cancela y sobrescribe </b>
                     al anterior inmediatamente.
                 </li>
-                <li>Esto último genera una posible <b>dinámica de uso reactivo</b> del sistema: un jugador puede
+                <li>Esto último genera una posible <b>dinámica de uso reactivo</b> del sistema: Un jugador puede
                     aplicarse un buff de forma deliberada para cancelar un debuff que acaba de recibir sin apenas
                     perjuicio si tiene los reflejos suficientes.
                 </li>
-                <li>Esta mecánica añade una capa de gestión táctica: cuándo aplicar un aderezo propio tiene tanto
+                <li>Esta mecánica añade una capa de gestión táctica: Cuándo aplicar un aderezo propio tiene tanto
                     peso como cuándo aplicárselo al rival.
                 </li>
             </ul>
             <p><b>Ejemplo de dinámica reactiva</b></p>
             <p>
                 El rival lanza un ataque de área sobre la zona dónde te sitúas:<br></br>
-                └──► La estanteria que hay detras tuya se rompe, cayendote encima un botecito de vinagre.<br></br>
+                └──► La estantería que hay detrás tuya se rompe, cayéndote encima un botecito de vinagre.<br></br>
                 └──► Aplica "Mareado" (inputs invertidos) a tu personaje.<br></br>
                 └──► Ejecutas una técnica que genera "Glaseado" (buff propio).<br></br>
-                └──► Mareado queda cancelado instantaneamente y obtienes Glaseado.<br></br>
+                └──► Mareado queda cancelado instantáneamente y obtienes Glaseado.<br></br>
                 Glaseado activo (absorbe 1 hit)<br></br>
             </p>
             <br></br>
@@ -189,7 +189,7 @@ export default function DressingsPage() {
                 <li>Los ataques melee y grabs, al requerir contacto directo con el rival, no activan elementos
                     de entorno
                 </li>
-                <li>El efecto producido es <b>AOE</b>: afecta por posición, pudiendo impactar a ambos
+                <li>El efecto producido es <b>AoE</b>: afecta por posición, pudiendo impactar a ambos
                     luchadores, solo al atacante, solo al defensor, o a ninguno
                 </li>
                 <li>El jugador debe considerar la posición relativa antes de lanzar un ataque que pueda activar
@@ -201,7 +201,7 @@ export default function DressingsPage() {
                 Personaje A lanza proyectil hacia el personaje B<br/>
                 Personaje B está frente a una estantería de botes de "Salsa Especiada".<br/>
                 └──► El proyectil alcanza la estantería.<br/>
-                └──► AOE de "Salsa Especiada".<br/>
+                └──► AoE de "Salsa Especiada".<br/>
             </p>
             <ul>
                 Casos:
