@@ -26,19 +26,8 @@ export default function Home() {
             <p className="claim">
                 Con los puños en la masa
             </p>
-            <AlertPanel>
-                TODO: asegurarse que todos los enlaces de la barra lateral y en el propio texto funcionan.
-            </AlertPanel>
-
-
-            <div
-                className="diagram"
-                style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    marginBottom: "2rem"
-                }}
-            >
+            <Heading2 id="trailer">Trailer de juego</Heading2>
+            <div className="diagram">
                 <video
                     loop
                     muted
