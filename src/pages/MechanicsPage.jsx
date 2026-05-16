@@ -2,7 +2,6 @@ import {Heading1, Heading2, Heading3, Heading4} from "../modules/Heading/Heading
 import {Input} from "../dataTemplate/input/enums/Input.js";
 import {InlineIcon} from "../modules/InlineIcon/InlineIcon.jsx";
 import {InputSequence} from "../dataTemplate/input/InputSequence.jsx";
-import AlertPanel from "../modules/AlertPanel/AlertPanel.jsx";
 import {getMoveStateIcon, MoveState} from "../dataTemplate/fighters/moves/enums/MoveState.jsx";
 import PLink from "../modules/Link/PLink.jsx";
 import {routes} from "../routes/routes.js";
@@ -638,7 +637,6 @@ export default function MechanicsPage() {
                 interrumpiendo su <PLink href={getGlossaryLink(glossary.recoveryFrames)}>animación de
                 recovery</PLink> para encadenar el siguiente ataque.
             </p>
-            <AlertPanel>TODO: Esquema/diagrama </AlertPanel>
             <pre>
                 UNIVERSAL<br/>
                 │<br/>

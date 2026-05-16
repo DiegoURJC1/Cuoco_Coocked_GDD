@@ -1,13 +1,10 @@
 import {Heading1, Heading2} from "../modules/Heading/Heading.jsx"
-import AlertPanel from "../modules/AlertPanel/AlertPanel.jsx";
 
 export default function BusinessPage() {
     return (
         <>
             <Heading1 id="business">Modelo de negocio</Heading1>
 
-            <AlertPanel>TODO: cuando se definan las fases del proyecto, poner cantidad de personajes y de escenarios
-                dentro de cada fase</AlertPanel>
             <p>
                 En cuanto al presupuesto, iniciamos una recaudación en kickstarter para obtener datos con cifras
                 realistas del número de interesados en el juego para buscar un publisher.
